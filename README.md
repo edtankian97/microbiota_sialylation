@@ -4,8 +4,11 @@ This project is related to my P.h.D.'s thesis which study is upon incorporation 
 seek in proteomes of bacterias from NCBI that has a potential proteins linked to the process of sialic acid's incorporation. For this purpose, the bioinformatic part was divided in:
 
 **1. Genome processing:** Retrieve information from NCBI, remotion of incomplete genomes and retrieve CheckM information.
+
 **2. HMMER models:** Creation of proteins datasets and creation of models.
+
 **3. Protein analysis:** Identification of sialylation pathway in filtered genomes.
+
 **4. Downstream analysis:** Genomic analysis of bacterias' genomes that have sialylation with figures created.
 
 ## 1. Genome processing
