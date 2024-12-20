@@ -9,13 +9,13 @@ seek in proteomes of bacterias from NCBI that has a potential proteins linked to
 4. Downstream analysis: Genomic analysis of bacterias' genomes that have sialylation with figures created.
 
 ## 1. Genome processing
-First of all, genomes were download at NCBI site, which was retrieved from [NCBI site](https://ftp.ncbi.nlm.nih.gov/genomes/refseq/bacteria/assembly_summary.txt). 
+First of all, genomes were download with command wget at [NCBI site](https://ftp.ncbi.nlm.nih.gov/genomes/refseq/bacteria/assembly_summary.txt). 
 
  **The original dataset is named assembly_summary.txt and be encountered in genomes_download directory**
 
 Doing the filtering in the NCBI retrieved dataset
 ```cd genomes_download
-grep -c “Complete” assembly_summary_txt
+grep -c “Complete” assembly_summary.txt
 grep "Complete" assembly_summary.txt > assembly_complete
 cut -f1,8,9,20 assembly_complete > assembly_complete_summary.tsv #retrieve info that I want to get```
 
