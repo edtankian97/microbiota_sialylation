@@ -21,7 +21,8 @@ First of all, genomes were download with command wget at [NCBI](https://ftp.ncbi
  The original dataset is named **assembly_summary.txt** and be encountered in **genomes_download** directory.
 
 ### 1.2 Filtering NCBI retrieved dataset
-```cd genomes_download
+```
+cd genomes_download
 grep -c “Complete” assembly_summary.txt
 grep "Complete" assembly_summary.txt > assembly_complete
 cut -f1,8,9,20 assembly_complete > assembly_complete_summary.tsv #retrieve info that I want to get
