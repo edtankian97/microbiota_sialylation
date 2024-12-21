@@ -18,7 +18,7 @@ seek in proteomes of bacterias from NCBI that has a potential proteins linked to
 ### 1.1 Retrieve genome information
 
 First of all, genomes were download with command wget at [NCBI](https://ftp.ncbi.nlm.nih.gov/genomes/refseq/bacteria/assembly_summary.txt). 
- **The original dataset is named assembly_summary.txt and be encountered in genomes_download directory**
+ The original dataset is named **assembly_summary.txt** and be encountered in **genomes_download directory**
 
 ### 1.2 Filtering NCBI retrieved dataset
 ```cd genomes_download
@@ -28,6 +28,6 @@ cut -f1,8,9,20 assembly_complete > assembly_complete_summary.tsv #retrieve info 
 ```
 
 ### 1.3 Retrieve CheckM information
-Please, check the ipynb file named as "Checkm_refseq_Reanalise_V2_R.ipynb"
+Please, check the ipynb file named as **Checkm_refseq_Reanalise_V2_R.ipynb**
 
 
