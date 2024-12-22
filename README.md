@@ -38,8 +38,8 @@ conda create -n ncbi_datasets #creation of the anaconda environment: Digit y or 
 conda activate ncbi_datasets #Activation of the environment. Do this after creation of the environment
 #retrieve missing data of completeness from ncbi_datasets
 xargs -a GCF_complete_without_checkM.txt -I {} datasets summary genome accession {} --as-json-lines | dataformat tsv genome --fields organism-name,accession,checkm-completeness,checkm-contamination > remain_CheckM_data.tsv
-
-#after this, continue the Part 02 of script: **Checkm_refseq_Reanalise_V2_R.ipynb**
 ```
+after this, continue the Part 02 of script: **Checkm_refseq_Reanalise_V2_R.ipynb**
+
 
 
