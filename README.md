@@ -29,6 +29,17 @@ cut -f1,8,9,20 assembly_complete > assembly_complete_summary.tsv #retrieve info 
 ```
 
 ### 1.3 Retrieve CheckM information
-Please, check the ipynb file named as **Checkm_refseq_Reanalise_V2_R.ipynb**
+First of all, start with the ipynb file named as **Checkm_refseq_Reanalise_V2_R.ipynb**
+If you do not have installed miniconda or anaconda yet, please follow the instructions in this [link](https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html).
+
+´´´
+#retrieve missing data of completeness from ncbi_datasets
+conda create -n ncbi_datasets #creation of the anaconda environment: Digit y or yes to continue the installation
+conda activate ncbi_datasets #Activation of the environment. Do this after creation of the environment
+#retrieve missing data of completeness from ncbi_datasets
+xargs -a GCF_complete_without_checkM.txt -I {} datasets summary genome accession {} --as-json-lines | dataformat tsv genome --fields organism-name,accession,checkm-completeness,checkm-contamination > remain_CheckM_data.tsv
+
+#after this, continue the Part 02 of script: **Checkm_refseq_Reanalise_V2_R.ipynb**
+```
 
 
