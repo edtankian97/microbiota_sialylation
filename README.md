@@ -34,15 +34,26 @@ If you do not have installed miniconda or anaconda yet, please follow the instru
 
 **-Creation of conda environment and installation of [ncbi_datasets](https://github.com/ncbi/datasets)**
 ```
-conda create -n ncbi_datasets #creation of the anaconda environment: Digit y or yes to continue the installation
+conda create -n ncbi_datasets python=3.8 #creation of the anaconda environment: Digit y or yes to continue the installation. If error occurs, you might update the python version.
 conda activate ncbi_datasets #Activation of the environment. Do this after creation of the environment
 conda install -c conda-forge ncbi-datasets-cli
 ```
 **-retrieve missing data of completeness from ncbi_datasets**
 ```
 xargs -a GCF_complete_without_checkM.txt -I {} datasets summary genome accession {} --as-json-lines | dataformat tsv genome --fields organism-name,accession,checkm-completeness,checkm-contamination > remain_CheckM_data.tsv
+mv remain_CheckM_data.tsv remain_CheckM_data_complete.tsv
 ```
 after this, continue the Part 02 of script: **Checkm_refseq_Reanalise_V2_R.ipynb**
+
+**Run CheckM2 to get completeness and contamination of missing data. CheckM2 uses artificial language to predict completeness of genomes. 
+```
+conda activate ncbi_datasets
+conda install -c bioconda -c conda-forge checkm2 
+checkm2 -h
+checkm2 database --download #download checkm2's standart database
+pwd #you should be in the directory **genomes_download**
+sed '1d' remain_CheckM_data_complete_with_NA.tsv > remain_CheckM_data_complete_with_NA_ID.tsv
+```
 
 
 
