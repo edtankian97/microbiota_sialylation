@@ -51,10 +51,15 @@ conda activate ncbi_datasets
 conda install -c bioconda -c conda-forge checkm2 
 checkm2 -h
 checkm2 database --download #download checkm2's standart database
+```
+**Download missing genomes for contamination analysis and run CheckM2**
+```
 pwd #you should be in the directory **genomes_download**
 sed '1d' remain_CheckM_data_complete_with_NA.tsv > remain_CheckM_data_complete_with_NA_ID.tsv
-checkm2 predict --threads 5 --input remain_CheckM_data_complete_with_NA_ID.tsv --output-directory checkm2_result
+datasets download genome accession --inputfile remain_CheckM_data_complete_with_NA_ID.tsv  #Download genomes filesos .fna
+checkm2 predict --threads 5 --input  ncbi/data/GCF*/ -output-directory checkm2_result
 ```
+
 
 
 
