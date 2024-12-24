@@ -62,7 +62,7 @@ rm ncbi_dataset.zip
 find ./remain_CheckM/data/GCF_000*/ -type f -iname "*.fna" -exec mv -v "{}" ./remain_CheckM/ \;
 checkm2 predict --threads 5 --input  remain_CheckM/ --output-directory checkm2_result
 ```
-
+Now return to the script **Checkm_refseq_Reanalise_V2_R.ipynb**
 
 
 
