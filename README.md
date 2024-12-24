@@ -104,6 +104,7 @@ mkdir CMP_synthase sialiltrans polisialiltrans o_acetiltrans_plus_poli kpsM kpsT
 cd ..
 ```
 Scripts for each enzyme model will be available with their respective names in **scripts** directory
+
 **CMP_synthase**
 ```
 cd scripts/
@@ -133,3 +134,17 @@ bash KpsT_hmm.sh
 ```
 bash RfaH_hmm.sh
 ```
+
+With all done, now it's time to start the process of coverage, e-value and bit-score filter
+```
+cd ..
+cd HMMER_analysis/
+find ./CMP_synthase/ -type f -name '*coverage*' -exec cat {} + > CMP_coverage.tsv
+find ./sialiltrans/ -type f -name '*coverage*' -exec cat {} + > sialil_coverage.tsv
+find ./polisialiltrans/ -type f -name '*coverage*' -exec cat {} + > polisialil_coverage.tsv
+find ./o_acetiltrans_plus_poli/ -type f -name '*coverage*' -exec cat {} + > o_acetiltrans_plus_poli_coverage.tsv
+find ./kpsM/ -type f -name '*coverage*' -exec cat {} + > kpsM_coverage.tsv
+find ./kpsT/ -type f -name '*coverage*' -exec cat {} + > kpsT_coverage.tsv
+find ./RfaH/ -type f -name '*coverage*' -exec cat {} + > RfaH_coverage.tsv
+```
+Now, go to 
