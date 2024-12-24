@@ -9,7 +9,7 @@ seek in proteomes of bacterias from NCBI that has a potential proteins linked to
 
 **2. HMMER models:** Creation of proteins datasets and creation of models.
 
-**3. Protein analysis:** Identification of sialylation pathway in filtered genomes.
+**3. Protein analysis:** Identification of sialylation pathway in filtered genomes/proteomes and control proteomes.
 
 **4. Downstream analysis:** Genomic analysis of bacterias' genomes that have sialylation with figures created.
 
@@ -29,7 +29,7 @@ cut -f1,8,9,20 assembly_complete > assembly_complete_summary.tsv #retrieve info 
 ```
 
 ### 1.3 Retrieve CheckM information
-First of all, start with the ipynb file named as **Checkm_refseq_Reanalise_V2_R.ipynb**
+First of all, start with the ipynb file named as **Checkm_refseq_Reanalise_V2_R.ipynb** which will be in this path=genomes_download/scripts/jupyter_scripts/
 If you do not have installed miniconda or anaconda yet, please follow the instructions in this [link](https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html).
 
 **-Creation of conda environment and installation of ncbi_datasets. More information about ncbi_datasets, click this [link](https://github.com/ncbi/datasets)**
@@ -63,6 +63,47 @@ find ./remain_CheckM/data/GCF_000*/ -type f -iname "*.fna" -exec mv -v "{}" ./re
 checkm2 predict --threads 5 --input  remain_CheckM/ --output-directory checkm2_result
 ```
 Now return to the script **Checkm_refseq_Reanalise_V2_R.ipynb**
+
+## 2 
+
+## 3. Protein analysis
+
+### 3.1 Protein analysis: Control proteomes
+
+### 3.2 Protein analysis: NCBI analysis
+After filtration with CheckM, the proteomes were downloaded from NCBI
+```
+cut -f2 checkm_filter_v2_complete.tsv > checkm_filter_v2_complete_ID.tsv
+sed -i '1d' checkm_filter_v2_complete_ID.tsv
+datasets download genome accession --inputfile checkm_filter_v2_complete_ID.tsv --include protein --dehydrated  --filename proteins.zip
+unzip proteins.zip -d proteins
+datasets rehydrate --directory proteins
+```
+After the download, proteins files were renamed with their own directory name 
+```
+cd scripts/
+bash rename_files.sh
+```
+With the proteins with their respective names, you can move them to the **proteins** directory
+```
+cd .. # you should be in genomes_download directory
+find proteins/ncbi_dataset/data/GCF*/ -type f -iname "*.faa" -exec mv -v "{}" ./proteins/ \;
+```
+Proteomes are now in **proteins** directory and then you can edit their fasta header, so we can identify them later on HMMER analysis.
+For this, do the following command:
+```
+cd scripts/
+bash rename_fasta.sh
+```
+Now the proteins files are ready to be analised. Now, let's organize subdiretories to store the results for each enzyme of sialylation process
+```
+cd ..
+mkdir HMMER_analysis
+cd HMMER_analysis
+mkdir CMP_synthase sialiltrans polisialiltrans o_acetiltrans_plus_poli kpsM kpsT RfaH
+cd ..
+```
+Scripts for each enzyme model will be available with their respective names in **scripts** directory
 
 
 
