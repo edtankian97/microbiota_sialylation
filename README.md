@@ -104,6 +104,32 @@ mkdir CMP_synthase sialiltrans polisialiltrans o_acetiltrans_plus_poli kpsM kpsT
 cd ..
 ```
 Scripts for each enzyme model will be available with their respective names in **scripts** directory
-
-
-
+**CMP_synthase**
+```
+cd scripts/
+bash CMP_hmm.sh
+```
+**Sialiltransferase**
+```
+bash Sialiltrans_hmm.sh
+```
+**Polisialiltransferase**
+```
+bash polisialiltrans_hmm.sh
+```
+**(Poly)O-acetiltransferase**
+```
+bash o_acetiltrans_poli_hmm.sh
+```
+**KpsM**
+```
+bash KpsM_hmm.sh
+```
+**KpsT**
+```
+bash KpsT_hmm.sh
+```
+**RfaH**
+```
+bash RfaH_hmm.sh
+```
