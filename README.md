@@ -157,7 +157,7 @@ mv CMP_complete_cover_filter_40.tsv ./HMMER_analysis/CMP_synthase/
 # 4. Downstream analysis
 
 ## 4.1 Datasets for plots
-
+This topic and subtopics forwards are about how to get data that will be important to create the plots.
 ### 4.1.1 Get information of complete genomes
 ```
 #Retrieve info of complete genomes of geo_loc, isolation_source and other info
@@ -198,9 +198,11 @@ mv taxonomy/ncbi_dataset/data/taxonomy_summary.tsv ./plots_data/
 ```
 ### 4.1.4 Phylogenetic tree
 
+To generate a tree from phylophlan, first you must download it. Check this [link](https://github.com/biobakery/phylophlan) with the procedures.
+```
+conda create -n "phylophlan" -c bioconda phylophlan=3.1.1
 
-
-
+```
 ## 4.2 Genome information
 
 Follow the script **retrieve_genome_info.ipynb** which is loccated in the path: microbial_sialylation/genomes_download/scripts/jupyter_scripts/
