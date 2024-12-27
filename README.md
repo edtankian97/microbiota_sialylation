@@ -147,8 +147,13 @@ find ./kpsM/ -type f -name '*coverage*' -exec cat {} + > kpsM_coverage.tsv
 find ./kpsT/ -type f -name '*coverage*' -exec cat {} + > kpsT_coverage.tsv
 find ./RfaH/ -type f -name '*coverage*' -exec cat {} + > RfaH_coverage.tsv
 ```
-Now, go to 
+Now, go to the script **hmm_process.ipynb** which is loccated in the path: microbial_sialylation/genomes_download/scripts/jupyter_scripts/
 
+```
+sed -i '1d' CMP_complete_cover_filter_40.tsv
+
+mv CMP_complete_cover_filter_40.tsv ./HMMER_analysis/CMP_synthase/
+```
 # 4. Downstream analysis
 
 ## 4.1 Datasets for plots
