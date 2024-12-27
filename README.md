@@ -148,3 +148,39 @@ find ./kpsT/ -type f -name '*coverage*' -exec cat {} + > kpsT_coverage.tsv
 find ./RfaH/ -type f -name '*coverage*' -exec cat {} + > RfaH_coverage.tsv
 ```
 Now, go to 
+
+# 4. Downstream analysis
+
+**Get information of complete genomes**
+```
+#Retrieve info of complete genomes of geo_loc, isolation_source and other info
+datasets download genome accession --inputfile checkm_filter_v2_complete_ID.tsv --dehydrated
+unzip -v ncbi_dataset.zip
+
+dataformat tsv genome --package ncbi_dataset.zip --fields accession,assminfo-biosample-geo-loc-name,assminfo-biosample-host,assminfo-biosample-host-disease,assminfo-biosample-isolation-source,assminfo-biosample-source-type > accession_list.tsv
+dataformat tsv genome --package ncbi_dataset.zip --fields accession,assminfo-biosample-geo-loc-name,assminfo-biosample-host,assminfo-biosample-host-disease,assminfo-biosample-isolation-source,assmstats-gc-percent,assmstats-total-sequence-len,organelle-assembly-name,organism-name,organism-tax-id,annotinfo-featcount-gene-protein-coding > accession_complete_fields.tsv
+```
+
+**After hmm_process analysis, do the following to get genomes information of genomes that have sialylation pathway**
+
+```
+#join files
+cat comm_CMP_sia_poli.tsv not_comm_CMP_sia_poli.tsv not_commm_CMP_sia_poli_1.tsv > all_commom.tsv
+#After join the files, remove header "X1"
+fgrep -v X1 all_commom.tsv > all_commom_1.tsv
+#remove _protein.faa
+sed 's/_protein.faa//' all_commom_1.tsv > all_commom_1_modified.tsv
+#get info
+datasets download genome accession --inputfile all_commom_1_modified.tsv --dehydrated
+dataformat tsv genome --package ncbi_dataset.zip  > comm_complete_genomes_dataset_tbl.tsv
+#select desired fields
+dataformat tsv genome --package ncbi_dataset.zip --fields accession,assminfo-biosample-geo-loc-name,assminfo-biosample-host,assminfo-biosample-host-disease,assminfo-biosample-source-type,assmstats-gc-percent,assmstats-total-sequence-len,organelle-assembly-name,organism-name,organism-tax-id > comm_complete_genomes_dataset_fields.tsv
+```
+**get taxonomy information**
+```
+#take desired columm
+cut -f10 comm_complete_genomes_dataset_fields.tsv > comm_sia_genomes_tax_id
+sed -i '1d' comm_sia_genomes_tax_id #remove header
+#retrieve taxonomy information
+datasets download taxonomy taxon --inputfile comm_sia_genomes_tax_id --filename taxonomy.zip
+```
