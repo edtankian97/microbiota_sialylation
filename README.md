@@ -147,12 +147,55 @@ find ./kpsM/ -type f -name '*coverage*' -exec cat {} + > kpsM_coverage.tsv
 find ./kpsT/ -type f -name '*coverage*' -exec cat {} + > kpsT_coverage.tsv
 find ./RfaH/ -type f -name '*coverage*' -exec cat {} + > RfaH_coverage.tsv
 ```
-Now, go to the script **hmm_process.ipynb** which is loccated in the path: microbial_sialylation/genomes_download/scripts/jupyter_scripts/
+Now, go to the script **hmm_process.ipynb** which is loccated in the path: microbial_sialylation/genomes_download/scripts/jupyter_scripts/ and follow the script.
 
+After part 01 with coverage assessment, follow this for each enzyme
+
+**CMP synthase**
 ```
 sed -i '1d' CMP_complete_cover_filter_40.tsv
-
+cut -f2 CMP_complete_cover_filter_40.tsv
 mv CMP_complete_cover_filter_40.tsv ./HMMER_analysis/CMP_synthase/
+cd ./HMMER_analysis/CMP_synthase/
+mkdir filter_cover_CMP
+for file in $(cat ./CMP_complete_cover_filter_40.tsv); do mv "$file" ./filter_cover_CMP/; done
+cd filter_cover_CMP
+#output tsv
+find . -type f -name '*protein_output*' -exec cat {} + > new_file.tsv
+#process output file
+sed -i '/#/d' new_file.tsv
+sed  's/ \{1,\}/\t/g' new_file.tsv > file_output_CMP.tsv
+cd ../../../
+```
+**Sialiltransferase**
+```
+sed -i '1d' sialil_complete_cover_filter_40.tsv
+cut -f2 sialil_complete_cover_filter_40.tsv
+mv sialil_complete_cover_filter_40.tsv ./HMMER_analysis/sialil/
+cd ./HMMER_analysis/sialil/
+mkdir filter_cover_sialil
+for file in $(cat ./sialil_complete_cover_filter_40.tsv); do mv "$file" ./filter_cover_sialil/; done
+cd filter_cover_sialil
+#output tsv
+find . -type f -name '*protein_output*' -exec cat {} + > new_file.tsv
+#process output file
+sed -i '/#/d' new_file.tsv
+sed  's/ \{1,\}/\t/g' new_file.tsv > file_output_sialil.tsv
+```
+**polisialiltransferase**
+```
+sed -i '1d' polisia_complete_cover_filter_40.tsv
+cut -f2 polisia_complete_cover_filter_40.tsv
+mv polisia_complete_cover_filter_40.tsv ./HMMER_analysis/polisiatrans/
+cd ./HMMER_analysis/polisiatrans/
+mkdir filter_cover_polisia
+for file in $(cat ./polisia_complete_cover_filter_40.tsv); do mv "$file" ./filter_cover_polisia/; done
+cd filter_cover_polisia
+#output tsv
+find . -type f -name '*protein_output*' -exec cat {} + > new_file.tsv
+#process output file
+sed -i '/#/d' new_file.tsv
+sed  's/ \{1,\}/\t/g' new_file.tsv > file_output_polisia.tsv
 ```
 # 4. Downstream analysis
 
@@ -201,7 +244,14 @@ mv taxonomy/ncbi_dataset/data/taxonomy_summary.tsv ./plots_data/
 To generate a tree from phylophlan, first you must download it. Check this [link](https://github.com/biobakery/phylophlan) with the procedures.
 ```
 conda create -n "phylophlan" -c bioconda phylophlan=3.1.1
-
+```
+**phylophlan database setup and installation**
+```
+phylophlan_setup_database.py
+```
+**phylophlan configuration file**
+```
+phylophlan_write_config_file.py 
 ```
 ## 4.2 Genome information
 
