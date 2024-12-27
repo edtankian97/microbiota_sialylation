@@ -151,7 +151,9 @@ Now, go to
 
 # 4. Downstream analysis
 
-**Get information of complete genomes**
+## 4.1 Datasets for plots
+
+### 4.1.1 Get information of complete genomes
 ```
 #Retrieve info of complete genomes of geo_loc, isolation_source and other info
 datasets download genome accession --inputfile checkm_filter_v2_complete_ID.tsv --dehydrated
@@ -161,8 +163,9 @@ dataformat tsv genome --package ncbi_dataset.zip --fields accession,assminfo-bio
 dataformat tsv genome --package ncbi_dataset.zip --fields accession,assminfo-biosample-geo-loc-name,assminfo-biosample-host,assminfo-biosample-host-disease,assminfo-biosample-isolation-source,assmstats-gc-percent,assmstats-total-sequence-len,organelle-assembly-name,organism-name,organism-tax-id,annotinfo-featcount-gene-protein-coding > accession_complete_fields.tsv
 ```
 
-**After hmm_process analysis, do the following to get genomes information of genomes that have sialylation pathway**
+### 4.1.2 Information of genomes with sialylation pathway
 
+**After hmm_process analysis, do the following to get information of genomes that have sialylation pathway**
 ```
 #join files
 cat comm_CMP_sia_poli.tsv not_comm_CMP_sia_poli.tsv not_commm_CMP_sia_poli_1.tsv > all_commom.tsv
@@ -175,12 +178,36 @@ datasets download genome accession --inputfile all_commom_1_modified.tsv --dehyd
 dataformat tsv genome --package ncbi_dataset.zip  > comm_complete_genomes_dataset_tbl.tsv
 #select desired fields
 dataformat tsv genome --package ncbi_dataset.zip --fields accession,assminfo-biosample-geo-loc-name,assminfo-biosample-host,assminfo-biosample-host-disease,assminfo-biosample-source-type,assmstats-gc-percent,assmstats-total-sequence-len,organelle-assembly-name,organism-name,organism-tax-id > comm_complete_genomes_dataset_fields.tsv
+#move to the folder
+
 ```
-**get taxonomy information**
+### 4.1.3 Taxonomy information
 ```
 #take desired columm
 cut -f10 comm_complete_genomes_dataset_fields.tsv > comm_sia_genomes_tax_id
 sed -i '1d' comm_sia_genomes_tax_id #remove header
 #retrieve taxonomy information
 datasets download taxonomy taxon --inputfile comm_sia_genomes_tax_id --filename taxonomy.zip
+unzip taxonomy.zip
+mv taxonomy/ncbi_dataset/data/taxonomy_summary.tsv ./plots_data/
 ```
+### 4.1.4 Phylogenetic tree
+
+
+
+
+## 4.2 Genome information
+
+Follow the script **retrieve_genome_info.ipynb** which is loccated in the path: microbial_sialylation/genomes_download/scripts/jupyter_scripts/
+
+## 4.3 Host distribution
+
+Follow the script **host_distribution.ipynb** which is loccated in the path: microbial_sialylation/genomes_download/scripts/jupyter_scripts/
+
+## 4.4 Species distribution
+
+Follow the script **pie_data.ipynb** which is loccated in the path: microbial_sialylation/genomes_download/scripts/jupyter_scripts/
+
+## 4.5 iTOL distribution
+
+Follow the script **itol_notation.ipynb** which is loccated in the path: microbial_sialylation/genomes_download/scripts/jupyter_scripts/
