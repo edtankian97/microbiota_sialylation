@@ -149,7 +149,7 @@ find ./RfaH/ -type f -name '*coverage*' -exec cat {} + > RfaH_coverage.tsv
 ```
 Now, go to the script **hmm_process.ipynb** which is loccated in the path: microbial_sialylation/genomes_download/scripts/jupyter_scripts/ and follow the script.
 
-After part 01 with coverage assessment, follow this for each enzyme
+After part 01 with coverage assessment, follow this for each core enzyme: CMP synthase, sialiltransferase and polisialiltransferase. The others will be analysed in the topic **4. Downstream analysis**.
 
 **CMP synthase**
 ```
@@ -244,15 +244,33 @@ mv taxonomy/ncbi_dataset/data/taxonomy_summary.tsv ./plots_data/
 To generate a tree from phylophlan, first you must download it. Check this [link](https://github.com/biobakery/phylophlan) with the procedures.
 ```
 conda create -n "phylophlan" -c bioconda phylophlan=3.1.1
+conda activate phylophlan
 ```
 **phylophlan database setup and installation**
+I followed instructions upon this [link](https://github.com/biobakery/phylophlan/wiki#databases). I followed the option 2 and installed the **phylophlan** database. Download **phylophlan_databases.txt** and follow the instructions below.
 ```
-phylophlan_setup_database.py
+cd proteins/
+mkdir protein_tree && cd protein_tree
+mkdir phylophlan_database && cd phylophlan_database
+cat phylophlan_databases.txt # copy and paste one of the links to **phylophlan** database (not amphora)
+tar -xf phylophlan.tar
+bunzip2 -k phylophlan/phylophlan.bz2
+cd ..
 ```
 **phylophlan configuration file**
 ```
-phylophlan_write_config_file.py 
+phylophlan_write_config_file.py --db_aa diamond --map_aa diamond --msa mafft \
+--trim trimal --tree1 fasttree --tree2 raxml -o genome_ed_config.cfg \
+--db_type a
 ```
+**Run script of phylophlan analysis**
+```
+cd ../../scripts/
+bash phylo.sh #make sure phylophlan's conda environment is activated
+```
+phylophlan generates a lot of files, but the most important is refine tree called **RAxML_result.proteins_unique_comm_sia_refined.tre** which was used for tree annotation with iTOL.
+This output is present in **genomes_download** folder
+
 ## 4.2 Genome information
 
 Follow the script **retrieve_genome_info.ipynb** which is loccated in the path: microbial_sialylation/genomes_download/scripts/jupyter_scripts/
@@ -265,6 +283,26 @@ Follow the script **host_distribution.ipynb** which is loccated in the path: mic
 
 Follow the script **pie_data.ipynb** which is loccated in the path: microbial_sialylation/genomes_download/scripts/jupyter_scripts/
 
-## 4.5 iTOL distribution
+## 4.5 iTOL annotation
 
 Follow the script **itol_notation.ipynb** which is loccated in the path: microbial_sialylation/genomes_download/scripts/jupyter_scripts/
+After this, each dataset created in the script was concatenated with iTol dataset
+```
+#remove header
+sed -i '1d' kpsT_represent_itol_EANS.tsv
+sed -i '1d' oacetil_itol_represent_EANS.tsv
+sed -i '1d' kpsM_itol_represent_EANS.tsv
+sed -i '1d' vfdb_itol_represent_EANS.tsv
+sed -i '1d' representative_labels_itol.tsv
+```
+#Ensure to move the to plots_data/itol folder, if is not there. 
+There will be files that are from iTOL called 'datasets' in general
+```
+ #Join files
+cat kpst_itol_representative.txt kpsT_represent_itol_EANS.tsv > final_kpsT_itol.txt
+cat oacetil_itol_representative.txt oacetil_itol_represent_EANS.tsv > final_oacetil_itol.txt
+cat kpsM_itol_representative.txt kpsM_itol_represent_EANS.tsv > final_kpsM_itol.txt
+cat vfdb_itol_representative_EANS.txt vfdb_itol_represent_EANS.tsv > final_vfdb_itol.txt
+cat ed_tree_label.txt representative_labels_itol.tsv > ed_tree_label_represent.txt
+```
+Now you can upload the files in iToL site.
