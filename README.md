@@ -56,7 +56,7 @@ checkm2 database --download #download checkm2's standart database
 ```
 pwd #you should be in the directory **genomes_download**
 sed '1d' remain_CheckM_data_complete_with_NA.tsv > remain_CheckM_data_complete_with_NA_ID.tsv
-datasets download genome accession --inputfile remain_CheckM_data_complete_with_NA_ID.tsv  #Download genomes filesos .fna
+datasets download genome accession --inputfile remain_CheckM_data_complete_with_NA_ID.tsv  #Download genomes files ".fna"
 unzip ncbi_dataset.zip && mv ncbi_dataset/ remain_CheckM/
 rm ncbi_dataset.zip
 find ./remain_CheckM/data/GCF_000*/ -type f -iname "*.fna" -exec mv -v "{}" ./remain_CheckM/ \;
@@ -69,7 +69,71 @@ Now return to the script **Checkm_refseq_Reanalise_V2_R.ipynb**
 ## 3. Protein analysis
 
 ### 3.1 Protein analysis: Control proteomes
-
+```
+conda activate ncbi_datasets
+mkdir control_proteomes #already
+mv control_proteomes.txt ./control_proteomes && cd control_proteomes #tenho que mandar
+datasets download genome accession --inputfile control_proteomes.txt --include protein --filename control.zip
+unzip control.zip -d control
+```
+After download, process the files
+```
+bash rename_control_files.sh #rename the files based on their directories
+find ./control/ncbi_dataset/data/GCF*/ -type f -iname "*.faa" -exec mv -v "{}" ./ \; #move files
+while read line; do eval mv $line; done < files.txt #rename with species names
+bash rename_fasta_control.sh #rename fasta header
+```
+Create directories to organize the results and install HMMER 
+```
+mkdir CMP sialil polisia kpsM_T Rfah
+mkdir CMP/mixed CMP/review CMP/unreview sialil/mixed sialil/review sialil/unreview 
+conda install bioconda::hmmer #install HMMER v. 3.4
+bash teste_hmm_control.sh
+```
+Join all output files for each enzyme
+```
+cat CMP_mixed*_output.tsv > all_CMP_mixed_control_output.tsv
+cat CMP_review*_output.tsv > all_CMP_review_control_output.tsv
+cat CMP_unreview*_output.tsv > all_CMP_unreview_control_output.tsv
+cat sialil_review*_output.tsv > all_sialil_review_control_output.tsv
+cat sialil_unreview*_output.tsv > all_sialil_unreview_control_output.tsv
+cat all_sialil_old_one*_output.tsv > all_sialil_mixed_control_output.tsv
+cat polisialil*_output.tsv > all_polisialil_control_output.tsv
+cat Rfah_1*_output.tsv > all_Rfah_1_control_output.tsv
+cat kpsM_mafft*_output.tsv > all_kpsM_control_output.tsv
+cat kpsT_mafft*_output.tsv > all_kpsT_control_output.tsv
+```
+Do the same thing for coverage files
+```
+cat CMP_mixed*_output.tsv_coverage > all_CMP_mixed_control_output_coverage.tsv
+cat CMP_review*_output.tsv_coverage > all_CMP_review_control_output_coverage.tsv
+cat CMP_unreview*_output.tsv_coverage > all_CMP_unreview_control_output_coverage.tsv
+cat sialil_review*_output.tsv_coverage > all_sialil_review_control_output_coverage.tsv
+cat sialil_unreview*_output.tsv_coverage > all_sialil_unreview_control_output_coverage.tsv
+cat all_sialil_old_one*_output.tsv_coverage > all_sialil_mixed_control_output_coverage.tsv
+cat polisialil*_output.tsv_coverage > all_polisialil_control_output_coverage.tsv
+cat Rfah_1*_output.tsv_coverage > all_Rfah_1_control_output_coverage.tsv
+cat kpsM_mafft*_output.tsv_coverage > all_kpsM_control_output_coverage.tsv
+cat kpsT_mafft*_output.tsv_coverage > all_kpsT_control_output_coverage.tsv
+```
+Process output file
+```
+sed -i '/#/d' *_output.tsv
+sed -i 's/ \{1,\}/\t/g' *_output.tsv 
+```
+Move the results to their respectives directories
+```
+mv CMP_mixed* CMP/mixed
+mv CMP_review* CMP/review
+mv CMP_unreview* CMP/unreview
+mv sialiltransferase_review* sialil/review
+mv sialiltransferase_unreview* sialil/unreview
+mv all_sialil_old_one* sialil/mixed
+mv polisialil* polisia/
+mv Rfah_1* Rfah/
+mv kpsM_mafft* kpsM_T/
+mv kpsT_mafft* kpsM_T/
+```
 ### 3.2 Protein analysis: NCBI analysis
 After filtration with CheckM, the proteomes were downloaded from NCBI
 ```
