@@ -64,8 +64,34 @@ checkm2 predict --threads 5 --input  remain_CheckM/ --output-directory checkm2_r
 ```
 Now return to the script **Checkm_refseq_Reanalise_V2_R.ipynb**
 
-## 2 
+## 2 HMMER models
 
+With all protein fasta downloaded, remove duplicated sequences with CD-HIT, which can be downloaded following this [guide](https://github.com/weizhongli/cdhit)
+After installation, follow this step for each enzyme.
+In brackets, it's the output file name that you may apply according to enzyme name and MODE_TYPE which can be review, unreview or mixed, according to original fasta dataset 
+(Example: cd-hit -i CMP_synthase_mixed.fasta -o CMP_synthase_mixed_100_per_cent.fasta -c 1.00 -n 5 ).
+```
+cd Protein_database
+mkdir CD_HIT
+cd-hit -i [PROTEIN_FASTA_NAME] -o [CD_HIT_ENZYME_NAME_MODE_TYPE_OUTPUT_FILE]  -c 1.00 -n 5 #basic usage
+mv [CD_HIT_ENZYME_NAME_MODE_TYPE_OUTPUT_FILE] CD_HIT/ 
+```
+After this, it's turn to do an alignment with [mafft](https://mafft.cbrc.jp/alignment/software/) program. In brackets, it's the output file name that you may apply according to enzyme name
+and MODE_TYPE which can be review, unreview or mixed, according to original fasta dataset. 
+(Example: mafft --auto --threads 5 CMP_synthase_mixed_100_per_cent.fasta > CMP_synthase_mixed_mafft.fasta).
+```
+cd CD_HIT
+mkdir mafft_align
+mafft --auto [CD_HIT_ENZYME_NAME_MODE_TYPE_OUTPUT_FILE] > [ENZYME_NAME_MODE_TYPE_OUTPUT_FILE]_mafft.fasta
+mv [ENZYME_NAME_MODE_TYPE_OUTPUT_FILE]_mafft.fasta mafft_align/ 
+```
+In the end, let's construct protein models with [HMMER](https://github.com/EddyRivasLab/hmmer)
+```
+cd mafft_align
+mkdir hmm_models
+hmmbuild [PROTEIN_NAME_MODE_TYPE_OUTPUT_FILE].hmm [ENZYME_NAME_MODE_TYPE_OUTPUT_FILE]_mafft.fasta
+mv [PROTEIN_NAME_MODE_TYPE_OUTPUT_FILE].hmm ./hmm_models
+```
 ## 3. Protein analysis
 
 ### 3.1 Protein analysis: Control proteomes
