@@ -54,7 +54,7 @@ checkm2 database --download #download checkm2's standart database
 ```
 **Download missing genomes for contamination analysis and run CheckM2**
 ```
-pwd #you should be in the directory **genomes_download**
+pwd #you should be in the directory genomes_download
 sed '1d' remain_CheckM_data_complete_with_NA.tsv > remain_CheckM_data_complete_with_NA_ID.tsv
 datasets download genome accession --inputfile remain_CheckM_data_complete_with_NA_ID.tsv  #Download genomes files ".fna"
 unzip ncbi_dataset.zip && mv ncbi_dataset/ remain_CheckM/
@@ -68,8 +68,8 @@ Now return to the script **Checkm_refseq_Reanalise_V2_R.ipynb**
 
 With all protein fasta downloaded, remove duplicated sequences with CD-HIT, which can be downloaded following this [guide](https://github.com/weizhongli/cdhit)
 After installation, follow this step for each enzyme.
-In brackets, it's the output file name that you may apply according to enzyme name and MODE_TYPE which can be review, unreview or mixed, according to original fasta dataset 
-(Example: cd-hit -i CMP_synthase_mixed.fasta -o CMP_synthase_mixed_100_per_cent.fasta -c 1.00 -n 5 ).
+In brackets, it's the output file name that you may apply according to enzyme name and MODE_TYPE which can be review, unreview or mixed, according to original FASTA dataset 
+(Example: cd-hit -i CMP_synthase_mixed.fasta -o CMP_synthase_mixed_100_per_cent.fasta -c 1.00 -n 5).
 ```
 cd Protein_database
 mkdir CD_HIT
@@ -77,7 +77,7 @@ cd-hit -i [PROTEIN_FASTA_NAME] -o [CD_HIT_ENZYME_NAME_MODE_TYPE_OUTPUT_FILE]  -c
 mv [CD_HIT_ENZYME_NAME_MODE_TYPE_OUTPUT_FILE] CD_HIT/ 
 ```
 After this, it's turn to do an alignment with [mafft](https://mafft.cbrc.jp/alignment/software/) program. In brackets, it's the output file name that you may apply according to enzyme name
-and MODE_TYPE which can be review, unreview or mixed, according to original fasta dataset. 
+and MODE_TYPE which can be review, unreview or mixed, according to original FASTA dataset. 
 (Example: mafft --auto --threads 5 CMP_synthase_mixed_100_per_cent.fasta > CMP_synthase_mixed_mafft.fasta).
 ```
 cd CD_HIT
@@ -91,30 +91,33 @@ cd mafft_align
 mkdir hmm_models
 hmmbuild [PROTEIN_NAME_MODE_TYPE_OUTPUT_FILE].hmm [ENZYME_NAME_MODE_TYPE_OUTPUT_FILE]_mafft.fasta
 mv [PROTEIN_NAME_MODE_TYPE_OUTPUT_FILE].hmm ./hmm_models
+cd ../../../../ #you must be located in genomes_download
 ```
 ## 3. Protein analysis
 
 ### 3.1 Protein analysis: Control proteomes
+
+First, we will download some proteomes based on NCBI ID which are presented in **control_proteomes.txt**. Other ones are already available in **control_proteins** folder
 ```
 conda activate ncbi_datasets
-mkdir control_proteomes #already
-mv control_proteomes.txt ./control_proteomes && cd control_proteomes #tenho que mandar
+cd ./control_proteins/ 
 datasets download genome accession --inputfile control_proteomes.txt --include protein --filename control.zip
 unzip control.zip -d control
 ```
 After download, process the files
 ```
-bash rename_control_files.sh #rename the files based on their directories
+bash ../../scripts/rename_control_files.sh #rename the files based on their directories
 find ./control/ncbi_dataset/data/GCF*/ -type f -iname "*.faa" -exec mv -v "{}" ./ \; #move files
 while read line; do eval mv $line; done < files.txt #rename with species names
-bash rename_fasta_control.sh #rename fasta header
+bash ../../scripts/rename_fasta_control.sh #rename fasta header
 ```
 Create directories to organize the results and install HMMER 
 ```
+mkdir HMMER_CONTROL_RESULTS && cd HMMER_CONTROL_RESULTS
 mkdir CMP sialil polisia kpsM_T Rfah
 mkdir CMP/mixed CMP/review CMP/unreview sialil/mixed sialil/review sialil/unreview 
 conda install bioconda::hmmer #install HMMER v. 3.4
-bash teste_hmm_control.sh
+bash ../../scripts/teste_hmm_control.sh
 ```
 Join all output files for each enzyme
 ```
