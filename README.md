@@ -1,8 +1,8 @@
-# Sialylation project of microbiome
+# Sialylation project of microbiota
 
 ![Bacteria%20sia](https://github.com/edtankian97/microbiota_sialylation/blob/teste/Bacteria%20sia.gif)
 
-This project is related to my P.h.D.'s thesis which study is upon incorporation of sialic acid intestinal microbiome onto their cell wall. The main objective of the bioinformatic analysis is to
+This project is related to my P.h.D.'s thesis which study is upon incorporation of sialic acid intestinal microbiota onto their cell wall. The main objective of the bioinformatic analysis is to
 seek in proteomes of bacterias from NCBI that has a potential proteins linked to the process of sialic acid's incorporation. For this purpose, the bioinformatic part was divided in:
 
 **1. Genome processing:** Retrieve information from NCBI, remotion of incomplete genomes and retrieve CheckM information.
@@ -111,12 +111,12 @@ find ./control/ncbi_dataset/data/GCF*/ -type f -iname "*.faa" -exec mv -v "{}" .
 while read line; do eval mv $line; done < files.txt #rename with species names
 bash ../../scripts/rename_fasta_control.sh #rename fasta header
 ```
-Create directories to organize the results and install HMMER 
+Create directories to organize the results and install [HMMER](https://github.com/EddyRivasLab/hmmer) 
+I've installed HMMER v. 3.4 by downloading the raw file.
 ```
 mkdir HMMER_CONTROL_RESULTS && cd HMMER_CONTROL_RESULTS
 mkdir CMP sialil polisia kpsM_T Rfah
 mkdir CMP/mixed CMP/review CMP/unreview sialil/mixed sialil/review sialil/unreview 
-conda install bioconda::hmmer #install HMMER v. 3.4
 bash ../../scripts/teste_hmm_control.sh
 ```
 Join all output files for each enzyme
