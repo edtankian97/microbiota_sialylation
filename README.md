@@ -67,22 +67,19 @@ Now return to the script **Checkm_refseq_Reanalise_V2_R.ipynb**
 ## 2 HMMER models
 
 With all protein fasta downloaded, remove duplicated sequences with CD-HIT, which can be downloaded following this [guide](https://github.com/weizhongli/cdhit)
-After installation, follow this step for each enzyme.
-In brackets, it's the output file name that you may apply according to enzyme name and MODE_TYPE which can be review, unreview or mixed, according to original FASTA dataset 
-(Example: cd-hit -i CMP_synthase_mixed.fasta -o CMP_synthase_mixed_100_per_cent.fasta -c 1.00 -n 5).
+After installation, check if the PATH for CD-HIT executable is recognize in your system. If not, you might add PATH to CD-HIT executable folder.
+(Example usage of cd-hit: cd-hit -i [PROTEIN_FASTA_NAME] -o [CD_HIT_ENZYME_NAME_MODE_TYPE_OUTPUT_FILE]  -c 1.00 -n 5 ).
 ```
 cd Protein_database
 mkdir CD_HIT
-cd-hit -i [PROTEIN_FASTA_NAME] -o [CD_HIT_ENZYME_NAME_MODE_TYPE_OUTPUT_FILE]  -c 1.00 -n 5 #basic usage
-mv [CD_HIT_ENZYME_NAME_MODE_TYPE_OUTPUT_FILE] CD_HIT/ 
+bash ../scripts/CD_HIT_script.sh
 ```
-After this, it's turn to do an alignment. For this purpose, follow [mafft](https://mafft.cbrc.jp/alignment/software/) installation. In brackets, it's the output file name that you may apply according to enzyme name
-and MODE_TYPE which can be review, unreview or mixed, according to original FASTA dataset. 
-(Example: mafft --auto --threads 5 CMP_synthase_mixed_100_per_cent.fasta > CMP_synthase_mixed_mafft.fasta).
+After this, it's turn to do an alignment. For this purpose, follow [mafft](https://mafft.cbrc.jp/alignment/software/) installation.  
+(Example of mafft usage: mafft --auto [CD_HIT_ENZYME_NAME_MODE_TYPE_OUTPUT_FILE] > [ENZYME_NAME_MODE_TYPE_OUTPUT_FILE]_mafft.fasta).
 ```
 cd CD_HIT
 mkdir mafft_align
-mafft --auto [CD_HIT_ENZYME_NAME_MODE_TYPE_OUTPUT_FILE] > [ENZYME_NAME_MODE_TYPE_OUTPUT_FILE]_mafft.fasta
+bash ../mafft_align.sh
 mv [ENZYME_NAME_MODE_TYPE_OUTPUT_FILE]_mafft.fasta mafft_align/ 
 ```
 In the end, let's construct protein models with [HMMER](https://github.com/EddyRivasLab/hmmer).In this link aside, I've installed the uppermost recent version #3.4 by downloading the raw file.
