@@ -89,7 +89,18 @@ In the end, let's construct protein models with [HMMER](https://github.com/EddyR
 ```
 cd mafft_align
 mkdir hmm_models
-hmmbuild [PROTEIN_NAME_MODE_TYPE_OUTPUT_FILE].hmm [ENZYME_NAME_MODE_TYPE_OUTPUT_FILE]_mafft.fasta
+#hmmbuild [PROTEIN_NAME_MODE_TYPE_OUTPUT_FILE].hmm [ENZYME_NAME_MODE_TYPE_OUTPUT_FILE]_mafft.fasta
+hmmbuild CMP_mixed.hmm [ENZYME_NAME_MODE_TYPE_OUTPUT_FILE]_mafft.fasta 
+hmmbuild CMP_unreview.hmm [ENZYME_NAME_MODE_TYPE_OUTPUT_FILE]_mafft.fasta
+hmmbuild CMP_review.hmm [ENZYME_NAME_MODE_TYPE_OUTPUT_FILE]_mafft.fasta
+hmmbuild sialil_review.hmm [ENZYME_NAME_MODE_TYPE_OUTPUT_FILE]_mafft.fasta
+hmmbuild sialil_unreview.hmm [ENZYME_NAME_MODE_TYPE_OUTPUT_FILE]_mafft.fasta
+hmmbuild all_sialil_old_one.hmm [ENZYME_NAME_MODE_TYPE_OUTPUT_FILE]_mafft.fasta
+hmmbuild  polisialil.hmm [ENZYME_NAME_MODE_TYPE_OUTPUT_FILE]_mafft.fasta
+hmmbuild  Rfah_1.hmm [ENZYME_NAME_MODE_TYPE_OUTPUT_FILE]_mafft.fasta
+hmmbuild  kpsM_mafft.hmm [ENZYME_NAME_MODE_TYPE_OUTPUT_FILE]_mafft.fasta
+hmmbuild  kpsT_mafft.hmm [ENZYME_NAME_MODE_TYPE_OUTPUT_FILE]_mafft.fasta
+
 mv [PROTEIN_NAME_MODE_TYPE_OUTPUT_FILE].hmm ./hmm_models
 cd ../../../../ #you must be located in genomes_download
 ```
