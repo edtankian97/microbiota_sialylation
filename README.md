@@ -79,26 +79,13 @@ After this, it's turn to do an alignment. For this purpose, follow [mafft](https
 ```
 cd CD_HIT
 mkdir mafft_align
-bash ../mafft_align.sh
-mv [ENZYME_NAME_MODE_TYPE_OUTPUT_FILE]_mafft.fasta mafft_align/ 
+bash ../../scripts/mafft_align.sh 
 ```
 In the end, let's construct protein models with [HMMER](https://github.com/EddyRivasLab/hmmer).In this link aside, I've installed the uppermost recent version #3.4 by downloading the raw file.
 ```
 cd mafft_align
 mkdir hmm_models
-#hmmbuild [PROTEIN_NAME_MODE_TYPE_OUTPUT_FILE].hmm [ENZYME_NAME_MODE_TYPE_OUTPUT_FILE]_mafft.fasta
-hmmbuild CMP_mixed.hmm [ENZYME_NAME_MODE_TYPE_OUTPUT_FILE]_mafft.fasta 
-hmmbuild CMP_unreview.hmm [ENZYME_NAME_MODE_TYPE_OUTPUT_FILE]_mafft.fasta
-hmmbuild CMP_review.hmm [ENZYME_NAME_MODE_TYPE_OUTPUT_FILE]_mafft.fasta
-hmmbuild sialil_review.hmm [ENZYME_NAME_MODE_TYPE_OUTPUT_FILE]_mafft.fasta
-hmmbuild sialil_unreview.hmm [ENZYME_NAME_MODE_TYPE_OUTPUT_FILE]_mafft.fasta
-hmmbuild all_sialil_old_one.hmm [ENZYME_NAME_MODE_TYPE_OUTPUT_FILE]_mafft.fasta
-hmmbuild  polisialil.hmm [ENZYME_NAME_MODE_TYPE_OUTPUT_FILE]_mafft.fasta
-hmmbuild  Rfah_1.hmm [ENZYME_NAME_MODE_TYPE_OUTPUT_FILE]_mafft.fasta
-hmmbuild  kpsM_mafft.hmm [ENZYME_NAME_MODE_TYPE_OUTPUT_FILE]_mafft.fasta
-hmmbuild  kpsT_mafft.hmm [ENZYME_NAME_MODE_TYPE_OUTPUT_FILE]_mafft.fasta
-
-mv [PROTEIN_NAME_MODE_TYPE_OUTPUT_FILE].hmm ./hmm_models
+bash ../../../scrips/hmm_models.sh
 cd ../../../../ #you must be located in genomes_download
 ```
 ## 3. Protein analysis
