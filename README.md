@@ -240,10 +240,9 @@ After part 01 with coverage assessment, follow this for each core enzyme: CMP sy
 
 **CMP synthase**
 ```
+cd ./HMMER_analysis/CMP_synthase/
 sed -i '1d' CMP_complete_cover_filter_40.tsv
 cut -f2 CMP_complete_cover_filter_40.tsv
-mv CMP_complete_cover_filter_40.tsv ./HMMER_analysis/CMP_synthase/
-cd ./HMMER_analysis/CMP_synthase/
 mkdir filter_cover_CMP
 for file in $(cat ./CMP_complete_cover_filter_40.tsv); do mv "$file" ./filter_cover_CMP/; done
 cd filter_cover_CMP
@@ -256,10 +255,9 @@ cd ../../../
 ```
 **Sialiltransferase**
 ```
+cd ./HMMER_analysis/sialil/
 sed -i '1d' sialil_complete_cover_filter_40.tsv
 cut -f2 sialil_complete_cover_filter_40.tsv
-mv sialil_complete_cover_filter_40.tsv ./HMMER_analysis/sialil/
-cd ./HMMER_analysis/sialil/
 mkdir filter_cover_sialil
 for file in $(cat ./sialil_complete_cover_filter_40.tsv); do mv "$file" ./filter_cover_sialil/; done
 cd filter_cover_sialil
@@ -271,10 +269,9 @@ sed  's/ \{1,\}/\t/g' new_file.tsv > file_output_sialil.tsv
 ```
 **polisialiltransferase**
 ```
+cd ./HMMER_analysis/polisiatrans/
 sed -i '1d' polisia_complete_cover_filter_40.tsv
 cut -f2 polisia_complete_cover_filter_40.tsv
-mv polisia_complete_cover_filter_40.tsv ./HMMER_analysis/polisiatrans/
-cd ./HMMER_analysis/polisiatrans/
 mkdir filter_cover_polisia
 for file in $(cat ./polisia_complete_cover_filter_40.tsv); do mv "$file" ./filter_cover_polisia/; done
 cd filter_cover_polisia
