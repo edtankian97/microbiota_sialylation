@@ -236,8 +236,7 @@ find ./RfaH/ -type f -name '*coverage*' -exec cat {} + > RfaH_coverage.tsv
 ```
 Now, go to the script **hmm_process.ipynb** which is loccated in the path: microbial_sialylation/genomes_download/scripts/jupyter_scripts/ and follow the script.
 
-After part 01 with coverage assessment, follow this for each core enzyme: CMP synthase, sialiltransferase and polisialiltransferase. The others will be analysed in the topic **4. Downstream analysis**.
-
+After part 01 with coverage assessment, follow this for each core enzyme: CMP synthase, sialiltransferase and polisialiltransferase. 
 **CMP synthase**
 ```
 cd ./HMMER_analysis/CMP_synthase/
@@ -281,6 +280,121 @@ find . -type f -name '*protein_output*' -exec cat {} + > new_file.tsv
 sed -i '/#/d' new_file.tsv
 sed  's/ \{1,\}/\t/g' new_file.tsv > file_output_polisia.tsv
 ```
+Follow the **Part 02** of hmm_process.ipynb script.
+For the other proteins (KpsT, KpsM and RfaH), I followed in another way: subsets for representative species of the dataset. This will be useful for iTOL annotation: 
+**4.5 iTOL annotation**
+
+Select representative species 
+```
+ls proteins_unique_with_sia > representative_species.txt
+sed -i '1,2d' representative_species.txt
+head -n -1  representative_species.txt > representative_species_v1.txt
+sed 's/_protein.faa//g' representative_species_v1.txt > representative_species_modified_v6.txt
+sed 's/$/*/g' representative_species_modified_v6.txt > representative_species_modified_v5.txt
+sed -i 's/^/*/g' representative_species_modified_v5.txt
+cp representative_species_modified_v6.txt ../genomes_download/plots_data/itol/
+```
+**KpsM**
+```
+cp representative_species_modified_v5.txt  HMMER_analysis/kpsM/
+cd HMMER_analysis/kpsM/
+mkdir representative_species_kpsM
+for file in $(cat ./representative_species_modified_v5.txt); do mv "$file" ./representative_species_kpsM/; done
+cd representative_species_kpsM/
+find ./ -type f -name '*coverage*' -exec cat {} + > kpsM_coverage.tsv
+```
+Process resulted coverage file in hmm_process.ipynb script and then continue
+```
+#remove first line and first columm to get only ID
+sed -i '1d' kpsM_representative_cover_filter_40.tsv
+cut -f2 kpsM_representative_cover_filter_40.tsv > kpsM_representative_cover_filter_40_ID.tsv 
+mkdir filtered_kpsM
+#transfer files to another folder
+for file in $(cat ./kpsM_representative_cover_filter_40_ID.tsv); do mv "$file" ./filtered_kpsM/; done
+cd filtered_kpsM
+find . -type f -name '*protein_output*' -exec cat {} + > all_kpsM_protein.tsv
+#process output file
+sed -i '/#/d' all_kpsM_protein.tsv
+sed -i 's/ \{1,\}/\t/g' all_kpsM_protein.tsv 
+```
+Return to the script again. Final resulted file will be located in microbiota_sialylation/genomes_download/plots_data/itol/
+
+**KpsT**
+```
+cp representative_species_modified_v5.txt  HMMER_analysis/kpsT/
+cd HMMER_analysis/kpsT/
+mkdir representative_species_kpsT
+for file in $(cat ./representative_species_modified_v5.txt); do mv "$file" ./representative_species_kpsT/; done
+cd representative_species_kpsT/
+find ./ -type f -name '*coverage*' -exec cat {} + > kpsT_coverage.tsv
+```
+Process resulted coverage file in hmm_process.ipynb script and then continue
+```
+#remove first line and first columm to get only ID
+sed -i '1d' kpsT_representative_cover_filter_40.tsv
+cut -f2 kpsT_representative_cover_filter_40.tsv > kpsT_representative_cover_filter_40_ID.tsv 
+mkdir filtered_kpsT
+#transfer files to another folder
+for file in $(cat ./kpsT_representative_cover_filter_40_ID.tsv); do mv "$file" ./filtered_kpsT/; done
+cd filtered_kpsT
+find . -type f -name '*protein_output*' -exec cat {} + > all_kpsT_protein.tsv
+#process output file
+sed -i '/#/d' all_kpsT_protein.tsv
+sed -i 's/ \{1,\}/\t/g' all_kpsT_protein.tsv 
+```
+Return to the script again. Final resulted file will be located in microbiota_sialylation/genomes_download/plots_data/itol/
+
+**(Poly)O-acetiltransferase**
+```
+cp representative_species_modified_v5.txt  HMMER_analysis/o_acetiltrans_plus_poli/
+cd HMMER_analysis/o_acetiltrans_plus_poli/
+mkdir representative_oacetil
+for file in $(cat ./representative_species_modified_v5.txt); do mv "$file" ./representative_oacetil/; done
+cd representative_oacetil/
+find ./ -type f -name '*coverage*' -exec cat {} + > all_oacetil_cover
+```
+Process resulted coverage file in hmm_process.ipynb script and then continue
+```
+#remove first line and first columm to get only ID
+sed -i '1d' oacetil_representative_cover_filter_40.tsv
+cut -f2 oacetil_representative_cover_filter_40.tsv > oacetil_representative_cover_filter_40_ID.tsv 
+mkdir filtered_oacetil
+#transfer files to another folder
+for file in $(cat ./oacetil_representative_cover_filter_40_ID.tsv); do mv "$file" ./filtered_oacetil/; done
+cd filtered_oacetil
+find . -type f -name '*protein_output*' -exec cat {} + > all_oacetil_plus_poli.tsv
+#process output file
+sed -i '/#/d' all_oacetil_plus_poli.tsv
+sed -i 's/ \{1,\}/\t/g' all_oacetil_plus_poli.tsv 
+```
+Return to the script again. Final resulted file will be located in microbiota_sialylation/genomes_download/plots_data/itol/
+
+**RfaH**
+```
+cp representative_species_modified_v5.txt  HMMER_analysis/RfaH/
+cd HMMER_analysis/RfaH/
+mkdir representative_RfaH
+for file in $(cat ./representative_species_modified_v5.txt); do mv "$file" ./representative_RfaH/; done
+cd representative_RfaH/
+find ./ -type f -name '*coverage*' -exec cat {} + > rfah_coverage
+```
+Process resulted coverage file in hmm_process.ipynb script and then continue
+```
+#remove first line and first columm to get only ID
+sed -i '1d' rfah_representative_cover_filter_40.tsv
+cut -f2 rfah_representative_cover_filter_40.tsv > rfah_representative_cover_filter_40_ID.tsv 
+mkdir filter_rfaH
+#transfer files to another folder
+for file in $(cat ./rfah_representative_cover_filter_40_ID.tsv); do mv "$file" ./filter_rfaH/; done
+cd filter_rfaH
+find . -type f -name '*protein_output*' -exec cat {} + > all_rfah_tsv_w_o_cruz.tsv
+#process output file
+sed -i '/#/d' all_rfah_tsv_w_o_cruz.tsv
+sed -i 's/ \{1,\}/\t/g' all_rfah_tsv_w_o_cruz.tsv 
+```
+Return to the script again. Final resulted file will be located in microbiota_sialylation/genomes_download/plots_data/itol/
+
+
 # 4. Downstream analysis
 
 ## 4.1 Datasets for plots
