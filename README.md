@@ -280,20 +280,149 @@ find . -type f -name '*protein_output*' -exec cat {} + > new_file.tsv
 sed -i '/#/d' new_file.tsv
 sed  's/ \{1,\}/\t/g' new_file.tsv > file_output_polisia.tsv
 ```
-Follow the **Part 02** of hmm_process.ipynb script.
-For the other proteins (KpsT, KpsM and RfaH), I followed in another way: subsets for representative species of the dataset. This will be useful for iTOL annotation: 
-**4.5 iTOL annotation**
+
+# 4. Downstream analysis
+
+## 4.1 Datasets for plots
+This topic and subtopics forwards are about how to get data that will be important to create the plots.
+### 4.1.1 Get information of complete genomes
+```
+#Retrieve info of complete genomes of geo_loc, isolation_source and other info
+cd ../../../ #you must be located in genomes_download
+cut -f3 checkm_filter_v2_complete.tsv > checkm_filter_v2_complete_ID.tsv
+sed -i '1d' checkm_filter_v2_complete_ID.tsv
+datasets download genome accession --inputfile checkm_filter_v2_complete_ID.tsv --dehydrated
+unzip -v ncbi_dataset.zip
+dataformat tsv genome --package ncbi_dataset.zip --fields accession,assminfo-biosample-geo-loc-name,assminfo-biosample-host,assminfo-biosample-host-disease,assminfo-biosample-isolation-source,assminfo-biosample-source-type > accession_list.tsv
+dataformat tsv genome --package ncbi_dataset.zip --fields accession,assminfo-biosample-geo-loc-name,assminfo-biosample-host,assminfo-biosample-host-disease,assminfo-biosample-isolation-source,assmstats-gc-percent,assmstats-total-sequence-len,organelle-assembly-name,organism-name,organism-tax-id,annotinfo-featcount-gene-protein-coding > accession_complete_fields.tsv
+```
+
+### 4.1.2 Information of genomes with sialylation pathway
+
+**After hmm_process analysis of core enzymes, do the following to get information of genomes that have sialylation pathway**
+```
+#join files
+cat comm_CMP_sia_poli.tsv not_comm_CMP_sia_poli.tsv not_commm_CMP_sia_poli_1.tsv > all_commom.tsv
+#After join the files, remove header "X1"
+fgrep -v X1 all_commom.tsv > all_commom_1.tsv
+#remove _protein.faa
+sed 's/_protein.faa//' all_commom_1.tsv > all_commom_1_modified.tsv
+#get info
+datasets download genome accession --inputfile all_commom_1_modified.tsv --dehydrated
+dataformat tsv genome --package ncbi_dataset.zip  > comm_complete_genomes_dataset_tbl.tsv
+#select desired fields
+dataformat tsv genome --package ncbi_dataset.zip --fields accession,assminfo-biosample-geo-loc-name,assminfo-biosample-host,assminfo-biosample-host-disease,assminfo-biosample-source-type,assmstats-gc-percent,assmstats-total-sequence-len,organelle-assembly-name,organism-name,organism-tax-id > comm_complete_genomes_dataset_fields.tsv
+#move to the folder
+
+```
+### 4.1.3 Taxonomy information
+```
+#take desired columm
+cut -f10 comm_complete_genomes_dataset_fields.tsv > comm_sia_genomes_tax_id
+sed -i '1d' comm_sia_genomes_tax_id #remove header
+#retrieve taxonomy information
+datasets download taxonomy taxon --inputfile comm_sia_genomes_tax_id --filename taxonomy.zip
+unzip taxonomy.zip
+mv taxonomy/ncbi_dataset/data/taxonomy_summary.tsv ./plots_data/
+```
+### 4.1.4 Phylogenetic tree
+
+Fist of all, we will set up unique species' proteomes for the phylogenetic tree
+
+```{r}
+library(readr)
+library(dplyr)
+library(stringr)
+
+
+getwd()
+select_1 <- read_tsv("L:/comm_complete_genomes_dataset_fields.tsv")
+head(select_1)
+
+select_2 <- select_1 %>% select(`Assembly Accession`, `Organism Name`)
+select_2$extract_name <- word(select_2$`Organism Name`,1,2)
+
+#select only rows with new species ("sp.")
+select_sp <- select_2[grep("sp.$", select_2$extract_name), ]
+
+#select only rows without new species ("sp.")
+no_sp <- select_2[-grep("sp.$", select_2$extract_name), ]
+
+#see uniques species in extract_name collumn
+select_3 <- distinct(no_sp,extract_name, .keep_all = TRUE)
+
+all_select <- rbind(select_3,select_sp)
+
+select_ID <- all_select%>% select(`Assembly Accession`)
+
+write_tsv(select_ID, "microbiota_sialylation/genomes_download/proteins/proteins_unique_ID.tsv")
+```{r}
+
 
 Select representative species 
 ```
-ls proteins_unique_with_sia > representative_species.txt
+cd ./proteins/
+sed -i '1d' proteins_unique_ID.tsv
+mkdir proteins_comm_sia/ && mkdir proteins_comm_sia/proteins_unique_comm_sia
+for file in $(cat ./proteins_unique_ID.tsv); do cp "$file" ./proteins_comm_sia/proteins_unique_comm_sia/; done
+cd ./proteins_comm_sia/
+ls ./proteins_unique_comm_sia > representative_species.txt
 sed -i '1,2d' representative_species.txt
 head -n -1  representative_species.txt > representative_species_v1.txt
 sed 's/_protein.faa//g' representative_species_v1.txt > representative_species_modified_v6.txt
 sed 's/$/*/g' representative_species_modified_v6.txt > representative_species_modified_v5.txt
 sed -i 's/^/*/g' representative_species_modified_v5.txt
-cp representative_species_modified_v6.txt ../genomes_download/plots_data/itol/
+cp representative_species_modified_v6.txt ../../genomes_download/plots_data/itol/
 ```
+
+To generate a tree from phylophlan, first you must download it. Check this [link](https://github.com/biobakery/phylophlan) with the procedures.
+```
+conda create -n "phylophlan" -c bioconda phylophlan=3.1.1
+conda activate phylophlan
+```
+**phylophlan database setup and installation**
+I followed instructions upon this [link](https://github.com/biobakery/phylophlan/wiki#databases). I followed the option 2 and installed the **phylophlan** database. Download **phylophlan_databases.txt** and follow the instructions below.
+```
+cd proteins/
+mkdir protein_tree && cd protein_tree
+mkdir phylophlan_database && cd phylophlan_database
+cat phylophlan_databases.txt # copy and paste one of the links to **phylophlan** database (not amphora)
+tar -xf phylophlan.tar
+bunzip2 -k phylophlan/phylophlan.bz2
+cd ..
+```
+**phylophlan configuration file**
+```
+phylophlan_write_config_file.py --db_aa diamond --map_aa diamond --msa mafft \
+--trim trimal --tree1 fasttree --tree2 raxml -o genome_ed_config.cfg \
+--db_type a
+```
+**Run script of phylophlan analysis**
+```
+cd ../../scripts/
+bash phylo.sh #make sure phylophlan's conda environment is activated
+```
+phylophlan generates a lot of files, but the most important is refine tree called **RAxML_result.proteins_unique_comm_sia_refined.tre** which was used for tree annotation with iTOL.
+This output is present in **genomes_download** folder
+
+## 4.2 Genome information
+
+Follow the script **retrieve_genome_info.ipynb** which is loccated in the path: microbial_sialylation/genomes_download/scripts/jupyter_scripts/
+
+## 4.3 Host distribution
+
+Follow the script **host_distribution.ipynb** which is loccated in the path: microbial_sialylation/genomes_download/scripts/jupyter_scripts/
+
+## 4.4 Species distribution
+
+Follow the script **pie_data.ipynb** which is loccated in the path: microbial_sialylation/genomes_download/scripts/jupyter_scripts/
+
+## 4.5 iTOL annotation
+
+Follow the **Part 02** of hmm_process.ipynb script.
+For the other proteins (KpsT, KpsM and RfaH), I followed in another way: subsets for representative species of the dataset. This will be useful for iTOL annotation: 
+**4.5 iTOL annotation**
+
 **KpsM**
 ```
 cp representative_species_modified_v5.txt  HMMER_analysis/kpsM/
@@ -394,94 +523,6 @@ sed -i 's/ \{1,\}/\t/g' all_rfah_tsv_w_o_cruz.tsv
 ```
 Return to the script again. Final resulted file will be located in microbiota_sialylation/genomes_download/plots_data/itol/
 
-
-# 4. Downstream analysis
-
-## 4.1 Datasets for plots
-This topic and subtopics forwards are about how to get data that will be important to create the plots.
-### 4.1.1 Get information of complete genomes
-```
-#Retrieve info of complete genomes of geo_loc, isolation_source and other info
-datasets download genome accession --inputfile checkm_filter_v2_complete_ID.tsv --dehydrated
-unzip -v ncbi_dataset.zip
-
-dataformat tsv genome --package ncbi_dataset.zip --fields accession,assminfo-biosample-geo-loc-name,assminfo-biosample-host,assminfo-biosample-host-disease,assminfo-biosample-isolation-source,assminfo-biosample-source-type > accession_list.tsv
-dataformat tsv genome --package ncbi_dataset.zip --fields accession,assminfo-biosample-geo-loc-name,assminfo-biosample-host,assminfo-biosample-host-disease,assminfo-biosample-isolation-source,assmstats-gc-percent,assmstats-total-sequence-len,organelle-assembly-name,organism-name,organism-tax-id,annotinfo-featcount-gene-protein-coding > accession_complete_fields.tsv
-```
-
-### 4.1.2 Information of genomes with sialylation pathway
-
-**After hmm_process analysis, do the following to get information of genomes that have sialylation pathway**
-```
-#join files
-cat comm_CMP_sia_poli.tsv not_comm_CMP_sia_poli.tsv not_commm_CMP_sia_poli_1.tsv > all_commom.tsv
-#After join the files, remove header "X1"
-fgrep -v X1 all_commom.tsv > all_commom_1.tsv
-#remove _protein.faa
-sed 's/_protein.faa//' all_commom_1.tsv > all_commom_1_modified.tsv
-#get info
-datasets download genome accession --inputfile all_commom_1_modified.tsv --dehydrated
-dataformat tsv genome --package ncbi_dataset.zip  > comm_complete_genomes_dataset_tbl.tsv
-#select desired fields
-dataformat tsv genome --package ncbi_dataset.zip --fields accession,assminfo-biosample-geo-loc-name,assminfo-biosample-host,assminfo-biosample-host-disease,assminfo-biosample-source-type,assmstats-gc-percent,assmstats-total-sequence-len,organelle-assembly-name,organism-name,organism-tax-id > comm_complete_genomes_dataset_fields.tsv
-#move to the folder
-
-```
-### 4.1.3 Taxonomy information
-```
-#take desired columm
-cut -f10 comm_complete_genomes_dataset_fields.tsv > comm_sia_genomes_tax_id
-sed -i '1d' comm_sia_genomes_tax_id #remove header
-#retrieve taxonomy information
-datasets download taxonomy taxon --inputfile comm_sia_genomes_tax_id --filename taxonomy.zip
-unzip taxonomy.zip
-mv taxonomy/ncbi_dataset/data/taxonomy_summary.tsv ./plots_data/
-```
-### 4.1.4 Phylogenetic tree
-
-To generate a tree from phylophlan, first you must download it. Check this [link](https://github.com/biobakery/phylophlan) with the procedures.
-```
-conda create -n "phylophlan" -c bioconda phylophlan=3.1.1
-conda activate phylophlan
-```
-**phylophlan database setup and installation**
-I followed instructions upon this [link](https://github.com/biobakery/phylophlan/wiki#databases). I followed the option 2 and installed the **phylophlan** database. Download **phylophlan_databases.txt** and follow the instructions below.
-```
-cd proteins/
-mkdir protein_tree && cd protein_tree
-mkdir phylophlan_database && cd phylophlan_database
-cat phylophlan_databases.txt # copy and paste one of the links to **phylophlan** database (not amphora)
-tar -xf phylophlan.tar
-bunzip2 -k phylophlan/phylophlan.bz2
-cd ..
-```
-**phylophlan configuration file**
-```
-phylophlan_write_config_file.py --db_aa diamond --map_aa diamond --msa mafft \
---trim trimal --tree1 fasttree --tree2 raxml -o genome_ed_config.cfg \
---db_type a
-```
-**Run script of phylophlan analysis**
-```
-cd ../../scripts/
-bash phylo.sh #make sure phylophlan's conda environment is activated
-```
-phylophlan generates a lot of files, but the most important is refine tree called **RAxML_result.proteins_unique_comm_sia_refined.tre** which was used for tree annotation with iTOL.
-This output is present in **genomes_download** folder
-
-## 4.2 Genome information
-
-Follow the script **retrieve_genome_info.ipynb** which is loccated in the path: microbial_sialylation/genomes_download/scripts/jupyter_scripts/
-
-## 4.3 Host distribution
-
-Follow the script **host_distribution.ipynb** which is loccated in the path: microbial_sialylation/genomes_download/scripts/jupyter_scripts/
-
-## 4.4 Species distribution
-
-Follow the script **pie_data.ipynb** which is loccated in the path: microbial_sialylation/genomes_download/scripts/jupyter_scripts/
-
-## 4.5 iTOL annotation
 
 Follow the script **itol_notation.ipynb** which is loccated in the path: microbial_sialylation/genomes_download/scripts/jupyter_scripts/
 After this, each dataset created in the script was concatenated with iTol dataset
