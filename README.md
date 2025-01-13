@@ -359,8 +359,7 @@ select_ID <- all_select%>% select(`Assembly Accession`)
 write_tsv(select_ID, "microbiota_sialylation/genomes_download/proteins/proteins_unique_ID.tsv")
 ```
 
-
-Select representative species 
+Select **representative species**
 ```
 cd ./proteins/
 sed -i '1d' proteins_unique_ID.tsv
@@ -522,6 +521,31 @@ sed -i '/#/d' all_rfah_tsv_w_o_cruz.tsv
 sed -i 's/ \{1,\}/\t/g' all_rfah_tsv_w_o_cruz.tsv 
 ```
 Return to the script again. Final resulted file will be located in microbiota_sialylation/genomes_download/plots_data/itol/
+
+
+### 4.5.2 Virulence factors
+
+Virulence factors were detected by abricate software with VFDB database.
+```
+#install abricate
+conda activate ncbi_datasets
+conda install -c conda-forge -c bioconda -c defaults abricate
+```
+
+After install abricate, download genomes.
+```
+cd ../../../proteins/
+datasets download genome accession --inputfile ./proteins_unique_ID.tsv --include genome --dehydrated --filename genomes_unique.zip
+mv genomes_unique.zip ./proteins_comm_sia/proteins_unique_comm.sia/
+unzip genomes_unique.zip -d genomes_unique
+datasets rehydrate --directory genomes_unique
+find ./proteins_comm_sia/proteins_unique_comm.sia/genomes_unique/ncbi_dataset/data/GCF*/ -type f -iname "*.fna" -exec mv -v "{}" ./genomes_unique \; #move files
+```
+Start the process of analysis
+```
+abricate ./genomes_unique/ --db vfdb --csv --minid 70 --mincov 60 > out_70id_60cov.csv
+mv out_70id_60cov.csv ../plots_data/itol/
+```
 
 
 Follow the script **itol_notation.ipynb** which is loccated in the path: microbial_sialylation/genomes_download/scripts/jupyter_scripts/
