@@ -329,7 +329,7 @@ mv taxonomy/ncbi_dataset/data/taxonomy_summary.tsv ./plots_data/
 
 Fist of all, we will set up unique species' proteomes for the phylogenetic tree
 
-```{r}
+```r
 library(readr)
 library(dplyr)
 library(stringr)
@@ -356,7 +356,7 @@ all_select <- rbind(select_3,select_sp)
 select_ID <- all_select%>% select(`Assembly Accession`)
 
 write_tsv(select_ID, "microbiota_sialylation/genomes_download/proteins/proteins_unique_ID.tsv")
-```{r}
+```r
 
 
 Select representative species 
