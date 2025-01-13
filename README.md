@@ -327,7 +327,7 @@ mv taxonomy/ncbi_dataset/data/taxonomy_summary.tsv ./plots_data/
 ```
 ### 4.1.4 Phylogenetic tree
 
-Fist of all, we will set up unique species' proteomes for the phylogenetic tree
+Fist of all, we will set up unique species' proteomes for the phylogenetic tree. First open R or Rstudio and copy and paste the following code.
 
 ```r
 library(readr)
@@ -356,7 +356,6 @@ all_select <- rbind(select_3,select_sp)
 select_ID <- all_select%>% select(`Assembly Accession`)
 
 write_tsv(select_ID, "microbiota_sialylation/genomes_download/proteins/proteins_unique_ID.tsv")
-```r
 
 
 Select representative species 
