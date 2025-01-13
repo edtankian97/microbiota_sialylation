@@ -367,11 +367,10 @@ mkdir proteins_comm_sia/ && mkdir proteins_comm_sia/proteins_unique_comm_sia
 for file in $(cat ./proteins_unique_ID.tsv); do cp "$file" ./proteins_comm_sia/proteins_unique_comm_sia/; done
 cd ./proteins_comm_sia/
 ls ./proteins_unique_comm_sia > representative_species.txt
-sed -i '1,2d' representative_species.txt
-head -n -1  representative_species.txt > representative_species_v1.txt
-sed 's/_protein.faa//g' representative_species_v1.txt > representative_species_modified_v6.txt
+sed 's/_protein.faa//g' representative_species.txt > representative_species_modified_v6.txt
 sed 's/$/*/g' representative_species_modified_v6.txt > representative_species_modified_v5.txt
 sed -i 's/^/*/g' representative_species_modified_v5.txt
+mv representative_species_modified_v5.txt ../../genomes_download/
 cp representative_species_modified_v6.txt ../../genomes_download/plots_data/itol/
 ```
 
