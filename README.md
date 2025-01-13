@@ -356,6 +356,7 @@ all_select <- rbind(select_3,select_sp)
 select_ID <- all_select%>% select(`Assembly Accession`)
 
 write_tsv(select_ID, "microbiota_sialylation/genomes_download/proteins/proteins_unique_ID.tsv")
+```
 
 
 Select representative species 
