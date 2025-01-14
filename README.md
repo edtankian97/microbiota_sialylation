@@ -13,7 +13,7 @@ seek in proteomes of bacterias from NCBI that has a potential proteins linked to
 
 **4. Downstream analysis:** Genomic analysis of bacterias' genomes that have sialylation with figures created.
 
-# Structure of folders before everything
+## Structure of folders before everything
 
 ```
 .
@@ -627,7 +627,7 @@ cat ed_tree_label.txt representative_labels_itol.tsv > ed_tree_label_represent.t
 Now you can upload the files in iToL site.
 
 
-# Structure of folders after all
+## Structure of folders after all
 
 ```
 .
