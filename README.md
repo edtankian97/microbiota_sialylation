@@ -13,6 +13,60 @@ seek in proteomes of bacterias from NCBI that has a potential proteins linked to
 
 **4. Downstream analysis:** Genomic analysis of bacterias' genomes that have sialylation with figures created.
 
+# Structure of folders before everything
+
+.
+└── genomes_download
+    ├── Protein_database
+    │   ├── CMP_synthase_mixed_database.fasta
+    │   ├── CMP_synthase_review_database.fasta
+    │   ├── CMP_synthase_unreview_database.fasta
+    │   ├── KpsM_mixed.fasta
+    │   ├── KpsT_mixed.fasta
+    │   ├── oacetil_plus_poli_mixed_database.fasta
+    │   ├── polisialil_database.fasta
+    │   ├── sialiltransferase_mixed_database_old_gold.fasta
+    │   ├── sialiltransferase_review_database.fasta
+    │   └── sialiltransferase_unreview_database.fasta
+    ├── control_proteins
+    │   ├── Bac_fragilis_ATCC_faa.faa
+    │   ├── E_coli_dh10B.faa
+    │   ├── F_nucleatum_faa.faa
+    │   ├── M4.faa
+    │   ├── MAPA1.faa
+    │   ├── P_putida_kt2440.faa
+    │   ├── campylobacter_jejuni_ATCC_faa.faa
+    │   ├── control_proteomes.txt
+    │   └── files.txt
+    ├── plots_data
+    │   └── itol
+    ├── proteins
+    └── scripts
+        ├── CD_HIT_script.sh
+        ├── CMP_hmm.sh
+        ├── KpsM_hmm.sh
+        ├── KpsT_hmm.sh
+        ├── RfaH_hmm.sh
+        ├── Sialiltrans_hmm.sh
+        ├── hmm_models.sh
+        ├── jupyter_scripts
+        │   ├── Checkm_refseq_Reanalise_V2.ipynb
+        │   ├── hmm_process.ipynb
+        │   ├── host_distribution.ipynb
+        │   ├── itol_notation.ipynb
+        │   ├── pie_data.ipynb
+        │   └── retrieve_assembly_info.ipynb
+        ├── mafft_align.sh
+        ├── o_acetiltrans_poli_hmm.sh
+        ├── phylo.sh
+        ├── polisialiltrans_hmm.sh
+        ├── rename_control_files.sh
+        ├── rename_fasta.sh
+        ├── rename_fasta_control.sh
+        ├── rename_file.sh
+        └── teste_hmm_control.sh
+
+
 ## 1. Genome processing
 
 ### 1.1 Retrieve genome information
@@ -81,7 +135,7 @@ cd CD_HIT
 mkdir mafft_align
 bash ../../scripts/mafft_align.sh 
 ```
-In the end, let's construct protein models with [HMMER](https://github.com/EddyRivasLab/hmmer).In this link aside, I've installed the uppermost recent version #3.4 by downloading the raw file.
+In the end, let's construct protein models with [HMMER](https://github.com/EddyRivasLab/hmmer).In this link aside, I've installed the 3.2 version for creation of models, but for searching proteins of sialylation, I've used the uppermost recent version #3.4# by downloading the raw file.
 ```
 cd mafft_align
 mkdir hmm_models
@@ -546,7 +600,7 @@ Start the process of analysis
 abricate ./genomes_unique/ --db vfdb --csv --minid 70 --mincov 60 > out_70id_60cov.csv
 mv out_70id_60cov.csv ../plots_data/itol/
 ```
-
+### 4.5.3 Processing of resulted files for iTOL annotation
 
 Follow the script **itol_notation.ipynb** which is loccated in the path: microbial_sialylation/genomes_download/scripts/jupyter_scripts/
 After this, each dataset created in the script was concatenated with iTol dataset
@@ -569,3 +623,142 @@ cat vfdb_itol_representative_EANS.txt vfdb_itol_represent_EANS.tsv > final_vfdb_
 cat ed_tree_label.txt representative_labels_itol.tsv > ed_tree_label_represent.txt
 ```
 Now you can upload the files in iToL site.
+
+
+# Structure of folders after all
+
+.
+└── genomes_download
+    ├── CheckM_report_prokaryotes.txt
+    ├── HMMER_analysis
+    │   ├── CMP_synthase
+    │   │   ├── CMP_coverage.tsv
+    │   │   └── filter_cover_CMP
+    │   │       └── file_output_CMP.tsv
+    │   ├── RfaH
+    │   │   └── representative_RfaH
+    │   │       └── filter_rfaH
+    │   ├── kpsM
+    │   │   └── representative_kpsM
+    │   │       └── filtered_kpsM
+    │   ├── kpsT
+    │   │   └── representative_species_kpsT
+    │   │       └── filtered_kpsT
+    │   ├── o_acetiltrans_plus_poli
+    │   │   └── representative_oacetil
+    │   │       └── filtered_oacetil
+    │   ├── polisialiltrans
+    │   │   ├── filter_cover_polisia
+    │   │   │   └── file_output_polisia.tsv
+    │   │   └── polisialil_coverage.tsv
+    │   └── sialiltrans
+    │       ├── filter_cover_sialil
+    │       │   └── file_output_sialil.tsv
+    │       └── sialil_coverage.tsv
+    ├── Protein_database
+    │   ├── CD_HIT
+    │   │   └── mafft_align
+    │   │       └── hmm_models
+    │   ├── CMP_synthase_mixed_database.fasta
+    │   ├── CMP_synthase_review_database.fasta
+    │   ├── CMP_synthase_unreview_database.fasta
+    │   ├── KpsM_mixed.fasta
+    │   ├── KpsT_mixed.fasta
+    │   ├── oacetil_plus_poli_mixed_database.fasta
+    │   ├── polisialil_database.fasta
+    │   ├── sialiltransferase_mixed_database_old_gold.fasta
+    │   ├── sialiltransferase_review_database.fasta
+    │   └── sialiltransferase_unreview_database.fasta
+    ├── README.md
+    ├── assembly_complete_summary.tsv
+    ├── assembly_summary_complete_ID.txt
+    ├── checkm2_result
+    │   ├── checkm2.log
+    │   ├── diamond_output
+    │   │   └── DIAMOND_RESULTS.tsv
+    │   ├── protein_files
+    │   │   ├── GCF_000010245.2_ASM1024v1_genomic.faa
+    │   │   ├── GCF_000146065.2_ASM14606v1_genomic.faa
+    │   │   ├── GCF_000264665.3_ASM26466v2_genomic.faa
+    │   │   └── GCF_000967155.2_HUSEC2011CHR1_genomic.faa
+    │   └── quality_report.tsv
+    ├── control_proteins
+    │   ├── Bac_fragilis_ATCC_faa.faa
+    │   ├── E_coli_dh10B.faa
+    │   ├── F_nucleatum_faa.faa
+    │   ├── HMMER_CONTROL_RESULTS
+    │   │   ├── CMP
+    │   │   │   ├── mixed
+    │   │   │   ├── review
+    │   │   │   └── unreview
+    │   │   ├── Rfah
+    │   │   ├── kpsM_T
+    │   │   ├── polisia
+    │   │   └── sialil
+    │   │       ├── mixed
+    │   │       ├── review
+    │   │       └── unreview
+    │   ├── M4.faa
+    │   ├── MAPA1.faa
+    │   ├── P_putida_kt2440.faa
+    │   ├── campylobacter_jejuni_ATCC_faa.faa
+    │   ├── control_proteomes.txt
+    │   └── files.txt
+    ├── ncbi_dataset.zip
+    ├── plots_data
+    │   ├── accession_complete_fields.tsv
+    │   ├── comm_complete_genomes_dataset_fields.tsv
+    │   ├── itol
+    │   │   ├── kpsM_represent_filter.tsv
+    │   │   ├── kpsT_represent_filter.tsv
+    │   │   ├── oacetil_represent_filter.tsv
+    │   │   ├── out_70id_60cov.csv
+    │   │   ├── representative_species_modified_v6.txt
+    │   │   └── rfah_represent_filter.tsv
+    │   └── taxonomy_summary.tsv
+    ├── proteins
+    │   ├── proteins_comm_sia
+    │   │   └── proteins_unique_comm_sia
+    │   └── proteins_tree
+    │       └── phylophlan_database
+    ├── remain_CheckM
+    │   ├── GCF_000010245.2_ASM1024v1_genomic.fna
+    │   ├── GCF_000146065.2_ASM14606v1_genomic.fna
+    │   ├── GCF_000264665.3_ASM26466v2_genomic.fna
+    │   ├── GCF_000967155.2_HUSEC2011CHR1_genomic.fna
+    │   ├── data
+    │   │   ├── GCF_000010245.2
+    │   │   ├── GCF_000146065.2
+    │   │   ├── GCF_000264665.3
+    │   │   ├── GCF_000967155.2
+    │   │   ├── assembly_data_report.jsonl
+    │   │   └── dataset_catalog.json
+    │   └── microbiota_sialylation.lnk
+    ├── remain_CheckM_data_complete.tsv
+    ├── remain_CheckM_data_complete_with_NA.tsv
+    ├── remain_CheckM_data_complete_with_NA_ID.tsv
+    └── scripts
+        ├── CD_HIT_script.sh
+        ├── CMP_hmm.sh
+        ├── KpsM_hmm.sh
+        ├── KpsT_hmm.sh
+        ├── RfaH_hmm.sh
+        ├── Sialiltrans_hmm.sh
+        ├── hmm_models.sh
+        ├── jupyter_scripts
+        │   ├── Checkm_refseq_Reanalise_V2.ipynb
+        │   ├── hmm_process.ipynb
+        │   ├── host_distribution.ipynb
+        │   ├── itol_notation.ipynb
+        │   ├── pie_data.ipynb
+        │   └── retrieve_assembly_info.ipynb
+        ├── mafft_align.sh
+        ├── o_acetiltrans_poli_hmm.sh
+        ├── phylo.sh
+        ├── polisialiltrans_hmm.sh
+        ├── rename_control_files.sh
+        ├── rename_fasta.sh
+        ├── rename_fasta_control.sh
+        ├── rename_file.sh
+        └── teste_hmm_control.sh
+
