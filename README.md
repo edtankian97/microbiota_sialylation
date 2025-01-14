@@ -141,7 +141,7 @@ In the end, let's construct protein models with [HMMER](https://github.com/EddyR
 ```
 cd mafft_align
 mkdir hmm_models
-bash ../../../scrips/hmm_models.sh #results will be located in hmm_models folder
+bash ../../../scripts/hmm_models.sh #results will be located in hmm_models folder
 cd ../../../../ #you must be located in genomes_download
 ```
 ## 3. Protein analysis
