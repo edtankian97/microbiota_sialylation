@@ -66,7 +66,7 @@ seek in proteomes of bacterias from NCBI that has a potential proteins linked to
         ├── rename_file.sh
         └── teste_hmm_control.sh
 
-
+d
 ## 1. Genome processing
 
 ### 1.1 Retrieve genome information
