@@ -15,6 +15,7 @@ seek in proteomes of bacterias from NCBI that has a potential proteins linked to
 
 # Structure of folders before everything
 
+```
 .
 └── genomes_download
     ├── Protein_database
@@ -65,8 +66,8 @@ seek in proteomes of bacterias from NCBI that has a potential proteins linked to
         ├── rename_fasta_control.sh
         ├── rename_file.sh
         └── teste_hmm_control.sh
+```
 
-d
 ## 1. Genome processing
 
 ### 1.1 Retrieve genome information
@@ -627,6 +628,7 @@ Now you can upload the files in iToL site.
 
 # Structure of folders after all
 
+```
 .
 └── genomes_download
     ├── CheckM_report_prokaryotes.txt
@@ -761,4 +763,4 @@ Now you can upload the files in iToL site.
         ├── rename_fasta_control.sh
         ├── rename_file.sh
         └── teste_hmm_control.sh
-
+```
