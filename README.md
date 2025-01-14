@@ -77,6 +77,7 @@ First of all, genomes were download with command wget at [NCBI](https://ftp.ncbi
 
 ### 1.2 Filtering NCBI retrieved dataset
 ```
+mv assembly_summary.txt ./genomes_download && mv CheckM_report_prokaryotes.txt ./genomes_download
 cd genomes_download
 grep -c “Complete” assembly_summary.txt
 grep "Complete" assembly_summary.txt > assembly_complete
