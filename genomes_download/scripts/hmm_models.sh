@@ -5,7 +5,7 @@
 
 #  extract their names
 for mafft_file in ../Protein_database/CD_HIT/mafft_align/*; do
-    # Extrair o nome do modelo (sem a extensão .fasta)
+    # Extract name of file (without extension .fasta)
     mafft_name=$(basename "$mafft_file" .fasta)
 
 
