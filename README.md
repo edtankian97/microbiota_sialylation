@@ -243,7 +243,7 @@ Now the proteins files are ready to be analised. Now, let's organize subdiretori
 cd ..
 mkdir HMMER_analysis
 cd HMMER_analysis
-mkdir CMP_synthase sialiltrans polisialiltrans o_acetiltrans_plus_poli kpsM kpsT RfaH
+mkdir CMP_synthase pm0188 PF11477 neuS PF06002 lst lic3X IPR010866
 cd ..
 ```
 Scripts for each enzyme model will be available with their respective names in **scripts** directory
