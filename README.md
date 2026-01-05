@@ -127,6 +127,7 @@ After installation, check if the PATH for CD-HIT executable is recognize in your
 (Example usage of cd-hit: cd-hit -i [PROTEIN_FASTA_NAME] -o [CD_HIT_ENZYME_NAME_MODE_TYPE_OUTPUT_FILE]  -c 1.00 -n 5 ).
 ```
 cd Protein_database
+tar -xf fastas_sialylation_final.tar.gz --strip-components=1
 mkdir CD_HIT
 bash ../scripts/CD_HIT_script.sh
 ```
