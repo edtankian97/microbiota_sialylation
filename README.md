@@ -175,8 +175,10 @@ After download, process the files
 ```
 bash ../scripts/rename_control_files.sh #rename the files based on their directories
 find ./control/ncbi_dataset/data/GCF*/ -type f -iname "*.faa" -exec mv -v "{}" ./ \; #move files
+ls #see moved files 
 while read line; do eval mv $line; done < files.txt #rename with species names
 bash ../scripts/rename_fasta_control.sh #rename fasta header with filename
+less GCF_004015025.1_Akker_munciph_NEG.faa #see content of a file
 ```
 Create directories to organize the results.
 ```
