@@ -122,46 +122,61 @@ Now return to the script **Checkm_refseq_Reanalise_V2_R.ipynb**
 
 ## 2 HMMER models
 
-With all protein fasta downloaded, remove duplicated sequences with CD-HIT, which can be downloaded following this [guide](https://github.com/weizhongli/cdhit)
-After installation, check if the PATH for CD-HIT executable is recognize in your system. If not, you might add PATH to CD-HIT executable folder.
+Full process of download of sequences and remotion of duplicates are well described at [Thais_github](https://github.com/ThaisAFM/sialic_acid_catalog)
+We removed duplicated sequences with CD-HIT, which can be downloaded following this [guide](https://github.com/weizhongli/cdhit)
 (Example usage of cd-hit: cd-hit -i [PROTEIN_FASTA_NAME] -o [CD_HIT_ENZYME_NAME_MODE_TYPE_OUTPUT_FILE]  -c 1.00 -n 5 ).
+
 ```
-cd Protein_database
-tar -xf fastas_sialylation_final.tar.gz --strip-components=1
-mkdir CD_HIT
-bash ../scripts/CD_HIT_script.sh
+#go to where tar file of sialylation sequences fasta is located 
+cd genomes_download/Protein_database
+
+#untar the file, then delete tar file after
+tar -xf fastas_sialylation_final.tar.gz --strip-components=1 
+rm fastas_sialylation_final.tar.gz
+tar -xf fastas_others_final.tar --strip-components=1 
+rm fastas_others_final.tar
 ```
 After this, it's turn to do an alignment. For this purpose, follow [mafft](https://mafft.cbrc.jp/alignment/software/) installation.  
 (Example of mafft usage: mafft --auto [CD_HIT_ENZYME_NAME_MODE_TYPE_OUTPUT_FILE] > [ENZYME_NAME_MODE_TYPE_OUTPUT_FILE]_mafft.fasta).
+Results will be located at genomes_download/Protein_database/mafft_align/
 ```
-cd CD_HIT
-mkdir mafft_align
-bash ../../scripts/mafft_align.sh 
+bash ../scripts/mafft_align.sh 
+cd genomes_download/Protein_database/mafft_align/
+ls
 ```
-In the end, let's construct protein models with [HMMER](https://github.com/EddyRivasLab/hmmer).In this link aside, I've installed the 3.2 version for creation of models, but for searching proteins of sialylation, I've used the uppermost recent version #3.4# by downloading the raw file.
+In the end, let's construct protein models with [HMMER](https://github.com/EddyRivasLab/hmmer).In this link aside, I've installed the 3.4 version for creation of models and sialylation protein's annotation.
 ```
-cd mafft_align
-mkdir hmm_models
-bash ../../../scripts/hmm_models.sh #results will be located in hmm_models folder
-cd ../../../../ #you must be located in genomes_download
+bash ../../scripts/hmm_models.sh #results will be located in this PATH: genomes_download/Protein_database/mafft_align/hmm_models 
+```
+Let's move hmm models for external rings annotation into another directory
+```
+cd ../../../ #you must be located in Protein_database
+mkdir external_rings_models
+mv ./mafft_align/hmm_models/neu*hmm ./external_rings_models
+mv ./mafft_align/hmm_models/kps*hmm ./external_rings_models
+ls ./external_rings_models #check if files are there
+cd ../ #you must be located in genomes_download
+
 ```
 ## 3. Protein analysis
 
 ### 3.1 Protein analysis: Control proteomes
 
-First, we will download some proteomes based on NCBI ID which are presented in **control_proteomes.txt**. Other ones are already available in **control_proteins** folder
+First, we will download some proteomes based on NCBI ID which are presented in **control_proteomes.txt**. Other ones are already available in **control_proteins** folder. Those are from ATCC web and can only be download with authorizated access. Please, just use
+these fasta files for academic purposes.
 ```
 conda activate ncbi_datasets
 cd ./control_proteins/ 
 datasets download genome accession --inputfile control_proteomes.txt --include protein --filename control.zip
 unzip control.zip -d control
+ls control
 ```
 After download, process the files
 ```
-bash ../../scripts/rename_control_files.sh #rename the files based on their directories
+bash ../scripts/rename_control_files.sh #rename the files based on their directories
 find ./control/ncbi_dataset/data/GCF*/ -type f -iname "*.faa" -exec mv -v "{}" ./ \; #move files
 while read line; do eval mv $line; done < files.txt #rename with species names
-bash ../../scripts/rename_fasta_control.sh #rename fasta header
+bash ../scripts/rename_fasta_control.sh #rename fasta header with filename
 ```
 Create directories to organize the results.
 ```

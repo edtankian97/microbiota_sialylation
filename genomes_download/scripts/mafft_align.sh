@@ -2,13 +2,14 @@
 
 #Sequences alignment with mafft of sequence database
 
-mkdir -p mafft_align
+OUT_PATH=../Protein_database/mafft_align/
+IN_PATH=../Protein_database/
+mkdir -p $OUT_PATH
 
-for file in ./*fasta; do
+for file in $IN_PATH/*fasta; do
 BASENAME=$(basename $file .fasta)
 
-mafft --auto  --thread 5 $file > "${BASENAME}_mafft.fasta" 
-mv "${BASENAME}_mafft.fasta" ./mafft_align
+mafft --auto  --thread 5 $file > "$OUT_PATH/${BASENAME}_mafft.fasta"
 done
 
 
