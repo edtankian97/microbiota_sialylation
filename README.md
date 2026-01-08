@@ -133,8 +133,8 @@ cd genomes_download/Protein_database
 #untar the file, then delete tar file after
 tar -xf fastas_sialylation_final.tar.gz --strip-components=1 
 rm fastas_sialylation_final.tar.gz
-tar -xf fastas_others_final.tar --strip-components=1 
-rm fastas_others_final.tar
+tar -xf fastas_others_final.tar.gz --strip-components=1 
+rm fastas_others_final.tar.gz
 ```
 After this, it's turn to do an alignment. For this purpose, follow [mafft](https://mafft.cbrc.jp/alignment/software/) installation.  
 (Example of mafft usage: mafft --auto [CD_HIT_ENZYME_NAME_MODE_TYPE_OUTPUT_FILE] > [ENZYME_NAME_MODE_TYPE_OUTPUT_FILE]_mafft.fasta).
@@ -183,85 +183,65 @@ less GCF_004015025.1_Akker_munciph_NEG.faa #see content of a file
 Create directories to organize the results.
 ```
 mkdir HMMER_CONTROL_RESULTS && cd HMMER_CONTROL_RESULTS
-mkdir CMP sialil polisia kpsM_T Rfah
-mkdir CMP/mixed CMP/review CMP/unreview sialil/mixed sialil/review sialil/unreview 
 bash ../../scripts/teste_hmm_control.sh
 ```
 Join all output files for each enzyme
 ```
-cat CMP_mixed*_output.tsv > all_CMP_mixed_control_output.tsv
-cat CMP_review*_output.tsv > all_CMP_review_control_output.tsv
-cat CMP_unreview*_output.tsv > all_CMP_unreview_control_output.tsv
-cat sialil_review*_output.tsv > all_sialil_review_control_output.tsv
-cat sialil_unreview*_output.tsv > all_sialil_unreview_control_output.tsv
-cat all_sialil_old_one*_output.tsv > all_sialil_mixed_control_output.tsv
-cat polisialil*_output.tsv > all_polisialil_control_output.tsv
-cat Rfah_1*_output.tsv > all_Rfah_1_control_output.tsv
-cat kpsM_mafft*_output.tsv > all_kpsM_control_output.tsv
-cat kpsT_mafft*_output.tsv > all_kpsT_control_output.tsv
+cat neuA*_output.tsv > all_CMP_neuA_control_output.tsv
+cat lic3X*_output.tsv > all_lic3X_sialil_control_output.tsv
+cat lst*_output.tsv > all_lst_sialil_control_output.tsv
+cat pm0188*_output.tsv > all_pm0188_sialil_control_output.tsv
+cat PF06002*_output.tsv > all_PF06002_sialil_control_output.tsv
+cat PF11477*_output.tsv > all_PF11477_sialil_control_output.tsv
+cat IPR010866*_output.tsv > all_IPR010866_polisialil_control_output.tsv
+cat neuS*_output.tsv > all_neuS_polisialil_control_output.tsv
 ```
 Do the same thing for coverage files
 ```
-cat CMP_mixed*_output.tsv_coverage > all_CMP_mixed_control_output_coverage.tsv
-cat CMP_review*_output.tsv_coverage > all_CMP_review_control_output_coverage.tsv
-cat CMP_unreview*_output.tsv_coverage > all_CMP_unreview_control_output_coverage.tsv
-cat sialil_review*_output.tsv_coverage > all_sialil_review_control_output_coverage.tsv
-cat sialil_unreview*_output.tsv_coverage > all_sialil_unreview_control_output_coverage.tsv
-cat all_sialil_old_one*_output.tsv_coverage > all_sialil_mixed_control_output_coverage.tsv
-cat polisialil*_output.tsv_coverage > all_polisialil_control_output_coverage.tsv
-cat Rfah_1*_output.tsv_coverage > all_Rfah_1_control_output_coverage.tsv
-cat kpsM_mafft*_output.tsv_coverage > all_kpsM_control_output_coverage.tsv
-cat kpsT_mafft*_output.tsv_coverage > all_kpsT_control_output_coverage.tsv
+cat neuA*_output.tsv_coverage > all_CMP_neuA_control_output_coverage.tsv
+cat lic3X*_output.tsv_coverage > all_lic3X_sialil_control_output_coverage.tsv
+cat lst*_output.tsv_coverage > all_lst_sialil_control_output_coverage.tsv
+cat pm0188*_output.tsv_coverage > all_pm0188_sialil_control_output_coverage.tsv
+cat PF06002*_output.tsv_coverage > all_PF06002_sialil_control_output_coverage.tsv
+cat PF11477*_output.tsv_coverage > all_PF11477_sialil_control_output_coverage.tsv
+cat IPR010866*_output.tsv_coverage > all_IPR010866_polisialil_control_output_coverage.tsv
+cat neuS*_output.tsv_coverage > all_neuS_polisialil_control_output_coverage.tsv
 ```
 Process output file
 ```
 sed -i '/#/d' *_output.tsv
 sed -i 's/ \{1,\}/\t/g' *_output.tsv 
 ```
-Move the results to their respectives directories
-```
-mv CMP_mixed* CMP/mixed
-mv CMP_review* CMP/review
-mv CMP_unreview* CMP/unreview
-mv sialiltransferase_review* sialil/review
-mv sialiltransferase_unreview* sialil/unreview
-mv all_sialil_old_one* sialil/mixed
-mv polisialil* polisia/
-mv Rfah_1* Rfah/
-mv kpsM_mafft* kpsM_T/
-mv kpsT_mafft* kpsM_T/
-```
+
 ### 3.2 Protein analysis: NCBI analysis
 After filtration with CheckM, the proteomes were downloaded from NCBI
 ```
+cd ../../ #go to genomes_download folder and then move checkm_filter_v2_complete.tsv to this folder
 cut -f2 checkm_filter_v2_complete.tsv > checkm_filter_v2_complete_ID.tsv
 sed -i '1d' checkm_filter_v2_complete_ID.tsv
 datasets download genome accession --inputfile checkm_filter_v2_complete_ID.tsv --include protein --dehydrated  --filename proteins.zip
+rm -rfv proteins/
 unzip proteins.zip -d proteins
 datasets rehydrate --directory proteins
 ```
 After the download, proteins files were renamed with their own directory name 
 ```
-cd scripts/
-bash rename_files.sh
+bash ../scripts/rename_files.sh
 ```
 With the proteins with their respective names, you can move them to the **proteins** directory
 ```
-cd .. # you should be in genomes_download directory
 find proteins/ncbi_dataset/data/GCF*/ -type f -iname "*.faa" -exec mv -v "{}" ./proteins/ \;
 ```
 Proteomes are now in **proteins** directory and then you can edit their fasta header, so we can identify them later on HMMER analysis.
 For this, do the following command:
 ```
-cd scripts/
-bash rename_fasta.sh
+bash ../scripts/rename_fasta.sh
 ```
 Now the proteins files are ready to be analised. Now, let's organize subdiretories to store the results for each enzyme of sialylation process
 ```
-cd ..
-mkdir HMMER_analysis
+mkdir HMMER_analysis # you must be located at **genomes_download** folder
 cd HMMER_analysis
-mkdir CMP_synthase pm0188 PF11477 neuS PF06002 lst lic3X IPR010866
+mkdir neuA_out pm0188_out PF11477_out neuS_out PF06002_out lst_out lic3X_out IPR010866_out
 cd ..
 ```
 Scripts for each enzyme model will be available with their respective names in **scripts** directory
@@ -272,116 +252,151 @@ Scripts for each enzyme model will be available with their respective names in *
 cd scripts/
 bash CMP_hmm.sh
 ```
-**Sialiltransferase**
-```
-bash Sialiltrans_hmm.sh
-```
-**Polisialiltransferase**
-```
-bash polisialiltrans_hmm.sh
-```
-**(Poly)O-acetiltransferase**
-```
-bash o_acetiltrans_poli_hmm.sh
-```
-**KpsM**
-```
-bash KpsM_hmm.sh
-```
-**KpsT**
-```
-bash KpsT_hmm.sh
-```
-**RfaH**
-```
-bash RfaH_hmm.sh
-```
 
 With all done, now it's time to start the process of coverage, e-value and bit-score filter
 ```
-cd ..
-cd HMMER_analysis/
-find ./CMP_synthase/ -type f -name '*coverage*' -exec cat {} + > CMP_coverage.tsv
-find ./sialiltrans/ -type f -name '*coverage*' -exec cat {} + > sialil_coverage.tsv
-find ./polisialiltrans/ -type f -name '*coverage*' -exec cat {} + > polisialil_coverage.tsv
-find ./o_acetiltrans_plus_poli/ -type f -name '*coverage*' -exec cat {} + > o_acetiltrans_plus_poli_coverage.tsv
-find ./kpsM/ -type f -name '*coverage*' -exec cat {} + > kpsM_coverage.tsv
-find ./kpsT/ -type f -name '*coverage*' -exec cat {} + > kpsT_coverage.tsv
-find ./RfaH/ -type f -name '*coverage*' -exec cat {} + > RfaH_coverage.tsv
+cd ../HMMER_analysis/
+find ./ -type f -name 'neuA*coverage' -exec cat {} + > neuA_coverage.tsv
+find ./ -type f -name 'neuS*coverage' -exec cat {} + > neuS_coverage.tsv
+find ./ -type f -name 'lic3X*coverage' -exec cat {} + > lic3X_coverage.tsv
+find ./ -type f -name 'lst*coverage' -exec cat {} + > lst_coverage.tsv
+find ./ -type f -name 'pm0188*coverage' -exec cat {} + > pm0188_coverage.tsv
+find ./ -type f -name 'PF11477*coverage' -exec cat {} + > PF11477_coverage.tsv
+find ./ -type f -name 'PF06002*coverage' -exec cat {} + > PF06002_coverage.tsv
+find ./ -type f -name 'IPR010866*coverage' -exec cat {} + > IPR010866_coverage.tsv
 ```
 Now, go to the script **hmm_process.ipynb** which is loccated in the path: microbial_sialylation/genomes_download/scripts/jupyter_scripts/ and follow the script.
 
-After part 01 with coverage assessment, follow this for each core enzyme: CMP synthase, sialiltransferase and polisialiltransferase. 
-**CMP synthase**
+After part 01 with coverage assessment, follow this for each core enzyme 
+**NeuA**
 ```
-cd ./HMMER_analysis/CMP_synthase/
-sed -i '1d' CMP_complete_cover_filter_40.tsv
-cut -f2 CMP_complete_cover_filter_40.tsv
-mkdir filter_cover_CMP
-for file in $(cat ./CMP_complete_cover_filter_40.tsv); do mv "$file" ./filter_cover_CMP/; done
-cd filter_cover_CMP
+cd ./HMMER_analysis
+sed -i '1d' neuA_complete_cover_filter_40.tsv
+cut -f2 neuA_complete_cover_filter_40.tsv > neuA_complete_cover_filter_40_ID.tsv
+for file in $(cat ./neuA_complete_cover_filter_40_ID.tsv); do mv "$file" ./neuA_out/; done
+cd neuA_out
 #output tsv
-find . -type f -name '*protein_output*' -exec cat {} + > new_file.tsv
+find ./ -type f -name '*protein_output*' -exec cat {} + > new_file.tsv
 #process output file
 sed -i '/#/d' new_file.tsv
 sed  's/ \{1,\}/\t/g' new_file.tsv > file_output_CMP.tsv
-cd ../../../
+cd ../ #must be located at HMMER_analysis folder
 ```
-**Sialiltransferase**
+**lic3X**
 ```
-cd ./HMMER_analysis/sialil/
-sed -i '1d' sialil_complete_cover_filter_40.tsv
-cut -f2 sialil_complete_cover_filter_40.tsv
-mkdir filter_cover_sialil
-for file in $(cat ./sialil_complete_cover_filter_40.tsv); do mv "$file" ./filter_cover_sialil/; done
-cd filter_cover_sialil
+sed -i '1d' lic3X_complete_cover_filter_40.tsv
+cut -f2 lic3X_complete_cover_filter_40.tsv > lic3X_complete_cover_filter_40_ID.tsv
+for file in $(cat ./lic3X_complete_cover_filter_40_ID.tsv); do mv "$file" ./lic3X_out/; done
+cd lic3X_out
+#output tsv
+find ./ -type f -name '*protein_output*' -exec cat {} + > new_file.tsv
+#process output file
+sed -i '/#/d' new_file.tsv
+sed  's/ \{1,\}/\t/g' new_file.tsv > file_output_lic3X.tsv
+```
+**lst**
+```
+cd ../
+sed -i '1d' lst_complete_cover_filter_40.tsv
+cut -f2 lst_complete_cover_filter_40.tsv > lst_complete_cover_filter_40_ID.tsv
+for file in $(cat ./lst_complete_cover_filter_40_ID.tsv); do mv "$file" ./lst_out/; done
+cd lst_out
 #output tsv
 find . -type f -name '*protein_output*' -exec cat {} + > new_file.tsv
 #process output file
 sed -i '/#/d' new_file.tsv
-sed  's/ \{1,\}/\t/g' new_file.tsv > file_output_sialil.tsv
+sed  's/ \{1,\}/\t/g' new_file.tsv > file_output_lst.tsv
 ```
-**polisialiltransferase**
+**neuS**
 ```
-cd ./HMMER_analysis/polisiatrans/
-sed -i '1d' polisia_complete_cover_filter_40.tsv
-cut -f2 polisia_complete_cover_filter_40.tsv
-mkdir filter_cover_polisia
-for file in $(cat ./polisia_complete_cover_filter_40.tsv); do mv "$file" ./filter_cover_polisia/; done
-cd filter_cover_polisia
+cd ../
+sed -i '1d' neuS_complete_cover_filter_40.tsv
+cut -f2 neuS_complete_cover_filter_40.tsv > neuS_complete_cover_filter_40_ID.tsv
+for file in $(cat ./neuS_complete_cover_filter_40_ID.tsv); do mv "$file" ./neuS_out/; done
+cd neuS_out
+#output tsv
+find . -type f -name '*protein_output' -exec cat {} + > new_file.tsv
+#process output file
+sed -i '/#/d' new_file.tsv
+sed  's/ \{1,\}/\t/g' new_file.tsv > file_output_neuS.tsv
+```
+**pm0188**
+```
+cd ../
+sed -i '1d' pm0188_complete_cover_filter_40.tsv
+cut -f2 pm0188_complete_cover_filter_40.tsv >pm0188_complete_cover_filter_40_ID.tsv
+for file in $(cat ./pm0188_complete_cover_filter_40_ID.tsv); do mv "$file" ./pm0188_out/; done
+cd pm0188_out
 #output tsv
 find . -type f -name '*protein_output*' -exec cat {} + > new_file.tsv
 #process output file
 sed -i '/#/d' new_file.tsv
-sed  's/ \{1,\}/\t/g' new_file.tsv > file_output_polisia.tsv
+sed  's/ \{1,\}/\t/g' new_file.tsv > file_output_pm0188.tsv
 ```
+**PF06002**
+```
+cd ../
+sed -i '1d' PF06002_complete_cover_filter_40.tsv
+cut -f2 PF06002_complete_cover_filter_40.tsv > PF06002_complete_cover_filter_40_ID.tsv
+for file in $(cat ./PF06002_complete_cover_filter_40_ID.tsv); do mv "$file" ./PF06002_out/; done
+cd PF06002_out
+#output tsv
+find . -type f -name '*protein_output*' -exec cat {} + > new_file.tsv
+#process output file
+sed -i '/#/d' new_file.tsv
+sed  's/ \{1,\}/\t/g' new_file.tsv > file_output_PF06002.tsv
+```
+
+**PF11477**
+```
+cd ../
+sed -i '1d' PF11477_complete_cover_filter_40.tsv
+cut -f2 PF11477_complete_cover_filter_40.tsv > PF11477_complete_cover_filter_40_ID.tsv
+for file in $(cat ./PF11477_complete_cover_filter_40_ID.tsv); do mv "$file" ./PF11477_out/; done
+cd PF11477_out
+#output tsv
+find . -type f -name '*protein_output*' -exec cat {} + > new_file.tsv
+#process output file
+sed -i '/#/d' new_file.tsv
+sed  's/ \{1,\}/\t/g' new_file.tsv > file_output_PF11477.tsv
+```
+**IPR010866**
+```
+cd ../
+sed -i '1d' IPR010866_complete_cover_filter_40.tsv 
+cut -f2 IPR010866_complete_cover_filter_40.tsv > IPR010866_complete_cover_filter_40_ID.tsv
+for file in $(cat ./IPR010866_complete_cover_filter_40_ID.tsv); do mv "$file" ./IPR010866_out/; done
+cd IPR010866_out
+#output tsv
+find . -type f -name '*protein_output*' -exec cat {} + > new_file.tsv
+#process output file
+sed -i '/#/d' new_file.tsv
+sed  's/ \{1,\}/\t/g' new_file.tsv > file_output_PF11477.tsv
+```
+
+Now, go to the script **hmm_process.ipynb** which is loccated in the path: microbial_sialylation/genomes_download/scripts/jupyter_scripts/ and follow the script PART 02 to process output file.
+
+### 3.3 Protein analysis: Interproscan analysis
+First, download Interproscan tar file. For this purpose, I followed the manual by this [link](https://interproscan-docs.readthedocs.io/en/v5/UserDocs.html#obtaining-a-copy-of-interproscan)
+
+```
+cd ../../
+wget https://ftp.ebi.ac.uk/pub/software/unix/iprscan/5/5.76-107.0/interproscan-5.76-107.0-64-bit.tar.gz
+tar -pxvzf interproscan-5.76-107.0-*-bit.tar.gz
+```
+
 
 # 4. Downstream analysis
 
 ## 4.1 Datasets for plots
 This topic and subtopics forwards are about how to get data that will be important to create the plots.
-### 4.1.1 Get information of complete genomes
-```
-#Retrieve info of complete genomes of geo_loc, isolation_source and other info
-cd ../../../ #you must be located in genomes_download
-cut -f3 checkm_filter_v2_complete.tsv > checkm_filter_v2_complete_ID.tsv
-sed -i '1d' checkm_filter_v2_complete_ID.tsv
-datasets download genome accession --inputfile checkm_filter_v2_complete_ID.tsv --dehydrated
-unzip -v ncbi_dataset.zip
-dataformat tsv genome --package ncbi_dataset.zip --fields accession,assminfo-biosample-geo-loc-name,assminfo-biosample-host,assminfo-biosample-host-disease,assminfo-biosample-isolation-source,assminfo-biosample-source-type > accession_list.tsv
-dataformat tsv genome --package ncbi_dataset.zip --fields accession,assminfo-biosample-geo-loc-name,assminfo-biosample-host,assminfo-biosample-host-disease,assminfo-biosample-isolation-source,assmstats-gc-percent,assmstats-total-sequence-len,organelle-assembly-name,organism-name,organism-tax-id,annotinfo-featcount-gene-protein-coding > accession_complete_fields.tsv
-```
 
-### 4.1.2 Information of genomes with sialylation pathway
+### 4.1.1 Information of genomes with sialylation pathway
 
 **After hmm_process analysis of core enzymes, do the following to get information of genomes that have sialylation pathway**
 ```
-#join files
-cat comm_CMP_sia_poli.tsv not_comm_CMP_sia_poli.tsv not_commm_CMP_sia_poli_1.tsv > all_commom.tsv
-#After join the files, remove header "X1"
-fgrep -v X1 all_commom.tsv > all_commom_1.tsv
-#remove _protein.faa
-sed 's/_protein.faa//' all_commom_1.tsv > all_commom_1_modified.tsv
+#get file with protein ID with whole sialylation pathway
+
 #get info
 datasets download genome accession --inputfile all_commom_1_modified.tsv --dehydrated
 dataformat tsv genome --package ncbi_dataset.zip  > comm_complete_genomes_dataset_tbl.tsv
@@ -390,7 +405,7 @@ dataformat tsv genome --package ncbi_dataset.zip --fields accession,assminfo-bio
 #move to the folder
 
 ```
-### 4.1.3 Taxonomy information
+### 4.1.2 Taxonomy information
 ```
 #take desired columm
 cut -f10 comm_complete_genomes_dataset_fields.tsv > comm_sia_genomes_tax_id
@@ -400,52 +415,17 @@ datasets download taxonomy taxon --inputfile comm_sia_genomes_tax_id --filename 
 unzip taxonomy.zip
 mv taxonomy/ncbi_dataset/data/taxonomy_summary.tsv ./plots_data/
 ```
-### 4.1.4 Phylogenetic tree
+### 4.1.3 Phylogenetic tree
 
-Fist of all, we will set up unique species' proteomes for the phylogenetic tree. First open R or Rstudio and copy and paste the following code.
-
-```r
-library(readr)
-library(dplyr)
-library(stringr)
-
-
-getwd()
-select_1 <- read_tsv("L:/comm_complete_genomes_dataset_fields.tsv")
-head(select_1)
-
-select_2 <- select_1 %>% select(`Assembly Accession`, `Organism Name`)
-select_2$extract_name <- word(select_2$`Organism Name`,1,2)
-
-#select only rows with new species ("sp.")
-select_sp <- select_2[grep("sp.$", select_2$extract_name), ]
-
-#select only rows without new species ("sp.")
-no_sp <- select_2[-grep("sp.$", select_2$extract_name), ]
-
-#see uniques species in extract_name collumn
-select_3 <- distinct(no_sp,extract_name, .keep_all = TRUE)
-
-all_select <- rbind(select_3,select_sp)
-
-select_ID <- all_select%>% select(`Assembly Accession`)
-
-write_tsv(select_ID, "microbiota_sialylation/genomes_download/proteins/proteins_unique_ID.tsv")
-```
-
-Select **representative species**
 ```
 cd ./proteins/
 sed -i '1d' proteins_unique_ID.tsv
-mkdir proteins_comm_sia/ && mkdir proteins_comm_sia/proteins_unique_comm_sia
+mkdir proteins_comm_sia
 for file in $(cat ./proteins_unique_ID.tsv); do cp "$file" ./proteins_comm_sia/proteins_unique_comm_sia/; done
 cd ./proteins_comm_sia/
-ls ./proteins_unique_comm_sia > representative_species.txt
-sed 's/_protein.faa//g' representative_species.txt > representative_species_modified_v6.txt
-sed 's/$/*/g' representative_species_modified_v6.txt > representative_species_modified_v5.txt
-sed -i 's/^/*/g' representative_species_modified_v5.txt
-mv representative_species_modified_v5.txt ../../genomes_download/
-cp representative_species_modified_v6.txt ../../genomes_download/plots_data/itol/
+ls ./proteins_comm_sia > representative_species.txt
+sed 's/_protein.faa//g' representative_species.txt > representative_species_modified.txt
+cp representative_species_modified.txt ../../genomes_download/plots_data/itol/
 ```
 
 To generate a tree from phylophlan, first you must download it. Check this [link](https://github.com/biobakery/phylophlan) with the procedures.
@@ -456,7 +436,7 @@ conda activate phylophlan
 **phylophlan database setup and installation**
 I followed instructions upon this [link](https://github.com/biobakery/phylophlan/wiki#databases). I followed the option 2 and installed the **phylophlan** database. Download **phylophlan_databases.txt** and follow the instructions below.
 ```
-cd proteins/
+cd .. #must be in protein folder
 mkdir protein_tree && cd protein_tree
 mkdir phylophlan_database && cd phylophlan_database
 cat phylophlan_databases.txt # copy and paste one of the links to **phylophlan** database (not amphora)
@@ -472,7 +452,7 @@ phylophlan_write_config_file.py --db_aa diamond --map_aa diamond --msa mafft \
 ```
 **Run script of phylophlan analysis**
 ```
-cd ../../scripts/
+cd ../../../scripts/
 bash phylo.sh #make sure phylophlan's conda environment is activated
 ```
 phylophlan generates a lot of files, but the most important is refine tree called **RAxML_result.proteins_unique_comm_sia_refined.tre** which was used for tree annotation with iTOL.
@@ -493,27 +473,28 @@ Follow the script **pie_data.ipynb** which is loccated in the path: microbial_si
 ## 4.5 iTOL annotation
 
 Follow the **Part 02** of hmm_process.ipynb script.
-For the other proteins (KpsT, KpsM and RfaH), I followed in another way: subsets for representative species of the dataset. This will be useful for iTOL annotation: 
+For the other proteins (KpsT, Kp), I followed in another way: subsets for representative species of the dataset. This will be useful for iTOL annotation: 
 **4.5 iTOL annotation**
 
 **KpsM**
 ```
-cp representative_species_modified_v5.txt  HMMER_analysis/kpsM/
-cd HMMER_analysis/kpsM/
-mkdir representative_species_kpsM
-for file in $(cat ./representative_species_modified_v5.txt); do mv "$file" ./representative_species_kpsM/; done
-cd representative_species_kpsM/
-find ./ -type f -name '*coverage*' -exec cat {} + > kpsM_coverage.tsv
+cd ../Protein_database/external_rings_models/
+mkdir kpsM_out kpsT_out kpsD_out neuD_out neuO_out
+find ./ -type f -name 'kpsM*coverage' -exec cat {} + > kpsM_coverage.tsv
+find ./ -type f -name 'kpsT*coverage' -exec cat {} + > kpsT_coverage.tsv
+find ./ -type f -name 'kpsD*coverage' -exec cat {} + > kpsD_coverage.tsv
+find ./ -type f -name 'neuO*coverage' -exec cat {} + > neuO_coverage.tsv
+find ./ -type f -name 'neuD*coverage' -exec cat {} + > neuD_coverage.tsv
 ```
 Process resulted coverage file in hmm_process.ipynb script and then continue
+
+**KpsM**
 ```
-#remove first line and first columm to get only ID
-sed -i '1d' kpsM_representative_cover_filter_40.tsv
-cut -f2 kpsM_representative_cover_filter_40.tsv > kpsM_representative_cover_filter_40_ID.tsv 
-mkdir filtered_kpsM
+sed -i '1d' kpsM_cover_filter_40.tsv
+cut -f2 kpsM_cover_filter_40.tsv > kpsM_cover_filter_40_ID.tsv 
 #transfer files to another folder
-for file in $(cat ./kpsM_representative_cover_filter_40_ID.tsv); do mv "$file" ./filtered_kpsM/; done
-cd filtered_kpsM
+for file in $(cat ./kpsM_cover_filter_40_ID.tsv); do mv "$file" ./kpsM_out/; done
+cd kpsM_out
 find . -type f -name '*protein_output*' -exec cat {} + > all_kpsM_protein.tsv
 #process output file
 sed -i '/#/d' all_kpsM_protein.tsv
@@ -522,77 +503,46 @@ sed -i 's/ \{1,\}/\t/g' all_kpsM_protein.tsv
 Return to the script again. Final resulted file will be located in microbiota_sialylation/genomes_download/plots_data/itol/
 
 **KpsT**
-```
-cp representative_species_modified_v5.txt  HMMER_analysis/kpsT/
-cd HMMER_analysis/kpsT/
-mkdir representative_species_kpsT
-for file in $(cat ./representative_species_modified_v5.txt); do mv "$file" ./representative_species_kpsT/; done
-cd representative_species_kpsT/
-find ./ -type f -name '*coverage*' -exec cat {} + > kpsT_coverage.tsv
-```
 Process resulted coverage file in hmm_process.ipynb script and then continue
 ```
 #remove first line and first columm to get only ID
-sed -i '1d' kpsT_representative_cover_filter_40.tsv
-cut -f2 kpsT_representative_cover_filter_40.tsv > kpsT_representative_cover_filter_40_ID.tsv 
-mkdir filtered_kpsT
+sed -i '1d' kpsT_cover_filter_40.tsv
+cut -f2 kpsT_cover_filter_40.tsv > kpsT_cover_filter_40_ID.tsv 
 #transfer files to another folder
-for file in $(cat ./kpsT_representative_cover_filter_40_ID.tsv); do mv "$file" ./filtered_kpsT/; done
-cd filtered_kpsT
+for file in $(cat ./kpsT_cover_filter_40_ID.tsv); do mv "$file" ./kpsT_out/; done
+cd kpsT_out
 find . -type f -name '*protein_output*' -exec cat {} + > all_kpsT_protein.tsv
 #process output file
 sed -i '/#/d' all_kpsT_protein.tsv
 sed -i 's/ \{1,\}/\t/g' all_kpsT_protein.tsv 
 ```
-Return to the script again. Final resulted file will be located in microbiota_sialylation/genomes_download/plots_data/itol/
+**NeuD**
 
-**(Poly)O-acetiltransferase**
-```
-cp representative_species_modified_v5.txt  HMMER_analysis/o_acetiltrans_plus_poli/
-cd HMMER_analysis/o_acetiltrans_plus_poli/
-mkdir representative_oacetil
-for file in $(cat ./representative_species_modified_v5.txt); do mv "$file" ./representative_oacetil/; done
-cd representative_oacetil/
-find ./ -type f -name '*coverage*' -exec cat {} + > all_oacetil_cover
-```
-Process resulted coverage file in hmm_process.ipynb script and then continue
 ```
 #remove first line and first columm to get only ID
-sed -i '1d' oacetil_representative_cover_filter_40.tsv
-cut -f2 oacetil_representative_cover_filter_40.tsv > oacetil_representative_cover_filter_40_ID.tsv 
-mkdir filtered_oacetil
+sed -i '1d' neuD_cover_filter_40.tsv
+cut -f2 neuD_cover_filter_40.tsv > neuD_cover_filter_40.tsv_ID.tsv 
 #transfer files to another folder
-for file in $(cat ./oacetil_representative_cover_filter_40_ID.tsv); do mv "$file" ./filtered_oacetil/; done
-cd filtered_oacetil
-find . -type f -name '*protein_output*' -exec cat {} + > all_oacetil_plus_poli.tsv
+for file in $(cat ./neuD_cover_filter_40.tsv_ID.tsv); do mv "$file" ./neuD_out/; done
+cd neuD_out
+find . -type f -name '*protein_output*' -exec cat {} + > all_neuD_output.tsv
 #process output file
-sed -i '/#/d' all_oacetil_plus_poli.tsv
-sed -i 's/ \{1,\}/\t/g' all_oacetil_plus_poli.tsv 
+sed -i '/#/d' all_neuD_output.tsv
+sed -i 's/ \{1,\}/\t/g' all_neuD_output.tsv 
 ```
-Return to the script again. Final resulted file will be located in microbiota_sialylation/genomes_download/plots_data/itol/
 
-**RfaH**
-```
-cp representative_species_modified_v5.txt  HMMER_analysis/RfaH/
-cd HMMER_analysis/RfaH/
-mkdir representative_RfaH
-for file in $(cat ./representative_species_modified_v5.txt); do mv "$file" ./representative_RfaH/; done
-cd representative_RfaH/
-find ./ -type f -name '*coverage*' -exec cat {} + > rfah_coverage
-```
-Process resulted coverage file in hmm_process.ipynb script and then continue
+**NeuO**
 ```
 #remove first line and first columm to get only ID
-sed -i '1d' rfah_representative_cover_filter_40.tsv
-cut -f2 rfah_representative_cover_filter_40.tsv > rfah_representative_cover_filter_40_ID.tsv 
-mkdir filter_rfaH
+sed -i '1d' neuO_cover_filter_40.tsv
+cut -f2 neuO_cover_filter_40.tsv > neuO_cover_filter_40_ID.tsv 
 #transfer files to another folder
-for file in $(cat ./rfah_representative_cover_filter_40_ID.tsv); do mv "$file" ./filter_rfaH/; done
-cd filter_rfaH
-find . -type f -name '*protein_output*' -exec cat {} + > all_rfah_tsv_w_o_cruz.tsv
+for file in $(cat ./neuO_cover_filter_40_ID.tsv); do mv "$file" ./neuO_out/; done
+cd neuO_out
+find . -type f -name '*protein_output*' -exec cat {} + > all_neuO_output.tsv
 #process output file
-sed -i '/#/d' all_rfah_tsv_w_o_cruz.tsv
-sed -i 's/ \{1,\}/\t/g' all_rfah_tsv_w_o_cruz.tsv 
+sed -i '/#/d' all_neuO_output.tsv
+sed -i 's/ \{1,\}/\t/g' all_neuO_output.tsv 
 ```
 Return to the script again. Final resulted file will be located in microbiota_sialylation/genomes_download/plots_data/itol/
 
@@ -610,15 +560,16 @@ After install abricate, download genomes.
 ```
 cd ../../../proteins/
 datasets download genome accession --inputfile ./proteins_unique_ID.tsv --include genome --dehydrated --filename genomes_unique.zip
-mv genomes_unique.zip ./proteins_comm_sia/proteins_unique_comm.sia/
+mv genomes_unique.zip ./proteins_comm_sia/
+cd proteins_comm_sia
 unzip genomes_unique.zip -d genomes_unique
 datasets rehydrate --directory genomes_unique
-find ./proteins_comm_sia/proteins_unique_comm.sia/genomes_unique/ncbi_dataset/data/GCF*/ -type f -iname "*.fna" -exec mv -v "{}" ./genomes_unique \; #move files
+find ./genomes_unique/ncbi_dataset/data/GCF*/ -type f -iname "*.fna" -exec mv -v "{}" ./genomes_unique \; #move files
 ```
 Start the process of analysis
 ```
-abricate ./genomes_unique/ --db vfdb --csv --minid 70 --mincov 60 > out_70id_60cov.csv
-mv out_70id_60cov.csv ../plots_data/itol/
+abricate ./genomes_unique/*fna --db vfdb --csv --minid 70 --mincov 60 > out_70id_60cov.csv
+mv out_70id_60cov.csv ../../../plots_data/itol/
 ```
 ### 4.5.3 Processing of resulted files for iTOL annotation
 
