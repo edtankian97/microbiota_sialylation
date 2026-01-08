@@ -5,7 +5,7 @@
 seq_dir=../control_proteins/
 
 # Loop through the HMM models files with .hmm to extract their names
-for hmm_file in ../Protein_database/CD_HIT/mafft_align/hmm_models/*; do
+for hmm_file in ../Protein_database/mafft_align/hmm_models/*; do
     # Extrair o nome do modelo (sem a extensão .hmm)
     hmm_name=$(basename "$hmm_file" .hmm)
 
