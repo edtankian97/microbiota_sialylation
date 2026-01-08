@@ -2,7 +2,7 @@
 
 #Define diretories with HMM models and proteins sequences 
 
-hmm_dir=../HMM_models/CMP_mixed.hmm
+hmm_dir=../HMM_models/
 seq_dir=../proteins/
 
 # Loop throuhg the HMM models files with .hmm to extract their names
