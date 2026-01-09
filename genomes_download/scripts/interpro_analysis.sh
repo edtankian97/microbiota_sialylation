@@ -1,8 +1,12 @@
 #! /bin/bash
 
+OUT_PATH="../Interpro_analysis/Interpro_results/"
 
-for file in ../proteins/proteins_sialylation/*for_Interpro.tsv; do
+mkdir -p $OUT_PATH
 
-BASE_FILE=$(basename "$file" .tsv)
-seqkit grep -f "$file" -n *.faa > "${file}_retrieved_now"
+for file in ../Interpro_analysis/*retrieved_now; do
+
+BASENAME=$(basename $file)
+
+../interproscan-5.76-107.0/interproscan.sh -i $file -b $OUT_PATH/${BASENAME}_results -f tsv -appl CDD,COILS,Gene3D,HAMAP,MobiDBLite,PANTHER,Pfam,PIRSF,PRINTS,SFLD,SMART,SUPERFAMILY,TIGRFAM;
 done
