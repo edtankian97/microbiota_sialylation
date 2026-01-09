@@ -2,8 +2,11 @@
 
 #Define diretories with HMM models and proteins sequences 
 
-hmm_dir=../HMM_models/
-seq_dir=../proteins/
+hmm_dir=../Protein_database/external_rings_models/
+seq_dir=../proteins/proteins_comm_sia/
+out_dir=../Protein_database/external_rings_models/external_rings_output/
+
+mkdir -p $out_dir
 
 # Loop throuhg the HMM models files with .hmm to extract their names
 for hmm_file in "$hmm_dir"; do
@@ -26,8 +29,8 @@ for hmm_file in "$hmm_dir"; do
         # Add the content of line 12 as a new columm in coverage file
         paste -d' ' "$coverage_file" > temp_file && mv temp_file "$coverage_file" 
         echo "Executado: $hmm_name contra $seq_name. Saída em $output_file"
-	mv "$output_file" ../HMMER_analysis/CMP_synthase/
-	mv "$coverage_file" ../HMMER_analysis/CMP_synthase/
+	mv "$output_file" "$out_dir"
+	mv "$coverage_file" "$out_dir"
     done
 done
 
