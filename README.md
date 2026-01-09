@@ -383,7 +383,26 @@ First, download Interproscan tar file. For this purpose, I followed the manual b
 cd ../../
 wget https://ftp.ebi.ac.uk/pub/software/unix/iprscan/5/5.76-107.0/interproscan-5.76-107.0-64-bit.tar.gz
 tar -pxvzf interproscan-5.76-107.0-*-bit.tar.gz
+conda install bioconda::seqkit #download seqkit, which will retrieve fasta sequences for interproscan analysis
 ```
+Tsv files with sequences ID for fasta sequences to retrieve will be at **/proteins/proteins_sialylation/** folder after hmm_process R's scripts had been finished. So now, execute the script below to retrieve sequences
+
+```
+bash ./scripts/retrieve_sequences_for_interpro.sh
+```
+Sequences retrieved will have **_retrieved_now** tag and will be at **scripts** folder. Let's move to another place
+```
+mkdir Interpro_analysis/Interpro_results
+mv ./scripts/*_retrieved_now ./Interpro_analysis
+bash ./scripts/interpro_analysis.sh
+```
+Results will be at this path **Interpro_analysis/Interpro_results**. Final results will be available at **plots_data/Interpro_results/** folder, which will be useful to execute Interproscan R'script
+```
+ls ./Interpro_analysis/Interpro_results
+```
+Now it's time to execute **Interpro_results** R'script to filter sequences based on signatures. This script is available at **scripts/jupyter_scripts/** folder
+
+
 Final result with all proteomes that passed interproscan are available in the file **complete_sialylation_interpro_filtration_final** which can be encounter at **genomes_download/plots_data/** folder. This is going to be used to extract info for the next topic **Downstream analysis**
 
 # 4. Downstream analysis
