@@ -384,7 +384,7 @@ cd ../../
 wget https://ftp.ebi.ac.uk/pub/software/unix/iprscan/5/5.76-107.0/interproscan-5.76-107.0-64-bit.tar.gz
 tar -pxvzf interproscan-5.76-107.0-*-bit.tar.gz
 ```
-
+Final result with all proteomes that passed interproscan are available in the file **complete_sialylation_interpro_filtration_final** which can be encounter at **genomes_download/plots_data/** folder. This is going to be used to extract info for the next topic **Downstream analysis**
 
 # 4. Downstream analysis
 
@@ -399,33 +399,26 @@ This topic and subtopics forwards are about how to get data that will be importa
 
 #get info
 datasets download genome accession --inputfile all_commom_1_modified.tsv --dehydrated
-dataformat tsv genome --package ncbi_dataset.zip  > comm_complete_genomes_dataset_tbl.tsv
 #select desired fields
-dataformat tsv genome --package ncbi_dataset.zip --fields accession,assminfo-biosample-geo-loc-name,assminfo-biosample-host,assminfo-biosample-host-disease,assminfo-biosample-source-type,assmstats-gc-percent,assmstats-total-sequence-len,organelle-assembly-name,organism-name,organism-tax-id > comm_complete_genomes_dataset_fields.tsv
-#move to the folder
+dataformat tsv genome --package ncbi_dataset.zip --fields accession,assminfo-biosample-geo-loc-name,assminfo-biosample-host,assminfo-biosample-host-disease,assminfo-biosample-source-type,assmstats-gc-percent,assmstats-total-sequence-len,organelle-assembly-name,organism-name,organism-tax-id > accession_complete_fields.tsv
+```
+Final file **accession_complete_fields.tsv** is already at **genomes_download/plots_data/** folder
 
-```
 ### 4.1.2 Taxonomy information
-```
-#take desired columm
-cut -f10 comm_complete_genomes_dataset_fields.tsv > comm_sia_genomes_tax_id
-sed -i '1d' comm_sia_genomes_tax_id #remove header
-#retrieve taxonomy information
-datasets download taxonomy taxon --inputfile comm_sia_genomes_tax_id --filename taxonomy.zip
-unzip taxonomy.zip
-mv taxonomy/ncbi_dataset/data/taxonomy_summary.tsv ./plots_data/
-```
+
+Final file **accession_complete_fields.tsv** is already at **genomes_download/plots_data/** folder
+
 ### 4.1.3 Phylogenetic tree
 
 ```
 cd ./proteins/
-sed -i '1d' proteins_unique_ID.tsv
-mkdir proteins_comm_sia
-for file in $(cat ./proteins_unique_ID.tsv); do cp "$file" ./proteins_comm_sia/; done
-cd ./proteins_comm_sia/
-ls ./proteins_comm_sia/*faa > representative_species.txt
+sed -i '1d' proteins_ID.tsv
+mkdir proteins_sialylation/final_complete_sialylation/
+for file in $(cat ./proteins_ID.tsv); do cp "$file" ./proteins_sialylation/; done
+cd ./proteins_sialylation/
+ls ./proteins_sialylation/*faa > representative_species.txt
 sed 's/_protein.faa//g' representative_species.txt > representative_species_modified.txt
-cp representative_species_modified.txt ../../genomes_download/plots_data/itol/
+cp representative_species_modified.txt ../../genomes_download/plots_data/
 ```
 
 To generate a tree from phylophlan, first you must download it. Check this [link](https://github.com/biobakery/phylophlan) with the procedures.
@@ -468,7 +461,7 @@ Follow the script **host_distribution.ipynb** which is loccated in the path: mic
 
 ## 4.4 Species distribution
 
-Follow the script **pie_data.ipynb** which is loccated in the path: microbial_sialylation/genomes_download/scripts/jupyter_scripts/
+Follow the script **species_distribution.ipynb** which is loccated in the path: microbial_sialylation/genomes_download/scripts/jupyter_scripts/
 
 ## 4.5 iTOL annotation
 
