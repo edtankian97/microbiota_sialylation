@@ -421,9 +421,9 @@ mv taxonomy/ncbi_dataset/data/taxonomy_summary.tsv ./plots_data/
 cd ./proteins/
 sed -i '1d' proteins_unique_ID.tsv
 mkdir proteins_comm_sia
-for file in $(cat ./proteins_unique_ID.tsv); do cp "$file" ./proteins_comm_sia/proteins_unique_comm_sia/; done
+for file in $(cat ./proteins_unique_ID.tsv); do cp "$file" ./proteins_comm_sia/; done
 cd ./proteins_comm_sia/
-ls ./proteins_comm_sia > representative_species.txt
+ls ./proteins_comm_sia/*faa > representative_species.txt
 sed 's/_protein.faa//g' representative_species.txt > representative_species_modified.txt
 cp representative_species_modified.txt ../../genomes_download/plots_data/itol/
 ```
@@ -472,13 +472,16 @@ Follow the script **pie_data.ipynb** which is loccated in the path: microbial_si
 
 ## 4.5 iTOL annotation
 
-Follow the **Part 02** of hmm_process.ipynb script.
-For the other proteins (KpsT, Kp), I followed in another way: subsets for representative species of the dataset. This will be useful for iTOL annotation: 
-**4.5 iTOL annotation**
+```
+cd ../ #If you are one level above at jupyter_scripts folder, do this command to go to scripts folder
+bash external_rings_hmmer.sh #do the annotation of proteins for external rings
+```
+
+Results for each protein: KpsM, KpsT, neuO and neuD will be located at **../Protein_database/external_rings_models/external_rings_output/**
 
 **KpsM**
 ```
-cd ../Protein_database/external_rings_models/
+cd ../Protein_database/external_rings_models/external_rings_output/
 mkdir kpsM_out kpsT_out kpsD_out neuD_out neuO_out
 find ./ -type f -name 'kpsM*coverage' -exec cat {} + > kpsM_coverage.tsv
 find ./ -type f -name 'kpsT*coverage' -exec cat {} + > kpsT_coverage.tsv
