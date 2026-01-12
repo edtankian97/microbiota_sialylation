@@ -231,6 +231,7 @@ bash ../scripts/rename_files.sh
 With the proteins with their respective names, you can move them to the **proteins** directory
 ```
 find proteins/ncbi_dataset/data/GCF*/ -type f -iname "*.faa" -exec mv -v "{}" ./proteins/ \;
+mkdir proteins/proteins_sialylation/final_complete_sialylation/ #create more directories
 ```
 Proteomes are now in **proteins** directory and then you can edit their fasta header, so we can identify them later on HMMER analysis.
 For this, do the following command:
@@ -250,10 +251,10 @@ Scripts for each enzyme model will be available with their respective names in *
 **CMP_synthase**
 ```
 cd scripts/
-bash CMP_hmm.sh
+bash ncbi_teste_own_hmmer.sh
 ```
 
-With all done, now it's time to start the process of coverage, e-value and bit-score filter
+With all done, now it's time to start the process of coverage, e-value and bit-score filter. First, let's cat coverage results for each protein
 ```
 cd ../HMMER_analysis/
 find ./ -type f -name 'neuA*coverage' -exec cat {} + > neuA_coverage.tsv
@@ -265,9 +266,10 @@ find ./ -type f -name 'PF11477*coverage' -exec cat {} + > PF11477_coverage.tsv
 find ./ -type f -name 'PF06002*coverage' -exec cat {} + > PF06002_coverage.tsv
 find ./ -type f -name 'IPR010866*coverage' -exec cat {} + > IPR010866_coverage.tsv
 ```
-Now, go to the script **hmm_process.ipynb** which is loccated in the path: microbial_sialylation/genomes_download/scripts/jupyter_scripts/ and follow the script.
+Now, go to the script **hmm_process.ipynb** which is loccated in the path: microbial_sialylation/genomes_download/scripts/jupyter_scripts/ and follow the script. We will filter first by coverage value.
 
-After part 01 with coverage assessment, follow this for each core enzyme 
+After part 01 with coverage assessment, follow this for each core enzyme. We will move files'results that passed the filter, then join them for each protein  
+
 **NeuA**
 ```
 cd ./HMMER_analysis
@@ -372,12 +374,16 @@ find . -type f -name '*protein_output*' -exec cat {} + > new_file.tsv
 #process output file
 sed -i '/#/d' new_file.tsv
 sed  's/ \{1,\}/\t/g' new_file.tsv > file_output_PF11477.tsv
+cd ../
 ```
 
-Now, go to the script **hmm_process.ipynb** which is loccated in the path: microbial_sialylation/genomes_download/scripts/jupyter_scripts/ and follow the script PART 02 to process output file.
+Now, go to the script **hmm_process.ipynb** which is loccated in the path: microbial_sialylation/genomes_download/scripts/jupyter_scripts/ and follow the script PART 02 to process output file. We will filter by bit-score and e-value.
+
+With the result, let's move faa files that passed the final filter.
+
 
 ### 3.3 Protein analysis: Interproscan analysis
-First, download Interproscan tar file. For this purpose, I followed the manual by this [link](https://interproscan-docs.readthedocs.io/en/v5/UserDocs.html#obtaining-a-copy-of-interproscan)
+First, download Interproscan tar file. For this purpose, I followed the manual by this [link](https://interproscan-docs.readthedocs.io/en/v5/UserDocs.html#obtaining-a-copy-of-interproscan).
 
 ```
 cd ../../
@@ -403,7 +409,7 @@ ls ./Interpro_analysis/Interpro_results
 Now it's time to execute **Interpro_results** R'script to filter sequences based on signatures. This script is available at **scripts/jupyter_scripts/** folder
 
 
-Final result with all proteomes that passed interproscan are available in the file **complete_sialylation_interpro_filtration_final** which can be encounter at **genomes_download/plots_data/** folder. This is going to be used to extract info for the next topic **Downstream analysis**
+Final result with all proteomes that passed interproscan are available in the file **complete_sialylation_interpro_filtration_final.tsv** which can be encounter at **genomes_download/plots_data/** folder. This is going to be used to extract info for the next topic **Downstream analysis**
 
 # 4. Downstream analysis
 
@@ -417,7 +423,7 @@ This topic and subtopics forwards are about how to get data that will be importa
 #get file with protein ID with whole sialylation pathway
 
 #get info
-datasets download genome accession --inputfile all_commom_1_modified.tsv --dehydrated
+cd plots_data/
 #select desired fields
 dataformat tsv genome --package ncbi_dataset.zip --fields accession,assminfo-biosample-geo-loc-name,assminfo-biosample-host,assminfo-biosample-host-disease,assminfo-biosample-source-type,assmstats-gc-percent,assmstats-total-sequence-len,organelle-assembly-name,organism-name,organism-tax-id > accession_complete_fields.tsv
 ```
@@ -430,14 +436,14 @@ Final file **accession_complete_fields.tsv** is already at **genomes_download/pl
 ### 4.1.3 Phylogenetic tree
 
 ```
-cd ./proteins/
-sed -i '1d' proteins_ID.tsv
-mkdir proteins_sialylation/final_complete_sialylation/
-for file in $(cat ./proteins_ID.tsv); do cp "$file" ./proteins_sialylation/; done
-cd ./proteins_sialylation/
-ls ./proteins_sialylation/*faa > representative_species.txt
+sed -i '1d' complete_sialylation_interpro_filtration_final.tsv
+cp complete_sialylation_interpro_filtration_final.tsv ../proteins/proteins_sialylation/
+cd ../proteins/proteins_sialylation/
+for file in $(cat ./complete_sialylation_interpro_filtration_final.tsv); do cp "$file" ./final_complete_sialylation/; done
+cd ./final_complete_sialylation/
+ls ./final_complete_sialylation/*faa > representative_species.txt
 sed 's/_protein.faa//g' representative_species.txt > representative_species_modified.txt
-cp representative_species_modified.txt ../../genomes_download/plots_data/
+cp representative_species_modified.txt ../../../genomes_download/plots_data/
 ```
 
 To generate a tree from phylophlan, first you must download it. Check this [link](https://github.com/biobakery/phylophlan) with the procedures.
@@ -573,18 +579,17 @@ conda install -c conda-forge -c bioconda -c defaults abricate
 
 After install abricate, download genomes.
 ```
-cd ../../../proteins/
-datasets download genome accession --inputfile ./proteins_unique_ID.tsv --include genome --dehydrated --filename genomes_unique.zip
-mv genomes_unique.zip ./proteins_comm_sia/
-cd proteins_comm_sia
+cd ../../../proteins/proteins_sialylation/final_complete_sialylation/
+datasets download genome accession --inputfile ./complete_sialylation_interpro_filtration_final.tsv --include genome --dehydrated --filename genomes_unique.zip
 unzip genomes_unique.zip -d genomes_unique
 datasets rehydrate --directory genomes_unique
 find ./genomes_unique/ncbi_dataset/data/GCF*/ -type f -iname "*.fna" -exec mv -v "{}" ./genomes_unique \; #move files
+ls ./genomes_unique # list files
 ```
 Start the process of analysis
 ```
 abricate ./genomes_unique/*fna --db vfdb --csv --minid 70 --mincov 60 > out_70id_60cov.csv
-mv out_70id_60cov.csv ../../../plots_data/itol/
+mv out_70id_60cov.csv ../../../../plots_data/itol/
 ```
 ### 4.5.3 Processing of resulted files for iTOL annotation
 
