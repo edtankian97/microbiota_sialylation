@@ -13,6 +13,8 @@ seek in proteomes of bacterias from NCBI that has a potential proteins linked to
 
 **4. Downstream analysis:** Genomic analysis of bacterias' genomes that have sialylation with figures created.
 
+**5. Metagenomic analysis:** Identification of sialylation pathway in metagenomic of diseases
+
 ## Structure of folders before everything
 
 ```
@@ -614,6 +616,104 @@ cat vfdb_itol_representative_EANS.txt vfdb_itol_represent_EANS.tsv > final_vfdb_
 cat ed_tree_label.txt representative_labels_itol.tsv > ed_tree_label_represent.txt
 ```
 Now you can upload the files in iToL site.
+
+
+# 5. Metagenomic analysis
+
+## 5.1 Study 01 colon cancer - France
+
+### 5.1.1 Download of fastq files
+
+First download  fastq files
+```
+conda install -c bioconda sra-tools #Install sra-tools
+cd metagen_files/Study01_france_cancer/
+cat *_get_ID > all_cancer_download.sh
+bash cancer_01_download.sh
+```
+### 5.1.2 Quality filtering
+
+After this, it's time to do a filtering with fastp
+```
+conda install -c bioconda fastp #download fastp
+bash script_fastp_filtering.sh
+ls outputs_fastp #folder with result of filtering
+```
+Results will be at **outputs_fastp** folder
+
+### 5.1.3 Download of human genome
+```
+conda install -c bioconda bowtie2 #download bowtie2 via conda
+bash script_get_human_genome_GRch38.sh
+```
+Output will be at **human_genome** folder.
+
+### 5.1.4 Human genome alignment
+
+We will align all fastq files against human genome 
+```
+bash script_align_reads_human_genome.sh
+ls outputs_bowtie2_FR # list output files
+```
+Files will be saved at **outputs_bowtie2_FR** folder.
+
+### 5.1.5 Remove human genome alignment
+
+After alignment, we will remove all human genome alignment to our fastq files, as we want only microbiota genomes'source
+
+```
+conda install -c bioconda samtools #download samtools via conda
+bash script_remove_human_genome.sh
+```
+Results will be saved at **clean_reads_FR** folder
+
+### 5.1.6 Merge sequences with FLASH
+```
+conda install -c bioconda flash #install flash via conda
+bash script_flash.sh
+```
+### 5.1.7 Generate contigs with MEGAHIT
+```
+conda install -c bioconda megahit
+bash script_megahit.sh
+```
+### 5.1.8 Generate bins with metabat
+```
+conda install bioconda::metabat2
+bash create_index.sh #create index
+bash prepare_to_binning.sh #coverage count
+bash generate_bins.sh #generate bins
+bash rename_bins_files.sh #rename files based on their directories
+```
+### 5.1.9 Check quality of bins with CheckM
+
+### 5.1.10 Generate proteins faa files with prokka
+```
+cd bins_paired
+mkdir all_prokka
+bash prokka_script.sh
+bash rename_fasta_header.sh 
+bash mv_prokka_files.sh 
+```
+Files with faa extension are now inside **all_prokka** folder. Let's see if everything is ok. Check if files are renamed corrected with their respective directory with **less file_name.faa** command
+```
+cd all_prokka 
+ls
+```
+### 5.1.11 Hmmer analysis
+
+Now, it's time to do a hmmer annotation
+
+```
+cd ../../ #must be at Study01_france_cancer folder
+bash metagen_hmmer.sh
+```
+Process hmmer results. Output files are in this path **metagen_files/Study01_france_cancer/output_data**
+```
+
+```
+### 5.1.12 Interpro analysis
+
 
 
 ## Structure of folders after all
