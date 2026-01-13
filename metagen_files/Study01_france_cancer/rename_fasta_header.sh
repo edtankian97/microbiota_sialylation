@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Loop for each .faa file extension
-for arquivo in ./ERR*/*prokka/*.faa; do
+for arquivo in ./all_prokka/*.faa; do
     # Verify if file exist 
     if [ -f "$arquivo" ]; then
         # Add filename to each fasta header 

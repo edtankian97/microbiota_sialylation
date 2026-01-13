@@ -692,8 +692,8 @@ bash rename_bins_files.sh #rename files based on their directories
 cd bins_paired
 mkdir all_prokka
 bash prokka_script.sh
-bash rename_fasta_header.sh 
 bash mv_prokka_files.sh 
+bash rename_fasta_header.sh 
 ```
 Files with faa extension are now inside **all_prokka** folder. Let's see if everything is ok. Check if files are renamed corrected with their respective directory with **less file_name.faa** command
 ```
