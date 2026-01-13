@@ -9,7 +9,7 @@ out_dir=../Protein_database/external_rings_models/external_rings_output/
 mkdir -p $out_dir
 
 # Loop throuhg the HMM models files with .hmm to extract their names
-for hmm_file in "$hmm_dir"; do
+for hmm_file in "${hmm_dir}"/*hmm; do
     # Extrair o nome do modelo (sem a extensão .hmm)
     hmm_name=$(basename "$hmm_file" .hmm)
 
