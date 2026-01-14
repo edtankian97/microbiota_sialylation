@@ -102,8 +102,7 @@ xargs -a GCF_complete_without_checkM.txt -I {} datasets summary genome accession
 mv remain_CheckM_data.tsv remain_CheckM_data_complete.tsv
 ```
 after this, continue the Part 02 of script: **Checkm_refseq_Reanalise_V2_R.ipynb**
-
-**Run CheckM2 to get completeness and contamination of missing data. CheckM2 uses artificial language to predict completeness of genomes. 
+Run CheckM2 to get completeness and contamination of missing data. CheckM2 uses artificial language to predict completeness of genomes. 
 ```
 conda activate ncbi_datasets
 conda install -c bioconda -c conda-forge checkm2 
@@ -598,6 +597,7 @@ mv out_70id_60cov.csv ../../../../plots_data/itol/
 Follow the script **itol_notation.ipynb** which is loccated in the path: microbial_sialylation/genomes_download/scripts/jupyter_scripts/
 After this, each dataset created in the script was concatenated with iTol dataset
 ```
+cd ../../../../plots_data/itol/
 #remove header
 sed -i '1d' kpsT_represent_itol_EANS.tsv
 sed -i '1d' oacetil_itol_represent_EANS.tsv
