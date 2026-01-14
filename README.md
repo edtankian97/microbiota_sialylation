@@ -714,11 +714,58 @@ Process hmmer results. Output files are in this path **metagen_files/Study01_fra
 ```
 ### 5.1.12 Interpro analysis
 
+Output files with sequences fasta to run Interpro will be at this path **metagen_files/Study01_france_cancer/output_data/Interproscan_analysis**. 
+```
+bash ../scripts/interpro_analysis_FR.sh
+```
+Final results of Interproscan are available at **metagen_files/Study01_france_cancer/output_data/Interpro_results/** folder, which will be useful to execute Interproscan R'script.
+Now it's time to execute **Interpro_results_FR** R'script to filter sequences based on signatures. This script is available at **metagen_files/Study01_france_cancer/** folder. Final result of  Interproscan analysis are available at  **metagen_files/Study01_france_cancer/output_data/Interpro_results/**
+
+### 5.1.13 Phylogeny Identification of bins
+
+Now, it's time to identify bins that passed the Interproscan analysis filtering. File with bins_ID are presented at **metagen_files/Study01_france_cancer/output_data/Interpro_results/** with the name **bins_for_identification.tsv**. Let's handle this file and extract the genomes file for identification.
+
+```
+cd ./output_data/Interpro_results/ #considering that you are at Study01_france_cancer folder
+less bins_for_identification.tsv
+sed -i '1d' bins_for_identification.tsv
+cut -d'_' -f2-3 bins_for_identification.tsv > bins_for_identification_modified.tsv #extract right ID of bins filename
+mv bins_for_identification_modified.tsv ../../bins_paired #move file to desired folder
+cd ../../bins_paired #go to folder of extraction
+mkdir bins_paired_sialylation #create folder to move the files
+
+#execute command to move the right files
+while IFS= read -r file; do
+    find . -type f -name "$file" -exec mv -t bins_paired_sialylation {} +
+done < bins_for_identification_modified.tsv
+
+ls ./bins_paired_sialylation/
+```
+Download GTDB-tk for analysis. I followed GTDB-tk [manual](https://ecogenomics.github.io/GTDBTk/installing/index.html#installing)
+```
+cd ../../ #must be at metagen_files folder
+mkdir GTDB_DATA && cd GTDB_DATA
+#download GTDB splitted files
+wget -r -np -nH --cut-dirs=8 \
+https://data.ace.uq.edu.au/public/gtdb/data/releases/release226/226.0/auxillary_files/gtdbtk_package/split_package/
+cd split_package #go to files' folder
+ cat gtdbtk_r226_data.tar.gz.part_* > gtdbtk_r226_data.tar.gz #cat all files into one
+ tar xvzf gtdbtk_r226_data.tar.gz #untar file
+```
+Also, download GTDB-tk via conda
+```
+conda create -n gtdbtk-2.6.1 -c conda-forge -c bioconda gtdbtk=2.6.1
+conda activate gtdbtk-2.6.0
+```
+Execute GTDB script.
+```
+bash metagen_FR_GTDB.sh
+```
+Summary results are at **metagen_files/Study01_france_cancer/output_data** folder with file named **gtdbtk.bac120.summary_FR.tsv**
 
 
 ## Structure of folders after all
 
-```
 .
 └── genomes_download
     ├── CheckM_report_prokaryotes.txt
