@@ -103,14 +103,20 @@ xargs -a GCF_complete_without_checkM.txt -I {} datasets summary genome accession
 mv remain_CheckM_data.tsv remain_CheckM_data_complete.tsv
 ```
 after this, continue the Part 02 of script: **Checkm_refseq_Reanalise_V2_R.ipynb**
-Run CheckM2 to get completeness and contamination of missing data. CheckM2 uses artificial language to predict completeness of genomes. 
+Run CheckM to get completeness and contamination of missing data.  Information of instalation can be found [here](https://github.com/Ecogenomics/CheckM/wiki/Installation). Below, you can find the commands for installation
 ```
-conda activate ncbi_datasets
-conda install -c bioconda -c conda-forge checkm2 
-checkm2 -h
-checkm2 database --download #download checkm2's standart database
+conda create -n checkm python=3.9
+conda activate checkm
+conda install -c bioconda numpy matplotlib pysam
+conda install -c bioconda hmmer prodigal pplacer
+pip3 install checkm-genome
 ```
-**Download missing genomes for contamination analysis and run CheckM2**
+Download CheckM database and substitute /path/to/my_checkm_data to where the database is located. Then, execute CheckM script
+```
+wget https://data.ace.uq.edu.au/public/CheckM_databases/checkm_data_2015_01_16.tar.gz
+export CHECKM_DATA_PATH=/path/to/my_checkm_data
+```
+**Download missing genomes for contamination analysis and run CheckM**
 ```
 pwd #you should be in the directory genomes_download
 sed '1d' remain_CheckM_data_complete_with_NA.tsv > remain_CheckM_data_complete_with_NA_ID.tsv
@@ -118,7 +124,14 @@ datasets download genome accession --inputfile remain_CheckM_data_complete_with_
 unzip ncbi_dataset.zip && mv ncbi_dataset/ remain_CheckM/
 rm ncbi_dataset.zip
 find ./remain_CheckM/data/GCF_000*/ -type f -iname "*.fna" -exec mv -v "{}" ./remain_CheckM/ \;
-checkm2 predict --threads 5 --input  remain_CheckM/ --output-directory checkm2_result
+ bash ./scripts/checkM_ncbi.sh
+```
+Output folder is **checkm_result_ncbi** and output file **bin_stats_ext.tsv** will be located at **checkm_result_ncbi/storage** folder. 
+But **bin_stats_ext.tsv** is also located at **genomes_download/plots_data** folder.
+```
+cd checkm_result_ncbi
+awk -F',' '/^GCF_/ { print $1, $11, $12 }' bin_stats_ext.tsv > checkm_GCF_delim.txt #delimiter rows with comma
+awk -F' ' 'BEGIN{OFS="\t"} /^GCF_/ { print $1, $6, $8 }' checkm_GCF_delim.txt > quality_report.tsv #choose right colummns that I want
 ```
 Now return to the script **Checkm_refseq_Reanalise_V2_R.ipynb**
 
@@ -426,12 +439,15 @@ This topic and subtopics forwards are about how to get data that will be importa
 
 ### 4.1.1 Information of genomes with sialylation pathway
 
-**After hmm_process analysis of core enzymes, do the following to get information of genomes that have sialylation pathway**
+**After Interproscan analysis of core enzymes, do the following to get information of genomes that have sialylation pathway**
 ```
 #get file with protein ID with whole sialylation pathway
-
-#get info
 cd plots_data/
+less complete_sialylation_interpro_filtration_final.tsv #see the data
+#process and download zip file to extract information
+sed -i '1d' complete_sialylation_interpro_filtration_final.tsv
+datasets download genome accession --inputfile complete_sialylation_interpro_filtration_final.tsv 
+
 #select desired fields
 dataformat tsv genome --package ncbi_dataset.zip --fields accession,assminfo-biosample-geo-loc-name,assminfo-biosample-host,assminfo-biosample-host-disease,assminfo-biosample-source-type,assmstats-gc-percent,assmstats-total-sequence-len,organelle-assembly-name,organism-name,organism-tax-id > accession_complete_fields.tsv
 ```
@@ -444,7 +460,6 @@ Final file **accession_complete_fields.tsv** is already at **genomes_download/pl
 ### 4.1.3 Phylogenetic tree
 
 ```
-sed -i '1d' complete_sialylation_interpro_filtration_final.tsv
 cp complete_sialylation_interpro_filtration_final.tsv ../proteins/proteins_sialylation/
 cd ../proteins/proteins_sialylation/
 for file in $(cat ./complete_sialylation_interpro_filtration_final.tsv); do cp "$file" ./final_complete_sialylation/; done
@@ -695,9 +710,8 @@ bash prepare_to_binning.sh #coverage count
 bash generate_bins.sh #generate bins
 bash rename_bins_files.sh #rename files based on their directories
 ```
-### 5.1.9 Check quality of bins with CheckM
 
-### 5.1.10 Generate proteins faa files with prokka
+### 5.1.9 Generate proteins faa files with prokka
 ```
 cd bins_paired
 mkdir all_prokka
@@ -710,7 +724,7 @@ Files with faa extension are now inside **all_prokka** folder. Let's see if ever
 cd all_prokka 
 ls
 ```
-### 5.1.11 Hmmer analysis
+### 5.1.10 Hmmer analysis
 
 Now, it's time to do a hmmer annotation
 
@@ -722,7 +736,7 @@ Process hmmer results. Output files are in this path **metagen_files/Study01_fra
 ```
 
 ```
-### 5.1.12 Interpro analysis
+### 5.1.11 Interpro analysis
 
 Output files with sequences fasta to run Interpro will be at this path **metagen_files/Study01_france_cancer/output_data/Interproscan_analysis**. 
 ```
@@ -731,7 +745,7 @@ bash ../scripts/interpro_analysis_FR.sh
 Final results of Interproscan are available at **metagen_files/Study01_france_cancer/output_data/Interpro_results/** folder, which will be useful to execute Interproscan R'script.
 Now it's time to execute **Interpro_results_FR** R'script to filter sequences based on signatures. This script is available at **metagen_files/Study01_france_cancer/** folder. Final result of  Interproscan analysis are available at  **metagen_files/Study01_france_cancer/output_data/Interpro_results/**
 
-### 5.1.13 Phylogeny Identification of bins
+### 5.1.12 Phylogeny Identification of bins
 
 Now, it's time to identify bins that passed the Interproscan analysis filtering. File with bins_ID are presented at **metagen_files/Study01_france_cancer/output_data/Interpro_results/** with the name **bins_for_identification.tsv**. Let's handle this file and extract the genomes file for identification.
 
@@ -773,141 +787,10 @@ bash metagen_FR_GTDB.sh
 ```
 Summary results are at **metagen_files/Study01_france_cancer/output_data** folder with file named **gtdbtk.bac120.summary_FR.tsv**
 
+### 5.1.13 Check quality of bins with CheckM
+```
+conda activate checkm
+export CHECKM_DATA_PATH=YOUR/PATH/TO/CHECKM/DATA
 
-## Structure of folders after all
 
-.
-└── genomes_download
-    ├── CheckM_report_prokaryotes.txt
-    ├── HMMER_analysis
-    │   ├── CMP_synthase
-    │   │   ├── CMP_coverage.tsv
-    │   │   └── filter_cover_CMP
-    │   │       └── file_output_CMP.tsv
-    │   ├── RfaH
-    │   │   └── representative_RfaH
-    │   │       └── filter_rfaH
-    │   ├── kpsM
-    │   │   └── representative_kpsM
-    │   │       └── filtered_kpsM
-    │   ├── kpsT
-    │   │   └── representative_species_kpsT
-    │   │       └── filtered_kpsT
-    │   ├── o_acetiltrans_plus_poli
-    │   │   └── representative_oacetil
-    │   │       └── filtered_oacetil
-    │   ├── polisialiltrans
-    │   │   ├── filter_cover_polisia
-    │   │   │   └── file_output_polisia.tsv
-    │   │   └── polisialil_coverage.tsv
-    │   └── sialiltrans
-    │       ├── filter_cover_sialil
-    │       │   └── file_output_sialil.tsv
-    │       └── sialil_coverage.tsv
-    ├── Protein_database
-    │   ├── CD_HIT
-    │   │   └── mafft_align
-    │   │       └── hmm_models
-    │   ├── CMP_synthase_mixed_database.fasta
-    │   ├── CMP_synthase_review_database.fasta
-    │   ├── CMP_synthase_unreview_database.fasta
-    │   ├── KpsM_mixed.fasta
-    │   ├── KpsT_mixed.fasta
-    │   ├── oacetil_plus_poli_mixed_database.fasta
-    │   ├── polisialil_database.fasta
-    │   ├── sialiltransferase_mixed_database_old_gold.fasta
-    │   ├── sialiltransferase_review_database.fasta
-    │   └── sialiltransferase_unreview_database.fasta
-    ├── README.md
-    ├── assembly_complete_summary.tsv
-    ├── assembly_summary_complete_ID.txt
-    ├── checkm2_result
-    │   ├── checkm2.log
-    │   ├── diamond_output
-    │   │   └── DIAMOND_RESULTS.tsv
-    │   ├── protein_files
-    │   │   ├── GCF_000010245.2_ASM1024v1_genomic.faa
-    │   │   ├── GCF_000146065.2_ASM14606v1_genomic.faa
-    │   │   ├── GCF_000264665.3_ASM26466v2_genomic.faa
-    │   │   └── GCF_000967155.2_HUSEC2011CHR1_genomic.faa
-    │   └── quality_report.tsv
-    ├── control_proteins
-    │   ├── Bac_fragilis_ATCC_faa.faa
-    │   ├── E_coli_dh10B.faa
-    │   ├── F_nucleatum_faa.faa
-    │   ├── HMMER_CONTROL_RESULTS
-    │   │   ├── CMP
-    │   │   │   ├── mixed
-    │   │   │   ├── review
-    │   │   │   └── unreview
-    │   │   ├── Rfah
-    │   │   ├── kpsM_T
-    │   │   ├── polisia
-    │   │   └── sialil
-    │   │       ├── mixed
-    │   │       ├── review
-    │   │       └── unreview
-    │   ├── M4.faa
-    │   ├── MAPA1.faa
-    │   ├── P_putida_kt2440.faa
-    │   ├── campylobacter_jejuni_ATCC_faa.faa
-    │   ├── control_proteomes.txt
-    │   └── files.txt
-    ├── ncbi_dataset.zip
-    ├── plots_data
-    │   ├── accession_complete_fields.tsv
-    │   ├── comm_complete_genomes_dataset_fields.tsv
-    │   ├── itol
-    │   │   ├── kpsM_represent_filter.tsv
-    │   │   ├── kpsT_represent_filter.tsv
-    │   │   ├── oacetil_represent_filter.tsv
-    │   │   ├── out_70id_60cov.csv
-    │   │   ├── representative_species_modified_v6.txt
-    │   │   └── rfah_represent_filter.tsv
-    │   └── taxonomy_summary.tsv
-    ├── proteins
-    │   ├── proteins_comm_sia
-    │   │   └── proteins_unique_comm_sia
-    │   └── proteins_tree
-    │       └── phylophlan_database
-    ├── remain_CheckM
-    │   ├── GCF_000010245.2_ASM1024v1_genomic.fna
-    │   ├── GCF_000146065.2_ASM14606v1_genomic.fna
-    │   ├── GCF_000264665.3_ASM26466v2_genomic.fna
-    │   ├── GCF_000967155.2_HUSEC2011CHR1_genomic.fna
-    │   ├── data
-    │   │   ├── GCF_000010245.2
-    │   │   ├── GCF_000146065.2
-    │   │   ├── GCF_000264665.3
-    │   │   ├── GCF_000967155.2
-    │   │   ├── assembly_data_report.jsonl
-    │   │   └── dataset_catalog.json
-    │   └── microbiota_sialylation.lnk
-    ├── remain_CheckM_data_complete.tsv
-    ├── remain_CheckM_data_complete_with_NA.tsv
-    ├── remain_CheckM_data_complete_with_NA_ID.tsv
-    └── scripts
-        ├── CD_HIT_script.sh
-        ├── CMP_hmm.sh
-        ├── KpsM_hmm.sh
-        ├── KpsT_hmm.sh
-        ├── RfaH_hmm.sh
-        ├── Sialiltrans_hmm.sh
-        ├── hmm_models.sh
-        ├── jupyter_scripts
-        │   ├── Checkm_refseq_Reanalise_V2.ipynb
-        │   ├── hmm_process.ipynb
-        │   ├── host_distribution.ipynb
-        │   ├── itol_notation.ipynb
-        │   ├── pie_data.ipynb
-        │   └── retrieve_assembly_info.ipynb
-        ├── mafft_align.sh
-        ├── o_acetiltrans_poli_hmm.sh
-        ├── phylo.sh
-        ├── polisialiltrans_hmm.sh
-        ├── rename_control_files.sh
-        ├── rename_fasta.sh
-        ├── rename_fasta_control.sh
-        ├── rename_file.sh
-        └── teste_hmm_control.sh
 ```
