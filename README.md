@@ -15,7 +15,7 @@ seek in proteomes of bacterias from NCBI that has a potential proteins linked to
 
 **5. Metagenomic analysis:** Identification of sialylation pathway in metagenomic data of diseases correlated to sialylation process
 
-## Structure of folders before everything (still in construction)
+## Structure of folders before everything (still in construction, ignore for while)
 
 ```
 .
@@ -68,6 +68,13 @@ seek in proteomes of bacterias from NCBI that has a potential proteins linked to
         ├── rename_fasta_control.sh
         ├── rename_file.sh
         └── teste_hmm_control.sh
+```
+## Recommendations
+
+To download this repository, run:
+
+```
+git clone https://github.com/edtankian97/microbiota_sialylation.git
 ```
 
 ## 1. Genome processing
@@ -639,9 +646,10 @@ cat neuD_itol_representative.txt neuD_itol_represent_EANS_paper.tsv > final_neuD
 cat neuO_itol_representative.txt neuO_itol_represent_EANS_paper.tsv > final_neuO_itol.txt
 cat vfdb_itol_representative_EANS.txt vfdb_itol_represent_EANS.tsv > final_vfdb_itol.txt
 cat ed_tree_label.txt representative_labels_itol.tsv > ed_tree_label_represent.txt
+cat representative_phyli_sialylation.txt representative_phylum_itol.tsv > final_representative_phylum.txt
 ```
-Now you can upload the files in iToL site. First submit and open final tree file. 
-
+Now you can upload the files in iToL site. First submit and open final tree file which is inside **plots_data/itol/** folder
+with the name **RAxML_result.final_complete_sialylation_refined.tre**
 
 # 5. Metagenomic analysis
 
