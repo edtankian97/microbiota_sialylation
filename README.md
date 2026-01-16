@@ -13,9 +13,9 @@ seek in proteomes of bacterias from NCBI that has a potential proteins linked to
 
 **4. Downstream analysis:** Genomic analysis of bacterias' genomes that have sialylation with figures created.
 
-**5. Metagenomic analysis:** Identification of sialylation pathway in metagenomic of diseases
+**5. Metagenomic analysis:** Identification of sialylation pathway in metagenomic data of diseases correlated to sialylation process
 
-## Structure of folders before everything
+## Structure of folders before everything (still in construction)
 
 ```
 .
@@ -98,6 +98,7 @@ conda install -c conda-forge ncbi-datasets-cli
 ```
 **-retrieve missing data of completeness from ncbi_datasets**
 ```
+sed -i '1d' GCF_complete_without_checkM.txt
 xargs -a GCF_complete_without_checkM.txt -I {} datasets summary genome accession {} --as-json-lines | dataformat tsv genome --fields organism-name,accession,checkm-completeness,checkm-contamination > remain_CheckM_data.tsv
 mv remain_CheckM_data.tsv remain_CheckM_data_complete.tsv
 ```
@@ -237,19 +238,19 @@ mkdir proteins/proteins_sialylation/final_complete_sialylation/ #create more dir
 Proteomes are now in **proteins** directory and then you can edit their fasta header, so we can identify them later on HMMER analysis.
 For this, do the following command:
 ```
-bash ../scripts/rename_fasta.sh
+cd proteins
+for f in *.faa; do sed -i "s/^>/>${f}_/" "$f"; done
 ```
 Now the proteins files are ready to be analised. Now, let's organize subdiretories to store the results for each enzyme of sialylation process
 ```
+cd .. #must be at genomes_download folder
 mkdir HMMER_analysis # you must be located at **genomes_download** folder
 cd HMMER_analysis
 mkdir neuA_out pm0188_out PF11477_out neuS_out PF06002_out lst_out lic3X_out IPR010866_out
-cd ..
+cd ../../ #must be at genomes_download folder
 ```
 Scripts for each enzyme model will be available with their respective names in **scripts** directory
 
-
-**CMP_synthase**
 ```
 cd scripts/
 bash ncbi_teste_own_hmmer.sh
@@ -299,7 +300,7 @@ sed  's/ \{1,\}/\t/g' new_file.tsv > file_output_lic3X.tsv
 ```
 **lst**
 ```
-cd ../
+cd ../ #must be located at HMMER_analysis folder
 sed -i '1d' lst_complete_cover_filter_40.tsv
 cut -f2 lst_complete_cover_filter_40.tsv > lst_complete_cover_filter_40_ID.tsv
 for file in $(cat ./lst_complete_cover_filter_40_ID.tsv); do mv "$file" ./lst_out/; done
@@ -312,7 +313,7 @@ sed  's/ \{1,\}/\t/g' new_file.tsv > file_output_lst.tsv
 ```
 **neuS**
 ```
-cd ../
+cd ../ #must be located at HMMER_analysis folder
 sed -i '1d' neuS_complete_cover_filter_40.tsv
 cut -f2 neuS_complete_cover_filter_40.tsv > neuS_complete_cover_filter_40_ID.tsv
 for file in $(cat ./neuS_complete_cover_filter_40_ID.tsv); do mv "$file" ./neuS_out/; done
@@ -325,7 +326,7 @@ sed  's/ \{1,\}/\t/g' new_file.tsv > file_output_neuS.tsv
 ```
 **pm0188**
 ```
-cd ../
+cd ../ #must be located at HMMER_analysis folder
 sed -i '1d' pm0188_complete_cover_filter_40.tsv
 cut -f2 pm0188_complete_cover_filter_40.tsv >pm0188_complete_cover_filter_40_ID.tsv
 for file in $(cat ./pm0188_complete_cover_filter_40_ID.tsv); do mv "$file" ./pm0188_out/; done
@@ -338,7 +339,7 @@ sed  's/ \{1,\}/\t/g' new_file.tsv > file_output_pm0188.tsv
 ```
 **PF06002**
 ```
-cd ../
+cd ../ #must be located at HMMER_analysis folder
 sed -i '1d' PF06002_complete_cover_filter_40.tsv
 cut -f2 PF06002_complete_cover_filter_40.tsv > PF06002_complete_cover_filter_40_ID.tsv
 for file in $(cat ./PF06002_complete_cover_filter_40_ID.tsv); do mv "$file" ./PF06002_out/; done
@@ -352,7 +353,7 @@ sed  's/ \{1,\}/\t/g' new_file.tsv > file_output_PF06002.tsv
 
 **PF11477**
 ```
-cd ../
+cd ../ #must be located at HMMER_analysis folder
 sed -i '1d' PF11477_complete_cover_filter_40.tsv
 cut -f2 PF11477_complete_cover_filter_40.tsv > PF11477_complete_cover_filter_40_ID.tsv
 for file in $(cat ./PF11477_complete_cover_filter_40_ID.tsv); do mv "$file" ./PF11477_out/; done
@@ -365,7 +366,7 @@ sed  's/ \{1,\}/\t/g' new_file.tsv > file_output_PF11477.tsv
 ```
 **IPR010866**
 ```
-cd ../
+cd ../ #must be located at HMMER_analysis folder
 sed -i '1d' IPR010866_complete_cover_filter_40.tsv 
 cut -f2 IPR010866_complete_cover_filter_40.tsv > IPR010866_complete_cover_filter_40_ID.tsv
 for file in $(cat ./IPR010866_complete_cover_filter_40_ID.tsv); do mv "$file" ./IPR010866_out/; done
@@ -375,7 +376,7 @@ find . -type f -name '*protein_output*' -exec cat {} + > new_file.tsv
 #process output file
 sed -i '/#/d' new_file.tsv
 sed  's/ \{1,\}/\t/g' new_file.tsv > file_output_PF11477.tsv
-cd ../
+cd ../ #must be located at HMMER_analysis folder
 ```
 
 Now, go to the script **hmm_process.ipynb** which is loccated in the path: microbial_sialylation/genomes_download/scripts/jupyter_scripts/ and follow the script PART 02 to process output file. We will filter by bit-score and e-value.
@@ -387,13 +388,19 @@ With the result, let's move faa files that passed the final filter.
 First, download Interproscan tar file. For this purpose, I followed the manual by this [link](https://interproscan-docs.readthedocs.io/en/v5/UserDocs.html#obtaining-a-copy-of-interproscan).
 
 ```
-cd ../../
+cd ../../ #must be at genome_download folder
 wget https://ftp.ebi.ac.uk/pub/software/unix/iprscan/5/5.76-107.0/interproscan-5.76-107.0-64-bit.tar.gz
 tar -pxvzf interproscan-5.76-107.0-*-bit.tar.gz
 conda install bioconda::seqkit #download seqkit, which will retrieve fasta sequences for interproscan analysis
 ```
-Tsv files with sequences ID for fasta sequences to retrieve will be at **/proteins/proteins_sialylation/** folder after hmm_process R's scripts had been finished. So now, execute the script below to retrieve sequences
+Tsv files with sequences ID for fasta sequences to retrieve will be at **/proteins/proteins_sialylation/** folder after hmm_process R's scripts had been finished. Before take the sequences, you must rename fasta header of proteins files to retrieve the sequences successfully. 
 
+```
+cd ./proteins/proteins_sialylation/
+sed -i 's/ .*//' *.faa
+cd ../../../ # must be at genomes_download folder
+```
+So now, execute the script below to retrieve sequences
 ```
 bash ./scripts/retrieve_sequences_for_interpro.sh
 ```
@@ -599,23 +606,26 @@ After this, each dataset created in the script was concatenated with iTol datase
 ```
 cd ../../../../plots_data/itol/
 #remove header
-sed -i '1d' kpsT_represent_itol_EANS.tsv
-sed -i '1d' oacetil_itol_represent_EANS.tsv
-sed -i '1d' kpsM_itol_represent_EANS.tsv
+sed -i '1d' kpsT_represent_itol_EANS_paper.tsv
+sed -i '1d' kpsM_itol_represent_EANS_paper.tsv
+sed -i '1d' kpsD_itol_represent_EANS_paper.tsv
+sed -i '1d' neuD_itol_represent_EANS_paper.tsv
+sed -i '1d' neuO_itol_represent_EANS_paper.tsv
 sed -i '1d' vfdb_itol_represent_EANS.tsv
 sed -i '1d' representative_labels_itol.tsv
 ```
-#Ensure to move the to plots_data/itol folder, if is not there. 
-There will be files that are from iTOL called 'datasets' in general
+Now, join files to get a dataset for itol
 ```
  #Join files
-cat kpst_itol_representative.txt kpsT_represent_itol_EANS.tsv > final_kpsT_itol.txt
-cat oacetil_itol_representative.txt oacetil_itol_represent_EANS.tsv > final_oacetil_itol.txt
-cat kpsM_itol_representative.txt kpsM_itol_represent_EANS.tsv > final_kpsM_itol.txt
+cat kpst_itol_representative.txt kpsT_represent_itol_EANS_paper.tsv > final_kpsT_itol.txt
+cat kpsM_itol_representative.txt kpsM_itol_represent_EANS_paper.tsv > final_kpsM_itol.txt
+cat kpsD_itol_representative.txt kpsD_itol_represent_EANS_paper.tsv > final_kpsD_itol.txt
+cat neuD_itol_representative.txt neuD_itol_represent_EANS_paper.tsv > final_neuD_itol.txt
+cat neuO_itol_representative.txt neuO_itol_represent_EANS_paper.tsv > final_neuO_itol.txt
 cat vfdb_itol_representative_EANS.txt vfdb_itol_represent_EANS.tsv > final_vfdb_itol.txt
 cat ed_tree_label.txt representative_labels_itol.tsv > ed_tree_label_represent.txt
 ```
-Now you can upload the files in iToL site.
+Now you can upload the files in iToL site. First submit and open final tree file. 
 
 
 # 5. Metagenomic analysis
@@ -627,7 +637,7 @@ Now you can upload the files in iToL site.
 First download  fastq files
 ```
 conda install -c bioconda sra-tools #Install sra-tools
-cd metagen_files/Study01_france_cancer/
+cd ../../../metagen_files/Study01_france_cancer/
 cat *_get_ID > all_cancer_download.sh
 bash cancer_01_download.sh
 ```

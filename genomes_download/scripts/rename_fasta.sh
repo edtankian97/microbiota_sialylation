@@ -5,7 +5,7 @@ for arquivo in ../proteins/*.faa; do
     # Verifica se o arquivo existe e é um arquivo regular
     if [ -f "$arquivo" ]; then
         # Adiciona o nome do arquivo para cada linha que começa com '>'
-        sed -i "s/^>/>$arquivo /" "$arquivo"
+        sed -i "s/^>/>$arquivo'_'/" "$arquivo"
         echo "Nome do arquivo adicionado para cada linha no arquivo $arquivo"
     fi
 done
