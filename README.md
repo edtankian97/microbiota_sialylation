@@ -799,6 +799,7 @@ Summary results are at **metagen_files/Study01_france_cancer/output_data** folde
 ```
 conda activate checkm
 export CHECKM_DATA_PATH=YOUR/PATH/TO/CHECKM/DATA
-
+bash checkm_script_metagen_FR.sh
 
 ```
+Results will be at **checkm_result_bins_with_sia** folder
