@@ -76,6 +76,7 @@ To download this repository, run:
 ```
 git clone https://github.com/edtankian97/microbiota_sialylation.git
 ```
+Observation: **assembly_summary.txt** may have an unexpected problem of data when downloaded. A quick solution is to remove the file and then download it directly from Github website. 
 
 ## 1. Genome processing
 
