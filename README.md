@@ -317,7 +317,7 @@ cd lic3X_out
 find ./ -type f -name '*protein_output*' -exec cat {} + > new_file.tsv
 #process output file 
 sed -i '/#/d' new_file.tsv
-sed  's/ \{1,\}/\t/g' new_file.tsv > file_output_lic3X.tsv
+sed  's/ \{1,\}/\t/g' new_file.tsv > lic3X_cover_filter_all.tsv
 ```
 **lst**
 ```
@@ -330,7 +330,7 @@ cd lst_out
 find . -type f -name '*protein_output*' -exec cat {} + > new_file.tsv
 #process output file. Remove each line with "#" and delim the file with tab
 sed -i '/#/d' new_file.tsv
-sed  's/ \{1,\}/\t/g' new_file.tsv > file_output_lst.tsv
+sed  's/ \{1,\}/\t/g' new_file.tsv > lst_cover_filter_all.tsv
 ```
 **neuS**
 ```
@@ -343,7 +343,7 @@ cd neuS_out
 find . -type f -name '*protein_output' -exec cat {} + > new_file.tsv
 #process output file. Remove each line with "#" and delim the file with tab
 sed -i '/#/d' new_file.tsv
-sed  's/ \{1,\}/\t/g' new_file.tsv > file_output_neuS.tsv
+sed  's/ \{1,\}/\t/g' new_file.tsv > neuS_cover_filter_all.tsv
 ```
 **pm0188**
 ```
@@ -356,7 +356,7 @@ cd pm0188_out
 find . -type f -name '*protein_output*' -exec cat {} + > new_file.tsv
 #process output file. Remove each line with "#" and delim the file with tab
 sed -i '/#/d' new_file.tsv
-sed  's/ \{1,\}/\t/g' new_file.tsv > file_output_pm0188.tsv
+sed  's/ \{1,\}/\t/g' new_file.tsv > pm0188_cover_filter_all.tsv
 ```
 **PF06002**
 ```
@@ -369,7 +369,7 @@ cd PF06002_out
 find . -type f -name '*protein_output*' -exec cat {} + > new_file.tsv
 #process output file. Remove each line with "#" and delim the file with tab
 sed -i '/#/d' new_file.tsv
-sed  's/ \{1,\}/\t/g' new_file.tsv > file_output_PF06002.tsv
+sed  's/ \{1,\}/\t/g' new_file.tsv > PF06002_cover_filter_all.tsv
 ```
 
 **PF11477**
@@ -383,7 +383,7 @@ cd PF11477_out
 find . -type f -name '*protein_output*' -exec cat {} + > new_file.tsv
 #process output file. Remove each line with "#" and delim the file with tab
 sed -i '/#/d' new_file.tsv
-sed  's/ \{1,\}/\t/g' new_file.tsv > file_output_PF11477.tsv
+sed  's/ \{1,\}/\t/g' new_file.tsv > PF11477_cover_filter_all.tsv
 ```
 **IPR010866**
 ```
@@ -396,14 +396,28 @@ cd IPR010866_out
 find . -type f -name '*protein_output*' -exec cat {} + > new_file.tsv
 #process output file. Remove each line with "#" and delim the file with tab
 sed -i '/#/d' new_file.tsv
-sed  's/ \{1,\}/\t/g' new_file.tsv > file_output_PF11477.tsv
+sed  's/ \{1,\}/\t/g' new_file.tsv > IPR010866_cover_filter_all.tsv
 cd ../ #must be located at HMMER_analysis folder
 ```
 
-Now, go to the script **hmm_process.ipynb** which is loccated in the path: microbial_sialylation/genomes_download/scripts/jupyter_scripts/ and follow the script PART 02 to process output file. We will filter by bit-score and e-value.
+Now, go to the script **hmm_process.ipynb** which is loccated in the path: microbial_sialylation/genomes_download/scripts/jupyter_scripts/ and follow the script to process output file. We will filter by bit-score and e-value.
 
 With the result, let's move faa files that passed the final filter.
-
+```
+cd ../proteins/
+sed -i '1d' completesialylation_GCF_ID.tsv #remove header
+```
+Move now the files into **proteins_sialylation** folder
+```
+ while read id; do
+  mv "${id}"* proteins_sialylation/ 
+done < completesialylation_GCF_ID.tsv
+```
+Check files and how many passed
+```
+ls ./proteins_sialylation
+ls proteins_sialylation | wc -l 
+```
 
 ### 3.3 Protein analysis: Interproscan analysis
 First, download Interproscan tar file. For this purpose, I followed the manual by this [link](https://interproscan-docs.readthedocs.io/en/v5/UserDocs.html#obtaining-a-copy-of-interproscan).
@@ -419,17 +433,20 @@ Tsv files with sequences ID for fasta sequences to retrieve will be at **/protei
 ```
 cd ./proteins/proteins_sialylation/
 sed -i 's/ .*//' *.faa
-cd ../../../ # must be at genomes_download folder
+cd ../../../scripts # must be at genomes_download folder
 ```
 So now, execute the script below to retrieve sequences
 ```
-bash ./scripts/retrieve_sequences_for_interpro.sh
+bash retrieve_sequences_for_interpro.sh
 ```
 Sequences retrieved will have **_retrieved_now** tag and will be at **scripts** folder. Let's move to another place
 ```
-mkdir Interpro_analysis/Interpro_results
-mv ./scripts/*_retrieved_now ./Interpro_analysis
-bash ./scripts/interpro_analysis.sh
+mkdir ../Interpro_analysis/Interpro_results
+mv *_retrieved_now ../Interpro_analysis
+conda deactivate
+bash interpro_analysis.sh
+conda activate ncbi_datasets
+cd .. #must be at genomes_download folder
 ```
 Results will be at this path **Interpro_analysis/Interpro_results**. Final results will be available at **plots_data/Interpro_results/** folder, which will be useful to execute Interproscan R'script
 ```
@@ -528,77 +545,110 @@ bash external_rings_hmmer.sh #do the annotation of proteins for external rings
 
 Results for each protein: KpsM, KpsT, neuO and neuD will be located at **../Protein_database/external_rings_models/external_rings_output/**
 
-**KpsM**
 ```
 cd ../Protein_database/external_rings_models/external_rings_output/
 mkdir kpsM_out kpsT_out kpsD_out neuD_out neuO_out
-find ./ -type f -name 'kpsM*coverage' -exec cat {} + > kpsM_coverage.tsv
-find ./ -type f -name 'kpsT*coverage' -exec cat {} + > kpsT_coverage.tsv
-find ./ -type f -name 'kpsD*coverage' -exec cat {} + > kpsD_coverage.tsv
-find ./ -type f -name 'neuO*coverage' -exec cat {} + > neuO_coverage.tsv
-find ./ -type f -name 'neuD*coverage' -exec cat {} + > neuD_coverage.tsv
+find ./ -type f -name 'kpsM*coverage' -exec cat {} + > all_kpsM_coverage.tsv
+find ./ -type f -name 'kpsT*coverage' -exec cat {} + > all_kpsT_coverage.tsv
+find ./ -type f -name 'kpsD*coverage' -exec cat {} + > all_KpsD_coverage.tsv
+find ./ -type f -name 'neuO*coverage' -exec cat {} + > all_neuO_coverage.tsv
+find ./ -type f -name 'neuD*coverage' -exec cat {} + > all_neuD_coverage.tsv
 ```
-Process resulted coverage file in hmm_process.ipynb script and then continue
+Final resulted file are located at **microbiota_sialylation/genomes_download/plots_data/hmmer_out/**
+First process resulted of coverage file in **hmm_process_external_rings.ipynb** script **Part 01** and then continue
 
 **KpsM**
 ```
-sed -i '1d' kpsM_cover_filter_40.tsv
-cut -f2 kpsM_cover_filter_40.tsv > kpsM_cover_filter_40_ID.tsv 
+sed -i '1d' cover_kpsM_ncbi_filter.tsv
+cut -f2 cover_kpsM_ncbi_filter.tsv > kpsM_cover_filter_40_ID.tsv 
 #transfer files to another folder
 for file in $(cat ./kpsM_cover_filter_40_ID.tsv); do mv "$file" ./kpsM_out/; done
 cd kpsM_out
-find . -type f -name '*protein_output*' -exec cat {} + > all_kpsM_protein.tsv
+find . -type f -name '*protein_output*' -exec cat {} + > file_output_kpsM.tsv
 #process output file
-sed -i '/#/d' all_kpsM_protein.tsv
-sed -i 's/ \{1,\}/\t/g' all_kpsM_protein.tsv 
+sed -i '/#/d' file_output_kpsM.tsv
+sed -i 's/ \{1,\}/\t/g' file_output_kpsM.tsv
+cd ..
 ```
-Return to the script again. Final resulted file will be located in microbiota_sialylation/genomes_download/plots_data/itol/
 
 **KpsT**
-Process resulted coverage file in hmm_process.ipynb script and then continue
 ```
 #remove first line and first columm to get only ID
-sed -i '1d' kpsT_cover_filter_40.tsv
-cut -f2 kpsT_cover_filter_40.tsv > kpsT_cover_filter_40_ID.tsv 
+sed -i '1d' cover_kpsT_ncbi_filter.tsv
+cut -f2 cover_kpsT_ncbi_filter.tsv > kpsT_cover_filter_40_ID.tsv 
 #transfer files to another folder
 for file in $(cat ./kpsT_cover_filter_40_ID.tsv); do mv "$file" ./kpsT_out/; done
 cd kpsT_out
-find . -type f -name '*protein_output*' -exec cat {} + > all_kpsT_protein.tsv
+find . -type f -name '*protein_output*' -exec cat {} + > file_output_kpsT.tsv
 #process output file
-sed -i '/#/d' all_kpsT_protein.tsv
-sed -i 's/ \{1,\}/\t/g' all_kpsT_protein.tsv 
+sed -i '/#/d' file_output_kpsT.tsv
+sed -i 's/ \{1,\}/\t/g' file_output_kpsT.tsv
+cd ..
 ```
-**NeuD**
-
+**KpsD**
 ```
 #remove first line and first columm to get only ID
-sed -i '1d' neuD_cover_filter_40.tsv
-cut -f2 neuD_cover_filter_40.tsv > neuD_cover_filter_40.tsv_ID.tsv 
+sed -i '1d' cover_kpsD_ncbi_filter.tsv
+cut -f2 cover_kpsD_ncbi_filter.tsv > kpsD_cover_filter_40_ID.tsv 
 #transfer files to another folder
-for file in $(cat ./neuD_cover_filter_40.tsv_ID.tsv); do mv "$file" ./neuD_out/; done
-cd neuD_out
-find . -type f -name '*protein_output*' -exec cat {} + > all_neuD_output.tsv
+for file in $(cat ./kpsD_cover_filter_40_ID.tsv); do mv "$file" ./kpsD_out/; done
+cd kpsT_out
+find . -type f -name '*protein_output*' -exec cat {} + > file_output_kpsD.tsv
 #process output file
-sed -i '/#/d' all_neuD_output.tsv
-sed -i 's/ \{1,\}/\t/g' all_neuD_output.tsv 
+sed -i '/#/d' file_output_kpsD.tsv
+sed -i 's/ \{1,\}/\t/g' file_output_kpsD.tsv
+cd ..
+```
+**NeuD**
+```
+#remove first line and first columm to get only ID
+sed -i '1d' cover_neuD_ncbi_filter.tsv
+cut -f2 cover_neuD_ncbi_filter.tsv > cover_neuD_ncbi_filter_modified.tsv
+#transfer files to another folder
+for file in $(cat ./cover_neuD_ncbi_filter_modified.tsv); do mv "$file" ./neuD_out/; done
+cd neuD_out
+find . -type f -name '*protein_output*' -exec cat {} + > file_output_neuD.tsv
+#process output file
+sed -i '/#/d' file_output_neuD.tsv
+sed -i 's/ \{1,\}/\t/g' file_output_neuD.tsv
+cd ..
 ```
 
 **NeuO**
 ```
 #remove first line and first columm to get only ID
-sed -i '1d' neuO_cover_filter_40.tsv
-cut -f2 neuO_cover_filter_40.tsv > neuO_cover_filter_40_ID.tsv 
+sed -i '1d' cover_neuO_ncbi_filter.tsv
+cut -f2 cover_neuO_ncbi_filter.tsv > neuO_cover_filter_40_ID.tsv 
 #transfer files to another folder
 for file in $(cat ./neuO_cover_filter_40_ID.tsv); do mv "$file" ./neuO_out/; done
 cd neuO_out
-find . -type f -name '*protein_output*' -exec cat {} + > all_neuO_output.tsv
+find . -type f -name '*protein_output*' -exec cat {} + > file_output_neuO.tsv
 #process output file
-sed -i '/#/d' all_neuO_output.tsv
-sed -i 's/ \{1,\}/\t/g' all_neuO_output.tsv 
+sed -i '/#/d' file_output_neuO.tsv
+sed -i 's/ \{1,\}/\t/g' file_output_neuO.tsv
+cd ..
 ```
-Return to the script again. Final resulted file will be located in microbiota_sialylation/genomes_download/plots_data/itol/
+Return to the **hmm_process_external_rings.ipynb** script again for **Part 02**. Final resulted files are already located at **microbiota_sialylation/genomes_download/plots_data/hmmer_out/**
 
 ### 4.5.1 Interpro_analysis
+
+Retrieve sequences for analysis.
+```
+conda deactivate
+cd ../../../../scripts #must be at scripts folder
+bash retrieve_sequences_for_interpro_external_rings.sh 
+ls ../Interpro_analysis # files will be at Interpro_analysis folder
+```
+Run Interpro analysis
+```
+bash interpro_analysis_external_rings.sh
+cd ..
+```
+Check output files at **/Interpro_analysis/Interpro_results/** PATH
+```
+ls ./Interpro_analysis/Interpro_results/
+```
+Now, it's time to process the results with interproscan'R script for external rings
 
 
 ### 4.5.2 Virulence factors
