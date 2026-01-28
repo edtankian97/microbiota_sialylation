@@ -280,7 +280,7 @@ bash ncbi_teste_own_hmmer.sh
 With all done, now it's time to start the process of coverage, e-value and bit-score filter. First, let's cat coverage results for each protein
 ```
 cd ../HMMER_analysis/
-find ./ -type f -name 'neuA*coverage' -exec cat {} + > neuA_coverage.tsv
+find ./ -type f -name 'neuA*coverage' -exec cat {} + > CMP_coverage.tsv
 find ./ -type f -name 'neuS*coverage' -exec cat {} + > neuS_coverage.tsv
 find ./ -type f -name 'lic3X*coverage' -exec cat {} + > lic3X_coverage.tsv
 find ./ -type f -name 'lst*coverage' -exec cat {} + > lst_coverage.tsv
@@ -289,85 +289,85 @@ find ./ -type f -name 'PF11477*coverage' -exec cat {} + > PF11477_coverage.tsv
 find ./ -type f -name 'PF06002*coverage' -exec cat {} + > PF06002_coverage.tsv
 find ./ -type f -name 'IPR010866*coverage' -exec cat {} + > IPR010866_coverage.tsv
 ```
-Now, go to the script **hmm_process.ipynb** which is loccated in the path: microbial_sialylation/genomes_download/scripts/jupyter_scripts/ and follow the script. We will filter first by coverage value.
+Now, go to the script **cover_hmm_filter_NCBI.ipynb** which is loccated in the path: microbial_sialylation/genomes_download/scripts/jupyter_scripts/ and follow the script. We will filter first by coverage value. Results of coverage are alrealdy available at **plots_data** folder.
 
-After part 01 with coverage assessment, follow this for each core enzyme. We will move files'results that passed the filter, then join them for each protein  
+After part 01 with coverage assessment, follow this for each core enzyme. First we are going to remove the header of each file, then get filenames to move into their respective directories.  The, we will cat output files and processed them.
 
 **NeuA**
 ```
 cd ./HMMER_analysis
-sed -i '1d' neuA_complete_cover_filter_40.tsv
-cut -f2 neuA_complete_cover_filter_40.tsv > neuA_complete_cover_filter_40_ID.tsv
-for file in $(cat ./neuA_complete_cover_filter_40_ID.tsv); do mv "$file" ./neuA_out/; done
+sed -i '1d' CMP_NCBI_ID_cover_filter_40.tsv
+cut -f2 CMP_NCBI_ID_cover_filter_40.tsv > CMP_NCBI_ID_cover_filter_40_modified.tsv
+for file in $(cat ./CMP_NCBI_ID_cover_filter_40_modified.tsv); do mv "$file" ./neuA_out/; done
 cd neuA_out
-#output tsv
+# join all output tsv files into one
 find ./ -type f -name '*protein_output*' -exec cat {} + > new_file.tsv
-#process output file
+#process output file. Remove each line with "#" and delim the file with tab
 sed -i '/#/d' new_file.tsv
 sed  's/ \{1,\}/\t/g' new_file.tsv > file_output_CMP.tsv
 cd ../ #must be located at HMMER_analysis folder
 ```
 **lic3X**
 ```
-sed -i '1d' lic3X_complete_cover_filter_40.tsv
-cut -f2 lic3X_complete_cover_filter_40.tsv > lic3X_complete_cover_filter_40_ID.tsv
-for file in $(cat ./lic3X_complete_cover_filter_40_ID.tsv); do mv "$file" ./lic3X_out/; done
+sed -i '1d' Lic3_NCBI_ID_cover_filter_40.tsv
+cut -f2 Lic3_NCBI_ID_cover_filter_40.tsv > Lic3_NCBI_ID_cover_filter_40_modified.tsv
+for file in $(cat ./Lic3_NCBI_ID_cover_filter_40_modified.tsv); do mv "$file" ./lic3X_out/; done
 cd lic3X_out
-#output tsv
+# join all output tsv files into one
 find ./ -type f -name '*protein_output*' -exec cat {} + > new_file.tsv
-#process output file
+#process output file 
 sed -i '/#/d' new_file.tsv
 sed  's/ \{1,\}/\t/g' new_file.tsv > file_output_lic3X.tsv
 ```
 **lst**
 ```
 cd ../ #must be located at HMMER_analysis folder
-sed -i '1d' lst_complete_cover_filter_40.tsv
-cut -f2 lst_complete_cover_filter_40.tsv > lst_complete_cover_filter_40_ID.tsv
-for file in $(cat ./lst_complete_cover_filter_40_ID.tsv); do mv "$file" ./lst_out/; done
+sed -i '1d' LST_NCBI_ID_cover_filter_40.tsv
+cut -f2 LST_NCBI_ID_cover_filter_40.tsv > LST_NCBI_ID_cover_filter_40_modified.tsv
+for file in $(cat ./LST_NCBI_ID_cover_filter_40_modified.tsv); do mv "$file" ./lst_out/; done
 cd lst_out
-#output tsv
+# join all output tsv files into one
 find . -type f -name '*protein_output*' -exec cat {} + > new_file.tsv
-#process output file
+#process output file. Remove each line with "#" and delim the file with tab
 sed -i '/#/d' new_file.tsv
 sed  's/ \{1,\}/\t/g' new_file.tsv > file_output_lst.tsv
 ```
 **neuS**
 ```
 cd ../ #must be located at HMMER_analysis folder
-sed -i '1d' neuS_complete_cover_filter_40.tsv
-cut -f2 neuS_complete_cover_filter_40.tsv > neuS_complete_cover_filter_40_ID.tsv
-for file in $(cat ./neuS_complete_cover_filter_40_ID.tsv); do mv "$file" ./neuS_out/; done
+sed -i '1d' neuS_thais_NCBI_ID_cover_filter_40.tsv
+cut -f2 neuS_thais_NCBI_ID_cover_filter_40.tsv > neuS_thais_NCBI_ID_cover_filter_40_modified.tsv
+for file in $(cat ./neuS_thais_NCBI_ID_cover_filter_40_modified.tsv); do mv "$file" ./neuS_out/; done
 cd neuS_out
-#output tsv
+# join all output tsv files into one
 find . -type f -name '*protein_output' -exec cat {} + > new_file.tsv
-#process output file
+#process output file. Remove each line with "#" and delim the file with tab
 sed -i '/#/d' new_file.tsv
 sed  's/ \{1,\}/\t/g' new_file.tsv > file_output_neuS.tsv
 ```
 **pm0188**
 ```
 cd ../ #must be located at HMMER_analysis folder
-sed -i '1d' pm0188_complete_cover_filter_40.tsv
-cut -f2 pm0188_complete_cover_filter_40.tsv >pm0188_complete_cover_filter_40_ID.tsv
-for file in $(cat ./pm0188_complete_cover_filter_40_ID.tsv); do mv "$file" ./pm0188_out/; done
+sed -i '1d' pm1088_NCBI_ID_cover_filter_40.tsv
+cut -f2 pm1088_NCBI_ID_cover_filter_40.tsv > pm1088_NCBI_ID_cover_filter_40_modified.tsv
+for file in $(cat ./pm1088_NCBI_ID_cover_filter_40_modified.tsv); do mv "$file" ./pm0188_out/; done
 cd pm0188_out
-#output tsv
+# join all output tsv files into one
 find . -type f -name '*protein_output*' -exec cat {} + > new_file.tsv
-#process output file
+#process output file. Remove each line with "#" and delim the file with tab
 sed -i '/#/d' new_file.tsv
 sed  's/ \{1,\}/\t/g' new_file.tsv > file_output_pm0188.tsv
 ```
 **PF06002**
 ```
 cd ../ #must be located at HMMER_analysis folder
-sed -i '1d' PF06002_complete_cover_filter_40.tsv
-cut -f2 PF06002_complete_cover_filter_40.tsv > PF06002_complete_cover_filter_40_ID.tsv
-for file in $(cat ./PF06002_complete_cover_filter_40_ID.tsv); do mv "$file" ./PF06002_out/; done
+sed -i '1d' PF06002_NCBI_ID_cover_filter_40.tsv
+cut -f2 PF06002_NCBI_ID_cover_filter_40.tsv > PF06002_NCBI_ID_cover_filter_40_modified.tsv
+for file in $(cat ./PF06002_NCBI_ID_cover_filter_40_modified.tsv); do mv "$file" ./PF06002_out/; done
 cd PF06002_out
-#output tsv
+# join all output tsv files into one
 find . -type f -name '*protein_output*' -exec cat {} + > new_file.tsv
-#process output file
+#process output file. Remove each line with "#" and delim the file with tab
 sed -i '/#/d' new_file.tsv
 sed  's/ \{1,\}/\t/g' new_file.tsv > file_output_PF06002.tsv
 ```
@@ -375,26 +375,26 @@ sed  's/ \{1,\}/\t/g' new_file.tsv > file_output_PF06002.tsv
 **PF11477**
 ```
 cd ../ #must be located at HMMER_analysis folder
-sed -i '1d' PF11477_complete_cover_filter_40.tsv
-cut -f2 PF11477_complete_cover_filter_40.tsv > PF11477_complete_cover_filter_40_ID.tsv
-for file in $(cat ./PF11477_complete_cover_filter_40_ID.tsv); do mv "$file" ./PF11477_out/; done
+sed -i '1d' PF11477_NCBI_ID_cover_filter_40.tsv
+cut -f2 PF11477_NCBI_ID_cover_filter_40.tsv > PF11477_NCBI_ID_cover_filter_40_modified.tsv
+for file in $(cat ./PF11477_NCBI_ID_cover_filter_40_modified.tsv); do mv "$file" ./PF11477_out/; done
 cd PF11477_out
-#output tsv
+# join all output tsv files into one
 find . -type f -name '*protein_output*' -exec cat {} + > new_file.tsv
-#process output file
+#process output file. Remove each line with "#" and delim the file with tab
 sed -i '/#/d' new_file.tsv
 sed  's/ \{1,\}/\t/g' new_file.tsv > file_output_PF11477.tsv
 ```
 **IPR010866**
 ```
 cd ../ #must be located at HMMER_analysis folder
-sed -i '1d' IPR010866_complete_cover_filter_40.tsv 
-cut -f2 IPR010866_complete_cover_filter_40.tsv > IPR010866_complete_cover_filter_40_ID.tsv
-for file in $(cat ./IPR010866_complete_cover_filter_40_ID.tsv); do mv "$file" ./IPR010866_out/; done
+sed -i '1d' IPR01086_NCBI_ID_cover_filter_40.tsv 
+cut -f2 IPR01086_NCBI_ID_cover_filter_40.tsv > IPR01086_NCBI_ID_cover_filter_40_modified.tsv
+for file in $(cat ./IPR01086_NCBI_ID_cover_filter_40_modified.tsv); do mv "$file" ./IPR010866_out/; done
 cd IPR010866_out
-#output tsv
+# join all output tsv files into one
 find . -type f -name '*protein_output*' -exec cat {} + > new_file.tsv
-#process output file
+#process output file. Remove each line with "#" and delim the file with tab
 sed -i '/#/d' new_file.tsv
 sed  's/ \{1,\}/\t/g' new_file.tsv > file_output_PF11477.tsv
 cd ../ #must be located at HMMER_analysis folder
@@ -597,6 +597,8 @@ sed -i '/#/d' all_neuO_output.tsv
 sed -i 's/ \{1,\}/\t/g' all_neuO_output.tsv 
 ```
 Return to the script again. Final resulted file will be located in microbiota_sialylation/genomes_download/plots_data/itol/
+
+### 4.5.1 Interpro_analysis
 
 
 ### 4.5.2 Virulence factors
