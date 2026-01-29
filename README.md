@@ -538,6 +538,8 @@ Follow the script **species_distribution.ipynb** which is loccated in the path: 
 
 ## 4.5 iTOL annotation
 
+### 4.5.1 Hmmer analysis of external rings
+
 ```
 cd ../ #If you are one level above at jupyter_scripts folder, do this command to go to scripts folder
 bash external_rings_hmmer.sh #do the annotation of proteins for external rings
@@ -630,7 +632,7 @@ cd ..
 ```
 Return to the **hmm_process_external_rings.ipynb** script again for **Part 02**. Final resulted files are already located at **microbiota_sialylation/genomes_download/plots_data/hmmer_out/**
 
-### 4.5.1 Interpro_analysis
+### 4.5.2 Interpro_analysis
 
 Retrieve sequences for analysis.
 ```
@@ -642,16 +644,16 @@ ls ../Interpro_analysis # files will be at Interpro_analysis folder
 Run Interpro analysis
 ```
 bash interpro_analysis_external_rings.sh
-cd ..
+cd .. # must be at genomes_download
 ```
-Check output files at **/Interpro_analysis/Interpro_results/** PATH
+Check output files at **/Interpro_analysis/Interpro_results/** PATH. Our results are already available at **plots_data/Interpro_results/** PATH
 ```
 ls ./Interpro_analysis/Interpro_results/
 ```
-Now, it's time to process the results with interproscan'R script for external rings
+Now, it's time to process the results with interproscan'R script for external rings: **Interpro_analysis_external_rings_final_script**. Final output files wil be used for iTOL annotation of external rings.
 
 
-### 4.5.2 Virulence factors
+### 4.5.3 Virulence factors
 
 Virulence factors were detected by abricate software with VFDB database.
 ```
@@ -674,7 +676,7 @@ Start the process of analysis
 abricate ./genomes_unique/*fna --db vfdb --csv --minid 70 --mincov 60 > out_70id_60cov.csv
 mv out_70id_60cov.csv ../../../../plots_data/itol/
 ```
-### 4.5.3 Processing of resulted files for iTOL annotation
+### 4.5.4 Processing of resulted files for iTOL annotation
 
 Follow the script **itol_notation.ipynb** which is loccated in the path: microbial_sialylation/genomes_download/scripts/jupyter_scripts/
 After this, each dataset created in the script was concatenated with iTol dataset
