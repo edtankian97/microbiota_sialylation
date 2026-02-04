@@ -481,9 +481,10 @@ Final file **accession_complete_fields.tsv** is already at **genomes_download/pl
 ### 4.1.2 Taxonomy information
 
 Final file **accession_complete_fields.tsv** is already at **genomes_download/plots_data/** folder
-We need to retrieve taxon information from each genome
+We need to retrieve taxon information from each genome. It's already in plots_data, but you can redo again
 ```
 #take desired columm
+conda activate ncbi_datasets
 cut -f10 accession_complete_fields.tsv > comm_sia_genomes_tax_id
 sed -i '1d' comm_sia_genomes_tax_id #remove header
 #retrieve taxonomy information
