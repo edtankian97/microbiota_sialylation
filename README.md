@@ -481,7 +481,17 @@ Final file **accession_complete_fields.tsv** is already at **genomes_download/pl
 ### 4.1.2 Taxonomy information
 
 Final file **accession_complete_fields.tsv** is already at **genomes_download/plots_data/** folder
-
+We need to retrieve taxon information from each genome
+```
+#take desired columm
+cut -f10 accession_complete_fields.tsv > comm_sia_genomes_tax_id
+sed -i '1d' comm_sia_genomes_tax_id #remove header
+#retrieve taxonomy information
+datasets download taxonomy taxon --inputfile comm_sia_genomes_tax_id --filename taxonomy.zip
+unzip taxonomy.zip
+mv ./ncbi_dataset/data/taxonomy_summary.tsv ./plots_data/
+rm -rfv ncbi_dataset
+```
 ### 4.1.3 Phylogenetic tree
 
 ```
