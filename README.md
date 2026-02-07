@@ -1,19 +1,32 @@
-# Sialylation project of microbiota
+# PhD Project: Sialylation in the Microbiota
 
 ![Bacteria%20sia](https://github.com/edtankian97/microbiota_sialylation/blob/teste/Bacteria%20sia.gif)
 
-This project is related to my P.h.D.'s thesis which study is upon incorporation of sialic acid intestinal microbiota onto their cell wall. The main objective of the bioinformatic analysis is to
-seek in proteomes of bacterias from NCBI that has a potential proteins linked to the process of sialic acid's incorporation. For this purpose, the bioinformatic part was divided in:
+This repository contains the bioinformatic workflows developed as part of a PhD thesis investigating the incorporation of sialic acid by members of the intestinal microbiota, with a particular focus on sialylation-associated pathways and proteins involved in cell surface modification. The primary objective of this project is to identify and characterize bacterial genomes and proteomes with the potential to incorporate sialic acid, by systematically screening publicly available datasets from NCBI and complementary metagenomic resources.
 
-**1. Genome processing:** Retrieve information from NCBI, remotion of incomplete genomes and retrieve CheckM information.
+## Project overview
+The bioinformatic analyses are organized into the following major components:
 
-**2. HMMER models:** Creation of proteins datasets and creation of models.
+**1. Genome processing:** 
+- Retrieval of bacterial genomes from NCBI.
+- Removal of incomplete or low-quality genomes.
+- Assessment of genome completeness and contamination using CheckM.
 
-**3. Protein analysis:** Identification of sialylation pathway in filtered genomes/proteomes and control proteomes.
+**2. HMMER model construction:** 
+- Curation of protein datasets associated with sialic acid metabolism and incorporation.
+- Construction of Hidden Markov Models (HMMs) for pathway-specific protein detection.
 
-**4. Downstream analysis:** Genomic analysis of bacterias' genomes that have sialylation with figures created.
+**3. Protein-level analysis:** 
+- Identification of sialylation-related proteins and pathways in filtered bacterial genomes and proteomes.
+- Comparative analysis against control proteomes lacking known sialylation capabilities.
 
-**5. Metagenomic analysis:** Identification of sialylation pathway in metagenomic data of diseases correlated to sialylation process
+**4. Downstream genomic analysis:** 
+- In-depth genomic characterization of bacteria predicted to possess sialylation pathways.
+- Generation of figures and summary statistics describing gene content, organization, and distribution.
+
+**5. Metagenomic analysis:** 
+- Detection of sialylation-associated pathways in metagenomic datasets.
+- Focus on microbiomes from diseases potentially linked to altered sialic acid metabolism or utilization.
 
 ## Structure of folders before everything (still in construction, ignore for while)
 
@@ -76,16 +89,20 @@ To download this repository, run:
 ```
 git clone https://github.com/edtankian97/microbiota_sialylation.git
 ```
-Observation: **assembly_summary.txt** may have an unexpected problem of data when downloaded. A quick solution is to remove the file and then download it directly from Github website. 
+**Note:** The file *assembly_summary.txt* may occasionally be corrupted or incomplete when downloaded programmatically.
+If this occurs, delete the file and download it manually directly from the GitHub or NCBI website.
 
-## 1. Genome processing
+## **1. Genome processing**
 
-### 1.1 Retrieve genome information
+## 1.1 Retrieval of genome information
+Bacterial genome metadata were downloaded from NCBI RefSeq using wget:
+- Source: [NCBI RefSeq bacteria](https://ftp.ncbi.nlm.nih.gov/genomes/refseq/bacteria/assembly_summary.txt). 
+- The original dataset is named *assembly_summary.txt* and should be placed in the directory:
+```
+genomes_download/
+```
 
-First of all, genomes were download with command wget at [NCBI](https://ftp.ncbi.nlm.nih.gov/genomes/refseq/bacteria/assembly_summary.txt). 
- The original dataset is named **assembly_summary.txt** and be encountered in **genomes_download** directory.
-
-### 1.2 Filtering NCBI retrieved dataset
+## 1.2 Filtering the NCBI dataset
 ```
 mv assembly_summary.txt ./genomes_download && mv CheckM_report_prokaryotes.txt ./genomes_download
 cd genomes_download
@@ -93,25 +110,35 @@ grep -c “Complete” assembly_summary.txt
 grep "Complete" assembly_summary.txt > assembly_complete
 cut -f1,8,9,20 assembly_complete > assembly_complete_summary.tsv #retrieve info that I want to get
 ```
+The resulting file assembly_complete_summary.tsv contains the selected metadata fields required for downstream analyses.
 
-### 1.3 Retrieve CheckM information
-First of all, start with the ipynb file named as **Checkm_refseq_Reanalise_V2_R.ipynb** which will be in this path=genomes_download/scripts/jupyter_scripts/
-If you do not have installed miniconda or anaconda yet, please follow the instructions in this [link](https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html).
+## 1.3 Retrieval of CheckM Information
+Begin with the first script: *01.Checkm_refseq_Reanalise_V2_R.ipynb*, located at 
+```
+genomes_download/scripts/jupyter_scripts/
+```
+If you do not have Miniconda or Anaconda installed, follow the installation instructions available [here](https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html).
 
-**-Creation of conda environment and installation of ncbi_datasets. More information about ncbi_datasets, click this [link](https://github.com/ncbi/datasets)**
+### 1.3.1 Creation of Conda Environment and Installation of ncbi_datasets
+Additional information on ncbi_datasets is available [here](https://github.com/ncbi/datasets):
+
 ```
 conda create -n ncbi_datasets python=3.8 #creation of the anaconda environment: Digit y or yes to continue the installation. If error occurs, you might update the python version.
 conda activate ncbi_datasets #Activation of the environment. Do this after creation of the environment
 conda install -c conda-forge ncbi-datasets-cli
 ```
-**-retrieve missing data of completeness from ncbi_datasets**
+
+### 1.3.2 Retrieval of Missing CheckM Completeness Data from NCBI
 ```
 sed -i '1d' GCF_complete_without_checkM.txt
 xargs -a GCF_complete_without_checkM.txt -I {} datasets summary genome accession {} --as-json-lines | dataformat tsv genome --fields organism-name,accession,checkm-completeness,checkm-contamination > remain_CheckM_data.tsv
 mv remain_CheckM_data.tsv remain_CheckM_data_complete.tsv
 ```
-after this, continue the Part 02 of script: **Checkm_refseq_Reanalise_V2_R.ipynb**
-Run CheckM to get completeness and contamination of missing data.  Information of instalation can be found [here](https://github.com/Ecogenomics/CheckM/wiki/Installation). Below, you can find the commands for installation
+After this step, return to Part 02 of the notebook: *01.Checkm_refseq_Reanalise_V2_R.ipynb*. 
+
+### 1.3.3 Running CheckM for Missing Genomes
+To compute completeness and contamination for genomes lacking CheckM data, install CheckM following the official [documentation]:(https://github.com/Ecogenomics/CheckM/wiki/Installation). Nonetheless, below are the commands to:
+- Conda environment setup
 ```
 conda create -n checkm python=3.9
 conda activate checkm
@@ -119,12 +146,14 @@ conda install -c bioconda numpy matplotlib pysam
 conda install -c bioconda hmmer prodigal pplacer
 pip3 install checkm-genome
 ```
-Download CheckM database and substitute /path/to/my_checkm_data to where the database is located. Then, execute CheckM script
+- Download and Configure the CheckM Database
 ```
 wget https://data.ace.uq.edu.au/public/CheckM_databases/checkm_data_2015_01_16.tar.gz
 export CHECKM_DATA_PATH=/path/to/my_checkm_data
 ```
-**Download missing genomes for contamination analysis and run CheckM**
+Replace */path/to/my_checkm_data* with the actual directory where the database is stored.
+
+### 1.3.4 Download Genomes and Run CheckM
 ```
 pwd #you should be in the directory genomes_download
 sed '1d' remain_CheckM_data_complete_with_NA.tsv > remain_CheckM_data_complete_with_NA_ID.tsv
@@ -134,59 +163,117 @@ rm ncbi_dataset.zip
 find ./remain_CheckM/data/GCF_000*/ -type f -iname "*.fna" -exec mv -v "{}" ./remain_CheckM/ \;
  bash ./scripts/checkM_ncbi.sh
 ```
-Output folder is **checkm_result_ncbi** and output file **bin_stats_ext.tsv** will be located at **checkm_result_ncbi/storage** folder. 
-But **bin_stats_ext.tsv** is also located at **genomes_download/plots_data** folder.
+
+### 1.3.5 CheckM Output Processing
+The main output directory is:
+```
+checkm_result_ncbi/
+```
+The primary results file *bin_stats_ext.tsv* is located in:
+```
+checkm_result_ncbi/storage/
+```
+A copy is also available in: 
+```
+genomes_download/plots_data/
+```
+
+Process the CheckM output as follows:
 ```
 cd checkm_result_ncbi
 awk -F',' '/^GCF_/ { print $1, $11, $12 }' bin_stats_ext.tsv > checkm_GCF_delim.txt #delimiter rows with comma
 awk -F' ' 'BEGIN{OFS="\t"} /^GCF_/ { print $1, $6, $8 }' checkm_GCF_delim.txt > quality_report.tsv #choose right colummns that I want
 ```
-Now return to the script **Checkm_refseq_Reanalise_V2_R.ipynb**
+The file *quality_report.tsv* contains genome accession IDs along with completeness and contamination values used for downstream filtering.
+At this point, return to the notebook: *Checkm_refseq_Reanalise_V2_R.ipynb*
 
-## 2 HMMER models
 
-Full process of download of sequences and remotion of duplicates are well described at [Thais_github](https://github.com/ThaisAFM/sialic_acid_catalog)
-We removed duplicated sequences with CD-HIT, which can be downloaded following this [guide](https://github.com/weizhongli/cdhit)
-(Example usage of cd-hit: cd-hit -i [PROTEIN_FASTA_NAME] -o [CD_HIT_ENZYME_NAME_MODE_TYPE_OUTPUT_FILE]  -c 1.00 -n 5 ).
+## **2. HMMER Model Construction**
+The complete procedure for downloading reference protein sequences and removing duplicate entries is described in detail in [this repository](https://github.com/ThaisAFM/sialic_acid_catalog).
 
+Briefly, duplicate protein sequences were removed using CD-HIT. Installation instructions for CD-HIT are available [here](https://github.com/weizhongli/cdhit)
+
+Example of CD-HIT usage:
 ```
-#go to where tar file of sialylation sequences fasta is located 
-cd genomes_download/Protein_database
+cd-hit -i [PROTEIN_FASTA_INPUT] \
+       -o [CD_HIT_OUTPUT_FASTA] \
+       -c 1.00 -n 5
+```
 
-#untar the file, then delete tar file after
-tar -xf fastas_sialylation_final.tar.gz --strip-components=1 
+## 2.1 Preparation of Protein Sequence Datasets
+Navigate to the directory containing the compressed FASTA files:
+```
+cd genomes_download/Protein_database
+```
+Extract the sialylation-related and control protein datasets, then remove the compressed archives:
+```
+tar -xf fastas_sialylation_final.tar.gz --strip-components=1
 rm fastas_sialylation_final.tar.gz
-tar -xf fastas_others_final.tar.gz --strip-components=1 
+
+tar -xf fastas_others_final.tar.gz --strip-components=1
 rm fastas_others_final.tar.gz
 ```
-After this, it's turn to do an alignment. For this purpose, follow [mafft](https://mafft.cbrc.jp/alignment/software/) installation.  
-(Example of mafft usage: mafft --auto [CD_HIT_ENZYME_NAME_MODE_TYPE_OUTPUT_FILE] > [ENZYME_NAME_MODE_TYPE_OUTPUT_FILE]_mafft.fasta).
-Results will be located at genomes_download/Protein_database/mafft_align/
+
+## 2.2 Multiple Sequence Alignment
+Protein sequences were aligned using MAFFT. Installation instructions are available [here]:(https://mafft.cbrc.jp/alignment/software/).
+
+Example MAFFT usage:
 ```
-bash ../scripts/mafft_align.sh 
+mafft --auto [CD_HIT_OUTPUT_FASTA] > [ENZYME_NAME]_mafft.fasta
+```
+To perform alignments for all datasets, run the provided script:
+```
+bash ../scripts/mafft_align.sh
+```
+Alignment results will be generated in:
+```
+genomes_download/Protein_database/mafft_align/
+```
+Verify the output files
+```
 cd genomes_download/Protein_database/mafft_align/
 ls
 ```
-In the end, let's construct protein models with [HMMER](https://github.com/EddyRivasLab/hmmer).In this link aside, I've installed the 3.4 version for creation of models and sialylation protein's annotation.
+
+## 2.3 Construction of HMM Profiles
+Hidden Markov Models (HMMs) were built from the aligned protein sequences using HMMER.
+The analyses were performed using HMMER v3.4, which was also used for downstream annotation of sialylation-related proteins.
+
+Run the model construction script:
 ```
-bash ../../scripts/hmm_models.sh #results will be located in this PATH: genomes_download/Protein_database/mafft_align/hmm_models 
+bash ../../scripts/hmm_models.sh
 ```
-Let's move hmm models for external rings annotation into another directory
+The resulting HMM profiles will be located at
 ```
-cd ../../../ #you must be located in Protein_database
+genomes_download/Protein_database/mafft_align/hmm_models/
+```
+
+## 2.4 Organization of HMM Profiles for External Annotation
+HMM models corresponding to proteins used for external ring annotation are grouped into a separate directory for clarity and downstream use.
+```
+cd ../../../   # you should now be in Protein_database/
+
 mkdir external_rings_models
-mv ./mafft_align/hmm_models/neu*hmm ./external_rings_models
-mv ./mafft_align/hmm_models/kps*hmm ./external_rings_models
-ls ./external_rings_models #check if files are there
-cd ../ #you must be located in genomes_download
 
+mv ./mafft_align/hmm_models/neu*.hmm ./external_rings_models
+mv ./mafft_align/hmm_models/kps*.hmm ./external_rings_models
+
+ls ./external_rings_models   # verify that the files were moved correctly
+cd ../   # return to genomes_download/
 ```
-## 3. Protein analysis
 
-### 3.1 Protein analysis: Control proteomes
+## **3. Protein analysis**
+This section describes the identification of sialylation-related proteins using HMMER across (i) control proteomes and (ii) NCBI RefSeq proteomes filtered by genome quality, followed by functional validation using InterProScan.
 
-First, we will download some proteomes based on NCBI ID which are presented in **control_proteomes.txt**. Other ones are already available in **control_proteins** folder. Those are from ATCC web and can only be download with authorizated access. Please, just use
-these fasta files for academic purposes.
+## 3.1 Protein analysis: Control proteomes
+Control proteomes were obtained from two sources:
+
+NCBI RefSeq, using accession IDs listed in *control_proteomes.txt*
+
+ATCC reference proteomes, already available in the *control_proteins/* directory
+(Note: ATCC data require authorized access and should be used strictly for academic purposes.)
+
+### 3.1.1 Download of Control Proteomes from NCBI
 ```
 conda activate ncbi_datasets
 cd ./control_proteins/ 
@@ -194,7 +281,7 @@ datasets download genome accession --inputfile control_proteomes.txt --include p
 unzip control.zip -d control
 ls control
 ```
-After download, process the files
+### 3.1.2 Processing and Renaming of Control Proteomes
 ```
 bash ../scripts/rename_control_files.sh #rename the files based on their directories
 find ./control/ncbi_dataset/data/GCF*/ -type f -iname "*.faa" -exec mv -v "{}" ./ \; #move files
@@ -203,12 +290,14 @@ while read line; do eval mv $line; done < files.txt #rename with species names
 bash ../scripts/rename_fasta_control.sh #rename fasta header with filename
 less GCF_004015025.1_Akker_munciph_NEG.faa #see content of a file
 ```
-Create directories to organize the results.
+### 3.1.3 HMMER Analysis of Control Proteomes
+Create directories to store results and execute HMMER searches:
 ```
 mkdir HMMER_CONTROL_RESULTS && cd HMMER_CONTROL_RESULTS
 bash ../../scripts/teste_hmm_control.sh
 ```
-Join all output files for each enzyme
+### 3.1.4 Consolidation of HMMER Outputs
+Concatenate output files for each enzyme model:
 ```
 cat neuA*_output.tsv > all_CMP_neuA_control_output.tsv
 cat lic3X*_output.tsv > all_lic3X_sialil_control_output.tsv
@@ -219,7 +308,7 @@ cat PF11477*_output.tsv > all_PF11477_sialil_control_output.tsv
 cat IPR010866*_output.tsv > all_IPR010866_polisialil_control_output.tsv
 cat neuS*_output.tsv > all_neuS_polisialil_control_output.tsv
 ```
-Do the same thing for coverage files
+Repeat the procedure for coverage files:
 ```
 cat neuA*_output.tsv_coverage > all_CMP_neuA_control_output_coverage.tsv
 cat lic3X*_output.tsv_coverage > all_lic3X_sialil_control_output_coverage.tsv
@@ -230,14 +319,15 @@ cat PF11477*_output.tsv_coverage > all_PF11477_sialil_control_output_coverage.ts
 cat IPR010866*_output.tsv_coverage > all_IPR010866_polisialil_control_output_coverage.tsv
 cat neuS*_output.tsv_coverage > all_neuS_polisialil_control_output_coverage.tsv
 ```
-Process output file
+Clean output formatting:
 ```
 sed -i '/#/d' *_output.tsv
 sed -i 's/ \{1,\}/\t/g' *_output.tsv 
 ```
 
-### 3.2 Protein analysis: NCBI analysis
-After filtration with CheckM, the proteomes were downloaded from NCBI
+## 3.2 Protein analysis: NCBI RefSeq Proteomes
+Proteomes corresponding to genomes that passed CheckM quality filtering were downloaded from NCBI.
+### 3.2.1 Download of Filtered Proteomes
 ```
 cd ../../ #go to genomes_download folder and then move checkm_filter_v2_complete.tsv to this folder
 cut -f2 checkm_filter_v2_complete.tsv > checkm_filter_v2_complete_ID.tsv
@@ -247,37 +337,31 @@ rm -rfv proteins/
 unzip proteins.zip -d proteins
 datasets rehydrate --directory proteins
 ```
-After the download, proteins files were renamed with their own directory name 
+### 3.2.2 Renaming and Formatting of Proteomes
 ```
 bash ../scripts/rename_files.sh
-```
-With the proteins with their respective names, you can move them to the **proteins** directory
-```
 find proteins/ncbi_dataset/data/GCF*/ -type f -iname "*.faa" -exec mv -v "{}" ./proteins/ \;
 mkdir proteins/proteins_sialylation/final_complete_sialylation/ #create more directories
 ```
-Proteomes are now in **proteins** directory and then you can edit their fasta header, so we can identify them later on HMMER analysis.
-For this, do the following command:
+Update FASTA headers to preserve proteome identity during HMMER analysis:
 ```
 cd proteins
 for f in *.faa; do sed -i "s/^>/>${f}_/" "$f"; done
 ```
-Now the proteins files are ready to be analised. Now, let's organize subdiretories to store the results for each enzyme of sialylation process
+### 3.2.3 Organization of HMMER Analyses
 ```
 cd .. #must be at genomes_download folder
 mkdir HMMER_analysis # you must be located at **genomes_download** folder
 cd HMMER_analysis
 mkdir neuA_out pm0188_out PF11477_out neuS_out PF06002_out lst_out lic3X_out IPR010866_out
 cd ../../ #must be at genomes_download folder
-```
-Scripts for each enzyme model will be available with their respective names in **scripts** directory
 
-```
 cd scripts/
 bash ncbi_teste_own_hmmer.sh
 ```
 
-With all done, now it's time to start the process of coverage, e-value and bit-score filter. First, let's cat coverage results for each protein
+### 3.2.4 Coverage Filtering
+Concatenate coverage outputs for each enzyme:
 ```
 cd ../HMMER_analysis/
 find ./ -type f -name 'neuA*coverage' -exec cat {} + > CMP_coverage.tsv
@@ -289,9 +373,21 @@ find ./ -type f -name 'PF11477*coverage' -exec cat {} + > PF11477_coverage.tsv
 find ./ -type f -name 'PF06002*coverage' -exec cat {} + > PF06002_coverage.tsv
 find ./ -type f -name 'IPR010866*coverage' -exec cat {} + > IPR010866_coverage.tsv
 ```
-Now, go to the script **cover_hmm_filter_NCBI.ipynb** which is loccated in the path: microbial_sialylation/genomes_download/scripts/jupyter_scripts/ and follow the script. We will filter first by coverage value. Results of coverage are alrealdy available at **plots_data** folder.
+Coverage-based filtering is performed using the script: *02.cover_hmm_filter_NCBI.ipynb*, available at
+```
+scripts/jupyter_scripts/02.cover_hmm_filter_NCBI.ipynb
+```
+Filtered coverage results are saved in *plots_data/*
 
-After part 01 with coverage assessment, follow this for each core enzyme. First we are going to remove the header of each file, then get filenames to move into their respective directories.  The, we will cat output files and processed them.
+### 3.2.5 Per-Enzyme Output Processing
+For each core enzyme (NeuA, Lic3X, Lst, NeuS, Pm0188, PF06002, PF11477, IPR010866), output files are:
+
+- Filtered by coverage
+- Grouped by enzyme
+- Concatenated
+- Cleaned (comment removal and tab-delimiting)
+
+(Commands shown in the original README are retained and should be executed enzyme by enzyme as documented below.)
 
 **NeuA**
 ```
@@ -400,46 +496,50 @@ sed  's/ \{1,\}/\t/g' new_file.tsv > IPR010866_cover_filter_all.tsv
 cd ../ #must be located at HMMER_analysis folder
 ```
 
-Now, go to the script **hmm_process.ipynb** which is loccated in the path: microbial_sialylation/genomes_download/scripts/jupyter_scripts/ and follow the script to process output file. We will filter by bit-score and e-value.
+### 3.2.6 Bit-Score and E-Value Filtering
+Final HMMER filtering based on bit-score and e-value is performed using script *03.hmm_process.ipynb*, located at:
+```
+scripts/jupyter_scripts/03.hmm_process.ipynb
+```
 
-With the result, let's move faa files that passed the final filter.
+### 3.2.7 Extraction of Final Sialylation Proteomes
 ```
 cd ../proteins/
 sed -i '1d' completesialylation_GCF_ID.tsv #remove header
-```
-Move now the files into **proteins_sialylation** folder
-```
+
  while read id; do
   mv "${id}"* proteins_sialylation/ 
 done < completesialylation_GCF_ID.tsv
 ```
-Check files and how many passed
+
+Verify results:
 ```
 ls ./proteins_sialylation
 ls proteins_sialylation | wc -l 
 ```
 
-### 3.3 Protein analysis: Interproscan analysis
-First, download Interproscan tar file. For this purpose, I followed the manual by this [link](https://interproscan-docs.readthedocs.io/en/v5/UserDocs.html#obtaining-a-copy-of-interproscan).
-
+## 3.3 Protein analysis: InterProScan Annotation
+[InterProScan](https://interproscan-docs.readthedocs.io/en/v5/UserDocs.html#obtaining-a-copy-of-interproscan) was used for functional validation of predicted sialylation-related proteins.
+### 3.3.1 Installation
 ```
 cd ../../ #must be at genome_download folder
 wget https://ftp.ebi.ac.uk/pub/software/unix/iprscan/5/5.76-107.0/interproscan-5.76-107.0-64-bit.tar.gz
 tar -pxvzf interproscan-5.76-107.0-*-bit.tar.gz
 conda install bioconda::seqkit #download seqkit, which will retrieve fasta sequences for interproscan analysis
 ```
-Tsv files with sequences ID for fasta sequences to retrieve will be at **/proteins/proteins_sialylation/** folder after hmm_process R's scripts had been finished. Before take the sequences, you must rename fasta header of proteins files to retrieve the sequences successfully. 
 
+### 3.3.2 Sequence Retrieval for InterProScan
+Before extracting sequences, FASTA headers must be simplified:
 ```
 cd ./proteins/proteins_sialylation/
 sed -i 's/ .*//' *.faa
+```
+Retrieve sequences:
+```
 cd ../../../scripts # must be at genomes_download folder
-```
-So now, execute the script below to retrieve sequences
-```
 bash retrieve_sequences_for_interpro.sh
 ```
-Sequences retrieved will have **_retrieved_now** tag and will be at **scripts** folder. Let's move to another place
+Move retrieved sequences and run InterProScan:
 ```
 mkdir ../Interpro_analysis/Interpro_results
 mv *_retrieved_now ../Interpro_analysis
@@ -448,23 +548,34 @@ bash interpro_analysis.sh
 conda activate ncbi_datasets
 cd .. #must be at genomes_download folder
 ```
-Results will be at this path **Interpro_analysis/Interpro_results**. Final results will be available at **plots_data/Interpro_results/** folder, which will be useful to execute Interproscan R'script
+
+### 3.3.3 InterProScan Output Processing
+Results are available in:
 ```
-ls ./Interpro_analysis/Interpro_results
+Interpro_analysis/Interpro_results/
+plots_data/Interpro_results/
 ```
-Now it's time to execute **Interpro_results** R'script to filter sequences based on signatures. This script is available at **scripts/jupyter_scripts/** folder
+Final filtering based on InterPro signatures is performed using the R script located in:
+```
+scripts/jupyter_scripts/
+```
+The final list of proteomes passing all filters is stored in:
+```
+plots_data/complete_sialylation_interpro_filtration_final.tsv
+```
+This file is used as input for the next section: *Downstream Analysis*.
 
 
-Final result with all proteomes that passed interproscan are available in the file **complete_sialylation_interpro_filtration_final.tsv** which can be encounter at **genomes_download/plots_data/** folder. This is going to be used to extract info for the next topic **Downstream analysis**
+# 4. Downstream Analysis
+This section describes how intermediate and final datasets are generated for visualization, phylogenetic reconstruction, and annotation. All resulting tables are used to produce figures and iTOL annotations.
 
-# 4. Downstream analysis
+## 4.1 Datasets for Plot Generation
+The following subsections explain how datasets required for downstream plots were generated.
 
-## 4.1 Datasets for plots
-This topic and subtopics forwards are about how to get data that will be important to create the plots.
 
-### 4.1.1 Information of genomes with sialylation pathway
+### 4.1.1 Genomes Containing a Complete Sialylation Pathway
 
-**After Interproscan analysis of core enzymes, do the following to get information of genomes that have sialylation pathway**
+After InterProScan validation of core sialylation enzymes, retrieve metadata for genomes that contain a complete sialylation pathway.
 ```
 #get file with protein ID with whole sialylation pathway
 cd plots_data/
@@ -472,16 +583,24 @@ less complete_sialylation_interpro_filtration_final.tsv #see the data
 #process and download zip file to extract information
 sed -i '1d' complete_sialylation_interpro_filtration_final.tsv
 datasets download genome accession --inputfile complete_sialylation_interpro_filtration_final.tsv 
-
+```
+Extract relevant genome- and sample-level metadata:
+```
 #select desired fields
 dataformat tsv genome --package ncbi_dataset.zip --fields accession,assminfo-biosample-geo-loc-name,assminfo-biosample-host,assminfo-biosample-host-disease,assminfo-biosample-source-type,assmstats-gc-percent,assmstats-total-sequence-len,organelle-assembly-name,organism-name,organism-tax-id > accession_complete_fields.tsv
 ```
-Final file **accession_complete_fields.tsv** is already at **genomes_download/plots_data/** folder
 
+The final file *accession_complete_fields.tsv* is available in:
+```
+genomes_download/plots_data/
+```
 ### 4.1.2 Taxonomy information
 
-Final file **accession_complete_fields.tsv** is already at **genomes_download/plots_data/** folder
-We need to retrieve taxon information from each genome. It's already in plots_data, but you can redo again
+Taxonomic data are derived directly from accession_complete_fields.tsv, located in:
+```
+genomes_download/plots_data/
+```
+The code below was used to retrieve taxonomic information for bacteria exhibiting sialylation:
 ```
 #take desired columm
 conda activate ncbi_datasets
@@ -493,8 +612,9 @@ unzip taxonomy.zip
 mv ./ncbi_dataset/data/taxonomy_summary.tsv ./plots_data/
 rm -rfv ncbi_dataset
 ```
-### 4.1.3 Phylogenetic tree
 
+### 4.1.3 Phylogenetic Tree Construction
+Prepare representative proteomes for phylogenetic reconstruction:
 ```
 cp complete_sialylation_interpro_filtration_final.tsv ../proteins/proteins_sialylation/
 cd ../proteins/proteins_sialylation/
@@ -504,14 +624,14 @@ ls ./final_complete_sialylation/*faa > representative_species.txt
 sed 's/_protein.faa//g' representative_species.txt > representative_species_modified.txt
 cp representative_species_modified.txt ../../../genomes_download/plots_data/
 ```
-
-To generate a tree from phylophlan, first you must download it. Check this [link](https://github.com/biobakery/phylophlan) with the procedures.
+**PhyloPhlAn Installation and Setup**
+Install [PhyloPhlAn](https://github.com/biobakery/phylophlan):
 ```
 conda create -n "phylophlan" -c bioconda phylophlan=3.1.1
 conda activate phylophlan
 ```
-**phylophlan database setup and installation**
-I followed instructions upon this [link](https://github.com/biobakery/phylophlan/wiki#databases). I followed the option 2 and installed the **phylophlan** database. Download **phylophlan_databases.txt** and follow the instructions below.
+Follow the database installation instructions provided [here](https://github.com/biobakery/phylophlan/wiki#databases).
+
 ```
 cd .. #must be in protein folder
 mkdir protein_tree && cd protein_tree
@@ -521,43 +641,57 @@ tar -xf phylophlan.tar
 bunzip2 -k phylophlan/phylophlan.bz2
 cd ..
 ```
-**phylophlan configuration file**
+Create a configuration file:
 ```
 phylophlan_write_config_file.py --db_aa diamond --map_aa diamond --msa mafft \
 --trim trimal --tree1 fasttree --tree2 raxml -o genome_ed_config.cfg \
 --db_type a
 ```
-**Run script of phylophlan analysis**
+Run PhyloPhlAn:
 ```
 cd ../../../scripts/
 bash phylo.sh #make sure phylophlan's conda environment is activated
 ```
-phylophlan generates a lot of files, but the most important is refine tree called **RAxML_result.proteins_unique_comm_sia_refined.tre** which was used for tree annotation with iTOL.
-This output is present in **genomes_download** folder
+phylophlan generates a lot of files, but the most important is refine tree called *RAxML_result.proteins_unique_comm_sia_refined.tre*, which was used for tree annotation with iTOL.
+This output is located at
+```
+genomes_download/
+```
 
-## 4.2 Genome information
-
-Follow the script **retrieve_genome_info.ipynb** which is loccated in the path: microbial_sialylation/genomes_download/scripts/jupyter_scripts/
+## 4.2 Genome-level information
+Genome-level summary statistics and annotations are generated using script *04.retrieve_genome_info.ipynb*, located at:
+```
+scripts/jupyter_scripts/retrieve_genome_info.ipynb
+```
 
 ## 4.3 Host distribution
-
-Follow the script **host_distribution.ipynb** which is loccated in the path: microbial_sialylation/genomes_download/scripts/jupyter_scripts/
+Host-associated metadata analyses are performed using script *05.host_distribution.ipynb*, located at:
+```
+microbial_sialylation/genomes_download/scripts/05.jupyter_scripts/
+```
 
 ## 4.4 Species distribution
 
-Follow the script **species_distribution.ipynb** which is loccated in the path: microbial_sialylation/genomes_download/scripts/jupyter_scripts/
+Species-level distribution plots are generated using script *06.species_distribution.ipynb*, located at: 
+```
+microbial_sialylation/genomes_download/scripts/jupyter_scripts/
+```
 
 ## 4.5 iTOL annotation
 
-### 4.5.1 Hmmer analysis of external rings
+### 4.5.1 HMMER Analysis of External Ring Proteins
+Run HMMER searches for external ring-associated proteins (KpsM, KpsT, KpsD, NeuD, NeuO):
 
 ```
 cd ../ #If you are one level above at jupyter_scripts folder, do this command to go to scripts folder
 bash external_rings_hmmer.sh #do the annotation of proteins for external rings
 ```
 
-Results for each protein: KpsM, KpsT, neuO and neuD will be located at **../Protein_database/external_rings_models/external_rings_output/**
-
+Results for each protein: KpsM, KpsT, neuO and neuD will be located at 
+```
+../Protein_database/external_rings_models/external_rings_output/
+```
+Aggregate coverage files:
 ```
 cd ../Protein_database/external_rings_models/external_rings_output/
 mkdir kpsM_out kpsT_out kpsD_out neuD_out neuO_out
@@ -567,7 +701,14 @@ find ./ -type f -name 'kpsD*coverage' -exec cat {} + > all_KpsD_coverage.tsv
 find ./ -type f -name 'neuO*coverage' -exec cat {} + > all_neuO_coverage.tsv
 find ./ -type f -name 'neuD*coverage' -exec cat {} + > all_neuD_coverage.tsv
 ```
-Final resulted file are located at **microbiota_sialylation/genomes_download/plots_data/hmmer_out/**
+Coverage filtering is performed in **Part 01** of script *06.hmmer_out*:
+```
+*microbiota_sialylation/genomes_download/plots_data/06.hmmer_out/
+```
+Filtered outputs are stored in:
+```
+genomes_download/plots_data/hmmer_out/
+```
 First process resulted of coverage file in **hmm_process_external_rings.ipynb** script **Part 01** and then continue
 
 **KpsM**
@@ -705,9 +846,9 @@ sed -i '1d' representative_labels_itol.tsv
 Now, join files to get a dataset for itol
 ```
  #Join files
-cat kpst_itol_representative.txt kpsT_represent_itol_EANS_paper.tsv > final_kpsT_itol.txt
+cat kpst_itol_representative.txt kpsT_itol_represent_EANS_paper.tsv > final_kpsT_itol.txt
 cat kpsM_itol_representative.txt kpsM_itol_represent_EANS_paper.tsv > final_kpsM_itol.txt
-cat kpsD_itol_representative.txt kpsD_itol_represent_EANS_paper.tsv > final_kpsD_itol.txt
+cat kpsD_itol_representative.txt KpsD_itol_represent_EANS_paper.tsv > final_kpsD_itol.txt
 cat neuD_itol_representative.txt neuD_itol_represent_EANS_paper.tsv > final_neuD_itol.txt
 cat neuO_itol_representative.txt neuO_itol_represent_EANS_paper.tsv > final_neuO_itol.txt
 cat vfdb_itol_representative_EANS.txt vfdb_itol_represent_EANS.tsv > final_vfdb_itol.txt
@@ -719,64 +860,80 @@ with the name **RAxML_result.final_complete_sialylation_refined.tre**
 
 # 5. Metagenomic analysis
 
-## 5.1 Study 01 colon cancer - France
+## 5.1 Study 01: Colorectal cancer cohort (France)
+ADD PAPER CITTATION HERE !!
 
-### 5.1.1 Download of fastq files
+This section describes the complete processing pipeline used to assemble, bin, annotate, and taxonomically classify metagenomic data from this study.
 
-First download  fastq files
+### 5.1.1 FASTQ download
+Raw sequencing reads were downloaded from the SRA using sra-tools.
 ```
 conda install -c bioconda sra-tools #Install sra-tools
 cd ../../../metagen_files/Study01_france_cancer/
 cat *_get_ID > all_cancer_download.sh
 bash cancer_01_download.sh
 ```
-### 5.1.2 Quality filtering
-
-After this, it's time to do a filtering with fastp
+### 5.1.2 Quality control (fastp)
+Quality filtering and adapter trimming were performed using fastp.
 ```
 conda install -c bioconda fastp #download fastp
 bash script_fastp_filtering.sh
 ls outputs_fastp #folder with result of filtering
 ```
-Results will be at **outputs_fastp** folder
+Output directory:
+```
+outputs_fastp
+```
 
-### 5.1.3 Download of human genome
+### 5.1.3 Host genome preparation (GRCh38)
+The human reference genome (ID: GRCh38) was downloaded and indexed for host read removal.
 ```
 conda install -c bioconda bowtie2 #download bowtie2 via conda
 bash script_get_human_genome_GRch38.sh
 ```
-Output will be at **human_genome** folder.
+Output directory:
+```
+human_genome
+```
 
-### 5.1.4 Human genome alignment
+### 5.1.4 Alignment against the human genome
 
-We will align all fastq files against human genome 
+All filtered reads were aligned against the human reference genome using Bowtie2.
 ```
 bash script_align_reads_human_genome.sh
 ls outputs_bowtie2_FR # list output files
 ```
-Files will be saved at **outputs_bowtie2_FR** folder.
+Output directory:
+```
+outputs_bowtie2_FR
+```
 
-### 5.1.5 Remove human genome alignment
+### 5.1.5 Removal of host-derived reads
 
-After alignment, we will remove all human genome alignment to our fastq files, as we want only microbiota genomes'source
-
+Reads aligning to the human genome were removed using samtools, retaining only microbial reads.
 ```
 conda install -c bioconda samtools #download samtools via conda
 bash script_remove_human_genome.sh
 ```
-Results will be saved at **clean_reads_FR** folder
+Output directory:
+```
+clean_reads_FR
+```
 
-### 5.1.6 Merge sequences with FLASH
+### 5.1.6 Read merging (FLASH)
+Paired-end reads were merged using FLASH, where applicable.
 ```
 conda install -c bioconda flash #install flash via conda
 bash script_flash.sh
 ```
-### 5.1.7 Generate contigs with MEGAHIT
+### 5.1.7 Metagenomic assembly (MEGAHIT)
+Cleaned reads were assembled into contigs using MEGAHIT.
 ```
 conda install -c bioconda megahit
 bash script_megahit.sh
 ```
-### 5.1.8 Generate bins with metabat
+### 5.1.8 Genome binning (MetaBAT2)
+Metagenome-assembled genomes (MAGs) were generated using MetaBAT2.
 ```
 conda install bioconda::metabat2
 bash create_index.sh #create index
@@ -785,7 +942,8 @@ bash generate_bins.sh #generate bins
 bash rename_bins_files.sh #rename files based on their directories
 ```
 
-### 5.1.9 Generate proteins faa files with prokka
+### 5.1.9 Protein prediction (Prokka)
+Protein-coding sequences were predicted for each bin using Prokka.
 ```
 cd bins_paired
 mkdir all_prokka
@@ -793,36 +951,52 @@ bash prokka_script.sh
 bash mv_prokka_files.sh 
 bash rename_fasta_header.sh 
 ```
-Files with faa extension are now inside **all_prokka** folder. Let's see if everything is ok. Check if files are renamed corrected with their respective directory with **less file_name.faa** command
+Protein FASTA files (.faa) are located in:
+```
+bins_paired/all_prokka/
+```
+
+Verify that headers and filenames are correct:
 ```
 cd all_prokka 
 ls
+less <file_name>.faa
 ```
-### 5.1.10 Hmmer analysis
-
-Now, it's time to do a hmmer annotation
-
+### 5.1.10 HMMER annotation
+Protein sequences were annotated using HMMER models.
 ```
 cd ../../ #must be at Study01_france_cancer folder
 bash metagen_hmmer.sh
 ```
-Process hmmer results. Output files are in this path **metagen_files/Study01_france_cancer/output_data**
+Output directory:
+```
+metagen_files/Study01_france_cancer/output_data
 ```
 
+### 5.1.11 InterProScan analysis
+FASTA files for InterProScan were generated during the HMMER step and are located at:
 ```
-### 5.1.11 Interpro analysis
-
-Output files with sequences fasta to run Interpro will be at this path **metagen_files/Study01_france_cancer/output_data/Interproscan_analysis**. 
+metagen_files/Study01_france_cancer/output_data/Interproscan_analysis
+```
+Run InterProScan:
 ```
 bash ../scripts/interpro_analysis_FR.sh
 ```
-Final results of Interproscan are available at **metagen_files/Study01_france_cancer/output_data/Interpro_results/** folder, which will be useful to execute Interproscan R'script.
-Now it's time to execute **Interpro_results_FR** R'script to filter sequences based on signatures. This script is available at **metagen_files/Study01_france_cancer/** folder. Final result of  Interproscan analysis are available at  **metagen_files/Study01_france_cancer/output_data/Interpro_results/**
+Final InterProScan results are available at:
+```
+metagen_files/Study01_france_cancer/output_data/Interpro_results/
+```
+These results are further processed using the R script *07.Interpro_results_FR*, located in:
+```
+metagen_files/Study01_france_cancer/
+```
 
-### 5.1.12 Phylogeny Identification of bins
-
-Now, it's time to identify bins that passed the Interproscan analysis filtering. File with bins_ID are presented at **metagen_files/Study01_france_cancer/output_data/Interpro_results/** with the name **bins_for_identification.tsv**. Let's handle this file and extract the genomes file for identification.
-
+### 5.1.12 Phylogeny Identification of bins (GTDB-Tk)
+Bins passing InterProScan filtering are listed in:
+```
+metagen_files/Study01_france_cancer/output_data/Interpro_results/ins_for_identification.tsv
+```
+Prepare bins for taxonomic classification:
 ```
 cd ./output_data/Interpro_results/ #considering that you are at Study01_france_cancer folder
 less bins_for_identification.tsv
@@ -839,7 +1013,8 @@ done < bins_for_identification_modified.tsv
 
 ls ./bins_paired_sialylation/
 ```
-Download GTDB-tk for analysis. I followed GTDB-tk [manual](https://ecogenomics.github.io/GTDBTk/installing/index.html#installing)
+### 5.1.13 GTDB-Tk setup and execution
+Download GTDB-Tk reference data following the official [installation manual](https://ecogenomics.github.io/GTDBTk/installing/index.html#installing)
 ```
 cd ../../ #must be at metagen_files folder
 mkdir GTDB_DATA && cd GTDB_DATA
@@ -850,22 +1025,28 @@ cd split_package #go to files' folder
  cat gtdbtk_r226_data.tar.gz.part_* > gtdbtk_r226_data.tar.gz #cat all files into one
  tar xvzf gtdbtk_r226_data.tar.gz #untar file
 ```
-Also, download GTDB-tk via conda
+Install GTDB-Tk via conda:
 ```
 conda create -n gtdbtk-2.6.1 -c conda-forge -c bioconda gtdbtk=2.6.1
 conda activate gtdbtk-2.6.0
 ```
-Execute GTDB script.
+Run taxonomic classification:
 ```
 bash metagen_FR_GTDB.sh
 ```
-Summary results are at **metagen_files/Study01_france_cancer/output_data** folder with file named **gtdbtk.bac120.summary_FR.tsv**
+Summary output:
+```
+metagen_files/Study01_france_cancer/output_data/gtdbtk.bac120.summary_FR.tsv
+```
 
-### 5.1.13 Check quality of bins with CheckM
+### 5.1.14 Bin quality assessment (CheckM)
+Genome completeness and contamination were assessed using CheckM.
 ```
 conda activate checkm
 export CHECKM_DATA_PATH=YOUR/PATH/TO/CHECKM/DATA
 bash checkm_script_metagen_FR.sh
-
 ```
-Results will be at **checkm_result_bins_with_sia** folder
+Output directory:
+```
+checkm_result_bins_with_sia
+```
