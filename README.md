@@ -557,7 +557,7 @@ plots_data/Interpro_results/
 ```
 Final filtering based on InterPro signatures is performed using the R script located in:
 ```
-scripts/jupyter_scripts/
+scripts/jupyter_scripts/04.Interpro_results.ipynb
 ```
 The final list of proteomes passing all filters is stored in:
 ```
@@ -659,20 +659,20 @@ genomes_download/
 ```
 
 ## 4.2 Genome-level information
-Genome-level summary statistics and annotations are generated using script *04.retrieve_genome_info.ipynb*, located at:
+Genome-level summary statistics and annotations are generated using script *05.retrieve_genome_info.ipynb*, located at:
 ```
 scripts/jupyter_scripts/retrieve_genome_info.ipynb
 ```
 
 ## 4.3 Host distribution
-Host-associated metadata analyses are performed using script *05.host_distribution.ipynb*, located at:
+Host-associated metadata analyses are performed using script *06.host_distribution.ipynb*, located at:
 ```
-microbial_sialylation/genomes_download/scripts/05.jupyter_scripts/
+microbial_sialylation/genomes_download/scripts/jupyter_scripts/
 ```
 
 ## 4.4 Species distribution
 
-Species-level distribution plots are generated using script *06.species_distribution.ipynb*, located at: 
+Species-level distribution plots are generated using script *07.species_distribution.ipynb*, located at: 
 ```
 microbial_sialylation/genomes_download/scripts/jupyter_scripts/
 ```
@@ -701,15 +701,15 @@ find ./ -type f -name 'kpsD*coverage' -exec cat {} + > all_KpsD_coverage.tsv
 find ./ -type f -name 'neuO*coverage' -exec cat {} + > all_neuO_coverage.tsv
 find ./ -type f -name 'neuD*coverage' -exec cat {} + > all_neuD_coverage.tsv
 ```
-Coverage filtering is performed in **Part 01** of script *06.hmmer_out*:
+Coverage filtering is performed in **Part 01** of script *08.hmm_process_external_rings.ipynb*:
 ```
-*microbiota_sialylation/genomes_download/plots_data/06.hmmer_out/
+*microbiota_sialylation/genomes_download/plots_data/hmmer_out/
 ```
 Filtered outputs are stored in:
 ```
 genomes_download/plots_data/hmmer_out/
 ```
-First process resulted of coverage file in **hmm_process_external_rings.ipynb** script **Part 01** and then continue
+First process resulted of coverage file in **08.hmm_process_external_rings.ipynb** script **Part 01** and then continue
 
 **KpsM**
 ```
@@ -782,7 +782,7 @@ sed -i '/#/d' file_output_neuO.tsv
 sed -i 's/ \{1,\}/\t/g' file_output_neuO.tsv
 cd ..
 ```
-Return to the **hmm_process_external_rings.ipynb** script again for **Part 02**. Final resulted files are already located at **microbiota_sialylation/genomes_download/plots_data/hmmer_out/**
+Return to the **08.hmm_process_external_rings.ipynb** script again for **Part 02**. Final resulted files are already located at **microbiota_sialylation/genomes_download/plots_data/hmmer_out/**
 
 ### 4.5.2 Interpro_analysis
 
@@ -802,7 +802,7 @@ Check output files at **/Interpro_analysis/Interpro_results/** PATH. Our results
 ```
 ls ./Interpro_analysis/Interpro_results/
 ```
-Now, it's time to process the results with interproscan'R script for external rings: **Interpro_analysis_external_rings_final_script**. Final output files wil be used for iTOL annotation of external rings.
+Now, it's time to process the results with interproscan'R script for external rings: **09.Interpro_analysis_external_rings_final_script**. Final output files wil be used for iTOL annotation of external rings.
 
 
 ### 4.5.3 Virulence factors
@@ -830,7 +830,7 @@ mv out_70id_60cov.csv ../../../../plots_data/itol/
 ```
 ### 4.5.4 Processing of resulted files for iTOL annotation
 
-Follow the script **itol_notation.ipynb** which is loccated in the path: microbial_sialylation/genomes_download/scripts/jupyter_scripts/
+Follow the script **10.itol_notation.ipynb** which is loccated in the path: microbial_sialylation/genomes_download/scripts/jupyter_scripts/
 After this, each dataset created in the script was concatenated with iTol dataset
 ```
 cd ../../../../plots_data/itol/
@@ -870,8 +870,8 @@ Raw sequencing reads were downloaded from the SRA using sra-tools.
 ```
 conda install -c bioconda sra-tools #Install sra-tools
 cd ../../../metagen_files/Study01_france_cancer/
-cat *_get_ID > all_cancer_download.sh
-bash cancer_01_download.sh
+cat *_get_ID > all_cancer_download.txt
+bash script_get_sra.sh
 ```
 ### 5.1.2 Quality control (fastp)
 Quality filtering and adapter trimming were performed using fastp.
@@ -980,7 +980,7 @@ metagen_files/Study01_france_cancer/output_data/Interproscan_analysis
 ```
 Run InterProScan:
 ```
-bash ../scripts/interpro_analysis_FR.sh
+bash interpro_analysis_FR.sh
 ```
 Final InterProScan results are available at:
 ```
@@ -994,7 +994,7 @@ metagen_files/Study01_france_cancer/
 ### 5.1.12 Phylogeny Identification of bins (GTDB-Tk)
 Bins passing InterProScan filtering are listed in:
 ```
-metagen_files/Study01_france_cancer/output_data/Interpro_results/ins_for_identification.tsv
+metagen_files/Study01_france_cancer/output_data/Interpro_results/bins_for_identification.tsv
 ```
 Prepare bins for taxonomic classification:
 ```
@@ -1050,3 +1050,250 @@ Output directory:
 ```
 checkm_result_bins_with_sia
 ```
+
+## 5.2 Study 02: Colorectal cancer cohort (China)
+
+Download adapter-host-trimmed reads
+```
+cd ../Study02_colon_cancer
+bash ena-file-download-read_run-PRJEB10878-submitted_ftp-20251205-1310.sh
+```
+Move fastq files to a directory
+```
+mkdir host_adapt_trimm_reads
+mv *fq.gz ./host_adapt_trimm_reads
+```
+### 5.2.1 Read merging (FLASH)
+
+Paired-end reads were merged using FLASH, where applicable.
+```
+bash script_flash_colon02.sh
+```
+### 5.2.3 Metagenomic assembly (MEGAHIT)
+Cleaned reads were assembled into contigs using MEGAHIT.
+```
+bash script_megahit_colon02.sh
+```
+### 5.2.4 Genome binning (MetaBAT2)
+Metagenome-assembled genomes (MAGs) were generated using MetaBAT2.
+```
+bash create_index.sh #create index
+bash prepare_to_binning.sh #coverage count
+bash generate_bins.sh #generate bins
+bash rename_bins_files.sh #rename files based on their directories
+```
+### 5.2.5 Protein prediction (Prokka)
+Protein-coding sequences were predicted for each bin using Prokka.
+```
+mkdir bins_paired/all_prokka
+bash prokka_script.sh
+mv mv_prokka_files.sh rename_fasta_header.sh bins_paired/ && cd bins_paired
+bash mv_prokka_files.sh 
+```
+Protein FASTA files (.faa) are located in:
+```
+bins_paired/all_prokka/
+```
+Rename faa files
+```
+cd all_prokka
+for f in *.faa; do sed -i '/^>/ s/ /_/1' "$f"; done
+sed -i 's/ .*//' *.faa
+```
+Verify that headers and filenames are correct:
+```
+ls
+less <file_name>.faa
+```
+### 5.2.6 HMMER annotation
+Protein sequences were annotated using HMMER models.
+```
+cd ../../ #must be at Study02_colon_cancer folder
+bash metagen_hmmer.sh
+```
+Output directory:
+```
+metagen_files/Study02_colon_cancer/bins_paired/all_prokka/metagen_hmmer_results/
+```
+Process coverage files
+```
+cd bins_paired/all_prokka/metagen_hmmer_results/
+cat neuA*_output.tsv_coverage > all_CMP_neuA_colon02_output_coverage.tsv
+cat lic3X*_output.tsv_coverage > all_lic3X_sialil_colon02_output_coverage.tsv
+cat lst*_output.tsv_coverage > all_lst_sialil_colon02_output_coverage.tsv
+cat pm0188*_output.tsv_coverage > all_pm0188_sialil_colon02_output_coverage.tsv
+cat PF06002*_output.tsv_coverage > all_PF06002_sialil_colon02_output_coverage.tsv
+cat PF11477*_output.tsv_coverage > all_PF11477_sialil_colon02_output_coverage.tsv
+cat IPR010866*_output.tsv_coverage > all_IPR010866_polisialil_colon02_output_coverage.tsv
+cat neuS*_output.tsv_coverage > all_neuS_polisialil_colon02_output_coverage.tsv
+```
+Filter lines with coverage value equal to 40 or above
+```
+for file in *_colon02_output_coverage.tsv; do 
+awk '$1 != "inf" && $1 >= 40' $file > "${file}_filtered";
+done
+```
+Retrieve filenames to be moved
+```
+for file in *_filtered; do
+awk '{print $2}' $file > "${file}_ID";
+done
+```
+See how many files will be moved
+```
+wc -l *_ID
+```
+Expected result
+```
+  3278 all_CMP_neuA_colon02_output_coverage.tsv_filtered_ID
+   703 all_IPR010866_polisialil_colon02_output_coverage.tsv_filtered_ID
+    18 all_lic3X_sialil_colon02_output_coverage.tsv_filtered_ID
+   348 all_lst_sialil_colon02_output_coverage.tsv_filtered_ID
+   694 all_neuS_polisialil_colon02_output_coverage.tsv_filtered_ID
+    18 all_PF06002_sialil_colon02_output_coverage.tsv_filtered_ID
+   172 all_PF11477_sialil_colon02_output_coverage.tsv_filtered_ID
+   102 all_pm0188_sialil_colon02_output_coverage.tsv_filtered_ID
+  5333 total
+```
+Script to move files filtered
+```
+mv ../../../move_hmmer_filter_output.sh ./
+bash move_hmmer_filter_output.sh
+```
+List new directories with moved files
+```
+ls -d */
+```
+check if number of files are been matched
+```
+for d in all_*_colon02/; do
+  echo -n "$d "
+  find "$d" -maxdepth 1 -type f | wc -l
+done
+```
+Process output file
+```
+for IN_DIR in *_colon02/; do
+OUT_FILE="$(basename "$IN_DIR")"
+find "$IN_DIR" -type f -name '*_output.tsv' -exec cat {} + > "${OUT_FILE}_all_process.tsv";
+done
+```
+Check concatened files
+```
+ls *_all_process.tsv
+```
+Format output files by filtering out # comment lines and delimiting fields with tabs
+
+```
+for file in *_all_process.tsv; do
+
+  # remove comment lines
+  sed '/#/d' "$file" > "${file%.tsv}_pre_process.tsv"
+
+  # replace multiple spaces with tabs
+  sed 's/ \{1,\}/\t/g' "${file%.tsv}_pre_process.tsv" \
+    > "${file%.tsv}_final_process.tsv"
+
+done
+```
+Remove unnecessary columns
+```
+for file in *_final_process.tsv; do
+cut -d $'\t' -f1-25 $file > "${file%.tsv}_filtered.tsv";
+done
+```
+Output files are already located in:
+```
+Study02_colon_cancer/output_data/
+```
+Execute  **hmmer_process_colon02.ipynb** script, which is located in:
+```
+metagen_files/Study02_colon_cancer/output_data/hmmer_process_colon02.ipynb
+```
+Output data will be located in:
+```
+Study02_colon_cancer/
+```
+
+Remove header of input of seqkit
+```
+sed -i '1d' colon02_*
+```
+Retrieve sequences with seqkit 
+```
+conda activate ncbi_datasets
+bash retrieved_seqs_Interpro.sh
+```
+Verify that the number of entries matches across files.
+```
+wc -l *_for_Interpro.tsv
+grep -c ">" *retrieved_now
+```
+Retrieve sequences for Interproscan analysis
+```
+bash retrieve_seqs_Interpro.sh
+```
+### 5.2.7 Interproscan annotation
+Run InterProScan:
+```
+bash interpro_analysis.sh
+```
+Final InterProScan results are available at:
+```
+metagen_files/Study02_france_cancer/output_data/Interpro_results/
+```
+These results are further processed using the R script *04.Interpro_results_colon02.iypnb*, located in:
+```
+metagen_files/jupyter_scripts/
+```
+
+### 5.2.8 Phylogeny Identification of bins (GTDB-Tk)
+Bins passing InterProScan filtering are listed in:
+```
+metagen_files/Study02_france_cancer/output_data/Interpro_results/bins_for_identification.tsv
+```
+Prepare bins for taxonomic classification:
+```
+cd ./output_data/Interpro_results/ #considering that you are at Study02_france_cancer folder
+less bins_for_identification.tsv
+sed '1d' bins_for_identification.tsv > bins_for_identification_modified.tsv
+mv bins_for_identification_modified.tsv ../../bins_paired #move file to desired folder
+cd ../../bins_paired #go to folder of extraction
+mkdir bins_paired_sialylation #create folder to move the files
+```
+Execute command to move the right files
+```
+while IFS= read -r file; do
+    find . -type f -name "$file" -exec mv -t bins_paired_sialylation {} +
+done < bins_for_identification_modified.tsv
+```
+Check files
+```
+ls ./bins_paired_sialylation/
+```
+### 5.2.9 GTDB-Tk execution
+
+Run taxonomic classification:
+```
+bash metagen_GTDB.sh
+```
+Summary output:
+```
+metagen_files/Study02_france_cancer/output_data/gtdbtk.bac120.summary.tsv
+```
+
+### 5.2.10 Bin quality assessment (CheckM)
+Genome completeness and contamination were assessed using CheckM.
+```
+conda activate checkm
+export CHECKM_DATA_PATH=YOUR/PATH/TO/CHECKM/DATA
+bash checkm_script_metagen.sh
+```
+Output directory:
+```
+checkm_result_bins_with_sia
+```
+
+
+
+
