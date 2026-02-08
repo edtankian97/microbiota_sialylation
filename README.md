@@ -1055,12 +1055,14 @@ checkm_result_bins_with_sia
 
 [Yu et. all (2014)](https://gut.bmj.com/content/66/1/70)
 
-Download adapter-host-trimmed reads
+### 5.2.1 FASTQ download
 ```
 cd ../Study02_colon_cancer
 bash ena-file-download.sh
 ```
-Rename files - Extract the original filenames from the ENA download script:
+### 5.2.2 Rename fastq reads files
+
+Extract the original filenames from the ENA download script:
 ```
 awk -F/ '{print $NF}' ena-file-download.sh > file_to_rename.txt
 
@@ -1380,7 +1382,7 @@ metagen_files/scripts
 ```
 Follow the same steps from **Study 02**  colon cancer with slighty modification.
 
-Caution: Steps of host and adapter trimming are not necessary!!!
+Caution: Step **5.2.2** is not necessary!!!
 
 ## 5.5 Study 05: Aterosclerosis Cohort (China)
 
