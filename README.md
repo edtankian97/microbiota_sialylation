@@ -1058,23 +1058,51 @@ checkm_result_bins_with_sia
 Download adapter-host-trimmed reads
 ```
 cd ../Study02_colon_cancer
-bash ena-file-download-read_run-PRJEB10878-submitted_ftp-20251205-1310.sh
+bash ena-file-download.sh
 ```
+Rename files - Extract the original filenames from the ENA download script:
+```
+awk -F/ '{print $NF}' ena-file-download.sh > file_to_rename.txt
+
+awk -F'/' '{print $7"_"$8}' ena-file-download.sh > new_reads_name.txt
+```
+Inspect the generated files:
+```
+head file_to_rename.txt
+head new_reads_name.txt
+```
+Create a file mapping original names to new names:
+```
+ paste file_to_rename.txt new_reads_name.txt > rename_pairs.filtered.txt
+head rename_pairs.filtered.txt
+```
+Preview the renaming commands (dry run):
+```
+while read -r old new; do
+    echo mv "$old" "$new"
+done < rename_pairs.filtered.txt
+```
+Rename the files:
+```
+while read old new; do mv "$old" "$new"; done < rename_pairs.filtered.txt
+```
+
 Move fastq files to a directory
 ```
 mkdir host_adapt_trimm_reads
 mv *fq.gz ./host_adapt_trimm_reads
 ```
+
 ### 5.2.1 Read merging (FLASH)
 
 Paired-end reads were merged using FLASH, where applicable.
 ```
-bash script_flash_colon02.sh
+bash script_flash.sh
 ```
 ### 5.2.3 Metagenomic assembly (MEGAHIT)
 Cleaned reads were assembled into contigs using MEGAHIT.
 ```
-bash script_megahit_colon02.sh
+bash script_megahit.sh
 ```
 ### 5.2.4 Genome binning (MetaBAT2)
 Metagenome-assembled genomes (MAGs) were generated using MetaBAT2.
@@ -1296,4 +1324,75 @@ Output directory:
 checkm_result_bins_with_sia
 ```
 
+## 5.3 Study 03: Colorectal Cancer Cohort (China)
 
+Based on the study by [Feng et al. (2015)](https://www.nature.com/articles/ncomms7528.pdf).
+
+Navigate to the following directory:
+```
+metagen_files/scripts/
+```
+
+Copy all scripts from the **scripts** folder to the Study 03 directory:
+```
+cp *sh ../Study03_colon_cancer
+```
+
+Return to **Study03_colon_cancer** directory, then download fastq files:
+```
+bash ena-file-download-read_run-ERP008729-colon_03.sh
+```
+Then, follow the same steps described for **Study 02** with slight modification.
+
+Move paired files to **host_adapt_trimm_reads** folder
+```
+mkdir host_adapt_trimm_reads
+mv *.clean.pair.rmhost.{1..2}.fq.gz ./host_adapt_trimm_reads
+rm -rfv *clean.single.rmhost.fq.gz #remove single end reads
+```
+
+ Results are available in:
+```
+Study03_colon_cancer/output_data/
+```
+
+The Jupyter-based R scripts used for **HMMER** and **InterProScan** analyses are located in:
+```
+metagen_files/jupyter_scripts
+```
+
+## 5.4 Study 04: Colorectal Cancer Cohort (Washington)
+
+Based on the study by [Vogtmann et. al (2016)](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0155362)
+
+A file containing the download links for the FASTQ reads will be located in:
+```
+metagen_files/Study04_colon_cancer
+```
+Download fastq files
+```
+bash script_get_sra.sh
+```
+
+Copy scripts in:
+```
+metagen_files/scripts
+```
+Follow the same steps from **Study 02**  colon cancer with slighty modification.
+
+Caution: Steps of host and adapter trimming are not necessary!!!
+
+## 5.5 Study 05: Aterosclerosis Cohort (China)
+
+Based on the study by [Liu et. al (2020)](https://faseb.onlinelibrary.wiley.com/doi/10.1096/fj.202000622R)
+
+A file containing the download links for the FASTQ reads will be located in:
+```
+metagen_files/Study05_aterosclerosis
+```
+Copy scripts in:
+```
+metagen_files/scripts
+```
+
+Follow the same steps from **Study 02**  colon cancer with slighty modification.
