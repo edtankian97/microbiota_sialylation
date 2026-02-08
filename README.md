@@ -1384,6 +1384,11 @@ Follow the same steps from **Study 02**  colon cancer with slighty modification.
 
 Caution: Step **5.2.2** is not necessary!!!
 
+The Jupyter-based R scripts used for **HMMER** and **InterProScan** analyses are located in:
+```
+metagen_files/jupyter_scripts
+```
+
 ## 5.5 Study 05: Aterosclerosis Cohort (China)
 
 Based on the study by [Liu et. al (2020)](https://faseb.onlinelibrary.wiley.com/doi/10.1096/fj.202000622R)
@@ -1398,3 +1403,8 @@ metagen_files/scripts
 ```
 
 Follow the same steps from **Study 02**  colon cancer with slighty modification.
+
+The Jupyter-based R scripts used for **HMMER** and **InterProScan** analyses are located in:
+```
+metagen_files/jupyter_scripts
+```
