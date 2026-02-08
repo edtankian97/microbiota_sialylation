@@ -861,7 +861,7 @@ with the name **RAxML_result.final_complete_sialylation_refined.tre**
 # 5. Metagenomic analysis
 
 ## 5.1 Study 01: Colorectal cancer cohort (France)
-ADD PAPER CITTATION HERE !!
+[Zeller et. all (2014)](https://link.springer.com/article/10.15252/msb.20145645#supplementary-materials)
 
 This section describes the complete processing pipeline used to assemble, bin, annotate, and taxonomically classify metagenomic data from this study.
 
@@ -1052,6 +1052,8 @@ checkm_result_bins_with_sia
 ```
 
 ## 5.2 Study 02: Colorectal cancer cohort (China)
+
+[Yu et. all (2014)](https://gut.bmj.com/content/66/1/70)
 
 Download adapter-host-trimmed reads
 ```
@@ -1293,7 +1295,5 @@ Output directory:
 ```
 checkm_result_bins_with_sia
 ```
-
-
 
 
