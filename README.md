@@ -968,12 +968,173 @@ Protein sequences were annotated using HMMER models.
 cd ../../ #must be at Study01_france_cancer folder
 bash metagen_hmmer.sh
 ```
-Output directory:
+Original output directory:
 ```
 metagen_files/Study01_france_cancer/output_data
 ```
+Join all coverage output
+```
+cd metagen_hmmer_results/
+cat neuA*coverage > all_neuA_cover_FR
+cat neuS*coverage > all_neuS_cover_FR
+cat lic3X*coverage > all_lic3X_cover_FR
+cat lst*coverage > all_lst_cover_FR
+cat pm0188*coverage > all_pm0188_cover_FR
+cat PF11477*coverage > all_PF11477_cover_FR
+cat PF06002*coverage > all_PF06002_cover_FR
+cat IPR010866*coverage > all_IPR010866_cover_FR
+```
+Coverage-based filtering is performed using the script: **01.cover_process_study01_metagen.ipynb**, available at
+```
+metagen_files/jupyter_scripts/01.cover_process_study01_metagen.ipynb
+```
+Filtered coverage results will be saved in **metagen_hmmer_results/** 
 
-### 5.1.11 InterProScan analysis
+- Move files that passed the filtering criteria
+
+**NeuA**
+```
+mkdir neuA_out
+sed -i '1d' CMP_FR_cover_filter_40.tsv
+cut -f2 CMP_FR_cover_filter_40.tsv > CMP_FR_cover_filter_40_modified.tsv
+for file in $(cat ./CMP_FR_cover_filter_40_modified.tsv); do mv "$file" ./neuA_out/; done
+cd neuA_out
+
+# join all output tsv files into one
+find ./ -type f -name '*protein_output*' -exec cat {} + > new_file.tsv
+#process output file. Remove each line with "#" and delim the file with tab
+sed -i '/#/d' new_file.tsv
+sed  's/ \{1,\}/\t/g' new_file.tsv > file_output_CMP.tsv
+cd ../ #must be located at metagen_hmmer_results/ folder
+```
+
+**pm0188**
+```
+mkdir pm0188_out
+sed -i '1d' pm0188_FR_cover_filter_40.tsv
+cut -f2 pm0188_FR_cover_filter_40.tsv > pm0188_FR_cover_filter_40_modified.tsv
+for file in $(cat ./pm0188_FR_cover_filter_40_modified.tsv); do mv "$file" ./pm0188_out/; done
+cd pm0188_out
+
+# join all output tsv files into one
+find ./ -type f -name '*protein_output*' -exec cat {} + > new_file.tsv
+#process output file. Remove each line with "#" and delim the file with tab
+sed -i '/#/d' new_file.tsv
+sed  's/ \{1,\}/\t/g' new_file.tsv > file_output_pm0188.tsv
+cd ../ #must be located at metagen_hmmer_results/ folder
+```
+
+**PF11477**
+```
+mkdir PF11477_out
+sed -i '1d' PF11477_FR_cover_filter_40.tsv
+cut -f2 PF11477_FR_cover_filter_40.tsv > PF11477_FR_cover_filter_40_modified.tsv
+for file in $(cat ./PF11477_FR_cover_filter_40_modified.tsv); do mv "$file" ./PF11477_out/; done
+cd PF11477_out
+
+# join all output tsv files into one
+find ./ -type f -name '*protein_output*' -exec cat {} + > new_file.tsv
+#process output file. Remove each line with "#" and delim the file with tab
+sed -i '/#/d' new_file.tsv
+sed  's/ \{1,\}/\t/g' new_file.tsv > file_output_PF11477.tsv
+cd ../ #must be located at metagen_hmmer_results/ folder
+```
+
+**PF06002**
+```
+mkdir PF06002_out
+sed -i '1d' PF06002_FR_cover_filter_40.tsv
+cut -f2 PF06002_FR_cover_filter_40.tsv > PF06002_FR_cover_filter_40_modified.tsv
+for file in $(cat ./PF06002_FR_cover_filter_40_modified.tsv); do mv "$file" ./PF06002_out/; done
+cd PF06002_out
+
+# join all output tsv files into one
+find ./ -type f -name '*protein_output*' -exec cat {} + > new_file.tsv
+#process output file. Remove each line with "#" and delim the file with tab
+sed -i '/#/d' new_file.tsv
+sed  's/ \{1,\}/\t/g' new_file.tsv > file_output_PF06002.tsv
+cd ../ #must be located at metagen_hmmer_results/ folder
+```
+
+**NeuS**
+```
+mkdir NeuS_out
+sed -i '1d' neuS_FR_cover_filter_40.tsv
+cut -f2 neuS_FR_cover_filter_40.tsv > neuS_FR_cover_filter_40_modified.tsv
+for file in $(cat ./neuS_FR_cover_filter_40_modified.tsv); do mv "$file" ./NeuS_out/; done
+cd NeuS_out
+
+# join all output tsv files into one
+find ./ -type f -name '*protein_output*' -exec cat {} + > new_file.tsv
+#process output file. Remove each line with "#" and delim the file with tab
+sed -i '/#/d' new_file.tsv
+sed  's/ \{1,\}/\t/g' new_file.tsv > file_output_neuS.tsv
+cd ../ #must be located at metagen_hmmer_results/ folder
+```
+
+**IPR010866**
+```
+mkdir IPR010866_out
+sed -i '1d' IPR010866_FR_cover_filter_40.tsv
+cut -f2 IPR010866_FR_cover_filter_40.tsv > IPR010866_FR_cover_filter_40_modified.tsv
+for file in $(cat ./IPR010866_FR_cover_filter_40_modified.tsv); do mv "$file" ./IPR010866_out/; done
+cd IPR010866_out
+
+# join all output tsv files into one
+find ./ -type f -name '*protein_output*' -exec cat {} + > new_file.tsv
+#process output file. Remove each line with "#" and delim the file with tab
+sed -i '/#/d' new_file.tsv
+sed  's/ \{1,\}/\t/g' new_file.tsv > file_output_IPR010866.tsv
+cd ../ #must be located at metagen_hmmer_results/ folder
+```
+
+**lst**
+```
+mkdir lst_out
+sed -i '1d' lst_FR_cover_filter_40.tsv
+cut -f2 lst_FR_cover_filter_40.tsv > lst_FR_cover_filter_40_modified.tsv
+for file in $(cat ./lst_FR_cover_filter_40_modified.tsv); do mv "$file" ./lst_out/; done
+cd lst_out
+
+# join all output tsv files into one
+find ./ -type f -name '*protein_output*' -exec cat {} + > new_file.tsv
+#process output file. Remove each line with "#" and delim the file with tab
+sed -i '/#/d' new_file.tsv
+sed  's/ \{1,\}/\t/g' new_file.tsv > file_output_lst.tsv
+cd ../ #must be located at metagen_hmmer_results/ folder
+```
+
+**Lic3X**
+```
+mkdir lic3X_out
+sed -i '1d' lic3X_FR_cover_filter_40.tsv
+cut -f2 lic3X_FR_cover_filter_40.tsv > lic3X_FR_cover_filter_40_modified.tsv
+for file in $(cat ./lic3X_FR_cover_filter_40_modified.tsv); do mv "$file" ./lic3X_out/; done
+cd lic3X_out
+
+# join all output tsv files into one
+find ./ -type f -name '*protein_output*' -exec cat {} + > new_file.tsv
+#process output file. Remove each line with "#" and delim the file with tab
+sed -i '/#/d' new_file.tsv
+sed  's/ \{1,\}/\t/g' new_file.tsv > file_output_lic3.tsv
+cd ../ #must be located at metagen_hmmer_results/ folder
+```
+
+### 5.1.11 Bit-Score and E-Value Filtering
+Final HMMER filtering based on bit-score and e-value is performed using script *02.hmm_process_FR.ipynb*, located at:
+```
+metagen_files/jupyter_scripts/02.hmm_process_FR.ipynb
+```
+Output data are available in:
+```
+metagen_files/output_data/hmmer_out/
+```
+Retrieve fasta sequences for Interproscan analysis
+```
+bash retrieve_seqs_Interpro.sh
+```
+
+### 5.1.12 InterProScan analysis
 FASTA files for InterProScan were generated during the HMMER step and are located at:
 ```
 metagen_files/Study01_france_cancer/output_data/Interproscan_analysis
@@ -986,12 +1147,12 @@ Final InterProScan results are available at:
 ```
 metagen_files/Study01_france_cancer/output_data/Interpro_results/
 ```
-These results are further processed using the R script *07.Interpro_results_FR*, located in:
+These results are further processed using the R script *03.Interpro_results_FR*, located in:
 ```
-metagen_files/Study01_france_cancer/
+metagen_files/jupyter_scripts/
 ```
 
-### 5.1.12 Phylogeny Identification of bins (GTDB-Tk)
+### 5.1.13 Phylogeny Identification of bins (GTDB-Tk)
 Bins passing InterProScan filtering are listed in:
 ```
 metagen_files/Study01_france_cancer/output_data/Interpro_results/bins_for_identification.tsv
@@ -1013,7 +1174,7 @@ done < bins_for_identification_modified.tsv
 
 ls ./bins_paired_sialylation/
 ```
-### 5.1.13 GTDB-Tk setup and execution
+### 5.1.14 GTDB-Tk setup and execution
 Download GTDB-Tk reference data following the official [installation manual](https://ecogenomics.github.io/GTDBTk/installing/index.html#installing)
 ```
 cd ../../ #must be at metagen_files folder
@@ -1039,7 +1200,7 @@ Summary output:
 metagen_files/Study01_france_cancer/output_data/gtdbtk.bac120.summary_FR.tsv
 ```
 
-### 5.1.14 Bin quality assessment (CheckM)
+### 5.1.15 Bin quality assessment (CheckM)
 Genome completeness and contamination were assessed using CheckM.
 ```
 conda activate checkm
@@ -1238,9 +1399,9 @@ Output files are already located in:
 ```
 Study02_colon_cancer/output_data/
 ```
-Execute  **hmmer_process_colon02.ipynb** script, which is located in:
+Execute  **04.hmmer_process_colon02.ipynb** script, which is located in:
 ```
-metagen_files/Study02_colon_cancer/output_data/hmmer_process_colon02.ipynb
+metagen_files/jupyter_scripts/04.hmmer_process_colon02.ipynb
 ```
 Output data will be located in:
 ```
@@ -1251,19 +1412,15 @@ Remove header of input of seqkit
 ```
 sed -i '1d' colon02_*
 ```
-Retrieve sequences with seqkit 
+Retrieve sequences for Interproscan analysis
 ```
 conda activate ncbi_datasets
-bash retrieved_seqs_Interpro.sh
+bash retrieve_seqs_Interpro.sh
 ```
 Verify that the number of entries matches across files.
 ```
 wc -l *_for_Interpro.tsv
 grep -c ">" *retrieved_now
-```
-Retrieve sequences for Interproscan analysis
-```
-bash retrieve_seqs_Interpro.sh
 ```
 ### 5.2.7 Interproscan annotation
 Run InterProScan:

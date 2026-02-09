@@ -1,0 +1,982 @@
+PROKKA_ERR479084_bin.5.faa_DIHOACLE_03060	-	119	neuS_final_auto	-	386	0.0038	14.2	2.4	1	1	1.3e-06	0.0043	14.0	2.4	63	177	3	110	1	118	0.76	hypothetical	protein
+PROKKA_ERR479198_bin.17.faa_NNMAHFLO_01074	-	213	neuS_final_auto	-	386	0.00093	15.6	1.2	1	1	5e-07	0.0011	15.3	1.2	145	262	98	190	56	208	0.78	Linearmycin	resistance	ATP-binding	protein	LnrL
+PROKKA_ERR479289_bin.20.faa_CAMLCKJE_00575	-	314	neuS_final_auto	-	386	2.5e-27	92.8	0.0	1	1	1.9e-30	3.1e-27	92.5	0.0	8	303	1	291	1	309	0.90	hypothetical	protein
+PROKKA_ERR479413_bin.17.faa_DCPICOCF_01263	-	361	neuS_final_auto	-	386	4.1e-38	128.6	5.1	1	1	2.4e-41	5e-38	128.3	5.1	8	300	2	327	1	327	0.85	hypothetical	protein
+PROKKA_ERR479022_bin.6.faa_PDFJBDOL_00215	-	327	neuS_final_auto	-	386	2.1e-06	23.4	7.7	1	1	3e-09	3.6e-06	22.6	7.7	85	327	55	295	8	323	0.66	hypothetical	protein
+PROKKA_ERR479006_bin.4.faa_KFBEFBME_00137	-	359	neuS_final_auto	-	386	1.4e-15	53.8	12.4	1	1	2.6e-18	1.7e-15	53.5	12.4	8	330	1	337	1	356	0.73	hypothetical	protein
+PROKKA_ERR479006_bin.4.faa_KFBEFBME_00414	-	213	neuS_final_auto	-	386	0.0018	13.9	0.2	1	1	2.8e-06	0.0019	13.9	0.2	176	262	118	190	33	208	0.79	Linearmycin	resistance	ATP-binding	protein	LnrL
+PROKKA_ERR479218_bin.34.faa_PJGLDJPD_01246	-	335	neuS_final_auto	-	386	3.6e-64	214.5	25.4	1	1	3.5e-67	3.9e-64	214.4	25.4	8	319	1	327	1	335	0.92	hypothetical	protein
+PROKKA_ERR479218_bin.34.faa_PJGLDJPD_01468	-	119	neuS_final_auto	-	386	0.0036	13.7	4.1	1	1	3.3e-06	0.0037	13.6	4.1	63	178	3	111	1	119	0.76	hypothetical	protein
+PROKKA_ERR479070_bin.7.faa_JFMELMJA_05933	-	331	neuS_final_auto	-	386	0.058	11.8	0.1	1	1	2.4e-05	0.078	11.4	0.1	129	258	67	213	62	213	0.72	Oligopeptide	transport	ATP-binding	protein	OppD
+PROKKA_ERR479070_bin.7.faa_JFMELMJA_09568	-	411	neuS_final_auto	-	386	0.068	11.6	0.1	1	2	9.5e-05	0.31	9.4	0.1	201	282	47	122	17	131	0.75	Xylose	import	ATP-binding	protein	XylG
+PROKKA_ERR479070_bin.7.faa_JFMELMJA_09568	-	411	neuS_final_auto	-	386	0.068	11.6	0.1	2	2	0.092	3e+02	-0.4	0.0	204	253	306	361	229	365	0.66	Xylose	import	ATP-binding	protein	XylG
+PROKKA_ERR479070_bin.7.faa_JFMELMJA_00082	-	495	neuS_final_auto	-	386	0.073	11.5	1.4	1	1	4.1e-05	0.13	10.6	1.4	156	258	102	201	70	203	0.77	Galactose/methyl	galactoside	import	ATP-binding	protein	MglA
+PROKKA_ERR479173_bin.6.faa_PEEBCOCD_06190	-	325	neuS_final_auto	-	386	1.6e-35	122.5	0.1	1	1	7.9e-39	2.3e-35	122.0	0.1	122	308	106	295	89	317	0.94	hypothetical	protein
+PROKKA_ERR479173_bin.6.faa_PEEBCOCD_04924	-	389	neuS_final_auto	-	386	1.1e-17	63.8	7.0	1	1	4.9e-21	1.4e-17	63.4	7.0	114	319	136	348	61	385	0.73	hypothetical	protein
+PROKKA_ERR479173_bin.6.faa_PEEBCOCD_00424	-	83	neuS_final_auto	-	386	7.3e-06	24.9	0.1	1	1	2.7e-09	7.7e-06	24.8	0.1	272	330	6	66	1	82	0.70	hypothetical	protein
+PROKKA_ERR479173_bin.6.faa_PEEBCOCD_09609	-	119	neuS_final_auto	-	386	0.024	13.3	3.7	1	1	8.5e-06	0.024	13.3	3.7	63	178	3	111	1	119	0.76	hypothetical	protein
+PROKKA_ERR479292_bin.6.faa_GFFANCLA_01580	-	356	neuS_final_auto	-	386	6.7e-33	111.3	20.1	1	1	4.1e-36	7.7e-33	111.1	20.1	8	323	1	321	1	353	0.78	hypothetical	protein
+PROKKA_ERR479241_bin.2.faa_NBGEGKMG_00182	-	173	neuS_final_auto	-	386	5.9e-05	18.0	0.0	1	1	8.8e-08	6.8e-05	17.8	0.0	288	363	16	123	13	151	0.69	Thioredoxin	reductase
+PROKKA_ERR479416_bin.21.faa_EBJMBIDH_01559	-	324	neuS_final_auto	-	386	4.6e-26	89.0	0.0	1	1	2.6e-29	5.5e-26	88.7	0.0	9	300	3	299	1	317	0.85	hypothetical	protein
+PROKKA_ERR479226_bin.6.faa_MADDMDCE_00014	-	138	neuS_final_auto	-	386	5e-29	98.3	1.2	1	1	6.6e-32	5.3e-29	98.2	1.2	203	308	6	107	2	137	0.91	hypothetical	protein
+PROKKA_ERR479226_bin.6.faa_MADDMDCE_00015	-	149	neuS_final_auto	-	386	1.6e-05	21.0	1.0	1	1	2.4e-08	2e-05	20.7	1.0	8	153	2	141	1	148	0.62	hypothetical	protein
+PROKKA_ERR479074_bin.18.faa_NOIKEDNF_00307	-	361	neuS_final_auto	-	386	1.2e-37	126.4	5.4	1	1	1.1e-40	1.4e-37	126.1	5.4	8	298	2	325	1	327	0.83	hypothetical	protein
+PROKKA_ERR479014_bin.15.faa_HDMNCBCM_00403	-	319	neuS_final_auto	-	386	4.7e-14	50.1	10.8	1	1	2.9e-17	9.9e-14	49.1	10.8	104	329	82	306	3	317	0.67	hypothetical	protein
+PROKKA_ERR479249_bin.10.faa_EMIKAEKL_01841	-	237	neuS_final_auto	-	386	0.0021	14.2	0.1	1	1	1.3e-06	0.0026	14.0	0.1	175	278	114	210	62	212	0.79	Manganese	import	ATP-binding	protein	ScaC
+PROKKA_ERR479002_bin.21.faa_KEJABKFK_00234	-	223	neuS_final_auto	-	386	0.00036	16.5	0.3	1	1	2.3e-07	0.00036	16.4	0.3	144	268	72	210	11	222	0.79	Lipoprotein-releasing	system	ATP-binding	protein	LolD
+PROKKA_ERR478980_bin.19.faa_PROKKA_ERR478980_bin.19.faa_ADBBDFJE_00144	-	314	neuS_final_auto	-	386	1.4e-27	93.4	0.0	1	1	1.2e-30	1.8e-27	93.1	0.0	8	303	1	291	1	309	0.91	hypothetical	protein
+PROKKA_ERR479076_bin.11.faa_CECALDMO_00048	-	336	neuS_final_auto	-	386	5.2e-45	151.1	7.9	1	1	3.6e-48	6.2e-45	150.8	7.9	67	307	50	303	12	330	0.87	hypothetical	protein
+PROKKA_ERR479237_bin.15.faa_OJJDHOAF_00689	-	335	neuS_final_auto	-	386	1.2e-64	214.5	25.4	1	1	1.8e-67	1.4e-64	214.4	25.4	8	319	1	327	1	335	0.92	hypothetical	protein
+PROKKA_ERR479177_bin.6.faa_BIBFDBBD_01787	-	200	neuS_final_auto	-	386	4e-07	26.9	1.2	1	1	3.5e-10	4.5e-07	26.7	1.2	209	319	47	169	8	198	0.69	hypothetical	protein
+PROKKA_ERR479177_bin.6.faa_BIBFDBBD_01473	-	266	neuS_final_auto	-	386	0.0096	12.5	0.9	1	2	0.29	3.7e+02	-2.6	0.0	75	94	57	76	28	121	0.52	hypothetical	protein
+PROKKA_ERR479177_bin.6.faa_BIBFDBBD_01473	-	266	neuS_final_auto	-	386	0.0096	12.5	0.9	2	2	1e-05	0.013	12.0	0.2	11	89	181	258	174	261	0.77	hypothetical	protein
+PROKKA_ERR479110_bin.2.faa_FDKOLAPP_00020	-	531	neuS_final_auto	-	386	1.1e-56	189.5	9.3	1	1	2.6e-59	1.6e-56	189.0	9.3	8	384	1	526	1	529	0.79	hypothetical	protein
+PROKKA_ERR479110_bin.2.faa_FDKOLAPP_00016	-	366	neuS_final_auto	-	386	7.8e-22	74.8	2.4	1	1	1.5e-24	9.4e-22	74.6	2.4	149	359	16	242	3	353	0.78	hypothetical	protein
+PROKKA_ERR479110_bin.2.faa_FDKOLAPP_00015	-	85	neuS_final_auto	-	386	3.3e-07	26.7	0.4	1	1	5.8e-10	3.5e-07	26.6	0.4	8	92	1	84	1	85	0.86	hypothetical	protein
+PROKKA_ERR479023_bin.9.faa_PPMJBHJB_01727	-	377	neuS_final_auto	-	386	2.2e-15	54.1	17.3	1	1	1.1e-18	2.7e-15	53.8	17.3	47	341	13	339	2	374	0.73	hypothetical	protein
+PROKKA_ERR479058_bin.3.faa_CJAMFHHO_00920	-	340	neuS_final_auto	-	386	1.5e-18	63.6	15.8	1	1	2.4e-21	1.7e-18	63.5	15.8	31	334	2	334	1	340	0.73	hypothetical	protein
+PROKKA_ERR479058_bin.3.faa_CJAMFHHO_00191	-	178	neuS_final_auto	-	386	0.00053	15.7	0.4	1	1	8.4e-07	0.00058	15.6	0.4	211	282	87	174	17	177	0.76	putative	ABC	transporter	ATP-binding	protein
+PROKKA_ERR479172_bin.17.faa_CBIJLJNN_00854	-	190	neuS_final_auto	-	386	9.6e-19	63.7	0.5	1	1	1.2e-21	1.2e-18	63.4	0.5	184	300	34	156	4	156	0.85	hypothetical	protein
+PROKKA_ERR479104_bin.4.faa_EFKCIPGO_00111	-	76	neuS_final_auto	-	386	0.00048	13.1	0.1	1	1	2.4e-06	0.00049	13.1	0.1	114	150	15	57	6	73	0.82	hypothetical	protein
+PROKKA_ERR479079_bin.15.faa_AENMNNPE_00193	-	135	neuS_final_auto	-	386	0.0017	11.9	0.2	1	1	6.2e-06	0.0019	11.7	0.2	196	264	40	116	4	132	0.72	Bacitracin	transport	ATP-binding	protein	BcrA
+PROKKA_ERR479113_bin.10.faa_ANDJFENN_02475	-	327	neuS_final_auto	-	386	1.2e-06	25.6	7.9	1	1	6e-10	2e-06	25.0	7.9	114	323	87	291	12	324	0.64	hypothetical	protein
+PROKKA_ERR479114_bin.21.faa_NBOOIMFD_03061	-	53	neuS_final_auto	-	386	0.0055	13.7	0.1	1	1	1.7e-06	0.0062	13.6	0.1	105	142	11	46	8	52	0.84	hypothetical	protein
+PROKKA_ERR479284_bin.19.faa_OIKOPFGC_01306	-	385	neuS_final_auto	-	386	0.00011	18.6	2.6	1	1	7e-08	0.00015	18.2	2.6	48	221	42	217	7	245	0.74	GDP-mannose-dependent	monoacylated	alpha-(1-6)-phosphatidylinositol	monomannoside	mannosyltransferase
+PROKKA_ERR479271_bin.22.faa_CCCBDAJF_00242	-	335	neuS_final_auto	-	386	2.4e-06	25.1	15.2	1	1	3.8e-09	4.1e-06	24.3	15.2	12	314	12	303	5	333	0.68	hypothetical	protein
+PROKKA_ERR479271_bin.22.faa_CCCBDAJF_01566	-	119	neuS_final_auto	-	386	0.0032	14.8	2.1	1	1	3.4e-06	0.0037	14.6	2.1	63	177	3	110	1	118	0.76	hypothetical	protein
+PROKKA_ERR479271_bin.22.faa_CCCBDAJF_03786	-	119	neuS_final_auto	-	386	0.0048	14.2	2.4	1	1	5e-06	0.0054	14.0	2.4	63	177	3	110	1	118	0.76	hypothetical	protein
+PROKKA_ERR479271_bin.22.faa_CCCBDAJF_01352	-	385	neuS_final_auto	-	386	0.005	14.1	0.4	1	2	0.37	3.9e+02	-2.0	0.1	31	31	58	58	8	121	0.56	hypothetical	protein
+PROKKA_ERR479271_bin.22.faa_CCCBDAJF_01352	-	385	neuS_final_auto	-	386	0.005	14.1	0.4	2	2	1e-05	0.011	13.0	0.0	236	322	223	312	215	374	0.72	hypothetical	protein
+PROKKA_ERR479203_bin.27.faa_HAFAJGOO_03533	-	389	neuS_final_auto	-	386	4.6e-18	63.9	6.8	1	1	1.1e-21	5.8e-18	63.6	6.8	114	319	136	348	61	385	0.73	hypothetical	protein
+PROKKA_ERR478987_bin.11.faa_LDFEDFFA_01832	-	377	neuS_final_auto	-	386	4.2e-15	54.1	17.3	1	1	1.1e-18	5.1e-15	53.8	17.3	47	341	13	339	2	374	0.73	hypothetical	protein
+PROKKA_ERR479243_bin.7.faa_LDDBMFBA_00765	-	359	neuS_final_auto	-	386	0.0044	13.9	0.0	1	1	4.3e-06	0.014	12.3	0.0	59	263	46	246	12	283	0.72	UDP-2,3-diacetamido-2,3-dideoxy-D-glucuronate	2-epimerase
+PROKKA_ERR479062_bin.14.faa_OCMFMBLJ_00247	-	324	neuS_final_auto	-	386	1.9e-57	190.2	12.7	1	1	8.9e-60	2.1e-57	190.0	12.7	8	313	1	307	1	323	0.95	hypothetical	protein
+PROKKA_ERR479062_bin.14.faa_OCMFMBLJ_00066	-	465	neuS_final_auto	-	386	4e-28	93.6	10.8	1	1	2.3e-30	5.6e-28	93.1	10.8	10	341	99	442	91	458	0.78	hypothetical	protein
+PROKKA_ERR479010_bin.13.faa_JJMBOLOP_00315	-	498	neuS_final_auto	-	386	2.2e-37	125.8	0.0	1	1	1.7e-40	2.6e-37	125.5	0.0	48	341	136	497	121	498	0.87	hypothetical	protein
+PROKKA_ERR479123_bin.15.faa_DCDBLMCE_00191	-	160	neuS_final_auto	-	386	0.00029	15.1	0.5	1	1	6.6e-07	0.00032	14.9	0.5	154	251	50	140	6	143	0.80	D-alanyl-D-alanine	carboxypeptidase
+PROKKA_ERR479036_bin.19.faa_KIGLPBHI_02282	-	387	neuS_final_auto	-	386	0.0012	15.5	0.5	1	2	1.2e-06	0.0032	14.1	0.3	30	162	25	185	14	263	0.74	N,N'-diacetylbacillosaminyl-diphospho-undecaprenol	alpha-1,3-N-acetylgalactosaminyltransferase
+PROKKA_ERR479036_bin.19.faa_KIGLPBHI_02282	-	387	neuS_final_auto	-	386	0.0012	15.5	0.5	2	2	0.033	89	-0.5	0.0	324	363	250	336	217	376	0.65	N,N'-diacetylbacillosaminyl-diphospho-undecaprenol	alpha-1,3-N-acetylgalactosaminyltransferase
+PROKKA_ERR479171_bin.13.faa_HEMDOLJJ_01133	-	361	neuS_final_auto	-	386	2.2e-38	129.6	2.6	1	1	1.3e-41	2.7e-38	129.2	2.6	1	300	1	326	1	328	0.83	hypothetical	protein
+PROKKA_ERR479285_bin.23.faa_JIDMNOGD_01400	-	385	neuS_final_auto	-	386	0.00011	18.6	2.6	1	1	7e-08	0.00016	18.2	2.6	48	221	42	217	7	245	0.74	GDP-mannose-dependent	monoacylated	alpha-(1-6)-phosphatidylinositol	monomannoside	mannosyltransferase
+PROKKA_ERR479073_bin.2.faa_ABLBLIOJ_00255	-	319	neuS_final_auto	-	386	5.4e-15	50.1	10.8	1	1	2.9e-17	1.1e-14	49.1	10.8	104	329	82	306	3	317	0.67	hypothetical	protein
+PROKKA_ERR479110_bin.5.faa_EMEKAOFC_05986	-	81	neuS_final_auto	-	386	0.022	12.6	0.3	1	1	3.6e-06	0.022	12.5	0.3	212	262	12	58	2	77	0.84	Arginine	transport	ATP-binding	protein	ArtM
+PROKKA_ERR478999_bin.8.faa_AJEMNOPC_00263	-	361	neuS_final_auto	-	386	2.9e-18	62.9	13.0	1	1	2.3e-21	3.6e-18	62.5	13.0	8	357	1	352	1	359	0.69	hypothetical	protein
+PROKKA_ERR479072_bin.24.faa_AIBPFHKA_00333	-	314	neuS_final_auto	-	386	2.8e-27	92.2	0.0	1	1	2.7e-30	3.5e-27	91.9	0.0	8	303	1	291	1	309	0.90	hypothetical	protein
+PROKKA_ERR479161_bin.20.faa_ANNBNCNC_01786	-	361	neuS_final_auto	-	386	1.4e-34	117.3	6.3	1	1	6.5e-38	1.7e-34	117.0	6.3	8	300	2	327	1	327	0.80	hypothetical	protein
+PROKKA_ERR479016_bin.17.faa_PROKKA_ERR479016_bin.17.faa_CCCGOAJF_02281	-	361	neuS_final_auto	-	386	4.5e-18	62.9	13.0	1	1	2.3e-21	5.6e-18	62.5	13.0	8	357	1	352	1	359	0.69	hypothetical	protein
+PROKKA_ERR478987_bin.25.faa_PROKKA_ERR478987_bin.25.faa_LHNNPDDL_00063	-	213	neuS_final_auto	-	386	0.00012	15.6	1.2	1	1	5e-07	0.00014	15.3	1.2	145	262	98	190	56	208	0.78	Linearmycin	resistance	ATP-binding	protein	LnrL
+PROKKA_ERR479136_bin.25.faa_GPEMLBHP_01070	-	346	neuS_final_auto	-	386	3e-29	99.5	4.9	1	1	1.7e-32	3.8e-29	99.2	4.9	35	300	21	312	2	312	0.79	hypothetical	protein
+PROKKA_ERR479065_bin.21.faa_IOOLDFHJ_02042	-	358	neuS_final_auto	-	386	2e-38	129.9	6.0	1	1	9.8e-42	2.3e-38	129.6	6.0	7	298	3	322	1	324	0.86	hypothetical	protein
+PROKKA_ERR479038_bin.16.faa_PROKKA_ERR479038_bin.16.faa_AAJAEEDH_00605	-	498	neuS_final_auto	-	386	4.4e-37	125.8	0.0	1	1	1.7e-40	5.3e-37	125.5	0.0	57	341	152	497	122	498	0.87	hypothetical	protein
+PROKKA_ERR478998_bin.8.faa_PAJPIGCB_00811	-	361	neuS_final_auto	-	386	2.9e-18	62.9	13.0	1	1	4.6e-21	3.6e-18	62.5	13.0	8	357	1	352	1	359	0.69	hypothetical	protein
+PROKKA_ERR478998_bin.8.faa_PAJPIGCB_00064	-	213	neuS_final_auto	-	386	0.0014	14.5	0.6	1	1	2e-06	0.0016	14.3	0.6	164	262	106	190	47	208	0.79	Linearmycin	resistance	ATP-binding	protein	LnrL
+PROKKA_ERR479284_bin.1.faa_LELAKLAM_02092	-	309	neuS_final_auto	-	386	5.7e-06	23.5	11.3	1	1	4.4e-09	1.5e-05	22.1	11.3	10	307	4	282	1	300	0.66	hypothetical	protein
+PROKKA_ERR479076_bin.46.faa_OIKPKFHD_00072	-	287	neuS_final_auto	-	386	2.8e-06	20.7	5.1	1	1	1.9e-08	4.6e-06	20.1	5.1	85	295	58	238	3	273	0.78	hypothetical	protein
+PROKKA_ERR478991_bin.4.faa_KGFMNOLN_00536	-	377	neuS_final_auto	-	386	3.8e-15	54.1	17.3	1	1	1.1e-18	4.6e-15	53.8	17.3	47	341	13	339	2	374	0.73	hypothetical	protein
+PROKKA_ERR479068_bin.26.faa_JDDBPDJO_01985	-	154	neuS_final_auto	-	386	0.0036	13.8	0.6	1	1	1.5e-06	0.0037	13.8	0.6	162	245	30	131	1	140	0.67	hypothetical	protein
+PROKKA_ERR479138_bin.23.faa_LNKCGCNN_01515	-	335	neuS_final_auto	-	386	1.3e-61	208.9	25.8	1	1	3.5e-65	1.4e-61	208.8	25.8	8	319	1	327	1	335	0.92	hypothetical	protein
+PROKKA_ERR479138_bin.23.faa_LNKCGCNN_13600	-	335	neuS_final_auto	-	386	2.3e-05	23.7	16.3	1	1	9.6e-09	4e-05	23.0	16.3	12	314	12	303	5	333	0.68	hypothetical	protein
+PROKKA_ERR479138_bin.23.faa_LNKCGCNN_03284	-	307	neuS_final_auto	-	386	0.19	10.9	0.0	1	1	5.6e-05	0.23	10.6	0.0	289	346	141	203	136	283	0.71	Thioredoxin	reductase
+PROKKA_ERR479138_bin.23.faa_LNKCGCNN_06345	-	302	neuS_final_auto	-	386	0.22	10.7	0.0	1	1	6.3e-05	0.26	10.4	0.0	288	345	139	199	135	284	0.77	Thioredoxin	reductase
+PROKKA_ERR479075_bin.26.faa_CIAHIDLN_01763	-	309	neuS_final_auto	-	386	8.9e-13	46.0	10.7	1	1	6.4e-16	1.2e-12	45.6	10.7	84	322	75	288	7	305	0.77	hypothetical	protein
+PROKKA_ERR479075_bin.26.faa_CIAHIDLN_00898	-	385	neuS_final_auto	-	386	0.0022	15.1	0.1	1	1	2.5e-06	0.0048	14.0	0.1	240	355	227	367	224	378	0.62	hypothetical	protein
+PROKKA_ERR479019_bin.15.faa_LMGJLGAP_00418	-	324	neuS_final_auto	-	386	2.9e-39	132.2	9.3	1	1	1.9e-42	3.5e-39	131.9	9.3	8	308	2	293	1	321	0.81	hypothetical	protein
+PROKKA_ERR479156_bin.9.faa_EEGKGBGH_00380	-	335	neuS_final_auto	-	386	1.4e-64	214.5	25.4	1	1	1.8e-67	1.6e-64	214.4	25.4	8	319	1	327	1	335	0.92	hypothetical	protein
+PROKKA_ERR479092_bin.6.faa_ACEPLPMF_00211	-	81	neuS_final_auto	-	386	5.1e-13	44.4	0.0	1	1	7.2e-16	5.1e-13	44.4	0.0	256	299	2	45	1	70	0.93	hypothetical	protein
+PROKKA_ERR478964_bin.21.faa_HJOJPMGA_01199	-	361	neuS_final_auto	-	386	4.3e-34	115.7	4.5	1	1	4.2e-37	5.3e-34	115.4	4.5	8	300	2	327	1	327	0.79	hypothetical	protein
+PROKKA_ERR478964_bin.21.faa_HJOJPMGA_00855	-	372	neuS_final_auto	-	386	5.8e-18	62.6	8.1	1	1	5e-21	6.4e-18	62.4	8.1	8	289	1	275	1	349	0.79	hypothetical	protein
+PROKKA_ERR478975_bin.16.faa_PROKKA_ERR478975_bin.16.faa_PJOGHGFA_00240	-	499	neuS_final_auto	-	386	2.7e-05	20.4	11.8	1	1	5.9e-08	0.00011	18.4	11.8	131	361	209	468	58	497	0.76	Membrane	protein	insertase	YidC
+PROKKA_ERR479078_bin.50.faa_NHOCDJIH_01136	-	341	neuS_final_auto	-	386	1.4e-35	120.8	17.5	1	1	1.2e-38	1.7e-35	120.5	17.5	8	341	1	333	1	337	0.91	hypothetical	protein
+PROKKA_ERR479078_bin.50.faa_NHOCDJIH_01920	-	75	neuS_final_auto	-	386	3.8e-05	20.6	0.0	1	1	2.6e-08	3.9e-05	20.6	0.0	277	330	4	57	1	71	0.73	hypothetical	protein
+PROKKA_ERR478973_bin.12.faa_PROKKA_ERR478973_bin.12.faa_HGFAOFDJ_03260	-	361	neuS_final_auto	-	386	3.6e-36	123.8	5.3	1	1	1.4e-39	4.3e-36	123.5	5.3	8	298	2	325	1	327	0.83	hypothetical	protein
+PROKKA_ERR478973_bin.12.faa_PROKKA_ERR478973_bin.12.faa_HGFAOFDJ_03647	-	419	neuS_final_auto	-	386	0.018	12.8	6.8	1	2	0.075	2.4e+02	-0.7	0.3	335	346	186	218	118	274	0.44	hypothetical	protein
+PROKKA_ERR478973_bin.12.faa_PROKKA_ERR478973_bin.12.faa_HGFAOFDJ_03647	-	419	neuS_final_auto	-	386	0.018	12.8	6.8	2	2	1e-05	0.032	12.0	5.9	155	251	273	373	189	387	0.79	hypothetical	protein
+PROKKA_ERR479015_bin.3.faa_LMANLJMB_01632	-	319	neuS_final_auto	-	386	4.6e-14	50.1	10.8	1	1	2.9e-17	9.8e-14	49.1	10.8	104	329	82	306	3	317	0.67	hypothetical	protein
+PROKKA_ERR479064_bin.19.faa_ABDPCJIJ_00749	-	359	neuS_final_auto	-	386	0.0048	12.9	0.5	1	2	7.1e-06	0.012	11.6	0.2	37	162	4	157	1	235	0.71	N,N'-diacetylbacillosaminyl-diphospho-undecaprenol	alpha-1,3-N-acetylgalactosaminyltransferase
+PROKKA_ERR479064_bin.19.faa_ABDPCJIJ_00749	-	359	neuS_final_auto	-	386	0.0048	12.9	0.5	2	2	0.023	39	-0.0	0.1	323	363	221	300	169	348	0.65	N,N'-diacetylbacillosaminyl-diphospho-undecaprenol	alpha-1,3-N-acetylgalactosaminyltransferase
+PROKKA_ERR479003_bin.2.faa_JEIBMIIJ_01352	-	223	neuS_final_auto	-	386	0.00055	16.5	0.3	1	1	2.3e-07	0.00056	16.4	0.3	144	268	72	210	11	222	0.79	Lipoprotein-releasing	system	ATP-binding	protein	LolD
+PROKKA_ERR479242_bin.1.faa_NNCMEOOJ_01249	-	213	neuS_final_auto	-	386	0.0017	14.4	1.1	1	1	1.2e-06	0.002	14.1	1.1	145	262	98	190	56	208	0.78	Linearmycin	resistance	ATP-binding	protein	LnrL
+PROKKA_ERR479043_bin.16.faa_KJEGIGAE_00935	-	371	neuS_final_auto	-	386	6.6e-12	43.0	11.6	1	1	2.6e-15	8.6e-12	42.6	11.6	8	319	1	340	1	368	0.67	hypothetical	protein
+PROKKA_ERR479106_bin.7.faa_OCMOEMID_00501	-	460	neuS_final_auto	-	386	0.00011	17.1	9.8	1	1	2.2e-05	0.018	9.9	9.7	29	304	126	390	78	436	0.73	hypothetical	protein
+PROKKA_ERR479405_bin.5.faa_DDAEICMH_00521	-	367	neuS_final_auto	-	386	1.7e-19	67.6	7.1	1	1	8e-23	1.9e-19	67.3	7.1	8	314	3	340	1	366	0.75	hypothetical	protein
+PROKKA_ERR479033_bin.15.faa_MPMDIOCL_00078	-	387	neuS_final_auto	-	386	0.00044	15.5	0.5	1	2	1.2e-06	0.0012	14.1	0.3	30	162	25	185	14	263	0.74	N,N'-diacetylbacillosaminyl-diphospho-undecaprenol	alpha-1,3-N-acetylgalactosaminyltransferase
+PROKKA_ERR479033_bin.15.faa_MPMDIOCL_00078	-	387	neuS_final_auto	-	386	0.00044	15.5	0.5	2	2	0.033	32	-0.5	0.0	324	363	250	336	217	376	0.65	N,N'-diacetylbacillosaminyl-diphospho-undecaprenol	alpha-1,3-N-acetylgalactosaminyltransferase
+PROKKA_ERR479109_bin.8.faa_LFIHNEKH_00829	-	531	neuS_final_auto	-	386	1.1e-56	189.5	9.3	1	1	2.6e-59	1.5e-56	189.0	9.3	8	384	1	526	1	529	0.79	hypothetical	protein
+PROKKA_ERR479109_bin.8.faa_LFIHNEKH_00833	-	366	neuS_final_auto	-	386	7.7e-22	74.8	2.4	1	1	1.5e-24	9.3e-22	74.6	2.4	149	359	16	242	3	353	0.78	hypothetical	protein
+PROKKA_ERR479109_bin.8.faa_LFIHNEKH_00834	-	85	neuS_final_auto	-	386	3.3e-07	26.7	0.4	1	1	5.8e-10	3.5e-07	26.6	0.4	8	92	1	84	1	85	0.86	hypothetical	protein
+PROKKA_ERR479156_bin.4.faa_IOIPMFAP_01137	-	138	neuS_final_auto	-	386	2e-26	89.9	4.2	1	1	2.6e-29	2.3e-26	89.7	4.2	202	308	5	107	2	133	0.92	hypothetical	protein
+PROKKA_ERR479156_bin.4.faa_IOIPMFAP_01138	-	83	neuS_final_auto	-	386	0.00014	17.9	1.1	1	1	1.8e-07	0.00016	17.8	1.1	90	153	10	75	7	82	0.70	hypothetical	protein
+PROKKA_ERR479137_bin.7.faa_LBMLLFKJ_00953	-	361	neuS_final_auto	-	386	1e-34	117.3	6.3	1	1	6.5e-38	1.3e-34	117.0	6.3	8	300	2	327	1	327	0.80	hypothetical	protein
+PROKKA_ERR479069_bin.25.faa_FOJGIHMM_00993	-	322	neuS_final_auto	-	386	2.3e-26	89.2	0.0	1	1	2.2e-29	2.7e-26	88.9	0.0	9	307	3	305	1	319	0.86	hypothetical	protein
+PROKKA_ERR479241_bin.11.faa_PFGJHBNL_00227	-	213	neuS_final_auto	-	386	0.00072	15.6	1.2	1	1	5e-07	0.00086	15.3	1.2	145	262	98	190	56	208	0.78	Linearmycin	resistance	ATP-binding	protein	LnrL
+PROKKA_ERR479217_bin.4.faa_HCJDHFBA_01181	-	335	neuS_final_auto	-	386	2.3e-64	214.5	25.4	1	1	1.8e-67	2.5e-64	214.4	25.4	8	319	1	327	1	335	0.92	hypothetical	protein
+PROKKA_ERR479250_bin.7.faa_AMNMGOOL_00400	-	359	neuS_final_auto	-	386	0.003	12.9	0.4	1	2	8.8e-06	0.0098	11.2	0.1	37	160	4	154	1	213	0.74	N,N'-diacetylbacillosaminyl-diphospho-undecaprenol	alpha-1,3-N-acetylgalactosaminyltransferase
+PROKKA_ERR479250_bin.7.faa_AMNMGOOL_00400	-	359	neuS_final_auto	-	386	0.003	12.9	0.4	2	2	0.031	35	-0.5	0.0	324	363	222	308	191	349	0.64	N,N'-diacetylbacillosaminyl-diphospho-undecaprenol	alpha-1,3-N-acetylgalactosaminyltransferase
+PROKKA_ERR479406_bin.17.faa_BPKKFKEE_01217	-	314	neuS_final_auto	-	386	3.4e-27	92.5	0.0	1	1	2.2e-30	4.3e-27	92.2	0.0	8	303	1	291	1	309	0.89	hypothetical	protein
+PROKKA_ERR479038_bin.13.faa_OAKKCFDN_00839	-	361	neuS_final_auto	-	386	1e-34	117.3	6.3	1	1	6.5e-38	1.3e-34	117.0	6.3	8	300	2	327	1	327	0.80	hypothetical	protein
+PROKKA_ERR479126_bin.9.faa_CHIGCEGI_01457	-	239	neuS_final_auto	-	386	2.6e-32	109.9	3.1	1	1	2.2e-35	3e-32	109.7	3.1	129	307	17	200	3	236	0.89	hypothetical	protein
+PROKKA_ERR479126_bin.9.faa_CHIGCEGI_02077	-	426	neuS_final_auto	-	386	3.9e-17	59.9	13.7	1	1	3.2e-19	4.4e-16	56.5	13.7	8	355	1	421	1	426	0.69	hypothetical	protein
+PROKKA_ERR479152_bin.14.faa_IGMDJCFA_05469	-	420	neuS_final_auto	-	386	1.1e-15	56.4	23.4	1	1	1.9e-17	6.5e-14	50.6	23.4	8	318	1	364	1	418	0.67	hypothetical	protein
+PROKKA_ERR479152_bin.14.faa_IGMDJCFA_02588	-	405	neuS_final_auto	-	386	0.0056	14.6	2.2	1	2	2.1e-06	0.0071	14.3	1.3	84	176	90	189	38	264	0.72	D-inositol-3-phosphate	glycosyltransferase
+PROKKA_ERR479152_bin.14.faa_IGMDJCFA_02588	-	405	neuS_final_auto	-	386	0.0056	14.6	2.2	2	2	0.2	6.6e+02	-2.1	0.0	314	371	323	383	295	400	0.60	D-inositol-3-phosphate	glycosyltransferase
+PROKKA_ERR479212_bin.16.faa_NFLHCINN_03107	-	352	neuS_final_auto	-	386	1.5e-24	85.1	9.9	1	1	1.1e-27	1.8e-24	84.9	9.9	7	314	3	320	1	350	0.72	hypothetical	protein
+PROKKA_ERR479212_bin.16.faa_NFLHCINN_00262	-	241	neuS_final_auto	-	386	0.0046	14.3	0.2	1	1	4.1e-06	0.0063	13.9	0.2	154	251	50	140	7	142	0.82	D-alanyl-D-alanine	carboxypeptidase
+PROKKA_ERR479212_bin.16.faa_NFLHCINN_02671	-	191	neuS_final_auto	-	386	0.03	11.7	0.0	1	1	2.3e-05	0.035	11.4	0.0	48	139	84	172	23	186	0.81	hypothetical	protein
+PROKKA_ERR479416_bin.2.faa_HFICEEKI_02280	-	331	neuS_final_auto	-	386	0.019	11.8	0.1	1	1	1.6e-05	0.025	11.4	0.1	129	258	67	213	62	213	0.72	Oligopeptide	transport	ATP-binding	protein	OppD
+PROKKA_ERR479416_bin.2.faa_HFICEEKI_02765	-	307	neuS_final_auto	-	386	0.036	10.9	0.0	1	1	2.8e-05	0.045	10.6	0.0	289	346	141	203	136	283	0.71	Thioredoxin	reductase
+PROKKA_ERR479185_bin.7.faa_IDLMIIAI_00448	-	335	neuS_final_auto	-	386	2.7e-06	23.9	16.9	1	1	4.1e-09	4.5e-06	23.2	16.9	12	314	12	303	5	333	0.68	hypothetical	protein
+PROKKA_ERR479185_bin.7.faa_IDLMIIAI_01599	-	210	neuS_final_auto	-	386	0.0071	12.7	0.2	1	1	7.9e-06	0.0086	12.4	0.2	181	255	102	186	50	203	0.65	Sulfate/thiosulfate	import	ATP-binding	protein	CysA
+PROKKA_ERR479170_bin.2.faa_CAAIFJIC_14307	-	212	neuS_final_auto	-	386	0.012	14.7	0.3	1	1	2.2e-06	0.018	14.2	0.3	154	251	21	111	4	113	0.83	D-alanyl-D-alanine	carboxypeptidase
+PROKKA_ERR479170_bin.2.faa_CAAIFJIC_03190	-	76	neuS_final_auto	-	386	0.032	13.4	0.1	1	1	4.1e-06	0.034	13.3	0.1	114	150	15	57	7	73	0.82	hypothetical	protein
+PROKKA_ERR479185_bin.4.faa_KACMJEPH_01364	-	154	neuS_final_auto	-	386	0.0056	13.3	1.1	1	1	2.2e-06	0.0059	13.2	1.1	153	245	13	131	1	140	0.66	hypothetical	protein
+PROKKA_ERR478967_bin.4.faa_PROKKA_ERR478967_bin.4.faa_FGHDHFOJ_03989	-	372	neuS_final_auto	-	386	1.4e-17	62.6	8.1	1	1	5e-21	1.6e-17	62.4	8.1	8	289	1	275	1	349	0.79	hypothetical	protein
+PROKKA_ERR478967_bin.4.faa_PROKKA_ERR478967_bin.4.faa_FGHDHFOJ_01906	-	405	neuS_final_auto	-	386	0.0056	14.5	2.8	1	2	2e-06	0.0062	14.4	1.5	84	195	90	208	38	264	0.71	D-inositol-3-phosphate	glycosyltransferase
+PROKKA_ERR478967_bin.4.faa_PROKKA_ERR478967_bin.4.faa_FGHDHFOJ_01906	-	405	neuS_final_auto	-	386	0.0056	14.5	2.8	2	2	0.12	3.8e+02	-1.4	0.0	314	371	323	383	269	401	0.64	D-inositol-3-phosphate	glycosyltransferase
+PROKKA_ERR479245_bin.6.faa_BIFPJHOG_01620	-	224	neuS_final_auto	-	386	0.0045	14.7	0.2	1	1	1.1e-06	0.0062	14.2	0.2	154	251	33	123	3	125	0.79	hypothetical	protein
+PROKKA_ERR478992_bin.10.faa_JPDMNKDE_00258	-	331	neuS_final_auto	-	386	0.017	11.8	0.1	1	1	7.9e-06	0.023	11.4	0.1	129	258	67	213	62	213	0.72	Oligopeptide	transport	ATP-binding	protein	OppD
+PROKKA_ERR479133_bin.6.faa_PEBJCFOP_01653	-	323	neuS_final_auto	-	386	3.3e-36	122.1	8.7	1	1	2.2e-39	3.9e-36	121.8	8.7	8	308	2	292	1	318	0.75	hypothetical	protein
+PROKKA_ERR479149_bin.13.faa_BJIBGPAL_01375	-	346	neuS_final_auto	-	386	2e-29	99.5	4.9	1	1	1.7e-32	2.6e-29	99.2	4.9	35	300	21	312	2	312	0.79	hypothetical	protein
+PROKKA_ERR479107_bin.2.faa_ECCIKAIP_00693	-	531	neuS_final_auto	-	386	1.1e-56	189.5	9.3	1	1	2.6e-59	1.6e-56	189.0	9.3	8	384	1	526	1	529	0.79	hypothetical	protein
+PROKKA_ERR479107_bin.2.faa_ECCIKAIP_00697	-	366	neuS_final_auto	-	386	7.8e-22	74.8	2.4	1	1	1.5e-24	9.4e-22	74.6	2.4	149	359	16	242	3	353	0.78	hypothetical	protein
+PROKKA_ERR479107_bin.2.faa_ECCIKAIP_00698	-	85	neuS_final_auto	-	386	3.3e-07	26.7	0.4	1	1	5.8e-10	3.5e-07	26.6	0.4	8	92	1	84	1	85	0.86	hypothetical	protein
+PROKKA_ERR479076_bin.40.faa_OECCJOCE_00045	-	307	neuS_final_auto	-	386	2.2e-47	156.1	23.7	1	1	1.1e-49	2.9e-47	155.7	23.7	8	308	1	276	1	306	0.80	hypothetical	protein
+PROKKA_ERR479101_bin.1.faa_DCHBPLBH_01504	-	137	neuS_final_auto	-	386	0.01	12.1	0.0	1	1	5.5e-06	0.012	11.9	0.0	197	282	31	133	7	136	0.74	putative	ABC	transporter	ATP-binding	protein
+PROKKA_ERR479004_bin.10.faa_JGILEJKO_01574	-	359	neuS_final_auto	-	386	2.6e-15	53.8	12.4	1	1	1.3e-18	3.1e-15	53.5	12.4	8	330	1	337	1	356	0.73	hypothetical	protein
+PROKKA_ERR479109_bin.3.faa_LDGKMJLM_01168	-	358	neuS_final_auto	-	386	3.5e-39	132.2	6.5	1	1	1.9e-42	4.1e-39	131.9	6.5	7	298	3	322	1	324	0.86	hypothetical	protein
+PROKKA_ERR479064_bin.17.faa_KCEBMJNK_00483	-	213	neuS_final_auto	-	386	0.00035	15.2	0.8	1	1	6.8e-07	0.00043	14.9	0.8	144	262	97	190	62	208	0.80	Linearmycin	resistance	ATP-binding	protein	LnrL
+PROKKA_ERR479080_bin.18.faa_BIAFKMNM_00019	-	359	neuS_final_auto	-	386	4.5e-16	53.8	12.4	1	1	1.3e-18	5.5e-16	53.5	12.4	8	330	1	337	1	356	0.73	hypothetical	protein
+PROKKA_ERR478976_bin.5.faa_OPBHKNLD_01486	-	335	neuS_final_auto	-	386	2.6e-64	214.5	25.4	1	1	1.8e-67	2.9e-64	214.4	25.4	8	319	1	327	1	335	0.92	hypothetical	protein
+PROKKA_ERR479011_bin.3.faa_IKIKKIPH_00628	-	346	neuS_final_auto	-	386	1e-32	109.3	4.3	1	1	1.7e-35	1.3e-32	109.1	4.3	34	298	20	310	2	312	0.84	hypothetical	protein
+PROKKA_ERR479033_bin.11.faa_KGCNNPCA_00348	-	320	neuS_final_auto	-	386	1.6e-09	34.3	19.1	1	1	2e-12	3.6e-09	33.1	19.1	9	307	4	287	1	316	0.65	hypothetical	protein
+PROKKA_ERR479226_bin.7.faa_FBJFOMED_00262	-	498	neuS_final_auto	-	386	2.2e-37	126.3	0.0	1	1	1.2e-40	2.6e-37	126.1	0.0	57	341	152	497	122	498	0.87	hypothetical	protein
+PROKKA_ERR479292_bin.2.faa_PHLMJEDE_04867	-	341	neuS_final_auto	-	386	2.4e-35	120.8	17.5	1	1	5.8e-39	3e-35	120.5	17.5	8	341	1	333	1	337	0.91	hypothetical	protein
+PROKKA_ERR478961_bin.15.faa_OOLDOOJC_00389	-	331	neuS_final_auto	-	386	0.019	11.8	0.1	1	1	7.9e-06	0.025	11.4	0.1	129	258	67	213	62	213	0.72	Oligopeptide	transport	ATP-binding	protein	OppD
+PROKKA_ERR479055_bin.2.faa_BLOLJNKL_00101	-	383	neuS_final_auto	-	386	7.5e-06	19.7	0.3	1	1	6.1e-07	0.00019	15.1	0.3	79	282	74	236	8	246	0.63	UDP-N-acetylglucosamine	2-epimerase
+PROKKA_ERR479050_bin.8.faa_OHGHAGGC_00347	-	168	neuS_final_auto	-	386	2.8e-23	79.8	0.0	1	1	2.7e-26	3e-23	79.7	0.0	183	341	2	167	1	168	0.82	hypothetical	protein
+PROKKA_ERR479050_bin.8.faa_OHGHAGGC_00348	-	264	neuS_final_auto	-	386	1.2e-07	28.4	0.0	1	1	1.4e-10	1.6e-07	28.0	0.0	47	141	135	256	120	261	0.81	hypothetical	protein
+PROKKA_ERR479002_bin.8.faa_LCABGBGD_00237	-	314	neuS_final_auto	-	386	1.6e-27	93.8	0.0	1	1	9.3e-31	2e-27	93.5	0.0	8	303	1	291	1	309	0.91	hypothetical	protein
+PROKKA_ERR479020_bin.19.faa_GLOMALFD_00297	-	324	neuS_final_auto	-	386	2.9e-39	132.2	9.3	1	1	1.9e-42	3.5e-39	131.9	9.3	8	308	2	293	1	321	0.81	hypothetical	protein
+PROKKA_ERR479298_bin.28.faa_LIOIDLGO_00384	-	361	neuS_final_auto	-	386	1.5e-34	117.3	6.3	1	1	6.5e-38	1.9e-34	117.0	6.3	8	300	2	327	1	327	0.80	hypothetical	protein
+PROKKA_ERR479035_bin.4.faa_PROKKA_ERR479035_bin.4.faa_LGCGGOIL_00203	-	387	neuS_final_auto	-	386	0.00028	15.5	0.5	1	2	1.2e-06	0.00073	14.1	0.3	30	162	25	185	14	263	0.74	N,N'-diacetylbacillosaminyl-diphospho-undecaprenol	alpha-1,3-N-acetylgalactosaminyltransferase
+PROKKA_ERR479035_bin.4.faa_PROKKA_ERR479035_bin.4.faa_LGCGGOIL_00203	-	387	neuS_final_auto	-	386	0.00028	15.5	0.5	2	2	0.033	20	-0.5	0.0	324	363	250	336	217	376	0.65	N,N'-diacetylbacillosaminyl-diphospho-undecaprenol	alpha-1,3-N-acetylgalactosaminyltransferase
+PROKKA_ERR479147_bin.11.faa_BMGJNDFM_04940	-	331	neuS_final_auto	-	386	0.05	11.8	0.1	1	1	7.9e-06	0.067	11.4	0.1	129	258	67	213	62	213	0.72	Oligopeptide	transport	ATP-binding	protein	OppD
+PROKKA_ERR479209_bin.16.faa_ECOCIFAB_01320	-	361	neuS_final_auto	-	386	4.6e-34	115.7	4.5	1	1	2.1e-37	5.7e-34	115.4	4.5	8	300	2	327	1	327	0.79	hypothetical	protein
+PROKKA_ERR479064_bin.27.faa_MBEFLKCB_01344	-	314	neuS_final_auto	-	386	1.8e-27	93.4	0.0	1	1	1.2e-30	2.2e-27	93.1	0.0	8	303	1	291	1	309	0.91	hypothetical	protein
+PROKKA_ERR479145_bin.10.faa_OBEIBJMN_00396	-	531	neuS_final_auto	-	386	3.7e-58	193.5	10.0	1	1	1e-60	5e-58	193.1	10.0	8	384	1	526	1	529	0.81	hypothetical	protein
+PROKKA_ERR479145_bin.10.faa_OBEIBJMN_00392	-	502	neuS_final_auto	-	386	1.3e-39	132.5	11.4	1	1	3.1e-42	1.5e-39	132.3	11.4	8	359	1	378	1	483	0.83	hypothetical	protein
+PROKKA_ERR479044_bin.19.faa_BOOEKAHL_02443	-	371	neuS_final_auto	-	386	6.4e-12	43.0	11.6	1	1	2.6e-15	8.4e-12	42.6	11.6	8	319	1	340	1	368	0.67	hypothetical	protein
+PROKKA_ERR479077_bin.52.faa_DONOJLME_00703	-	369	neuS_final_auto	-	386	5.3e-21	72.5	8.3	1	1	2.7e-24	6.3e-21	72.2	8.3	8	339	1	349	1	368	0.76	hypothetical	protein
+PROKKA_ERR479202_bin.1.faa_AOOLKIAI_04416	-	384	neuS_final_auto	-	386	0.003	15.7	0.5	1	1	5.6e-07	0.0044	15.2	0.5	52	226	47	223	4	245	0.72	GDP-mannose-dependent	monoacylated	alpha-(1-6)-phosphatidylinositol	monomannoside	mannosyltransferase
+PROKKA_ERR479197_bin.24.faa_CEKCAMKI_00434	-	213	neuS_final_auto	-	386	0.00086	15.6	1.2	1	1	5e-07	0.001	15.3	1.2	145	262	98	190	56	208	0.78	Linearmycin	resistance	ATP-binding	protein	LnrL
+PROKKA_ERR479124_bin.4.faa_MNJHDAIJ_01079	-	426	neuS_final_auto	-	386	2.3e-17	59.9	13.7	1	1	1.6e-19	2.6e-16	56.5	13.7	8	355	1	421	1	426	0.69	hypothetical	protein
+PROKKA_ERR479418_bin.40.faa_AFKOBGJD_02031	-	335	neuS_final_auto	-	386	2e-05	23.4	17.0	1	1	1.2e-08	3.4e-05	22.7	17.0	12	314	12	303	5	333	0.69	hypothetical	protein
+PROKKA_ERR479418_bin.40.faa_AFKOBGJD_04663	-	473	neuS_final_auto	-	386	0.055	12.1	0.0	1	2	6e-05	0.17	10.5	0.0	192	258	142	203	111	204	0.70	Putative	HMP/thiamine	import	ATP-binding	protein	YkoD
+PROKKA_ERR479418_bin.40.faa_AFKOBGJD_04663	-	473	neuS_final_auto	-	386	0.055	12.1	0.0	2	2	0.29	8.3e+02	-1.6	0.0	201	258	402	452	390	452	0.78	Putative	HMP/thiamine	import	ATP-binding	protein	YkoD
+PROKKA_ERR479418_bin.40.faa_AFKOBGJD_06495	-	107	neuS_final_auto	-	386	0.062	12.0	0.1	1	1	2.4e-05	0.07	11.8	0.1	178	245	3	64	1	72	0.83	hypothetical	protein
+PROKKA_ERR479418_bin.40.faa_AFKOBGJD_03690	-	307	neuS_final_auto	-	386	0.13	10.9	0.0	1	1	5.5e-05	0.16	10.6	0.0	289	346	141	203	136	283	0.71	Thioredoxin	reductase
+PROKKA_ERR479288_bin.6.faa_KPMNKKPD_01142	-	361	neuS_final_auto	-	386	8.4e-38	127.7	4.2	1	1	4.5e-41	9.9e-38	127.4	4.2	8	298	2	325	1	327	0.83	hypothetical	protein
+PROKKA_ERR479110_bin.11.faa_GLOOEJFO_01129	-	358	neuS_final_auto	-	386	3.7e-39	132.2	6.5	1	1	1.9e-42	4.4e-39	131.9	6.5	7	298	3	322	1	324	0.86	hypothetical	protein
+PROKKA_ERR479106_bin.3.faa_OIKDCODN_01934	-	361	neuS_final_auto	-	386	1.1e-34	117.3	6.3	1	1	6.5e-38	1.3e-34	117.0	6.3	8	300	2	327	1	327	0.80	hypothetical	protein
+PROKKA_ERR479131_bin.14.faa_FEOKLIBE_01799	-	154	neuS_final_auto	-	386	0.0051	13.3	1.1	1	1	2.2e-06	0.0054	13.2	1.1	153	245	13	131	1	140	0.66	hypothetical	protein
+PROKKA_ERR479107_bin.12.faa_IKEOIMHK_02107	-	358	neuS_final_auto	-	386	3.8e-39	132.2	6.5	1	1	1.9e-42	4.5e-39	131.9	6.5	7	298	3	322	1	324	0.86	hypothetical	protein
+PROKKA_ERR479020_bin.7.faa_DEKPAFOA_00090	-	335	neuS_final_auto	-	386	3.6e-64	214.5	25.4	1	1	1.8e-67	4e-64	214.4	25.4	8	319	1	327	1	335	0.92	hypothetical	protein
+PROKKA_ERR478968_bin.3.faa_NJKACLDD_00448	-	335	neuS_final_auto	-	386	1.4e-06	23.4	17.0	1	1	3e-09	2.3e-06	22.7	17.0	12	314	12	303	5	333	0.69	hypothetical	protein
+PROKKA_ERR478991_bin.16.faa_LPPDIDBG_01083	-	403	neuS_final_auto	-	386	1.1e-17	61.4	20.2	1	1	7e-20	1.5e-16	57.7	20.2	8	319	1	361	1	402	0.67	hypothetical	protein
+PROKKA_ERR479144_bin.29.faa_AGKOKBPP_00456	-	460	neuS_final_auto	-	386	0.00075	17.1	9.8	1	1	2.2e-05	0.12	9.9	9.7	29	304	126	390	78	436	0.73	hypothetical	protein
+PROKKA_ERR479408_bin.18.faa_MDAJAEBK_00541	-	367	neuS_final_auto	-	386	1.1e-19	67.6	7.1	1	1	2.4e-22	1.3e-19	67.3	7.1	8	314	3	340	1	366	0.75	hypothetical	protein
+PROKKA_ERR479408_bin.18.faa_MDAJAEBK_00412	-	406	neuS_final_auto	-	386	1.3e-05	21.2	3.3	1	1	4e-08	2.1e-05	20.5	3.3	84	260	63	255	52	258	0.78	hypothetical	protein
+PROKKA_ERR479408_bin.18.faa_MDAJAEBK_00163	-	213	neuS_final_auto	-	386	0.0014	14.5	0.6	1	1	3.1e-06	0.0016	14.3	0.6	164	262	106	190	47	208	0.79	Linearmycin	resistance	ATP-binding	protein	LnrL
+PROKKA_ERR479135_bin.1.faa_JCNIODHK_00336	-	323	neuS_final_auto	-	386	3.3e-36	122.1	8.7	1	1	2.2e-39	3.9e-36	121.8	8.7	8	308	2	292	1	318	0.75	hypothetical	protein
+PROKKA_ERR479143_bin.17.faa_IOEBABFG_00850	-	335	neuS_final_auto	-	386	1.9e-06	23.4	17.0	1	1	3e-09	3.2e-06	22.7	17.0	12	314	12	303	5	333	0.69	hypothetical	protein
+PROKKA_ERR479418_bin.5.faa_NJKLOFOL_00477	-	359	neuS_final_auto	-	386	0.0013	13.7	0.3	1	2	5.4e-06	0.0044	11.9	0.1	37	177	4	151	1	221	0.75	N,N'-diacetylbacillosaminyl-diphospho-undecaprenol	alpha-1,3-N-acetylgalactosaminyltransferase
+PROKKA_ERR479418_bin.5.faa_NJKLOFOL_00477	-	359	neuS_final_auto	-	386	0.0013	13.7	0.3	2	2	0.023	19	0.0	0.1	323	363	221	309	173	348	0.65	N,N'-diacetylbacillosaminyl-diphospho-undecaprenol	alpha-1,3-N-acetylgalactosaminyltransferase
+PROKKA_ERR479139_bin.15.faa_OPKEBHJN_02239	-	361	neuS_final_auto	-	386	9.9e-38	127.7	4.2	1	1	4.5e-41	1.2e-37	127.4	4.2	8	298	2	325	1	327	0.83	hypothetical	protein
+PROKKA_ERR478994_bin.16.faa_DBDNCHDB_05657	-	377	neuS_final_auto	-	386	5.3e-15	54.1	17.3	1	1	1.1e-18	6.4e-15	53.8	17.3	47	341	13	339	2	374	0.73	hypothetical	protein
+PROKKA_ERR479146_bin.5.faa_EDOFPHNC_05600	-	331	neuS_final_auto	-	386	0.037	11.8	0.1	1	1	7.9e-06	0.05	11.4	0.1	129	258	67	213	62	213	0.72	Oligopeptide	transport	ATP-binding	protein	OppD
+PROKKA_ERR478996_bin.21.faa_EAHKAANK_01811	-	367	neuS_final_auto	-	386	3.9e-34	115.3	4.1	1	1	5.2e-37	4.7e-34	115.0	4.1	7	299	5	331	1	344	0.81	hypothetical	protein
+PROKKA_ERR478996_bin.21.faa_EAHKAANK_00133	-	507	neuS_final_auto	-	386	0.016	11.3	0.3	1	2	5.8e-05	0.053	9.5	0.1	205	264	158	213	94	244	0.79	Ribose	import	ATP-binding	protein	RbsA
+PROKKA_ERR478996_bin.21.faa_EAHKAANK_00133	-	507	neuS_final_auto	-	386	0.016	11.3	0.3	2	2	0.085	77	-0.9	0.0	193	248	400	451	342	458	0.59	Ribose	import	ATP-binding	protein	RbsA
+PROKKA_ERR479133_bin.7.faa_LMBLOOIL_01851	-	309	neuS_final_auto	-	386	8.4e-13	46.0	10.7	1	1	3.2e-16	1.1e-12	45.6	10.7	84	322	75	288	7	305	0.77	hypothetical	protein
+PROKKA_ERR479121_bin.17.faa_LEDIHHML_02818	-	387	neuS_final_auto	-	386	0.0019	15.3	0.5	1	2	1.6e-06	0.0058	13.7	0.2	30	161	25	184	17	249	0.75	N,N'-diacetylbacillosaminyl-diphospho-undecaprenol	alpha-1,3-N-acetylgalactosaminyltransferase
+PROKKA_ERR479121_bin.17.faa_LEDIHHML_02818	-	387	neuS_final_auto	-	386	0.0019	15.3	0.5	2	2	0.029	1e+02	-0.3	0.1	323	363	249	328	200	376	0.66	N,N'-diacetylbacillosaminyl-diphospho-undecaprenol	alpha-1,3-N-acetylgalactosaminyltransferase
+PROKKA_ERR479078_bin.41.faa_GGHKDFDF_01545	-	378	neuS_final_auto	-	386	4.2e-22	76.2	0.2	1	1	3.2e-25	8.4e-22	75.2	0.2	124	319	139	340	18	369	0.68	hypothetical	protein
+PROKKA_ERR479206_bin.27.faa_GBBFNHCC_04428	-	389	neuS_final_auto	-	386	4.5e-18	63.9	6.8	1	1	1.1e-21	5.7e-18	63.6	6.8	114	319	136	348	61	385	0.73	hypothetical	protein
+PROKKA_ERR479111_bin.20.faa_EMPONHGL_01722	-	376	neuS_final_auto	-	386	0.0022	14.9	4.6	1	1	5.7e-07	0.0018	15.2	3.2	68	270	59	253	20	288	0.68	UDP-2,3-diacetamido-2,3-dideoxy-D-glucuronate	2-epimerase
+PROKKA_ERR478988_bin.3.faa_PROKKA_ERR478988_bin.3.faa_JDALFLNB_00036	-	213	neuS_final_auto	-	386	0.00085	15.6	1.2	1	1	5e-07	0.001	15.3	1.2	145	262	98	190	56	208	0.78	Linearmycin	resistance	ATP-binding	protein	LnrL
+PROKKA_ERR479236_bin.30.faa_HFHEBGOE_00974	-	531	neuS_final_auto	-	386	9.7e-57	189.1	8.7	1	1	2.2e-59	1.3e-56	188.7	8.7	8	384	1	526	1	529	0.79	hypothetical	protein
+PROKKA_ERR479236_bin.30.faa_HFHEBGOE_00978	-	502	neuS_final_auto	-	386	8.3e-40	133.4	11.5	1	1	1.6e-42	9.7e-40	133.2	11.5	8	359	1	378	1	483	0.83	hypothetical	protein
+PROKKA_ERR478990_bin.16.faa_PKKBNNFE_02827	-	377	neuS_final_auto	-	386	4e-15	54.1	17.3	1	1	1.1e-18	4.9e-15	53.8	17.3	47	341	13	339	2	374	0.73	hypothetical	protein
+PROKKA_ERR478960_bin.26.faa_PROKKA_ERR478960_bin.26.faa_HLNLKBCK_01793	-	359	neuS_final_auto	-	386	0.0067	12.9	0.4	1	2	8.1e-06	0.02	11.4	0.2	37	161	4	156	1	221	0.72	N,N'-diacetylbacillosaminyl-diphospho-undecaprenol	alpha-1,3-N-acetylgalactosaminyltransferase
+PROKKA_ERR478960_bin.26.faa_PROKKA_ERR478960_bin.26.faa_HLNLKBCK_01793	-	359	neuS_final_auto	-	386	0.0067	12.9	0.4	2	2	0.023	58	-0.0	0.0	323	363	221	306	169	348	0.66	N,N'-diacetylbacillosaminyl-diphospho-undecaprenol	alpha-1,3-N-acetylgalactosaminyltransferase
+PROKKA_ERR479147_bin.13.faa_BFLNOJGB_00586	-	498	neuS_final_auto	-	386	1.9e-36	121.5	0.0	1	1	3.3e-39	2.2e-36	121.3	0.0	80	341	188	497	110	498	0.87	hypothetical	protein
+PROKKA_ERR479254_bin.72.faa_PCADIIIE_01365	-	363	neuS_final_auto	-	386	2.6e-25	87.0	14.2	1	1	1e-28	3.1e-25	86.8	14.2	8	315	1	337	1	362	0.75	hypothetical	protein
+PROKKA_ERR479210_bin.18.faa_OMMFCAGE_02973	-	352	neuS_final_auto	-	386	1.1e-24	85.1	9.9	1	1	1.1e-27	1.3e-24	84.9	9.9	7	314	3	320	1	350	0.72	hypothetical	protein
+PROKKA_ERR479210_bin.18.faa_OMMFCAGE_00353	-	372	neuS_final_auto	-	386	7.6e-18	62.6	8.1	1	1	7.5e-21	8.4e-18	62.4	8.1	8	289	1	275	1	349	0.79	hypothetical	protein
+PROKKA_ERR479210_bin.18.faa_OMMFCAGE_02148	-	191	neuS_final_auto	-	386	0.022	11.7	0.0	1	1	2.3e-05	0.026	11.4	0.0	48	139	84	172	23	186	0.81	hypothetical	protein
+PROKKA_ERR479417_bin.37.faa_KCEKLDGL_00972	-	119	neuS_final_auto	-	386	0.0091	13.0	4.2	1	1	2.7e-06	0.0094	12.9	4.2	63	178	3	111	1	119	0.75	hypothetical	protein
+PROKKA_ERR479404_bin.11.faa_JJDBNDIM_00134	-	331	neuS_final_auto	-	386	0.0093	11.8	0.1	1	1	7.9e-06	0.012	11.4	0.1	129	258	67	213	62	213	0.72	Oligopeptide	transport	ATP-binding	protein	OppD
+PROKKA_ERR479225_bin.13.faa_GMMBBLHB_00098	-	391	neuS_final_auto	-	386	9.8e-38	127.4	0.0	1	1	5.2e-41	1.1e-37	127.2	0.0	57	341	45	390	16	391	0.87	hypothetical	protein
+PROKKA_ERR479090_bin.24.faa_MDFGNIDJ_00691	-	314	neuS_final_auto	-	386	3.3e-27	92.5	0.0	1	1	2.2e-30	4e-27	92.2	0.0	8	303	1	291	1	309	0.91	hypothetical	protein
+PROKKA_ERR479400_bin.7.faa_ELHFDIGN_00740	-	314	neuS_final_auto	-	386	6.2e-28	93.6	0.0	1	1	1e-30	7.5e-28	93.3	0.0	8	303	1	291	1	309	0.91	hypothetical	protein
+PROKKA_ERR479103_bin.5.faa_GEAPINPP_00894	-	361	neuS_final_auto	-	386	2.1e-34	115.7	6.5	1	1	2e-37	2.6e-34	115.4	6.5	8	300	2	327	1	327	0.80	hypothetical	protein
+PROKKA_ERR479065_bin.7.faa_HNODNDPB_00289	-	361	neuS_final_auto	-	386	1.9e-37	126.4	5.4	1	1	2.2e-40	2.3e-37	126.1	5.4	8	298	2	325	1	327	0.83	hypothetical	protein
+PROKKA_ERR479065_bin.7.faa_HNODNDPB_00601	-	302	neuS_final_auto	-	386	0.0051	13.1	0.7	1	3	1.7e-05	0.018	11.3	0.2	149	263	50	150	13	209	0.64	hypothetical	protein
+PROKKA_ERR479065_bin.7.faa_HNODNDPB_00601	-	302	neuS_final_auto	-	386	0.0051	13.1	0.7	2	3	0.047	49	-0.1	0.0	166	235	160	221	148	228	0.61	hypothetical	protein
+PROKKA_ERR479065_bin.7.faa_HNODNDPB_00601	-	302	neuS_final_auto	-	386	0.0051	13.1	0.7	3	3	0.076	78	-0.7	0.0	214	235	203	221	187	282	0.53	hypothetical	protein
+PROKKA_ERR479236_bin.26.faa_PBIEPHCP_00996	-	335	neuS_final_auto	-	386	2e-64	214.5	25.4	1	1	3.5e-67	2.2e-64	214.4	25.4	8	319	1	327	1	335	0.92	hypothetical	protein
+PROKKA_ERR479236_bin.26.faa_PBIEPHCP_00557	-	667	neuS_final_auto	-	386	0.0021	13.6	9.3	1	2	7.9e-07	0.00049	15.7	4.9	49	223	24	207	2	232	0.64	hypothetical	protein
+PROKKA_ERR479236_bin.26.faa_PBIEPHCP_00557	-	667	neuS_final_auto	-	386	0.0021	13.6	9.3	2	2	0.17	1.1e+02	-1.9	0.1	132	187	240	310	238	339	0.58	hypothetical	protein
+PROKKA_ERR478962_bin.3.faa_PROKKA_ERR478962_bin.3.faa_IOPKIAHO_03345	-	352	neuS_final_auto	-	386	1.6e-24	85.1	9.9	1	1	7.7e-28	1.9e-24	84.9	9.9	7	314	3	320	1	350	0.72	hypothetical	protein
+PROKKA_ERR478962_bin.3.faa_PROKKA_ERR478962_bin.3.faa_IOPKIAHO_00818	-	392	neuS_final_auto	-	386	0.0048	14.4	1.5	1	2	3e-06	0.0077	13.7	0.7	84	191	77	191	51	231	0.73	D-inositol-3-phosphate	glycosyltransferase
+PROKKA_ERR478962_bin.3.faa_PROKKA_ERR478962_bin.3.faa_IOPKIAHO_00818	-	392	neuS_final_auto	-	386	0.0048	14.4	1.5	2	2	0.12	3.1e+02	-1.4	0.0	314	372	310	371	265	388	0.63	D-inositol-3-phosphate	glycosyltransferase
+PROKKA_ERR479204_bin.7.faa_KNPAKDED_02989	-	359	neuS_final_auto	-	386	0.0081	12.9	0.4	1	2	1.6e-05	0.024	11.4	0.2	37	161	4	156	1	221	0.72	N,N'-diacetylbacillosaminyl-diphospho-undecaprenol	alpha-1,3-N-acetylgalactosaminyltransferase
+PROKKA_ERR479204_bin.7.faa_KNPAKDED_02989	-	359	neuS_final_auto	-	386	0.0081	12.9	0.4	2	2	0.047	70	-0.0	0.0	323	363	221	306	169	348	0.66	N,N'-diacetylbacillosaminyl-diphospho-undecaprenol	alpha-1,3-N-acetylgalactosaminyltransferase
+PROKKA_ERR479204_bin.7.faa_KNPAKDED_01612	-	419	neuS_final_auto	-	386	0.0087	12.8	6.8	1	2	0.075	1.1e+02	-0.7	0.3	335	346	186	218	118	274	0.44	hypothetical	protein
+PROKKA_ERR479204_bin.7.faa_KNPAKDED_01612	-	419	neuS_final_auto	-	386	0.0087	12.8	6.8	2	2	1e-05	0.015	12.0	5.9	155	251	273	373	189	387	0.79	hypothetical	protein
+PROKKA_ERR478983_bin.9.faa_NJNBKDEH_00963	-	314	neuS_final_auto	-	386	3.5e-27	92.0	0.0	1	1	3.2e-30	4.3e-27	91.7	0.0	8	303	1	291	1	309	0.91	hypothetical	protein
+PROKKA_ERR479067_bin.17.faa_JBANMHAP_03016	-	377	neuS_final_auto	-	386	7.4e-15	54.1	17.3	1	1	3.2e-18	8.9e-15	53.8	17.3	47	341	13	339	2	374	0.73	hypothetical	protein
+PROKKA_ERR479067_bin.17.faa_JBANMHAP_08333	-	495	neuS_final_auto	-	386	0.063	11.5	1.4	1	1	4.1e-05	0.12	10.6	1.4	156	258	102	201	70	203	0.77	Galactose/methyl	galactoside	import	ATP-binding	protein	MglA
+PROKKA_ERR479067_bin.17.faa_JBANMHAP_01588	-	394	neuS_final_auto	-	386	0.15	10.2	5.4	1	1	7.6e-05	0.21	9.7	4.6	142	258	152	263	139	278	0.66	hypothetical	protein
+PROKKA_ERR479052_bin.25.faa_AAKPDJDE_00671	-	361	neuS_final_auto	-	386	1.3e-34	115.7	6.5	1	1	2e-37	1.6e-34	115.4	6.5	8	300	2	327	1	327	0.80	hypothetical	protein
+PROKKA_ERR479096_bin.7.faa_DDPEENMG_01413	-	379	neuS_final_auto	-	386	0.0024	14.8	16.5	1	1	3.6e-06	0.004	14.1	16.5	142	372	133	372	10	378	0.74	Teichoic	acid	ribitol-phosphate	primase
+PROKKA_ERR479096_bin.7.faa_DDPEENMG_00889	-	372	neuS_final_auto	-	386	0.0048	13.8	0.1	1	1	5.1e-06	0.0057	13.6	0.1	30	149	7	147	2	257	0.75	N,N'-diacetylbacillosaminyl-diphospho-undecaprenol	alpha-1,3-N-acetylgalactosaminyltransferase
+PROKKA_ERR479096_bin.7.faa_DDPEENMG_00747	-	301	neuS_final_auto	-	386	0.012	12.6	0.0	1	1	1.3e-05	0.014	12.3	0.0	287	361	137	220	133	284	0.72	Thioredoxin	reductase
+PROKKA_ERR479102_bin.16.faa_CEFOKIPC_00044	-	271	neuS_final_auto	-	386	3.2e-22	74.8	0.0	1	1	5.1e-25	3.6e-22	74.6	0.0	95	307	39	254	3	268	0.86	hypothetical	protein
+PROKKA_ERR479075_bin.34.faa_DMGMADME_00767	-	362	neuS_final_auto	-	386	5.3e-32	108.1	24.1	1	1	3.9e-35	6.4e-32	107.9	24.1	8	321	1	328	1	360	0.74	hypothetical	protein
+PROKKA_ERR479057_bin.9.faa_MODPNIPJ_02118	-	364	neuS_final_auto	-	386	7e-25	85.1	17.6	1	1	3.7e-28	7.9e-25	84.9	17.6	7	334	2	358	1	364	0.75	hypothetical	protein
+PROKKA_ERR479244_bin.7.faa_LMJNJFEL_00349	-	212	neuS_final_auto	-	386	0.016	11.5	0.2	1	1	8.6e-06	0.02	11.3	0.2	179	264	100	193	61	208	0.75	Bacitracin	transport	ATP-binding	protein	BcrA
+PROKKA_ERR479295_bin.2.faa_KELLMDGN_00054	-	385	neuS_final_auto	-	386	1.2e-05	18.9	2.5	1	1	5.7e-08	1.7e-05	18.4	2.5	48	223	42	219	7	245	0.74	GDP-mannose-dependent	monoacylated	alpha-(1-6)-phosphatidylinositol	monomannoside	mannosyltransferase
+PROKKA_ERR479111_bin.5.faa_CBJKKFFL_00138	-	184	neuS_final_auto	-	386	0.0011	12.3	0.1	1	1	4.7e-06	0.0013	12.1	0.1	182	258	75	148	12	167	0.69	ABC	transporter	ATP-binding	protein	YtrE
+PROKKA_ERR479244_bin.12.faa_PEBKIDNM_01834	-	311	neuS_final_auto	-	386	5.3e-40	134.7	9.7	1	1	3.6e-43	7.2e-40	134.3	9.7	84	309	53	287	31	301	0.88	hypothetical	protein
+PROKKA_ERR479021_bin.11.faa_CLIJEDMJ_00687	-	324	neuS_final_auto	-	386	2.9e-39	132.2	9.3	1	1	1.9e-42	3.5e-39	131.9	9.3	8	308	2	293	1	321	0.81	hypothetical	protein
+PROKKA_ERR478989_bin.6.faa_FKCMJNPE_05394	-	146	neuS_final_auto	-	386	7.9e-26	89.6	0.6	1	1	4.9e-29	9.2e-26	89.4	0.6	199	310	6	118	2	143	0.91	hypothetical	protein
+PROKKA_ERR478989_bin.6.faa_FKCMJNPE_04627	-	377	neuS_final_auto	-	386	4.8e-15	54.1	17.3	1	1	3.2e-18	5.9e-15	53.8	17.3	47	341	13	339	2	374	0.73	hypothetical	protein
+PROKKA_ERR478989_bin.6.faa_FKCMJNPE_02026	-	153	neuS_final_auto	-	386	0.0039	14.9	0.3	1	1	2.7e-06	0.005	14.5	0.3	155	251	22	111	4	113	0.81	D-alanyl-D-alanine	carboxypeptidase
+PROKKA_ERR479221_bin.1.faa_HNHMKAND_01959	-	377	neuS_final_auto	-	386	3.3e-15	54.1	17.3	1	1	1.1e-18	4e-15	53.8	17.3	47	341	13	339	2	374	0.73	hypothetical	protein
+PROKKA_ERR479138_bin.26.faa_GPJJLIFK_01442	-	212	neuS_final_auto	-	386	0.016	11.5	0.2	1	1	8.6e-06	0.019	11.3	0.2	179	264	100	193	61	208	0.75	Bacitracin	transport	ATP-binding	protein	BcrA
+PROKKA_ERR479046_bin.29.faa_HNBOHABM_00401	-	62	neuS_final_auto	-	386	0.0037	13.1	0.0	1	1	2.5e-06	0.0038	13.1	0.0	279	341	1	61	1	62	0.77	hypothetical	protein
+PROKKA_ERR479150_bin.20.faa_OGAGEDKN_00494	-	361	neuS_final_auto	-	386	2e-18	63.5	12.9	1	1	3e-21	2.5e-18	63.2	12.9	8	357	1	352	1	359	0.69	hypothetical	protein
+PROKKA_ERR479150_bin.20.faa_OGAGEDKN_01663	-	213	neuS_final_auto	-	386	0.00062	15.8	0.6	1	1	8.5e-07	0.00072	15.6	0.6	164	262	106	190	47	208	0.79	Linearmycin	resistance	ATP-binding	protein	LnrL
+PROKKA_ERR479280_bin.13.faa_IHEFKDEO_00197	-	212	neuS_final_auto	-	386	0.015	11.5	0.2	1	1	8.6e-06	0.018	11.3	0.2	179	264	100	193	61	208	0.75	Bacitracin	transport	ATP-binding	protein	BcrA
+PROKKA_ERR479298_bin.36.faa_GGPDMKEE_00269	-	336	neuS_final_auto	-	386	1.1e-31	106.7	6.6	1	1	2.6e-34	1.7e-31	106.1	6.6	1	307	1	302	1	321	0.81	hypothetical	protein
+PROKKA_ERR479298_bin.36.faa_GGPDMKEE_00758	-	253	neuS_final_auto	-	386	0.0023	13.5	0.8	1	1	3.8e-06	0.0024	13.4	0.8	18	120	39	153	18	251	0.79	Putative	nuclease	YhcG
+PROKKA_ERR479185_bin.1.faa_DHMNCFLL_01326	-	565	neuS_final_auto	-	386	1.1e-38	131.3	18.7	1	2	3e-42	1.1e-38	131.3	18.7	8	346	1	392	1	503	0.76	hypothetical	protein
+PROKKA_ERR479185_bin.1.faa_DHMNCFLL_01326	-	565	neuS_final_auto	-	386	1.1e-38	131.3	18.7	2	2	0.0018	6.3	3.7	0.8	52	94	509	550	488	557	0.70	hypothetical	protein
+PROKKA_ERR479145_bin.6.faa_ODEPGCMN_01077	-	460	neuS_final_auto	-	386	0.00067	17.1	9.8	1	1	2.2e-05	0.1	9.9	9.7	29	304	126	390	78	436	0.73	hypothetical	protein
+PROKKA_ERR478964_bin.23.faa_PROKKA_ERR478964_bin.23.faa_CJJJINIL_00862	-	361	neuS_final_auto	-	386	1.3e-34	116.9	6.6	1	1	8.6e-38	1.6e-34	116.6	6.6	8	300	2	327	1	327	0.80	hypothetical	protein
+PROKKA_ERR479294_bin.4.faa_DMDLOCAN_00263	-	226	neuS_final_auto	-	386	0.0067	13.7	0.1	1	1	1.9e-06	0.0079	13.4	0.1	191	270	121	213	64	221	0.80	Bacitracin	export	ATP-binding	protein	BceA
+PROKKA_ERR479114_bin.13.faa_CIHJLLMI_04834	-	369	neuS_final_auto	-	386	0.0067	15.1	4.5	1	1	8.8e-07	0.0098	14.5	4.4	77	271	65	249	33	363	0.70	UDP-2,3-diacetamido-2,3-dideoxy-D-glucuronate	2-epimerase
+PROKKA_ERR478965_bin.13.faa_EAOLCAHB_00759	-	361	neuS_final_auto	-	386	4.3e-34	115.7	4.5	1	1	2.1e-37	5.3e-34	115.4	4.5	8	300	2	327	1	327	0.79	hypothetical	protein
+PROKKA_ERR479193_bin.1.faa_HMDEKGAD_00524	-	173	neuS_final_auto	-	386	0.00011	18.0	0.0	1	1	8.9e-08	0.00012	17.8	0.0	288	363	16	123	13	151	0.69	Thioredoxin	reductase
+PROKKA_ERR479254_bin.47.faa_JGBBAIML_03904	-	385	neuS_final_auto	-	386	9.3e-08	31.5	6.2	1	1	4.2e-11	1.2e-07	31.0	6.2	32	358	33	371	19	383	0.70	D-inositol-3-phosphate	glycosyltransferase
+PROKKA_ERR479254_bin.47.faa_JGBBAIML_10156	-	331	neuS_final_auto	-	386	0.087	11.8	0.1	1	1	3.9e-05	0.12	11.4	0.1	129	258	67	213	62	213	0.72	Oligopeptide	transport	ATP-binding	protein	OppD
+PROKKA_ERR479254_bin.47.faa_JGBBAIML_11686	-	495	neuS_final_auto	-	386	0.11	11.5	1.4	1	1	6.8e-05	0.2	10.6	1.4	156	258	102	201	70	203	0.77	Galactose/methyl	galactoside	import	ATP-binding	protein	MglA
+PROKKA_ERR479254_bin.47.faa_JGBBAIML_13943	-	307	neuS_final_auto	-	386	0.17	10.9	0.0	1	1	7e-05	0.21	10.6	0.0	289	346	141	203	136	283	0.71	Thioredoxin	reductase
+PROKKA_ERR479254_bin.47.faa_JGBBAIML_09259	-	302	neuS_final_auto	-	386	0.19	10.7	0.0	1	1	7.9e-05	0.23	10.4	0.0	288	345	139	199	135	284	0.77	Thioredoxin	reductase
+PROKKA_ERR479101_bin.33.faa_EFHOEEME_00226	-	331	neuS_final_auto	-	386	0.0041	11.8	0.1	1	1	7.9e-06	0.0055	11.4	0.1	129	258	67	213	62	213	0.72	Oligopeptide	transport	ATP-binding	protein	OppD
+PROKKA_ERR479206_bin.32.faa_HIELPFNK_01895	-	361	neuS_final_auto	-	386	1.3e-34	117.3	6.5	1	1	6.5e-38	1.6e-34	117.0	6.5	8	300	2	327	1	327	0.80	hypothetical	protein
+PROKKA_ERR479143_bin.14.faa_COLFAICB_00196	-	173	neuS_final_auto	-	386	6.5e-05	16.3	0.2	1	1	2.9e-07	7.6e-05	16.1	0.2	154	251	56	146	11	148	0.81	D-alanyl-D-alanine	carboxypeptidase
+PROKKA_ERR479289_bin.13.faa_BKMHKPHH_01346	-	361	neuS_final_auto	-	386	8.9e-38	127.7	4.2	1	1	4.5e-41	1.1e-37	127.4	4.2	8	298	2	325	1	327	0.83	hypothetical	protein
+PROKKA_ERR479270_bin.27.faa_LGMNODKA_00273	-	460	neuS_final_auto	-	386	0.00033	17.1	9.8	1	1	2.2e-05	0.051	9.9	9.7	29	304	126	390	78	436	0.73	hypothetical	protein
+PROKKA_ERR479033_bin.8.faa_BGEOBKED_00754	-	212	neuS_final_auto	-	386	0.017	11.5	0.2	1	1	8.6e-06	0.021	11.3	0.2	179	264	100	193	61	208	0.75	Bacitracin	transport	ATP-binding	protein	BcrA
+PROKKA_ERR479068_bin.21.faa_AGPDLJPO_01050	-	322	neuS_final_auto	-	386	2.1e-26	89.2	0.0	1	1	2.2e-29	2.5e-26	88.9	0.0	9	307	3	305	1	319	0.86	hypothetical	protein
+PROKKA_ERR479017_bin.11.faa_KHCNJHBJ_00742	-	367	neuS_final_auto	-	386	1.6e-32	109.2	13.8	1	1	3.6e-35	1.9e-32	109.0	13.8	9	323	3	341	1	362	0.80	hypothetical	protein
+PROKKA_ERR479017_bin.11.faa_KHCNJHBJ_01010	-	362	neuS_final_auto	-	386	1.5e-29	99.5	19.4	1	1	3.2e-32	1.8e-29	99.3	19.4	9	334	7	342	1	358	0.78	hypothetical	protein
+PROKKA_ERR479023_bin.8.faa_GOHAJDHF_00032	-	248	neuS_final_auto	-	386	1.6e-31	105.0	0.2	1	1	3.4e-34	1.9e-31	104.8	0.2	119	313	25	223	11	245	0.85	hypothetical	protein
+PROKKA_ERR479280_bin.10.faa_IBCMDHKD_00191	-	500	neuS_final_auto	-	386	9.3e-38	127.3	0.0	1	1	5.7e-41	1.1e-37	127.1	0.0	53	310	143	470	111	500	0.84	hypothetical	protein
+PROKKA_ERR479072_bin.17.faa_IKHNNDKK_00447	-	361	neuS_final_auto	-	386	1.3e-37	126.4	5.4	1	1	1.1e-40	1.6e-37	126.1	5.4	8	298	2	325	1	327	0.83	hypothetical	protein
+PROKKA_ERR479215_bin.10.faa_DIEJKOLD_01990	-	333	neuS_final_auto	-	386	5.9e-15	52.7	9.4	1	1	2.6e-18	7.1e-15	52.5	9.4	8	309	1	306	1	328	0.77	hypothetical	protein
+PROKKA_ERR479196_bin.23.faa_IDBPHGFC_01100	-	387	neuS_final_auto	-	386	0.00067	15.3	0.6	1	2	1.6e-06	0.0021	13.7	0.2	30	161	25	184	17	249	0.75	N,N'-diacetylbacillosaminyl-diphospho-undecaprenol	alpha-1,3-N-acetylgalactosaminyltransferase
+PROKKA_ERR479196_bin.23.faa_IDBPHGFC_01100	-	387	neuS_final_auto	-	386	0.00067	15.3	0.6	2	2	0.027	34	-0.2	0.0	323	363	249	328	197	376	0.65	N,N'-diacetylbacillosaminyl-diphospho-undecaprenol	alpha-1,3-N-acetylgalactosaminyltransferase
+PROKKA_ERR479119_bin.3.faa_KLOKLFLF_01445	-	359	neuS_final_auto	-	386	0.004	12.9	0.4	1	2	8.1e-06	0.012	11.4	0.2	37	161	4	156	1	221	0.72	N,N'-diacetylbacillosaminyl-diphospho-undecaprenol	alpha-1,3-N-acetylgalactosaminyltransferase
+PROKKA_ERR479119_bin.3.faa_KLOKLFLF_01445	-	359	neuS_final_auto	-	386	0.004	12.9	0.4	2	2	0.023	35	-0.0	0.0	323	363	221	306	169	348	0.66	N,N'-diacetylbacillosaminyl-diphospho-undecaprenol	alpha-1,3-N-acetylgalactosaminyltransferase
+PROKKA_ERR479073_bin.18.faa_MBMHPHFI_01332	-	132	neuS_final_auto	-	386	3.6e-15	52.5	0.0	1	1	2.7e-18	3.9e-15	52.4	0.0	198	304	2	110	1	128	0.90	hypothetical	protein
+PROKKA_ERR479400_bin.26.faa_MGIKMIIA_01529	-	165	neuS_final_auto	-	386	0.0056	12.6	0.1	1	1	3.6e-06	0.0057	12.5	0.1	183	264	82	149	38	165	0.72	Bacitracin	transport	ATP-binding	protein	BcrA
+PROKKA_ERR479077_bin.25.faa_JEEFJDDK_00528	-	378	neuS_final_auto	-	386	1.2e-22	76.2	0.2	1	1	3.2e-25	2.5e-22	75.2	0.2	124	319	139	340	18	369	0.68	hypothetical	protein
+PROKKA_ERR479170_bin.9.faa_JIJPEOJO_03703	-	336	neuS_final_auto	-	386	3.4e-31	106.7	6.6	1	1	1.3e-34	4.9e-31	106.1	6.6	1	307	1	302	1	321	0.81	hypothetical	protein
+PROKKA_ERR479158_bin.14.faa_MJCPPJNO_02152	-	361	neuS_final_auto	-	386	1.7e-34	117.3	6.5	1	1	6.5e-38	2.1e-34	117.0	6.5	8	300	2	327	1	327	0.80	hypothetical	protein
+PROKKA_ERR478995_bin.6.faa_LCMCKGCE_05269	-	377	neuS_final_auto	-	386	5.4e-15	54.1	17.3	1	1	1.1e-18	6.5e-15	53.8	17.3	47	341	13	339	2	374	0.73	hypothetical	protein
+PROKKA_ERR478992_bin.18.faa_PJGOPGGD_00565	-	403	neuS_final_auto	-	386	7.1e-18	61.4	20.2	1	1	7e-20	9.5e-17	57.7	20.2	8	319	1	361	1	402	0.67	hypothetical	protein
+PROKKA_ERR479078_bin.51.faa_AMPOKCDE_00406	-	324	neuS_final_auto	-	386	3.7e-26	88.6	0.0	1	1	3.4e-29	4.4e-26	88.3	0.0	9	305	3	305	1	320	0.85	hypothetical	protein
+PROKKA_ERR479198_bin.1.faa_FCDFADJH_01030	-	314	neuS_final_auto	-	386	1.3e-27	93.8	0.0	1	1	9.3e-31	1.6e-27	93.5	0.0	8	303	1	291	1	309	0.91	hypothetical	protein
+PROKKA_ERR479036_bin.11.faa_PKNOGKKG_02227	-	212	neuS_final_auto	-	386	0.018	11.5	0.2	1	1	8.6e-06	0.022	11.3	0.2	179	264	100	193	61	208	0.75	Bacitracin	transport	ATP-binding	protein	BcrA
+PROKKA_ERR479081_bin.19.faa_GFHAIIFM_00551	-	359	neuS_final_auto	-	386	7.6e-16	53.8	12.4	1	1	2.6e-18	9.2e-16	53.5	12.4	8	330	1	337	1	356	0.73	hypothetical	protein
+PROKKA_ERR479081_bin.19.faa_GFHAIIFM_00413	-	213	neuS_final_auto	-	386	0.00064	14.5	0.6	1	1	2e-06	0.00073	14.3	0.6	164	262	106	190	47	208	0.79	Linearmycin	resistance	ATP-binding	protein	LnrL
+PROKKA_ERR479150_bin.10.faa_MCGGKIKP_02256	-	128	neuS_final_auto	-	386	0.0014	15.3	0.3	1	1	1.2e-06	0.0017	15.0	0.3	124	187	55	122	41	127	0.78	hypothetical	protein
+PROKKA_ERR479150_bin.10.faa_MCGGKIKP_00190	-	182	neuS_final_auto	-	386	0.056	10.1	8.7	1	2	3.1e-06	0.0042	13.7	2.0	176	253	27	95	7	103	0.75	Histidine	biosynthesis	bifunctional	protein	HisB
+PROKKA_ERR479150_bin.10.faa_MCGGKIKP_00190	-	182	neuS_final_auto	-	386	0.056	10.1	8.7	2	2	0.029	40	0.6	0.9	78	148	112	180	97	182	0.66	Histidine	biosynthesis	bifunctional	protein	HisB
+PROKKA_ERR479016_bin.7.faa_GDBAAIPJ_02417	-	319	neuS_final_auto	-	386	4.6e-14	50.1	10.8	1	1	2.9e-17	9.6e-14	49.1	10.8	104	329	82	306	3	317	0.67	hypothetical	protein
+PROKKA_ERR478970_bin.8.faa_PCBONNMH_00599	-	361	neuS_final_auto	-	386	6.9e-37	123.8	5.3	1	1	6.9e-40	8.2e-37	123.5	5.3	8	298	2	325	1	327	0.83	hypothetical	protein
+PROKKA_ERR479407_bin.9.faa_EHBCJKON_00519	-	314	neuS_final_auto	-	386	3.4e-27	92.5	0.0	1	1	2.2e-30	4.2e-27	92.2	0.0	8	303	1	291	1	309	0.89	hypothetical	protein
+PROKKA_ERR479114_bin.3.faa_OHPPPPOO_00005	-	184	neuS_final_auto	-	386	0.00084	12.3	0.1	1	1	4.7e-06	0.00095	12.1	0.1	182	258	75	148	12	167	0.69	ABC	transporter	ATP-binding	protein	YtrE
+PROKKA_ERR479222_bin.12.faa_GPDHECND_03018	-	377	neuS_final_auto	-	386	3.1e-15	54.1	17.3	1	1	1.1e-18	3.8e-15	53.8	17.3	47	341	13	339	2	374	0.73	hypothetical	protein
+PROKKA_ERR479099_bin.22.faa_JBFCJNLJ_02068	-	330	neuS_final_auto	-	386	2.3e-38	129.8	13.4	1	1	1.1e-41	2.9e-38	129.5	13.4	46	306	45	311	14	327	0.82	hypothetical	protein
+PROKKA_ERR479047_bin.22.faa_EPIMDBII_01518	-	189	neuS_final_auto	-	386	3.7e-24	82.2	0.0	1	1	5.6e-27	4.3e-24	82.0	0.0	177	341	16	188	4	189	0.82	hypothetical	protein
+PROKKA_ERR479047_bin.22.faa_EPIMDBII_01517	-	264	neuS_final_auto	-	386	8.4e-08	28.4	0.0	1	1	1.4e-10	1.1e-07	28.0	0.0	47	141	135	256	120	261	0.81	hypothetical	protein
+PROKKA_ERR479174_bin.9.faa_PMHEBLHI_07151	-	83	neuS_final_auto	-	386	5.5e-06	24.9	0.1	1	1	1.3e-09	5.8e-06	24.8	0.1	272	330	6	66	1	82	0.70	hypothetical	protein
+PROKKA_ERR479174_bin.9.faa_PMHEBLHI_04767	-	119	neuS_final_auto	-	386	0.018	13.3	3.7	1	1	4.2e-06	0.018	13.3	3.7	63	178	3	111	1	119	0.76	hypothetical	protein
+PROKKA_ERR479288_bin.13.faa_NCMMANII_01359	-	314	neuS_final_auto	-	386	1.5e-27	93.5	0.0	1	1	1.2e-30	1.9e-27	93.2	0.0	8	303	1	291	1	309	0.90	hypothetical	protein
+PROKKA_ERR479181_bin.26.faa_FILHCCBB_00233	-	503	neuS_final_auto	-	386	1.1e-42	143.6	0.0	1	1	6.2e-46	1.3e-42	143.4	0.0	48	341	141	502	115	503	0.88	hypothetical	protein
+PROKKA_ERR479243_bin.1.faa_MOILGDCD_01161	-	311	neuS_final_auto	-	386	5.3e-40	134.7	9.7	1	1	3.6e-43	7.1e-40	134.3	9.7	84	309	53	287	31	301	0.88	hypothetical	protein
+PROKKA_ERR479290_bin.9.faa_AGKDNLME_01721	-	341	neuS_final_auto	-	386	8.9e-36	120.8	17.5	1	1	5.8e-39	1.1e-35	120.5	17.5	8	341	1	333	1	337	0.91	hypothetical	protein
+PROKKA_ERR479244_bin.8.faa_NEEPJBJN_01905	-	81	neuS_final_auto	-	386	0.0068	12.6	0.3	1	1	3.6e-06	0.0069	12.5	0.3	212	262	12	58	2	77	0.84	Arginine	transport	ATP-binding	protein	ArtM
+PROKKA_ERR479200_bin.2.faa_ADFEJKEN_00633	-	331	neuS_final_auto	-	386	0.025	11.8	0.1	1	1	7.9e-06	0.034	11.4	0.1	129	258	67	213	62	213	0.72	Oligopeptide	transport	ATP-binding	protein	OppD
+PROKKA_ERR479077_bin.31.faa_PNOLODGK_04434	-	358	neuS_final_auto	-	386	1.5e-24	85.9	9.3	1	1	2.4e-28	1.9e-24	85.5	9.3	7	314	9	326	6	356	0.72	hypothetical	protein
+PROKKA_ERR479269_bin.2.faa_MJNIMBKP_00411	-	263	neuS_final_auto	-	386	0.00012	16.6	0.0	1	1	2.8e-07	0.00016	16.2	0.0	288	363	106	213	103	237	0.68	Thioredoxin	reductase
+PROKKA_ERR478965_bin.18.faa_AMNPGIJH_00644	-	361	neuS_final_auto	-	386	1.5e-34	116.6	6.8	1	1	1.1e-37	1.9e-34	116.3	6.8	8	300	2	327	1	327	0.80	hypothetical	protein
+PROKKA_ERR479212_bin.5.faa_APOGNFLA_00269	-	474	neuS_final_auto	-	386	0.0072	12.2	5.9	1	1	1.6e-05	0.025	10.4	5.9	35	271	107	336	50	359	0.70	hypothetical	protein
+PROKKA_ERR479077_bin.49.faa_GEHPGIIK_02686	-	309	neuS_final_auto	-	386	6.6e-13	46.5	10.8	1	1	2.2e-16	8.7e-13	46.1	10.8	84	322	75	288	7	305	0.77	hypothetical	protein
+PROKKA_ERR479033_bin.5.faa_BPJAODAD_00528	-	335	neuS_final_auto	-	386	2.4e-06	23.4	17.0	1	1	3e-09	4e-06	22.7	17.0	12	314	12	303	5	333	0.69	hypothetical	protein
+PROKKA_ERR479293_bin.4.faa_FEBANKHE_00889	-	191	neuS_final_auto	-	386	4.9e-13	45.8	3.6	1	1	3.3e-16	5.7e-13	45.6	3.6	190	323	10	156	3	188	0.70	hypothetical	protein
+PROKKA_ERR479034_bin.10.faa_CBBKDILN_02424	-	335	neuS_final_auto	-	386	5.6e-06	23.4	17.0	1	1	3e-09	9.4e-06	22.7	17.0	12	314	12	303	5	333	0.69	hypothetical	protein
+PROKKA_ERR479071_bin.18.faa_DACHNBCL_00038	-	234	neuS_final_auto	-	386	0.0061	12.3	0.2	1	1	5.6e-06	0.0083	11.9	0.2	166	244	74	179	46	185	0.85	putative	ABC	transporter	ATP-binding	protein	YxlF
+PROKKA_ERR479193_bin.18.faa_OFBGGFOK_00257	-	163	neuS_final_auto	-	386	0.0029	11.6	0.0	1	1	7.3e-06	0.0031	11.5	0.0	211	282	76	159	19	163	0.78	putative	ABC	transporter	ATP-binding	protein
+PROKKA_ERR479097_bin.17.faa_DBDBOGDB_00419	-	361	neuS_final_auto	-	386	8.3e-38	126.3	5.8	1	1	1.2e-40	9.8e-38	126.1	5.8	8	298	2	325	1	327	0.83	hypothetical	protein
+PROKKA_ERR479078_bin.39.faa_PGAKIHPF_01176	-	569	neuS_final_auto	-	386	2.2e-36	123.6	17.8	1	2	1.3e-39	2.2e-36	123.6	17.8	8	323	1	349	1	506	0.79	hypothetical	protein
+PROKKA_ERR479078_bin.39.faa_PGAKIHPF_01176	-	569	neuS_final_auto	-	386	2.2e-36	123.6	17.8	2	2	0.0049	8.1	3.2	0.6	52	93	513	553	491	561	0.73	hypothetical	protein
+PROKKA_ERR479078_bin.39.faa_PGAKIHPF_00452	-	240	neuS_final_auto	-	386	1.1e-10	38.9	3.9	1	1	8.4e-14	1.4e-10	38.6	3.9	164	373	30	231	7	239	0.63	hypothetical	protein
+PROKKA_ERR479101_bin.20.faa_NBLJCKMK_04877	-	370	neuS_final_auto	-	386	0.0049	14.6	0.0	1	1	1.1e-06	0.0064	14.2	0.0	47	185	16	185	11	231	0.75	UDP-N-acetylglucosamine	2-epimerase
+PROKKA_ERR478992_bin.19.faa_IONPIGIJ_04118	-	377	neuS_final_auto	-	386	3.9e-15	54.1	17.3	1	1	1.1e-18	4.7e-15	53.8	17.3	47	341	13	339	2	374	0.73	hypothetical	protein
+PROKKA_ERR479092_bin.2.faa_FMCEPMGM_00862	-	212	neuS_final_auto	-	386	0.018	11.5	0.2	1	1	8.6e-06	0.022	11.3	0.2	179	264	100	193	61	208	0.75	Bacitracin	transport	ATP-binding	protein	BcrA
+PROKKA_ERR478999_bin.7.faa_PROKKA_ERR478999_bin.7.faa_APCMPECK_00125	-	85	neuS_final_auto	-	386	1.6e-07	26.7	0.4	1	1	1.9e-10	1.7e-07	26.6	0.4	8	92	1	84	1	85	0.86	hypothetical	protein
+PROKKA_ERR479172_bin.22.faa_MDKODBNP_04352	-	336	neuS_final_auto	-	386	6.3e-31	106.7	6.6	1	1	1.3e-34	9.2e-31	106.1	6.6	1	307	1	302	1	321	0.81	hypothetical	protein
+PROKKA_ERR479063_bin.14.faa_HPIDFBCF_00701	-	460	neuS_final_auto	-	386	0.00035	17.1	9.8	1	1	2.2e-05	0.054	9.9	9.7	29	304	126	390	78	436	0.73	hypothetical	protein
+PROKKA_ERR479285_bin.2.faa_CMIDBPKP_00214	-	309	neuS_final_auto	-	386	7.3e-06	23.5	11.3	1	1	4.4e-09	2e-05	22.1	11.3	10	307	4	282	1	300	0.66	hypothetical	protein
+PROKKA_ERR479150_bin.11.faa_KGKHDBEL_00687	-	76	neuS_final_auto	-	386	0.00065	14.5	0.0	1	1	9.1e-07	0.00066	14.5	0.0	114	150	15	57	6	73	0.82	hypothetical	protein
+PROKKA_ERR479039_bin.3.faa_AMAEHNAI_00395	-	245	neuS_final_auto	-	386	0.0018	14.5	2.6	1	1	1.5e-06	0.0029	13.8	2.6	81	174	31	130	19	197	0.65	UTP--glucose-1-phosphate	uridylyltransferase
+PROKKA_ERR479042_bin.15.faa_MDIMMDFL_00443	-	79	neuS_final_auto	-	386	0.00086	14.8	2.4	1	1	7.4e-07	0.00089	14.8	2.4	171	226	13	78	2	79	0.82	hypothetical	protein
+PROKKA_ERR479287_bin.5.faa_GGAHGPBM_00393	-	314	neuS_final_auto	-	386	2.4e-27	92.8	0.0	1	1	1.9e-30	2.9e-27	92.5	0.0	8	303	1	291	1	309	0.90	hypothetical	protein
+PROKKA_ERR479081_bin.2.faa_NCAIGPFE_01269	-	367	neuS_final_auto	-	386	2.4e-29	100.0	14.6	1	1	2.2e-32	2.8e-29	99.8	14.6	9	323	3	341	1	362	0.79	hypothetical	protein
+PROKKA_ERR479081_bin.2.faa_NCAIGPFE_01527	-	369	neuS_final_auto	-	386	6.5e-23	78.9	12.9	1	1	6.6e-26	8.4e-23	78.5	12.9	13	334	5	345	2	364	0.73	hypothetical	protein
+PROKKA_ERR479103_bin.1.faa_KPNBIHKK_00262	-	314	neuS_final_auto	-	386	1.7e-27	92.8	0.0	1	1	1.9e-30	2.2e-27	92.5	0.0	8	303	1	291	1	309	0.90	hypothetical	protein
+PROKKA_ERR479174_bin.19.faa_ECCFNKAM_00963	-	389	neuS_final_auto	-	386	4.2e-18	63.8	7.0	1	1	2.4e-21	5.3e-18	63.4	7.0	114	319	136	348	61	385	0.73	hypothetical	protein
+PROKKA_ERR479174_bin.19.faa_ECCFNKAM_01669	-	247	neuS_final_auto	-	386	0.014	12.7	0.1	1	1	1.2e-05	0.025	11.8	0.1	47	124	44	123	27	124	0.82	hypothetical	protein
+PROKKA_ERR478965_bin.27.faa_PROKKA_ERR478965_bin.27.faa_DBODCKPA_00932	-	531	neuS_final_auto	-	386	2.7e-54	182.2	12.1	1	1	3.3e-57	4.2e-54	181.5	12.1	8	385	1	527	1	529	0.77	hypothetical	protein
+PROKKA_ERR478965_bin.27.faa_PROKKA_ERR478965_bin.27.faa_DBODCKPA_00936	-	502	neuS_final_auto	-	386	1.1e-38	130.7	11.3	1	1	1e-41	1.3e-38	130.5	11.3	8	357	1	376	1	489	0.82	hypothetical	protein
+PROKKA_ERR479261_bin.12.faa_JHFMLHIH_01282	-	154	neuS_final_auto	-	386	0.0052	13.3	1.2	1	1	2.2e-06	0.0055	13.2	1.2	153	245	13	131	1	140	0.66	hypothetical	protein
+PROKKA_ERR479279_bin.4.faa_IHHJNBPO_00034	-	220	neuS_final_auto	-	386	9.6e-05	15.8	0.1	1	1	5.4e-07	0.00014	15.2	0.1	155	251	30	119	10	121	0.81	D-alanyl-D-alanine	carboxypeptidase
+PROKKA_ERR479011_bin.16.faa_APLHECCL_02056	-	314	neuS_final_auto	-	386	2.9e-27	92.9	0.0	1	1	1.7e-30	3.6e-27	92.6	0.0	8	303	1	291	1	309	0.90	hypothetical	protein
+PROKKA_ERR479198_bin.19.faa_MBOPOMEI_00612	-	387	neuS_final_auto	-	386	0.00041	15.3	0.6	1	2	1.6e-06	0.0013	13.7	0.2	30	161	25	184	17	249	0.75	N,N'-diacetylbacillosaminyl-diphospho-undecaprenol	alpha-1,3-N-acetylgalactosaminyltransferase
+PROKKA_ERR479198_bin.19.faa_MBOPOMEI_00612	-	387	neuS_final_auto	-	386	0.00041	15.3	0.6	2	2	0.027	21	-0.2	0.0	323	363	249	328	197	376	0.65	N,N'-diacetylbacillosaminyl-diphospho-undecaprenol	alpha-1,3-N-acetylgalactosaminyltransferase
+PROKKA_ERR479186_bin.6.faa_CDJDNCPM_00235	-	210	neuS_final_auto	-	386	0.0058	12.7	0.2	1	1	3.9e-06	0.007	12.4	0.2	181	255	102	186	50	203	0.65	Sulfate/thiosulfate	import	ATP-binding	protein	CysA
+PROKKA_ERR479138_bin.16.faa_DMLPFLBC_00563	-	314	neuS_final_auto	-	386	3e-27	92.5	0.0	1	1	2.3e-30	3.7e-27	92.2	0.0	8	303	1	291	1	309	0.91	hypothetical	protein
+PROKKA_ERR479069_bin.13.faa_CAMLNJOB_10794	-	331	neuS_final_auto	-	386	0.076	11.8	0.1	1	1	3.2e-05	0.1	11.4	0.1	129	258	67	213	62	213	0.72	Oligopeptide	transport	ATP-binding	protein	OppD
+PROKKA_ERR479069_bin.13.faa_CAMLNJOB_12178	-	495	neuS_final_auto	-	386	0.095	11.5	1.4	1	1	5.5e-05	0.17	10.6	1.4	156	258	102	201	70	203	0.77	Galactose/methyl	galactoside	import	ATP-binding	protein	MglA
+PROKKA_ERR479069_bin.13.faa_CAMLNJOB_02407	-	307	neuS_final_auto	-	386	0.14	10.9	0.0	1	1	5.5e-05	0.18	10.6	0.0	289	346	141	203	136	283	0.70	Thioredoxin	reductase
+PROKKA_ERR479069_bin.13.faa_CAMLNJOB_12367	-	394	neuS_final_auto	-	386	0.23	10.2	5.4	1	1	0.0001	0.32	9.7	4.6	142	258	152	263	139	278	0.66	hypothetical	protein
+PROKKA_ERR479037_bin.20.faa_EGKMFEJF_01262	-	361	neuS_final_auto	-	386	1.1e-34	117.3	6.3	1	1	6.5e-38	1.4e-34	117.0	6.3	8	300	2	327	1	327	0.80	hypothetical	protein
+PROKKA_ERR479170_bin.4.faa_KBKFBLCC_00342	-	361	neuS_final_auto	-	386	2.2e-38	129.6	2.6	1	1	1.3e-41	2.8e-38	129.2	2.6	1	300	1	326	1	328	0.83	hypothetical	protein
+PROKKA_ERR479134_bin.5.faa_JPPDLABK_02094	-	309	neuS_final_auto	-	386	9.5e-13	46.0	10.7	1	1	3.2e-16	1.3e-12	45.6	10.7	84	322	75	288	7	305	0.77	hypothetical	protein
+PROKKA_ERR479051_bin.18.faa_ADBJEIFI_02618	-	389	neuS_final_auto	-	386	7.1e-18	63.8	7.0	1	1	2.4e-21	9e-18	63.4	7.0	114	319	136	348	61	385	0.73	hypothetical	protein
+PROKKA_ERR479051_bin.18.faa_ADBJEIFI_03161	-	467	neuS_final_auto	-	386	0.033	12.2	0.0	1	1	1.5e-05	0.054	11.5	0.0	11	56	118	164	116	217	0.84	UDP-glucose:undecaprenyl-phosphate	glucose-1-phosphate	transferase
+PROKKA_ERR479091_bin.10.faa_HDIMKEFM_01505	-	213	neuS_final_auto	-	386	0.0008	15.6	1.2	1	1	5e-07	0.00096	15.3	1.2	145	262	98	190	56	208	0.78	Linearmycin	resistance	ATP-binding	protein	LnrL
+PROKKA_ERR479206_bin.24.faa_JPNKBLKG_00207	-	154	neuS_final_auto	-	386	0.0052	10.8	0.0	1	1	1.2e-05	0.0052	10.8	0.0	212	282	75	150	13	154	0.85	putative	ABC	transporter	ATP-binding	protein
+PROKKA_ERR479406_bin.18.faa_NGGAEANJ_00528	-	531	neuS_final_auto	-	386	4.4e-57	190.2	10.1	1	1	1.1e-59	6.2e-57	189.7	10.1	8	384	1	526	1	529	0.78	hypothetical	protein
+PROKKA_ERR479406_bin.18.faa_NGGAEANJ_00532	-	502	neuS_final_auto	-	386	2.1e-39	132.0	11.1	1	1	4.3e-42	2.4e-39	131.8	11.1	8	356	1	375	1	490	0.80	hypothetical	protein
+PROKKA_ERR478959_bin.5.faa_PIJPEINI_01759	-	359	neuS_final_auto	-	386	0.0066	12.9	0.4	1	2	8.1e-06	0.02	11.4	0.2	37	161	4	156	1	221	0.72	N,N'-diacetylbacillosaminyl-diphospho-undecaprenol	alpha-1,3-N-acetylgalactosaminyltransferase
+PROKKA_ERR478959_bin.5.faa_PIJPEINI_01759	-	359	neuS_final_auto	-	386	0.0066	12.9	0.4	2	2	0.023	57	-0.0	0.0	323	363	221	306	169	348	0.66	N,N'-diacetylbacillosaminyl-diphospho-undecaprenol	alpha-1,3-N-acetylgalactosaminyltransferase
+PROKKA_ERR479007_bin.1.faa_PROKKA_ERR479007_bin.1.faa_HEAGENCN_02740	-	359	neuS_final_auto	-	386	4.3e-15	53.8	12.4	1	1	3.9e-18	5.3e-15	53.5	12.4	8	330	1	337	1	356	0.73	hypothetical	protein
+PROKKA_ERR479007_bin.1.faa_PROKKA_ERR479007_bin.1.faa_HEAGENCN_02659	-	213	neuS_final_auto	-	386	0.0056	13.9	0.2	1	1	4.1e-06	0.0057	13.9	0.2	176	262	118	190	33	208	0.79	Linearmycin	resistance	ATP-binding	protein	LnrL
+PROKKA_ERR479007_bin.1.faa_PROKKA_ERR479007_bin.1.faa_HEAGENCN_00893	-	247	neuS_final_auto	-	386	0.0071	13.6	0.5	1	2	9.1e-06	0.012	12.8	0.1	172	222	5	58	1	63	0.89	hypothetical	protein
+PROKKA_ERR479007_bin.1.faa_PROKKA_ERR479007_bin.1.faa_HEAGENCN_00893	-	247	neuS_final_auto	-	386	0.0071	13.6	0.5	2	2	0.49	6.7e+02	-2.8	0.0	82	111	210	240	178	244	0.61	hypothetical	protein
+PROKKA_ERR479067_bin.19.faa_FEDHNOPD_00271	-	359	neuS_final_auto	-	386	6.9e-16	54.2	12.8	1	1	1.9e-18	8.5e-16	53.9	12.8	8	340	1	351	1	356	0.74	hypothetical	protein
+PROKKA_ERR479067_bin.19.faa_FEDHNOPD_00510	-	247	neuS_final_auto	-	386	0.0015	13.6	0.5	1	2	6e-06	0.0027	12.8	0.1	172	222	5	58	1	63	0.89	hypothetical	protein
+PROKKA_ERR479067_bin.19.faa_FEDHNOPD_00510	-	247	neuS_final_auto	-	386	0.0015	13.6	0.5	2	2	0.32	1.4e+02	-2.8	0.0	82	111	210	240	178	244	0.61	hypothetical	protein
+PROKKA_ERR479418_bin.36.faa_FMBJPNGI_01427	-	119	neuS_final_auto	-	386	0.0091	13.0	4.2	1	1	2.7e-06	0.0094	12.9	4.2	63	178	3	111	1	119	0.75	hypothetical	protein
+PROKKA_ERR479069_bin.12.faa_NJDOGDNN_07461	-	387	neuS_final_auto	-	386	1.2e-14	53.5	18.4	1	1	3.3e-18	1.6e-14	53.1	18.4	41	341	16	349	5	384	0.73	hypothetical	protein
+PROKKA_ERR479069_bin.12.faa_NJDOGDNN_02033	-	375	neuS_final_auto	-	386	0.0011	17.5	0.9	1	1	2.7e-07	0.0013	17.2	0.9	1	150	1	139	1	229	0.73	Putative	glycosyltransferase	EpsD
+PROKKA_ERR479065_bin.36.faa_OALLKAME_00743	-	333	neuS_final_auto	-	386	1.6e-16	57.0	7.5	1	1	1.6e-19	2.3e-16	56.5	7.5	8	323	10	311	5	329	0.77	hypothetical	protein
+PROKKA_ERR479005_bin.2.faa_IDJPHOKN_01770	-	359	neuS_final_auto	-	386	2.1e-15	53.8	12.4	1	1	2.6e-18	2.5e-15	53.5	12.4	8	330	1	337	1	356	0.73	hypothetical	protein
+PROKKA_ERR479005_bin.2.faa_IDJPHOKN_00640	-	213	neuS_final_auto	-	386	0.0015	14.7	0.4	1	1	1.8e-06	0.0017	14.5	0.4	164	262	106	190	39	208	0.80	Linearmycin	resistance	ATP-binding	protein	LnrL
+PROKKA_ERR479038_bin.15.faa_CAEJIDJI_01437	-	172	neuS_final_auto	-	386	0.0011	16.1	0.0	1	1	3.6e-07	0.0013	15.8	0.0	237	323	11	110	8	164	0.70	Teichoic	acid	ribitol-phosphate	primase
+PROKKA_ERR479142_bin.2.faa_NLBFCBBF_01726	-	531	neuS_final_auto	-	386	7.4e-58	193.5	10.0	1	1	1e-60	1e-57	193.1	10.0	8	384	1	526	1	529	0.81	hypothetical	protein
+PROKKA_ERR479142_bin.2.faa_NLBFCBBF_01722	-	505	neuS_final_auto	-	386	6.9e-39	131.1	11.7	1	1	8.2e-42	8e-39	130.8	11.7	11	359	6	381	1	486	0.83	hypothetical	protein
+PROKKA_ERR479130_bin.1.faa_JCEBOKLG_01412	-	181	neuS_final_auto	-	386	0.019	11.2	0.0	1	1	9.4e-06	0.021	11.1	0.0	211	282	94	177	31	181	0.79	putative	ABC	transporter	ATP-binding	protein
+PROKKA_ERR479071_bin.22.faa_DOIKCJOK_01327	-	361	neuS_final_auto	-	386	6.1e-37	126.4	5.4	1	1	1.1e-40	7.3e-37	126.1	5.4	8	298	2	325	1	327	0.83	hypothetical	protein
+PROKKA_ERR479040_bin.13.faa_DKCDLHDH_00271	-	253	neuS_final_auto	-	386	0.0029	12.8	9.5	1	1	6e-06	0.0059	11.8	9.5	49	200	14	202	2	247	0.79	GDP-L-fucose	synthase
+PROKKA_ERR479140_bin.11.faa_CGBNIDIC_01467	-	361	neuS_final_auto	-	386	2e-37	126.4	5.4	1	1	1.1e-40	2.3e-37	126.1	5.4	8	298	2	325	1	327	0.83	hypothetical	protein
+PROKKA_ERR479015_bin.16.faa_NHHAPJIP_03502	-	362	neuS_final_auto	-	386	8.1e-29	99.5	19.4	1	1	1.6e-32	9.6e-29	99.3	19.4	9	334	7	342	1	358	0.78	hypothetical	protein
+PROKKA_ERR479155_bin.14.faa_KBPNPFNG_00163	-	138	neuS_final_auto	-	386	2e-26	89.9	4.2	1	1	2.6e-29	2.2e-26	89.7	4.2	202	308	5	107	2	133	0.92	hypothetical	protein
+PROKKA_ERR479155_bin.14.faa_KBPNPFNG_00164	-	83	neuS_final_auto	-	386	0.00014	17.9	1.1	1	1	1.8e-07	0.00016	17.8	1.1	90	153	10	75	7	82	0.70	hypothetical	protein
+PROKKA_ERR479101_bin.21.faa_JAFHEPBD_01499	-	324	neuS_final_auto	-	386	3.8e-26	89.2	0.0	1	1	2.2e-29	4.6e-26	89.0	0.0	9	305	3	305	1	320	0.86	hypothetical	protein
+PROKKA_ERR479041_bin.21.faa_PMBNNDPK_00169	-	79	neuS_final_auto	-	386	0.00039	14.8	2.4	1	1	7.4e-07	0.00041	14.8	2.4	171	226	13	78	2	79	0.82	hypothetical	protein
+PROKKA_ERR479102_bin.18.faa_FJHFIACK_00207	-	331	neuS_final_auto	-	386	0.011	11.8	0.1	1	1	7.9e-06	0.015	11.4	0.1	129	258	67	213	62	213	0.72	Oligopeptide	transport	ATP-binding	protein	OppD
+PROKKA_ERR479243_bin.8.faa_MEGGINGH_03491	-	356	neuS_final_auto	-	386	4.8e-36	123.0	0.5	1	1	1.3e-39	5.8e-36	122.7	0.5	9	300	3	321	1	330	0.83	hypothetical	protein
+PROKKA_ERR479132_bin.1.faa_CABHEHFM_03288	-	309	neuS_final_auto	-	386	8.9e-13	46.0	10.7	1	1	3.2e-16	1.2e-12	45.6	10.7	84	322	75	288	7	305	0.77	hypothetical	protein
+PROKKA_ERR479271_bin.6.faa_OANPEPNG_01247	-	460	neuS_final_auto	-	386	0.00056	17.1	9.8	1	1	2.2e-05	0.086	9.9	9.7	29	304	126	390	78	436	0.73	hypothetical	protein
+PROKKA_ERR479000_bin.2.faa_IGKAEFAF_01354	-	223	neuS_final_auto	-	386	0.0004	16.5	0.3	1	1	4.7e-07	0.0004	16.4	0.3	144	268	72	210	11	222	0.79	Lipoprotein-releasing	system	ATP-binding	protein	LolD
+PROKKA_ERR479000_bin.2.faa_IGKAEFAF_00176	-	178	neuS_final_auto	-	386	0.0051	12.8	0.3	1	1	6.8e-06	0.0059	12.6	0.3	181	282	74	174	14	178	0.67	putative	ABC	transporter	ATP-binding	protein
+PROKKA_ERR479036_bin.6.faa_KFMODDOF_00613	-	335	neuS_final_auto	-	386	6.4e-06	23.4	17.0	1	1	3e-09	1.1e-05	22.7	17.0	12	314	12	303	5	333	0.69	hypothetical	protein
+PROKKA_ERR479034_bin.14.faa_PNGCNKGL_00613	-	212	neuS_final_auto	-	386	0.017	11.5	0.2	1	1	8.6e-06	0.021	11.3	0.2	179	264	100	193	61	208	0.75	Bacitracin	transport	ATP-binding	protein	BcrA
+PROKKA_ERR479040_bin.8.faa_MAOJHJPP_01752	-	245	neuS_final_auto	-	386	0.0017	14.5	2.6	1	1	1.5e-06	0.0028	13.8	2.6	81	174	31	130	19	197	0.65	UTP--glucose-1-phosphate	uridylyltransferase
+PROKKA_ERR479078_bin.4.faa_AGCBKHCP_01426	-	358	neuS_final_auto	-	386	1e-24	85.9	9.3	1	1	2.4e-28	1.4e-24	85.5	9.3	7	314	9	326	6	356	0.72	hypothetical	protein
+PROKKA_ERR479051_bin.10.faa_NLEHDMDH_01707	-	168	neuS_final_auto	-	386	3e-23	79.8	0.0	1	1	2.7e-26	3.2e-23	79.7	0.0	183	341	2	167	1	168	0.82	hypothetical	protein
+PROKKA_ERR479051_bin.10.faa_NLEHDMDH_01706	-	264	neuS_final_auto	-	386	1.3e-07	28.4	0.0	1	1	1.4e-10	1.7e-07	28.0	0.0	47	141	135	256	120	261	0.81	hypothetical	protein
+PROKKA_ERR479187_bin.5.faa_DAMFOANB_02778	-	335	neuS_final_auto	-	386	5.7e-06	23.4	17.0	1	1	3e-09	9.5e-06	22.7	17.0	12	314	12	303	5	333	0.69	hypothetical	protein
+PROKKA_ERR479083_bin.7.faa_CNGAKBOI_06718	-	335	neuS_final_auto	-	386	4.6e-05	22.1	14.4	1	1	1e-08	0.0001	20.9	14.4	12	314	12	303	5	333	0.65	hypothetical	protein
+PROKKA_ERR479186_bin.4.faa_APIFGJLE_00707	-	281	neuS_final_auto	-	386	6.1e-07	26.4	11.6	1	1	6.8e-10	9.4e-07	25.8	11.6	86	314	19	249	5	279	0.70	hypothetical	protein
+PROKKA_ERR479186_bin.4.faa_APIFGJLE_00399	-	154	neuS_final_auto	-	386	0.0057	13.3	1.1	1	1	4.3e-06	0.0061	13.2	1.1	153	245	13	131	1	140	0.66	hypothetical	protein
+PROKKA_ERR479169_bin.1.faa_IIADJADC_00368	-	361	neuS_final_auto	-	386	2e-38	129.6	2.6	1	1	1.3e-41	2.5e-38	129.2	2.6	1	300	1	326	1	328	0.83	hypothetical	protein
+PROKKA_ERR479205_bin.16.faa_MEJFLCPH_01159	-	387	neuS_final_auto	-	386	0.0056	15.3	0.5	1	2	8e-06	0.017	13.7	0.2	30	161	25	184	17	249	0.75	N,N'-diacetylbacillosaminyl-diphospho-undecaprenol	alpha-1,3-N-acetylgalactosaminyltransferase
+PROKKA_ERR479205_bin.16.faa_MEJFLCPH_01159	-	387	neuS_final_auto	-	386	0.0056	15.3	0.5	2	2	0.14	3.1e+02	-0.3	0.1	323	363	249	328	200	376	0.66	N,N'-diacetylbacillosaminyl-diphospho-undecaprenol	alpha-1,3-N-acetylgalactosaminyltransferase
+PROKKA_ERR479205_bin.16.faa_MEJFLCPH_10812	-	320	neuS_final_auto	-	386	0.0063	15.1	3.8	1	2	3.3e-06	0.0071	15.0	2.4	82	177	6	105	2	172	0.66	D-inositol-3-phosphate	glycosyltransferase
+PROKKA_ERR479205_bin.16.faa_MEJFLCPH_10812	-	320	neuS_final_auto	-	386	0.0063	15.1	3.8	2	2	0.26	5.7e+02	-1.2	0.0	314	372	238	299	190	316	0.63	D-inositol-3-phosphate	glycosyltransferase
+PROKKA_ERR479205_bin.16.faa_MEJFLCPH_06216	-	85	neuS_final_auto	-	386	0.012	14.3	0.1	1	1	5.3e-06	0.012	14.3	0.1	200	244	21	62	1	71	0.78	Protein	glycosylation	K
+PROKKA_ERR479205_bin.16.faa_MEJFLCPH_08404	-	419	neuS_final_auto	-	386	0.032	12.8	6.8	1	2	0.19	4.1e+02	-0.7	0.3	335	346	186	218	118	274	0.44	hypothetical	protein
+PROKKA_ERR479205_bin.16.faa_MEJFLCPH_08404	-	419	neuS_final_auto	-	386	0.032	12.8	6.8	2	2	2.5e-05	0.055	12.0	5.9	155	251	273	373	189	387	0.79	hypothetical	protein
+PROKKA_ERR479205_bin.16.faa_MEJFLCPH_03880	-	302	neuS_final_auto	-	386	0.14	10.7	0.0	1	1	7.9e-05	0.17	10.4	0.0	288	345	139	199	135	284	0.77	Thioredoxin	reductase
+PROKKA_ERR479151_bin.21.faa_MBMDCEKG_02114	-	361	neuS_final_auto	-	386	3e-18	63.5	12.9	1	1	3e-21	3.7e-18	63.2	12.9	8	357	1	352	1	359	0.69	hypothetical	protein
+PROKKA_ERR479151_bin.21.faa_MBMDCEKG_00551	-	213	neuS_final_auto	-	386	0.00093	15.8	0.6	1	1	8.5e-07	0.0011	15.6	0.6	164	262	106	190	47	208	0.79	Linearmycin	resistance	ATP-binding	protein	LnrL
+PROKKA_ERR479206_bin.22.faa_MOIODHBO_02882	-	387	neuS_final_auto	-	386	0.0033	15.3	0.5	1	2	3.2e-06	0.01	13.7	0.2	30	161	25	184	17	249	0.75	N,N'-diacetylbacillosaminyl-diphospho-undecaprenol	alpha-1,3-N-acetylgalactosaminyltransferase
+PROKKA_ERR479206_bin.22.faa_MOIODHBO_02882	-	387	neuS_final_auto	-	386	0.0033	15.3	0.5	2	2	0.057	1.9e+02	-0.3	0.1	323	363	249	328	200	376	0.66	N,N'-diacetylbacillosaminyl-diphospho-undecaprenol	alpha-1,3-N-acetylgalactosaminyltransferase
+PROKKA_ERR479206_bin.22.faa_MOIODHBO_05285	-	85	neuS_final_auto	-	386	0.0069	14.3	0.1	1	1	2.1e-06	0.0069	14.3	0.1	200	244	21	62	1	71	0.78	Protein	glycosylation	K
+PROKKA_ERR479063_bin.13.faa_CJMNCHPF_01052	-	314	neuS_final_auto	-	386	7.9e-28	93.9	0.0	1	1	8.4e-31	9.7e-28	93.6	0.0	8	303	1	291	1	309	0.91	hypothetical	protein
+PROKKA_ERR478974_bin.24.faa_FCFEGNMH_00258	-	428	neuS_final_auto	-	386	2.8e-23	77.8	10.3	1	1	8.6e-26	4.5e-23	77.1	10.3	126	383	2	345	1	350	0.69	hypothetical	protein
+PROKKA_ERR478997_bin.14.faa_PROKKA_ERR478997_bin.14.faa_KEIGOEEH_00071	-	76	neuS_final_auto	-	386	0.0017	14.5	0.0	1	1	9.1e-07	0.0017	14.5	0.0	114	150	15	57	6	73	0.82	hypothetical	protein
+PROKKA_ERR479209_bin.15.faa_DHMCHIHE_02761	-	352	neuS_final_auto	-	386	1.2e-24	85.1	9.9	1	1	1.1e-27	1.4e-24	84.9	9.9	7	314	3	320	1	350	0.72	hypothetical	protein
+PROKKA_ERR479209_bin.15.faa_DHMCHIHE_02992	-	377	neuS_final_auto	-	386	3.3e-15	54.1	17.3	1	1	3.2e-18	4e-15	53.8	17.3	47	341	13	339	2	374	0.73	hypothetical	protein
+PROKKA_ERR479209_bin.15.faa_DHMCHIHE_02974	-	191	neuS_final_auto	-	386	0.025	11.7	0.0	1	1	2.3e-05	0.029	11.4	0.0	48	139	84	172	23	186	0.81	hypothetical	protein
+PROKKA_ERR479103_bin.10.faa_ALODECKC_01531	-	76	neuS_final_auto	-	386	0.0045	13.1	0.1	1	1	2.4e-06	0.0046	13.1	0.1	114	150	15	57	6	73	0.82	hypothetical	protein
+PROKKA_ERR479099_bin.10.faa_OCIMMDGJ_01636	-	309	neuS_final_auto	-	386	4.4e-06	23.9	11.5	1	1	3.2e-09	1.1e-05	22.6	11.5	10	307	4	282	1	300	0.66	hypothetical	protein
+PROKKA_ERR479209_bin.5.faa_DCHLLJBB_00257	-	372	neuS_final_auto	-	386	5.8e-19	62.6	8.1	1	1	2.5e-21	6.4e-19	62.4	8.1	8	289	1	275	1	349	0.79	hypothetical	protein
+PROKKA_ERR478995_bin.12.faa_POKHNBMA_01307	-	358	neuS_final_auto	-	386	2.7e-19	66.9	14.8	1	1	1.4e-22	3.5e-19	66.5	14.8	8	334	1	328	1	353	0.75	hypothetical	protein
+PROKKA_ERR479005_bin.19.faa_LEOLFCMD_00457	-	338	neuS_final_auto	-	386	6.7e-27	91.1	20.3	1	1	1.2e-29	8.6e-27	90.7	20.3	1	307	1	302	1	320	0.80	hypothetical	protein
+PROKKA_ERR479005_bin.19.faa_LEOLFCMD_00464	-	384	neuS_final_auto	-	386	0.00095	14.9	0.1	1	1	2.5e-06	0.0017	14.0	0.1	241	306	227	296	225	380	0.69	hypothetical	protein
+PROKKA_ERR479097_bin.3.faa_IMGOJLCA_00811	-	172	neuS_final_auto	-	386	0.00053	16.1	1.3	1	1	3.4e-07	0.00061	15.9	1.3	145	262	57	149	27	167	0.77	Linearmycin	resistance	ATP-binding	protein	LnrL
+PROKKA_ERR479001_bin.18.faa_NCGFDOJD_02018	-	223	neuS_final_auto	-	386	0.00049	16.5	0.3	1	1	2.3e-07	0.0005	16.4	0.3	144	268	72	210	11	222	0.79	Lipoprotein-releasing	system	ATP-binding	protein	LolD
+PROKKA_ERR478966_bin.19.faa_PROKKA_ERR478966_bin.19.faa_IHOGOPPG_01087	-	361	neuS_final_auto	-	386	4.3e-34	115.7	4.5	1	1	4.2e-37	5.4e-34	115.4	4.5	8	300	2	327	1	327	0.79	hypothetical	protein
+PROKKA_ERR478966_bin.19.faa_PROKKA_ERR478966_bin.19.faa_IHOGOPPG_00682	-	372	neuS_final_auto	-	386	5.9e-18	62.6	8.1	1	1	5e-21	6.5e-18	62.4	8.1	8	289	1	275	1	349	0.79	hypothetical	protein
+PROKKA_ERR479216_bin.3.faa_PCKKKLNM_03313	-	333	neuS_final_auto	-	386	8.2e-15	52.7	9.4	1	1	2.6e-18	9.8e-15	52.5	9.4	8	309	1	306	1	328	0.77	hypothetical	protein
+PROKKA_ERR479196_bin.25.faa_AJJBGBJH_00386	-	213	neuS_final_auto	-	386	0.00094	15.6	1.2	1	1	5e-07	0.0011	15.3	1.2	145	262	98	190	56	208	0.78	Linearmycin	resistance	ATP-binding	protein	LnrL
+PROKKA_ERR478984_bin.11.faa_OAECEIMA_00205	-	235	neuS_final_auto	-	386	2.1e-08	28.4	6.0	1	1	2e-10	2.6e-08	28.1	6.0	164	314	45	203	2	233	0.61	hypothetical	protein
+PROKKA_ERR478984_bin.11.faa_OAECEIMA_00200	-	211	neuS_final_auto	-	386	1.8e-06	22.0	2.4	1	1	1.7e-08	2.2e-06	21.7	2.4	157	261	79	191	42	206	0.84	Bacitracin	transport	ATP-binding	protein	BcrA
+PROKKA_ERR478984_bin.11.faa_OAECEIMA_00108	-	249	neuS_final_auto	-	386	0.00059	13.7	0.5	1	2	1.1e-05	0.0014	12.5	0.3	180	255	108	187	89	190	0.78	Aliphatic	sulfonates	import	ATP-binding	protein	SsuB
+PROKKA_ERR478984_bin.11.faa_OAECEIMA_00108	-	249	neuS_final_auto	-	386	0.00059	13.7	0.5	2	2	0.1	13	-0.6	0.1	198	237	180	219	171	223	0.59	Aliphatic	sulfonates	import	ATP-binding	protein	SsuB
+PROKKA_ERR479082_bin.14.faa_FDHCCGJL_05275	-	367	neuS_final_auto	-	386	5.4e-29	100.0	14.6	1	1	2.2e-32	6.3e-29	99.8	14.6	9	323	3	341	1	362	0.79	hypothetical	protein
+PROKKA_ERR479082_bin.14.faa_FDHCCGJL_04962	-	369	neuS_final_auto	-	386	1.4e-22	78.9	12.9	1	1	6.6e-26	1.9e-22	78.5	12.9	13	334	5	345	2	364	0.73	hypothetical	protein
+PROKKA_ERR479071_bin.10.faa_IABBCFIM_00326	-	319	neuS_final_auto	-	386	5.1e-14	50.1	10.8	1	1	2.9e-17	1.1e-13	49.1	10.8	104	329	82	306	3	317	0.67	hypothetical	protein
+PROKKA_ERR479254_bin.46.faa_CLPMAFOJ_02167	-	371	neuS_final_auto	-	386	7.9e-26	88.3	1.3	1	1	1.2e-28	9.6e-26	88.0	1.3	5	319	3	330	1	366	0.79	hypothetical	protein
+PROKKA_ERR479254_bin.46.faa_CLPMAFOJ_02055	-	365	neuS_final_auto	-	386	1.5e-12	44.6	10.8	1	1	2.3e-15	1.8e-12	44.3	10.8	10	319	4	317	1	364	0.68	hypothetical	protein
+PROKKA_ERR479254_bin.46.faa_CLPMAFOJ_01858	-	136	neuS_final_auto	-	386	0.0014	15.1	0.1	1	1	2.1e-06	0.0016	14.9	0.1	30	117	33	124	12	131	0.73	Putative	nuclease	YhcG
+PROKKA_ERR479049_bin.27.faa_PLGEJJMN_00828	-	361	neuS_final_auto	-	386	4.6e-35	117.3	6.3	1	1	6.5e-38	5.7e-35	117.0	6.3	8	300	2	327	1	327	0.80	hypothetical	protein
+PROKKA_ERR479254_bin.83.faa_KDOMILPJ_00677	-	361	neuS_final_auto	-	386	7.7e-39	129.4	2.7	1	1	1.4e-41	9.6e-39	129.1	2.7	1	300	1	326	1	328	0.83	hypothetical	protein
+PROKKA_ERR479408_bin.7.faa_JBJDGNNM_00271	-	314	neuS_final_auto	-	386	3.5e-27	92.5	0.0	1	1	2.2e-30	4.4e-27	92.2	0.0	8	303	1	291	1	309	0.89	hypothetical	protein
+PROKKA_ERR479250_bin.10.faa_LMLFMKEA_00212	-	237	neuS_final_auto	-	386	0.0021	14.2	0.1	1	1	1.3e-06	0.0026	14.0	0.1	175	278	114	210	62	212	0.79	Manganese	import	ATP-binding	protein	ScaC
+PROKKA_ERR479102_bin.32.faa_KIDOGDEB_00111	-	324	neuS_final_auto	-	386	3.8e-26	89.2	0.0	1	1	2.2e-29	4.6e-26	89.0	0.0	9	305	3	305	1	320	0.86	hypothetical	protein
+PROKKA_ERR478960_bin.27.faa_PROKKA_ERR478960_bin.27.faa_CPJAHJNI_01322	-	314	neuS_final_auto	-	386	1.8e-27	93.5	0.0	1	1	1.1e-30	2.2e-27	93.2	0.0	8	303	1	291	1	309	0.91	hypothetical	protein
+PROKKA_ERR479210_bin.4.faa_FEJDMPFJ_00932	-	361	neuS_final_auto	-	386	4.5e-34	115.7	4.5	1	1	2.1e-37	5.6e-34	115.4	4.5	8	300	2	327	1	327	0.79	hypothetical	protein
+PROKKA_ERR479122_bin.19.faa_DAHADNPC_01223	-	81	neuS_final_auto	-	386	0.012	11.6	0.0	1	1	7.4e-06	0.013	11.5	0.0	214	282	4	77	2	81	0.87	hypothetical	protein
+PROKKA_ERR479037_bin.17.faa_AEMJAJHM_00939	-	498	neuS_final_auto	-	386	4.2e-37	125.8	0.0	1	1	1.7e-40	5e-37	125.5	0.0	57	341	152	497	122	498	0.87	hypothetical	protein
+PROKKA_ERR479245_bin.19.faa_IDJOMAPL_00426	-	159	neuS_final_auto	-	386	0.0088	11.6	0.2	1	1	7.1e-06	0.0094	11.6	0.2	189	264	57	140	6	156	0.72	Bacitracin	transport	ATP-binding	protein	BcrA
+PROKKA_ERR479132_bin.4.faa_APPGMHDI_00571	-	323	neuS_final_auto	-	386	3.3e-36	122.1	8.7	1	1	2.2e-39	3.9e-36	121.8	8.7	8	308	2	292	1	318	0.75	hypothetical	protein
+PROKKA_ERR479405_bin.18.faa_ECNKFIDI_01759	-	314	neuS_final_auto	-	386	3.5e-27	92.5	0.0	1	1	2.2e-30	4.3e-27	92.2	0.0	8	303	1	291	1	309	0.89	hypothetical	protein
+PROKKA_ERR478997_bin.15.faa_KLIFANPN_00607	-	367	neuS_final_auto	-	386	2.3e-34	115.3	4.1	1	1	2.6e-37	2.8e-34	115.0	4.1	7	299	5	331	1	344	0.81	hypothetical	protein
+PROKKA_ERR478984_bin.6.faa_ECLHPENE_01665	-	531	neuS_final_auto	-	386	6.5e-57	190.3	8.7	1	1	5e-60	8.9e-57	189.8	8.7	8	384	1	526	1	529	0.79	hypothetical	protein
+PROKKA_ERR479063_bin.34.faa_BEDNBDPH_00079	-	213	neuS_final_auto	-	386	0.00015	15.2	0.8	1	1	6.8e-07	0.00018	14.9	0.8	144	262	97	190	62	208	0.80	Linearmycin	resistance	ATP-binding	protein	LnrL
+PROKKA_ERR479259_bin.9.faa_NFECFAEO_00930	-	154	neuS_final_auto	-	386	0.0053	13.3	1.2	1	1	2.2e-06	0.0056	13.2	1.2	153	245	13	131	1	140	0.66	hypothetical	protein
+PROKKA_ERR479079_bin.3.faa_MMBINJMD_02042	-	367	neuS_final_auto	-	386	3.9e-29	100.0	14.6	1	1	1.1e-32	4.5e-29	99.8	14.6	9	323	3	341	1	362	0.79	hypothetical	protein
+PROKKA_ERR479083_bin.24.faa_OMJBCKEE_01338	-	309	neuS_final_auto	-	386	5e-06	23.9	11.5	1	1	3.2e-09	1.3e-05	22.6	11.5	10	307	4	282	1	300	0.66	hypothetical	protein
+PROKKA_ERR478986_bin.19.faa_FAIHCLLF_01068	-	213	neuS_final_auto	-	386	0.00075	15.6	1.2	1	1	5e-07	0.0009	15.3	1.2	145	262	98	190	56	208	0.78	Linearmycin	resistance	ATP-binding	protein	LnrL
+PROKKA_ERR479003_bin.18.faa_BHABLBGK_01833	-	314	neuS_final_auto	-	386	1.6e-27	93.8	0.0	1	1	9.3e-31	2e-27	93.5	0.0	8	303	1	291	1	309	0.91	hypothetical	protein
+PROKKA_ERR479100_bin.8.faa_DGHDIKJC_00185	-	147	neuS_final_auto	-	386	0.0046	13.3	1.6	1	1	2.5e-06	0.0053	13.1	1.6	160	245	22	125	2	133	0.69	hypothetical	protein
+PROKKA_ERR479065_bin.15.faa_MONCDIGJ_00868	-	138	neuS_final_auto	-	386	6.4e-29	97.8	1.4	1	1	9.6e-32	7.1e-29	97.7	1.4	203	308	6	107	2	131	0.94	hypothetical	protein
+PROKKA_ERR479065_bin.15.faa_MONCDIGJ_00869	-	149	neuS_final_auto	-	386	1.4e-05	21.0	1.0	1	1	2.4e-08	1.8e-05	20.7	1.0	8	153	2	141	1	148	0.62	hypothetical	protein
+PROKKA_ERR479145_bin.7.faa_GAMOFANN_00297	-	173	neuS_final_auto	-	386	0.00013	16.3	0.2	1	1	2.9e-07	0.00015	16.1	0.2	154	251	56	146	11	148	0.81	D-alanyl-D-alanine	carboxypeptidase
+PROKKA_ERR479083_bin.34.faa_FBPHBMMP_01510	-	309	neuS_final_auto	-	386	1.4e-36	123.8	0.0	1	1	6.2e-40	1.5e-36	123.7	0.0	85	341	3	308	1	309	0.91	hypothetical	protein
+PROKKA_ERR479184_bin.3.faa_IHPFBPHF_01272	-	210	neuS_final_auto	-	386	0.0061	12.7	0.2	1	1	3.9e-06	0.0073	12.4	0.2	181	255	102	186	50	203	0.65	Sulfate/thiosulfate	import	ATP-binding	protein	CysA
+PROKKA_ERR478966_bin.23.faa_AIDJIJBP_02190	-	359	neuS_final_auto	-	386	1.9e-15	54.2	12.8	1	1	1.9e-18	2.4e-15	53.9	12.8	8	340	1	351	1	356	0.74	hypothetical	protein
+PROKKA_ERR478966_bin.23.faa_AIDJIJBP_00032	-	213	neuS_final_auto	-	386	0.0034	13.9	0.2	1	1	2.8e-06	0.0034	13.9	0.2	176	262	118	190	33	208	0.79	Linearmycin	resistance	ATP-binding	protein	LnrL
+PROKKA_ERR479285_bin.17.faa_HHHDKOPH_00155	-	361	neuS_final_auto	-	386	4.7e-38	127.4	5.8	1	1	5.3e-41	5.6e-38	127.2	5.8	8	298	2	325	1	327	0.83	hypothetical	protein
+PROKKA_ERR479104_bin.19.faa_ONFAOBBB_00181	-	138	neuS_final_auto	-	386	1.5e-28	95.9	1.2	1	1	1.8e-31	1.7e-28	95.8	1.2	203	308	6	107	2	131	0.94	hypothetical	protein
+PROKKA_ERR479011_bin.24.faa_AMFHPHGA_00019	-	111	neuS_final_auto	-	386	2.4e-17	57.4	0.1	1	1	9.1e-20	2.7e-17	57.3	0.1	224	300	6	76	1	85	0.91	hypothetical	protein
+PROKKA_ERR478967_bin.3.faa_PROKKA_ERR478967_bin.3.faa_OBPELHPP_00652	-	531	neuS_final_auto	-	386	8e-55	182.2	12.1	1	1	4.9e-57	1.3e-54	181.5	12.1	8	385	1	527	1	529	0.77	hypothetical	protein
+PROKKA_ERR478967_bin.3.faa_PROKKA_ERR478967_bin.3.faa_OBPELHPP_00648	-	502	neuS_final_auto	-	386	3.4e-39	130.7	11.3	1	1	1.5e-41	3.9e-39	130.5	11.3	8	357	1	376	1	489	0.82	hypothetical	protein
+PROKKA_ERR478967_bin.3.faa_PROKKA_ERR478967_bin.3.faa_OBPELHPP_00304	-	206	neuS_final_auto	-	386	0.0044	11.8	0.1	1	1	1.9e-05	0.0048	11.7	0.1	184	264	124	190	80	206	0.73	Bacitracin	transport	ATP-binding	protein	BcrA
+PROKKA_ERR479281_bin.19.faa_AHMCHMAF_01040	-	314	neuS_final_auto	-	386	2.8e-27	92.1	0.0	1	1	3e-30	3.5e-27	91.8	0.0	8	303	1	291	1	309	0.90	hypothetical	protein
+PROKKA_ERR479195_bin.17.faa_PLKCPOLO_01744	-	387	neuS_final_auto	-	386	0.0012	15.3	0.6	1	2	1.6e-06	0.0037	13.7	0.2	30	161	25	184	17	249	0.75	N,N'-diacetylbacillosaminyl-diphospho-undecaprenol	alpha-1,3-N-acetylgalactosaminyltransferase
+PROKKA_ERR479195_bin.17.faa_PLKCPOLO_01744	-	387	neuS_final_auto	-	386	0.0012	15.3	0.6	2	2	0.027	61	-0.2	0.0	323	363	249	328	197	376	0.65	N,N'-diacetylbacillosaminyl-diphospho-undecaprenol	alpha-1,3-N-acetylgalactosaminyltransferase
+PROKKA_ERR479076_bin.43.faa_AANMHCFO_01318	-	309	neuS_final_auto	-	386	3.8e-13	46.0	10.7	1	1	3.2e-16	5.1e-13	45.6	10.7	84	322	75	288	7	305	0.77	hypothetical	protein
+PROKKA_ERR478995_bin.13.faa_OJFKMAMJ_03640	-	309	neuS_final_auto	-	386	1.4e-12	46.0	10.7	1	1	6.4e-16	1.9e-12	45.6	10.7	84	322	75	288	7	305	0.77	hypothetical	protein
+PROKKA_ERR478995_bin.13.faa_OJFKMAMJ_02227	-	500	neuS_final_auto	-	386	0.048	11.3	0.3	1	2	5.6e-05	0.17	9.6	0.1	205	264	151	206	87	237	0.79	Ribose	import	ATP-binding	protein	RbsA
+PROKKA_ERR478995_bin.13.faa_OJFKMAMJ_02227	-	500	neuS_final_auto	-	386	0.048	11.3	0.3	2	2	0.082	2.4e+02	-0.8	0.0	193	248	393	444	334	451	0.59	Ribose	import	ATP-binding	protein	RbsA
+PROKKA_ERR479100_bin.17.faa_EAABDGEA_01830	-	309	neuS_final_auto	-	386	4.4e-06	23.9	11.5	1	1	3.2e-09	1.1e-05	22.6	11.5	10	307	4	282	1	300	0.66	hypothetical	protein
+PROKKA_ERR479074_bin.16.faa_NBHDCDCP_03794	-	319	neuS_final_auto	-	386	7.4e-14	50.1	10.8	1	1	5.8e-17	1.6e-13	49.1	10.8	104	329	82	306	3	317	0.67	hypothetical	protein
+PROKKA_ERR479074_bin.16.faa_NBHDCDCP_00432	-	114	neuS_final_auto	-	386	0.0017	16.0	0.1	1	1	6.3e-07	0.0017	16.0	0.1	55	131	5	84	1	109	0.86	hypothetical	protein
+PROKKA_ERR478994_bin.3.faa_LAFPNADN_00437	-	358	neuS_final_auto	-	386	1.1e-19	66.9	14.8	1	1	1.4e-22	1.5e-19	66.5	14.8	8	334	1	328	1	353	0.75	hypothetical	protein
+PROKKA_ERR479184_bin.10.faa_NDLEGPJN_00846	-	361	neuS_final_auto	-	386	7.7e-38	127.1	4.8	1	1	6.8e-41	9.2e-38	126.8	4.8	8	298	2	325	1	327	0.83	hypothetical	protein
+PROKKA_ERR479071_bin.24.faa_KIKJLEAO_01055	-	361	neuS_final_auto	-	386	1.2e-38	129.6	2.7	1	1	1.3e-41	1.6e-38	129.2	2.7	1	300	1	326	1	328	0.83	hypothetical	protein
+PROKKA_ERR479121_bin.27.faa_LLCELNEF_00142	-	361	neuS_final_auto	-	386	1.7e-38	129.6	2.6	1	1	1.3e-41	2.1e-38	129.2	2.6	1	300	1	326	1	328	0.83	hypothetical	protein
+PROKKA_ERR479283_bin.7.faa_GIGILLKE_01265	-	500	neuS_final_auto	-	386	9.6e-38	127.3	0.0	1	1	5.7e-41	1.1e-37	127.1	0.0	53	310	143	470	111	500	0.84	hypothetical	protein
+PROKKA_ERR478976_bin.2.faa_OKAMEGDJ_00955	-	163	neuS_final_auto	-	386	0.016	11.5	0.0	1	1	7.8e-06	0.016	11.4	0.0	211	282	76	159	19	163	0.79	putative	ABC	transporter	ATP-binding	protein
+PROKKA_ERR479266_bin.12.faa_AAJKMFPO_00266	-	356	neuS_final_auto	-	386	2e-32	111.3	20.1	1	1	8.2e-36	2.3e-32	111.1	20.1	8	323	1	321	1	353	0.78	hypothetical	protein
+PROKKA_ERR479266_bin.12.faa_AAJKMFPO_05204	-	354	neuS_final_auto	-	386	0.00041	18.1	10.5	1	1	1.8e-07	0.00051	17.8	10.5	60	354	36	350	13	354	0.63	hypothetical	protein
+PROKKA_ERR479203_bin.7.faa_MPILMMAM_01151	-	361	neuS_final_auto	-	386	1.3e-34	117.3	6.5	1	1	6.5e-38	1.6e-34	117.0	6.5	8	300	2	327	1	327	0.80	hypothetical	protein
+PROKKA_ERR478964_bin.11.faa_PROKKA_ERR478964_bin.11.faa_JBGKFNIE_01979	-	359	neuS_final_auto	-	386	1.8e-15	54.2	12.8	1	1	2.9e-18	2.3e-15	53.9	12.8	8	340	1	351	1	356	0.74	hypothetical	protein
+PROKKA_ERR478964_bin.11.faa_PROKKA_ERR478964_bin.11.faa_JBGKFNIE_00714	-	213	neuS_final_auto	-	386	0.0032	13.9	0.2	1	1	4.1e-06	0.0033	13.9	0.2	176	262	118	190	33	208	0.79	Linearmycin	resistance	ATP-binding	protein	LnrL
+PROKKA_ERR478964_bin.11.faa_PROKKA_ERR478964_bin.11.faa_JBGKFNIE_01108	-	247	neuS_final_auto	-	386	0.0041	13.6	0.5	1	2	9.1e-06	0.0071	12.8	0.1	172	222	5	58	1	63	0.89	hypothetical	protein
+PROKKA_ERR478964_bin.11.faa_PROKKA_ERR478964_bin.11.faa_JBGKFNIE_01108	-	247	neuS_final_auto	-	386	0.0041	13.6	0.5	2	2	0.49	3.8e+02	-2.8	0.0	82	111	210	240	178	244	0.61	hypothetical	protein
+PROKKA_ERR479035_bin.3.faa_PROKKA_ERR479035_bin.3.faa_BEGDAHDN_01842	-	320	neuS_final_auto	-	386	3.2e-09	34.3	19.1	1	1	2e-12	7.1e-09	33.1	19.1	9	307	4	287	1	316	0.65	hypothetical	protein
+PROKKA_ERR479204_bin.29.faa_DKKMMHNF_00279	-	187	neuS_final_auto	-	386	3.4e-08	29.6	2.3	1	1	2.5e-11	3.6e-08	29.5	1.8	236	330	32	131	27	172	0.70	hypothetical	protein
+PROKKA_ERR479211_bin.7.faa_JIFFJEMJ_03327	-	377	neuS_final_auto	-	386	3.1e-15	54.1	17.3	1	1	2.1e-18	3.8e-15	53.8	17.3	47	341	13	339	2	374	0.73	hypothetical	protein
+PROKKA_ERR479211_bin.7.faa_JIFFJEMJ_01339	-	160	neuS_final_auto	-	386	2.1e-13	48.0	1.3	1	1	1.3e-16	2.4e-13	47.9	1.3	203	314	11	133	2	159	0.78	hypothetical	protein
+PROKKA_ERR479414_bin.7.faa_HCINMLGI_01105	-	361	neuS_final_auto	-	386	4.2e-38	128.6	5.1	1	1	2.4e-41	5.3e-38	128.3	5.1	8	300	2	327	1	327	0.85	hypothetical	protein
+PROKKA_ERR479280_bin.31.faa_FEPBPGGL_00081	-	299	neuS_final_auto	-	386	6e-05	16.7	0.0	1	1	2.8e-07	9e-05	16.2	0.0	288	376	142	262	139	272	0.69	Thioredoxin	reductase
+PROKKA_ERR479052_bin.22.faa_IMNFPHJA_00686	-	264	neuS_final_auto	-	386	1.3e-07	28.4	0.0	1	1	1.4e-10	1.7e-07	28.0	0.0	47	141	135	256	120	261	0.81	hypothetical	protein
+PROKKA_ERR479052_bin.22.faa_IMNFPHJA_00280	-	62	neuS_final_auto	-	386	0.0055	13.1	0.0	1	1	4.9e-06	0.0057	13.1	0.0	279	341	1	61	1	62	0.77	hypothetical	protein
+PROKKA_ERR478990_bin.12.faa_CAFGLCDF_00173	-	403	neuS_final_auto	-	386	9.8e-18	61.4	20.2	1	1	7e-20	1.3e-16	57.7	20.2	8	319	1	361	1	402	0.67	hypothetical	protein
+PROKKA_ERR479139_bin.21.faa_MHJPBDBB_00906	-	222	neuS_final_auto	-	386	1.1e-17	61.0	0.0	1	1	7.6e-21	1.2e-17	60.8	0.0	103	303	3	199	1	217	0.80	hypothetical	protein
+PROKKA_ERR479210_bin.6.faa_BEOCEIJL_01222	-	377	neuS_final_auto	-	386	2.1e-15	54.1	17.3	1	1	1.1e-18	2.6e-15	53.8	17.3	47	341	13	339	2	374	0.73	hypothetical	protein
+PROKKA_ERR479193_bin.19.faa_BECGKCDK_01865	-	362	neuS_final_auto	-	386	0.001	15.2	5.8	1	1	1.8e-06	0.0016	14.5	5.8	23	200	19	211	1	272	0.67	N,N'-diacetylbacillosaminyl-diphospho-undecaprenol	alpha-1,3-N-acetylgalactosaminyltransferase
+PROKKA_ERR479193_bin.19.faa_BECGKCDK_01637	-	551	neuS_final_auto	-	386	0.001	15.2	0.1	1	2	4.1e-06	0.0038	13.3	0.0	186	258	128	200	105	204	0.81	Putative	HMP/thiamine	import	ATP-binding	protein	YkoD
+PROKKA_ERR479193_bin.19.faa_BECGKCDK_01637	-	551	neuS_final_auto	-	386	0.001	15.2	0.1	2	2	0.11	99	-1.2	0.1	211	254	426	480	363	519	0.70	Putative	HMP/thiamine	import	ATP-binding	protein	YkoD
+PROKKA_ERR479112_bin.3.faa_GNINCNFM_08072	-	369	neuS_final_auto	-	386	0.007	15.1	4.5	1	1	8.8e-07	0.01	14.5	4.4	77	271	65	249	33	363	0.70	UDP-2,3-diacetamido-2,3-dideoxy-D-glucuronate	2-epimerase
+PROKKA_ERR479417_bin.30.faa_GGLFAPEL_04270	-	335	neuS_final_auto	-	386	8e-06	23.4	17.0	1	1	5.9e-09	1.3e-05	22.7	17.0	12	314	12	303	5	333	0.69	hypothetical	protein
+PROKKA_ERR479417_bin.30.faa_GGLFAPEL_02404	-	473	neuS_final_auto	-	386	0.021	12.1	0.0	1	2	3e-05	0.068	10.5	0.0	192	258	142	203	111	204	0.70	Putative	HMP/thiamine	import	ATP-binding	protein	YkoD
+PROKKA_ERR479417_bin.30.faa_GGLFAPEL_02404	-	473	neuS_final_auto	-	386	0.021	12.1	0.0	2	2	0.14	3.3e+02	-1.6	0.0	201	258	402	452	390	452	0.78	Putative	HMP/thiamine	import	ATP-binding	protein	YkoD
+PROKKA_ERR479118_bin.7.faa_MNBEPFFI_00195	-	117	neuS_final_auto	-	386	0.0019	13.1	0.0	1	1	2.6e-06	0.002	13.0	0.0	96	142	7	54	2	97	0.78	hypothetical	protein
+PROKKA_ERR479130_bin.7.faa_GCDNCJDA_01871	-	154	neuS_final_auto	-	386	0.0054	13.3	1.1	1	1	2.2e-06	0.0057	13.2	1.1	153	245	13	131	1	140	0.66	hypothetical	protein
+PROKKA_ERR479153_bin.21.faa_FCFFPDAK_00659	-	361	neuS_final_auto	-	386	3.2e-18	63.5	12.9	1	1	3e-21	4e-18	63.2	12.9	8	357	1	352	1	359	0.69	hypothetical	protein
+PROKKA_ERR479153_bin.21.faa_FCFFPDAK_02057	-	213	neuS_final_auto	-	386	0.001	15.8	0.6	1	1	8.5e-07	0.0012	15.6	0.6	164	262	106	190	47	208	0.79	Linearmycin	resistance	ATP-binding	protein	LnrL
+PROKKA_ERR479077_bin.6.faa_APACENED_01368	-	324	neuS_final_auto	-	386	6e-26	88.0	0.0	1	1	5.1e-29	7.3e-26	87.7	0.0	9	305	3	305	1	320	0.85	hypothetical	protein
+PROKKA_ERR479075_bin.28.faa_BLNCLIPA_01222	-	307	neuS_final_auto	-	386	2.5e-46	156.1	23.7	1	1	3.4e-49	3.3e-46	155.7	23.7	8	308	1	276	1	306	0.80	hypothetical	protein
+PROKKA_ERR479075_bin.28.faa_BLNCLIPA_00197	-	336	neuS_final_auto	-	386	8.5e-45	151.1	7.9	1	1	1.1e-47	1e-44	150.8	7.9	67	307	50	303	12	330	0.87	hypothetical	protein
+PROKKA_ERR479075_bin.28.faa_BLNCLIPA_00891	-	314	neuS_final_auto	-	386	0.01	12.6	5.9	1	2	2.9e-05	0.029	11.1	0.6	184	246	74	136	5	146	0.77	Oligopeptide	transport	ATP-binding	protein	OppF
+PROKKA_ERR479075_bin.28.faa_BLNCLIPA_00891	-	314	neuS_final_auto	-	386	0.01	12.6	5.9	2	2	0.003	2.9	4.5	0.6	193	282	177	272	160	289	0.82	Oligopeptide	transport	ATP-binding	protein	OppF
+PROKKA_ERR479415_bin.13.faa_COBAPBII_03427	-	331	neuS_final_auto	-	386	0.029	11.8	0.1	1	1	7.9e-06	0.039	11.4	0.1	129	258	67	213	62	213	0.72	Oligopeptide	transport	ATP-binding	protein	OppD
+PROKKA_ERR479248_bin.27.faa_EBDMEDLE_00151	-	324	neuS_final_auto	-	386	4.5e-40	134.4	7.4	1	1	4.1e-43	5.5e-40	134.1	7.4	8	308	2	293	1	318	0.78	hypothetical	protein
+PROKKA_ERR479225_bin.12.faa_BCCIKMPF_01245	-	138	neuS_final_auto	-	386	5.2e-29	98.3	1.2	1	1	6.6e-32	5.5e-29	98.2	1.2	203	308	6	107	2	137	0.91	hypothetical	protein
+PROKKA_ERR479225_bin.12.faa_BCCIKMPF_01244	-	149	neuS_final_auto	-	386	1.7e-05	21.0	1.0	1	1	2.4e-08	2.1e-05	20.7	1.0	8	153	2	141	1	148	0.62	hypothetical	protein
+PROKKA_ERR479083_bin.26.faa_APIBKEPB_00742	-	334	neuS_final_auto	-	386	1.2e-31	107.2	0.0	1	1	1.5e-34	1.5e-31	106.9	0.0	10	321	4	326	1	333	0.83	hypothetical	protein
+PROKKA_ERR479083_bin.26.faa_APIBKEPB_01400	-	122	neuS_final_auto	-	386	6.5e-18	62.0	0.0	1	1	7.9e-21	7.5e-18	61.8	0.0	214	309	12	106	2	117	0.93	hypothetical	protein
+PROKKA_ERR479282_bin.7.faa_DAOIJHKP_01028	-	500	neuS_final_auto	-	386	9e-38	127.3	0.0	1	1	5.7e-41	1.1e-37	127.1	0.0	53	310	143	470	111	500	0.84	hypothetical	protein
+PROKKA_ERR479272_bin.16.faa_HDDCBCOJ_01060	-	335	neuS_final_auto	-	386	2.3e-06	25.1	15.2	1	1	3.8e-09	3.9e-06	24.3	15.2	12	314	12	303	5	333	0.68	hypothetical	protein
+PROKKA_ERR479272_bin.16.faa_HDDCBCOJ_02119	-	119	neuS_final_auto	-	386	0.0031	14.8	2.1	1	1	3.4e-06	0.0035	14.6	2.1	63	177	3	110	1	118	0.76	hypothetical	protein
+PROKKA_ERR479272_bin.16.faa_HDDCBCOJ_01700	-	119	neuS_final_auto	-	386	0.0046	14.2	2.4	1	1	5e-06	0.0052	14.0	2.4	63	177	3	110	1	118	0.76	hypothetical	protein
+PROKKA_ERR479272_bin.16.faa_HDDCBCOJ_00781	-	385	neuS_final_auto	-	386	0.0048	14.1	0.4	1	2	0.37	3.8e+02	-2.0	0.1	31	31	58	58	8	121	0.56	hypothetical	protein
+PROKKA_ERR479272_bin.16.faa_HDDCBCOJ_00781	-	385	neuS_final_auto	-	386	0.0048	14.1	0.4	2	2	1e-05	0.011	13.0	0.0	236	322	223	312	215	374	0.72	hypothetical	protein
+PROKKA_ERR479138_bin.20.faa_CNMHLCON_01341	-	309	neuS_final_auto	-	386	4.1e-18	63.3	15.1	1	1	3.2e-21	4.9e-18	63.1	15.1	13	329	11	303	1	308	0.75	hypothetical	protein
+PROKKA_ERR479138_bin.20.faa_CNMHLCON_01244	-	237	neuS_final_auto	-	386	0.0055	13.5	0.1	1	1	9.7e-06	0.015	12.1	0.1	272	377	6	140	2	149	0.64	Transcriptional	regulatory	protein	BtsR
+PROKKA_ERR479195_bin.21.faa_CAFEKLBC_00704	-	358	neuS_final_auto	-	386	7.1e-25	85.9	9.3	1	1	2.4e-28	9.2e-25	85.5	9.3	7	314	9	326	6	356	0.72	hypothetical	protein
+PROKKA_ERR479205_bin.24.faa_CCEJCLHN_01531	-	389	neuS_final_auto	-	386	4.3e-18	63.9	6.8	1	1	1.1e-21	5.5e-18	63.6	6.8	114	319	136	348	61	385	0.73	hypothetical	protein
+PROKKA_ERR479141_bin.7.faa_NDGMGPKK_00165	-	336	neuS_final_auto	-	386	3.5e-45	151.0	7.5	1	1	3.7e-48	4.2e-45	150.7	7.5	67	307	50	303	12	330	0.87	hypothetical	protein
+PROKKA_ERR478963_bin.7.faa_BIEEPBPE_03339	-	352	neuS_final_auto	-	386	1.7e-24	85.1	9.9	1	1	3.8e-28	2e-24	84.9	9.9	7	314	3	320	1	350	0.72	hypothetical	protein
+PROKKA_ERR479075_bin.17.faa_NDDKKLNH_05258	-	331	neuS_final_auto	-	386	0.041	11.8	0.1	1	1	7.9e-06	0.054	11.4	0.1	129	258	67	213	62	213	0.72	Oligopeptide	transport	ATP-binding	protein	OppD
+PROKKA_ERR479071_bin.5.faa_DOBMPPIO_00527	-	314	neuS_final_auto	-	386	2.8e-27	92.2	0.0	1	1	2.7e-30	3.5e-27	91.9	0.0	8	303	1	291	1	309	0.90	hypothetical	protein
+PROKKA_ERR479090_bin.23.faa_LOHLGNPJ_01859	-	361	neuS_final_auto	-	386	1.7e-37	126.7	4.5	1	1	1.8e-40	2.1e-37	126.4	4.5	8	298	2	325	1	327	0.83	hypothetical	protein
+PROKKA_ERR479090_bin.23.faa_LOHLGNPJ_00874	-	361	neuS_final_auto	-	386	3.8e-34	115.7	4.5	1	1	4.2e-37	4.7e-34	115.4	4.5	8	300	2	327	1	327	0.79	hypothetical	protein
+PROKKA_ERR478971_bin.9.faa_PROKKA_ERR478971_bin.9.faa_MIAJEGEN_04538	-	361	neuS_final_auto	-	386	3.7e-36	123.8	5.3	1	1	6.9e-40	4.4e-36	123.5	5.3	8	298	2	325	1	327	0.83	hypothetical	protein
+PROKKA_ERR479284_bin.29.faa_MOEKJALJ_01238	-	168	neuS_final_auto	-	386	3.1e-23	79.8	0.0	1	1	2.7e-26	3.3e-23	79.7	0.0	183	341	2	167	1	168	0.82	hypothetical	protein
+PROKKA_ERR479284_bin.29.faa_MOEKJALJ_01239	-	264	neuS_final_auto	-	386	1.3e-07	28.4	0.0	1	1	1.4e-10	1.7e-07	28.0	0.0	47	141	135	256	120	261	0.81	hypothetical	protein
+PROKKA_ERR479069_bin.19.faa_ANBEMPHE_00972	-	154	neuS_final_auto	-	386	0.0035	13.8	0.6	1	1	1.5e-06	0.0035	13.8	0.6	162	245	30	131	1	140	0.67	hypothetical	protein
+PROKKA_ERR479296_bin.7.faa_CFJBMEFF_01233	-	361	neuS_final_auto	-	386	8.9e-35	117.3	6.3	1	1	6.5e-38	1.1e-34	117.0	6.3	8	300	2	327	1	327	0.80	hypothetical	protein
+PROKKA_ERR479254_bin.3.faa_COLBDHNK_10725	-	460	neuS_final_auto	-	386	7.4e-05	21.6	18.6	1	1	1.7e-08	0.0001	21.2	18.6	10	323	6	360	1	444	0.75	hypothetical	protein
+PROKKA_ERR479254_bin.3.faa_COLBDHNK_08132	-	76	neuS_final_auto	-	386	0.011	14.5	0.0	1	1	1.8e-06	0.011	14.5	0.0	114	150	15	57	6	73	0.82	hypothetical	protein
+PROKKA_ERR479015_bin.13.faa_LNKLKJDL_01199	-	361	neuS_final_auto	-	386	4.7e-18	62.9	13.0	1	1	2.3e-21	5.8e-18	62.5	13.0	8	357	1	352	1	359	0.69	hypothetical	protein
+PROKKA_ERR479092_bin.14.faa_GBHODEDJ_01828	-	213	neuS_final_auto	-	386	0.00085	15.6	1.2	1	1	5e-07	0.001	15.3	1.2	145	262	98	190	56	208	0.78	Linearmycin	resistance	ATP-binding	protein	LnrL
+PROKKA_ERR479084_bin.35.faa_PEEEBDFO_00565	-	334	neuS_final_auto	-	386	1.2e-31	107.2	0.0	1	1	7.7e-35	1.5e-31	106.9	0.0	10	321	4	326	1	333	0.83	hypothetical	protein
+PROKKA_ERR479127_bin.18.faa_EFBBLJEE_01095	-	346	neuS_final_auto	-	386	1.6e-32	111.1	12.0	1	1	1.5e-35	2e-32	110.8	12.0	41	307	22	307	3	342	0.84	hypothetical	protein
+PROKKA_ERR479127_bin.18.faa_EFBBLJEE_03582	-	369	neuS_final_auto	-	386	5.8e-22	76.4	8.3	1	1	5.3e-25	7.1e-22	76.1	8.3	9	323	2	333	1	367	0.75	hypothetical	protein
+PROKKA_ERR479127_bin.18.faa_EFBBLJEE_01378	-	426	neuS_final_auto	-	386	5.7e-17	59.9	13.7	1	1	4.9e-19	6.5e-16	56.5	13.7	8	355	1	421	1	426	0.69	hypothetical	protein
+PROKKA_ERR479283_bin.26.faa_NOBGEBBJ_01138	-	299	neuS_final_auto	-	386	0.00025	16.7	0.0	1	1	2.8e-07	0.00038	16.2	0.0	288	376	142	262	139	272	0.69	Thioredoxin	reductase
+PROKKA_ERR479285_bin.9.faa_OOJNHGFL_01516	-	168	neuS_final_auto	-	386	3.2e-23	79.8	0.0	1	1	2.7e-26	3.5e-23	79.7	0.0	183	341	2	167	1	168	0.82	hypothetical	protein
+PROKKA_ERR479285_bin.9.faa_OOJNHGFL_01515	-	264	neuS_final_auto	-	386	1.4e-07	28.4	0.0	1	1	1.4e-10	1.8e-07	28.0	0.0	47	141	135	256	120	261	0.81	hypothetical	protein
+PROKKA_ERR478961_bin.28.faa_PFOLBNOL_01407	-	359	neuS_final_auto	-	386	0.0053	12.9	0.4	1	2	8.1e-06	0.016	11.4	0.2	37	161	4	156	1	221	0.72	N,N'-diacetylbacillosaminyl-diphospho-undecaprenol	alpha-1,3-N-acetylgalactosaminyltransferase
+PROKKA_ERR478961_bin.28.faa_PFOLBNOL_01407	-	359	neuS_final_auto	-	386	0.0053	12.9	0.4	2	2	0.023	46	-0.0	0.0	323	363	221	306	169	348	0.66	N,N'-diacetylbacillosaminyl-diphospho-undecaprenol	alpha-1,3-N-acetylgalactosaminyltransferase
+PROKKA_ERR479161_bin.51.faa_AGOHGDFH_00640	-	314	neuS_final_auto	-	386	5e-28	94.6	0.0	1	1	5.1e-31	6e-28	94.3	0.0	8	303	1	291	1	309	0.90	hypothetical	protein
+PROKKA_ERR478984_bin.9.faa_ODGKJLEI_01096	-	138	neuS_final_auto	-	386	1.1e-28	97.3	2.0	1	1	1.4e-31	1.2e-28	97.1	2.0	203	308	6	107	2	132	0.93	hypothetical	protein
+PROKKA_ERR478984_bin.9.faa_ODGKJLEI_01097	-	134	neuS_final_auto	-	386	0.00031	16.7	1.8	1	1	7.8e-07	0.00065	15.7	1.8	8	153	2	126	1	133	0.57	hypothetical	protein
+PROKKA_ERR479077_bin.26.faa_IPALEGDM_00375	-	409	neuS_final_auto	-	386	7e-78	259.1	28.4	1	1	1.1e-80	8.6e-78	258.9	28.4	5	344	41	394	7	405	0.94	hypothetical	protein
+PROKKA_ERR479077_bin.26.faa_IPALEGDM_01549	-	341	neuS_final_auto	-	386	7.6e-36	120.8	17.5	1	1	1.2e-38	9.3e-36	120.5	17.5	8	341	1	333	1	337	0.91	hypothetical	protein
+PROKKA_ERR479079_bin.23.faa_PHBKIPKD_01055	-	359	neuS_final_auto	-	386	2.3e-15	53.8	12.4	1	1	3.9e-18	2.8e-15	53.5	12.4	8	330	1	337	1	356	0.73	hypothetical	protein
+PROKKA_ERR479079_bin.23.faa_PHBKIPKD_00897	-	213	neuS_final_auto	-	386	0.002	14.5	0.6	1	1	3.1e-06	0.0023	14.3	0.6	164	262	106	190	47	208	0.79	Linearmycin	resistance	ATP-binding	protein	LnrL
+PROKKA_ERR479079_bin.23.faa_PHBKIPKD_00860	-	247	neuS_final_auto	-	386	0.0038	13.6	0.5	1	2	9.1e-06	0.0067	12.8	0.1	172	222	5	58	1	63	0.89	hypothetical	protein
+PROKKA_ERR479079_bin.23.faa_PHBKIPKD_00860	-	247	neuS_final_auto	-	386	0.0038	13.6	0.5	2	2	0.49	3.6e+02	-2.8	0.0	82	111	210	240	178	244	0.61	hypothetical	protein
+PROKKA_ERR479272_bin.23.faa_NABNFBDD_00594	-	460	neuS_final_auto	-	386	0.0003	17.1	9.8	1	1	2.2e-05	0.046	9.9	9.7	29	304	126	390	78	436	0.73	hypothetical	protein
+PROKKA_ERR479287_bin.14.faa_NDHIJLOM_00851	-	361	neuS_final_auto	-	386	7.7e-38	127.7	4.2	1	1	4.5e-41	9.2e-38	127.4	4.2	8	298	2	325	1	327	0.83	hypothetical	protein
+PROKKA_ERR478985_bin.9.faa_OCKNBMJG_01295	-	531	neuS_final_auto	-	386	7e-57	190.3	8.7	1	1	1e-59	9.6e-57	189.8	8.7	8	384	1	526	1	529	0.79	hypothetical	protein
+PROKKA_ERR478985_bin.9.faa_OCKNBMJG_00809	-	502	neuS_final_auto	-	386	2.3e-39	132.6	11.9	1	1	2.8e-42	2.7e-39	132.4	11.9	8	359	1	378	1	483	0.83	hypothetical	protein
+PROKKA_ERR479005_bin.14.faa_MFBDLAJD_00250	-	361	neuS_final_auto	-	386	1.8e-37	126.4	5.4	1	1	2.2e-40	2.2e-37	126.1	5.4	8	298	2	325	1	327	0.83	hypothetical	protein
+PROKKA_ERR479005_bin.14.faa_MFBDLAJD_00030	-	405	neuS_final_auto	-	386	0.0032	13.6	1.7	1	2	4.9e-06	0.0048	13.1	0.8	84	175	90	178	55	248	0.71	D-inositol-3-phosphate	glycosyltransferase
+PROKKA_ERR479005_bin.14.faa_MFBDLAJD_00030	-	405	neuS_final_auto	-	386	0.0032	13.6	1.7	2	2	0.13	1.3e+02	-1.5	0.0	314	372	323	384	279	401	0.63	D-inositol-3-phosphate	glycosyltransferase
+PROKKA_ERR479123_bin.6.faa_DBJMAGEK_03330	-	359	neuS_final_auto	-	386	4.2e-15	53.8	12.4	1	1	3.9e-18	5.1e-15	53.5	12.4	8	330	1	337	1	356	0.73	hypothetical	protein
+PROKKA_ERR479123_bin.6.faa_DBJMAGEK_03649	-	213	neuS_final_auto	-	386	0.0017	15.6	1.2	1	1	1.5e-06	0.002	15.3	1.2	145	262	98	190	56	208	0.78	Linearmycin	resistance	ATP-binding	protein	LnrL
+PROKKA_ERR479123_bin.6.faa_DBJMAGEK_02917	-	385	neuS_final_auto	-	386	0.0046	14.1	0.4	1	2	0.27	3.6e+02	-2.0	0.1	31	31	58	58	8	121	0.56	hypothetical	protein
+PROKKA_ERR479123_bin.6.faa_DBJMAGEK_02917	-	385	neuS_final_auto	-	386	0.0046	14.1	0.4	2	2	7.6e-06	0.01	13.0	0.0	236	322	223	312	215	374	0.72	hypothetical	protein
+PROKKA_ERR478967_bin.19.faa_PBCJMIOD_00565	-	361	neuS_final_auto	-	386	3.9e-34	115.7	4.5	1	1	2.1e-37	4.9e-34	115.4	4.5	8	300	2	327	1	327	0.79	hypothetical	protein
+PROKKA_ERR479004_bin.11.faa_KEOBOBOF_00354	-	230	neuS_final_auto	-	386	0.0017	14.7	0.0	1	1	9.6e-07	0.0021	14.4	0.0	169	282	86	226	59	230	0.74	Spermidine/putrescine	import	ATP-binding	protein	PotA
+PROKKA_ERR479070_bin.11.faa_NIILDKFK_00298	-	387	neuS_final_auto	-	386	1.3e-14	53.5	18.4	1	1	5e-18	1.7e-14	53.1	18.4	41	341	16	349	5	384	0.73	hypothetical	protein
+PROKKA_ERR479070_bin.11.faa_NIILDKFK_08191	-	473	neuS_final_auto	-	386	0.047	12.1	0.0	1	2	4.5e-05	0.15	10.5	0.0	192	258	142	203	111	204	0.70	Putative	HMP/thiamine	import	ATP-binding	protein	YkoD
+PROKKA_ERR479070_bin.11.faa_NIILDKFK_08191	-	473	neuS_final_auto	-	386	0.047	12.1	0.0	2	2	0.22	7.2e+02	-1.6	0.0	201	258	402	452	390	452	0.78	Putative	HMP/thiamine	import	ATP-binding	protein	YkoD
+PROKKA_ERR479070_bin.11.faa_NIILDKFK_04447	-	394	neuS_final_auto	-	386	0.18	10.2	5.4	1	1	7.6e-05	0.25	9.7	4.6	142	258	152	263	139	278	0.66	hypothetical	protein
+PROKKA_ERR479034_bin.5.faa_AHOKLGBB_01223	-	320	neuS_final_auto	-	386	3.4e-09	34.3	19.1	1	1	2e-12	7.6e-09	33.1	19.1	9	307	4	287	1	316	0.65	hypothetical	protein
+PROKKA_ERR479235_bin.33.faa_LIOKALON_00090	-	355	neuS_final_auto	-	386	8e-38	125.1	0.0	1	1	2.6e-40	9.2e-38	124.9	0.0	82	341	46	354	11	355	0.89	hypothetical	protein
+PROKKA_ERR479140_bin.9.faa_DEDOAGKI_01769	-	336	neuS_final_auto	-	386	7.8e-45	151.0	7.5	1	1	7.4e-48	9.4e-45	150.7	7.5	67	307	50	303	12	330	0.87	hypothetical	protein
+PROKKA_ERR479140_bin.9.faa_DEDOAGKI_01630	-	314	neuS_final_auto	-	386	0.0089	12.6	5.9	1	2	2e-05	0.025	11.1	0.6	184	246	74	136	5	146	0.77	Oligopeptide	transport	ATP-binding	protein	OppF
+PROKKA_ERR479140_bin.9.faa_DEDOAGKI_01630	-	314	neuS_final_auto	-	386	0.0089	12.6	5.9	2	2	0.002	2.5	4.5	0.6	193	282	177	272	160	289	0.82	Oligopeptide	transport	ATP-binding	protein	OppF
+PROKKA_ERR479204_bin.12.faa_IAFBJAIL_02153	-	361	neuS_final_auto	-	386	1.2e-34	117.3	6.5	1	1	6.5e-38	1.5e-34	117.0	6.5	8	300	2	327	1	327	0.80	hypothetical	protein
+PROKKA_ERR479018_bin.18.faa_MNALGADB_00168	-	210	neuS_final_auto	-	386	2e-40	137.8	8.0	1	1	6.7e-44	2.2e-40	137.7	8.0	132	319	3	202	1	210	0.93	hypothetical	protein
+PROKKA_ERR479018_bin.18.faa_MNALGADB_04377	-	385	neuS_final_auto	-	386	0.00094	17.1	5.2	1	1	5.5e-07	0.0018	16.2	5.2	219	323	253	360	62	383	0.81	hypothetical	protein
+PROKKA_ERR479068_bin.4.faa_EKAHNDGP_05430	-	387	neuS_final_auto	-	386	1.1e-14	53.5	18.4	1	1	3.3e-18	1.5e-14	53.1	18.4	41	341	16	349	5	384	0.73	hypothetical	protein
+PROKKA_ERR479068_bin.4.faa_EKAHNDGP_07333	-	394	neuS_final_auto	-	386	0.16	10.2	5.4	1	1	5e-05	0.22	9.7	4.6	142	258	152	263	139	278	0.66	hypothetical	protein
+PROKKA_ERR479049_bin.9.faa_KOODMKEP_03141	-	389	neuS_final_auto	-	386	8.2e-18	63.8	7.0	1	1	2.4e-21	1e-17	63.4	7.0	114	319	136	348	61	385	0.73	hypothetical	protein
+PROKKA_ERR479049_bin.9.faa_KOODMKEP_07768	-	467	neuS_final_auto	-	386	0.038	12.2	0.0	1	1	1.5e-05	0.062	11.5	0.0	11	56	118	164	116	217	0.84	UDP-glucose:undecaprenyl-phosphate	glucose-1-phosphate	transferase
+PROKKA_ERR479139_bin.27.faa_KHNFHOKJ_01658	-	212	neuS_final_auto	-	386	0.017	11.5	0.2	1	1	8.6e-06	0.02	11.3	0.2	179	264	100	193	61	208	0.75	Bacitracin	transport	ATP-binding	protein	BcrA
+PROKKA_ERR479042_bin.7.faa_BFEIOPOH_00680	-	181	neuS_final_auto	-	386	3.1e-16	56.4	1.3	1	1	2e-19	3.8e-16	56.1	1.3	193	341	20	173	3	178	0.83	hypothetical	protein
+PROKKA_ERR479204_bin.18.faa_JMHFJIEH_02868	-	389	neuS_final_auto	-	386	4.6e-18	63.9	6.8	1	1	1.1e-21	5.8e-18	63.6	6.8	114	319	136	348	61	385	0.73	hypothetical	protein
+PROKKA_ERR479282_bin.31.faa_NIOANMKB_00092	-	299	neuS_final_auto	-	386	0.00026	16.7	0.0	1	1	2.8e-07	0.00039	16.2	0.0	288	376	142	262	139	272	0.69	Thioredoxin	reductase
+PROKKA_ERR479237_bin.14.faa_MNDMOCAL_01093	-	172	neuS_final_auto	-	386	0.00074	16.2	0.8	1	1	3.2e-07	0.00085	16.0	0.8	164	262	65	149	26	167	0.77	Linearmycin	resistance	ATP-binding	protein	LnrL
+PROKKA_ERR479135_bin.2.faa_IELKNPEA_00440	-	309	neuS_final_auto	-	386	8.9e-13	46.0	10.7	1	1	3.2e-16	1.2e-12	45.6	10.7	84	322	75	288	7	305	0.77	hypothetical	protein
+PROKKA_ERR479083_bin.18.faa_LDNLIEJH_01912	-	86	neuS_final_auto	-	386	4.9e-12	43.8	0.1	1	1	2.3e-15	5.1e-12	43.8	0.1	252	300	2	50	1	67	0.96	hypothetical	protein
+PROKKA_ERR479083_bin.18.faa_LDNLIEJH_01952	-	511	neuS_final_auto	-	386	0.035	11.4	0.5	1	2	2.5e-05	0.055	10.8	0.1	164	258	107	204	72	236	0.68	Galactose/methyl	galactoside	import	ATP-binding	protein	MglA
+PROKKA_ERR479083_bin.18.faa_LDNLIEJH_01952	-	511	neuS_final_auto	-	386	0.035	11.4	0.5	2	2	0.46	1e+03	-3.3	0.0	222	246	370	394	340	429	0.68	Galactose/methyl	galactoside	import	ATP-binding	protein	MglA
+PROKKA_ERR479042_bin.12.faa_GGPNACCN_01869	-	318	neuS_final_auto	-	386	6.1e-31	104.9	4.1	1	1	3.7e-34	7.2e-31	104.7	4.1	46	298	4	282	1	284	0.84	hypothetical	protein
+PROKKA_ERR479080_bin.12.faa_OEHNFKGF_04059	-	367	neuS_final_auto	-	386	4.3e-29	100.0	14.6	1	1	2.2e-32	5.1e-29	99.8	14.6	9	323	3	341	1	362	0.79	hypothetical	protein
+PROKKA_ERR479080_bin.12.faa_OEHNFKGF_02049	-	369	neuS_final_auto	-	386	1.2e-22	78.9	12.9	1	1	6.6e-26	1.5e-22	78.5	12.9	13	334	5	345	2	364	0.73	hypothetical	protein
+PROKKA_ERR479183_bin.5.faa_EMPILGKL_00331	-	330	neuS_final_auto	-	386	3.5e-39	129.8	13.4	1	1	3.2e-41	4.4e-39	129.5	13.4	46	306	45	311	14	327	0.82	hypothetical	protein
+PROKKA_ERR479183_bin.5.faa_EMPILGKL_00105	-	335	neuS_final_auto	-	386	5.2e-07	23.9	16.9	1	1	6.2e-09	8.7e-07	23.2	16.9	12	314	12	303	5	333	0.68	hypothetical	protein
+PROKKA_ERR479183_bin.5.faa_EMPILGKL_00403	-	119	neuS_final_auto	-	386	0.0011	13.0	4.2	1	1	8.2e-06	0.0011	12.9	4.2	63	178	3	111	1	119	0.75	hypothetical	protein
+PROKKA_ERR478993_bin.20.faa_BCEEBGEI_01176	-	403	neuS_final_auto	-	386	9.1e-18	61.4	20.2	1	1	7e-20	1.2e-16	57.7	20.2	8	319	1	361	1	402	0.67	hypothetical	protein
+PROKKA_ERR479415_bin.11.faa_NIBKKPPN_01717	-	324	neuS_final_auto	-	386	4.5e-26	89.0	0.0	1	1	2.6e-29	5.5e-26	88.7	0.0	9	300	3	299	1	317	0.85	hypothetical	protein
+PROKKA_ERR479001_bin.16.faa_JBPHJCLF_00452	-	314	neuS_final_auto	-	386	2e-27	93.5	0.0	1	1	1.2e-30	2.5e-27	93.2	0.0	8	303	1	291	1	309	0.90	hypothetical	protein
+PROKKA_ERR479017_bin.2.faa_PROKKA_ERR479017_bin.2.faa_BKOKGFED_01004	-	319	neuS_final_auto	-	386	4.5e-14	50.1	10.8	1	1	2.9e-17	9.5e-14	49.1	10.8	104	329	82	306	3	317	0.67	hypothetical	protein
+PROKKA_ERR479076_bin.44.faa_MBNDIJCM_00453	-	151	neuS_final_auto	-	386	1.7e-19	67.1	5.0	1	1	2.1e-22	1.8e-19	67.0	5.0	212	323	5	127	1	150	0.83	hypothetical	protein
+PROKKA_ERR479076_bin.44.faa_MBNDIJCM_00452	-	227	neuS_final_auto	-	386	3e-11	39.9	12.4	1	1	3.9e-14	3.5e-11	39.7	12.4	8	198	1	208	1	223	0.68	hypothetical	protein
+PROKKA_ERR479073_bin.1.faa_HEFPILHA_02977	-	408	neuS_final_auto	-	386	2.2e-41	140.1	14.7	1	1	2.3e-44	2.7e-41	139.8	14.7	8	345	1	362	1	405	0.80	hypothetical	protein
+PROKKA_ERR479073_bin.1.faa_HEFPILHA_03376	-	368	neuS_final_auto	-	386	2.6e-24	83.9	13.0	1	1	2.6e-27	3.1e-24	83.7	13.0	8	373	1	359	1	367	0.74	hypothetical	protein
+PROKKA_ERR479073_bin.1.faa_HEFPILHA_01820	-	377	neuS_final_auto	-	386	0.00026	18.1	0.4	1	1	2.7e-07	0.00031	17.8	0.4	1	149	1	138	1	245	0.73	Putative	glycosyltransferase	EpsD
+PROKKA_ERR478985_bin.4.faa_PKLAMJHL_00066	-	138	neuS_final_auto	-	386	1.1e-28	97.3	2.0	1	1	1.4e-31	1.2e-28	97.1	2.0	203	308	6	107	2	132	0.93	hypothetical	protein
+PROKKA_ERR478985_bin.4.faa_PKLAMJHL_00067	-	134	neuS_final_auto	-	386	0.00031	16.7	1.8	1	1	7.8e-07	0.00064	15.7	1.8	8	153	2	126	1	133	0.57	hypothetical	protein
+PROKKA_ERR479068_bin.5.faa_BPLDBEMA_01595	-	331	neuS_final_auto	-	386	0.056	11.8	0.1	1	1	1.6e-05	0.074	11.4	0.1	129	258	67	213	62	213	0.72	Oligopeptide	transport	ATP-binding	protein	OppD
+PROKKA_ERR479068_bin.5.faa_BPLDBEMA_04818	-	495	neuS_final_auto	-	386	0.07	11.5	1.4	1	1	2.7e-05	0.13	10.6	1.4	156	258	102	201	70	203	0.77	Galactose/methyl	galactoside	import	ATP-binding	protein	MglA
+PROKKA_ERR479235_bin.2.faa_IKCFJAJG_00862	-	335	neuS_final_auto	-	386	2.6e-64	214.5	25.4	1	1	1.8e-67	2.9e-64	214.4	25.4	8	319	1	327	1	335	0.92	hypothetical	protein
+PROKKA_ERR479011_bin.2.faa_NNDCGFPF_01265	-	498	neuS_final_auto	-	386	3.3e-37	125.8	0.0	1	1	1.7e-40	3.9e-37	125.5	0.0	48	341	136	497	121	498	0.87	hypothetical	protein
+PROKKA_ERR479159_bin.11.faa_LACPJLDD_00874	-	361	neuS_final_auto	-	386	1.6e-34	117.3	6.5	1	1	6.5e-38	2e-34	117.0	6.5	8	300	2	327	1	327	0.80	hypothetical	protein
+PROKKA_ERR478958_bin.10.faa_HJDHKJMH_01621	-	359	neuS_final_auto	-	386	0.0062	12.9	0.4	1	2	8.1e-06	0.019	11.4	0.2	37	161	4	156	1	221	0.72	N,N'-diacetylbacillosaminyl-diphospho-undecaprenol	alpha-1,3-N-acetylgalactosaminyltransferase
+PROKKA_ERR478958_bin.10.faa_HJDHKJMH_01621	-	359	neuS_final_auto	-	386	0.0062	12.9	0.4	2	2	0.023	54	-0.0	0.0	323	363	221	306	169	348	0.66	N,N'-diacetylbacillosaminyl-diphospho-undecaprenol	alpha-1,3-N-acetylgalactosaminyltransferase
+PROKKA_ERR479082_bin.17.faa_JJICLBCC_02322	-	359	neuS_final_auto	-	386	2.6e-15	53.8	12.4	1	1	3.9e-18	3.1e-15	53.5	12.4	8	330	1	337	1	356	0.73	hypothetical	protein
+PROKKA_ERR479082_bin.17.faa_JJICLBCC_02222	-	213	neuS_final_auto	-	386	0.0022	14.5	0.6	1	1	3.1e-06	0.0025	14.3	0.6	164	262	106	190	47	208	0.79	Linearmycin	resistance	ATP-binding	protein	LnrL
+PROKKA_ERR479082_bin.17.faa_JJICLBCC_02455	-	247	neuS_final_auto	-	386	0.0043	13.6	0.5	1	2	9.1e-06	0.0074	12.8	0.1	172	222	5	58	1	63	0.89	hypothetical	protein
+PROKKA_ERR479082_bin.17.faa_JJICLBCC_02455	-	247	neuS_final_auto	-	386	0.0043	13.6	0.5	2	2	0.49	4e+02	-2.8	0.0	82	111	210	240	178	244	0.61	hypothetical	protein
+PROKKA_ERR479243_bin.12.faa_ODAMDHBD_00449	-	279	neuS_final_auto	-	386	3.7e-16	54.1	6.7	1	1	2.1e-18	4.7e-16	53.8	6.7	96	357	15	270	3	277	0.70	hypothetical	protein
+PROKKA_ERR479243_bin.12.faa_ODAMDHBD_00314	-	213	neuS_final_auto	-	386	0.00017	15.8	0.6	1	1	8.5e-07	0.00019	15.6	0.6	164	262	106	190	47	208	0.79	Linearmycin	resistance	ATP-binding	protein	LnrL
+PROKKA_ERR479128_bin.12.faa_ANCDLBDN_00788	-	154	neuS_final_auto	-	386	0.0051	13.3	1.1	1	1	2.2e-06	0.0054	13.2	1.1	153	245	13	131	1	140	0.66	hypothetical	protein
+PROKKA_ERR479035_bin.11.faa_BMFAFKIO_01207	-	335	neuS_final_auto	-	386	4.5e-06	23.4	17.0	1	1	3e-09	7.6e-06	22.7	17.0	12	314	12	303	5	333	0.69	hypothetical	protein
+PROKKA_ERR479186_bin.10.faa_DAJCOOHK_00149	-	330	neuS_final_auto	-	386	1.3e-39	129.8	13.4	1	1	1.1e-41	1.7e-39	129.5	13.4	46	306	45	311	14	327	0.82	hypothetical	protein
+PROKKA_ERR478981_bin.8.faa_ACMJKHLI_00857	-	314	neuS_final_auto	-	386	1.4e-27	93.4	0.0	1	1	1.2e-30	1.7e-27	93.1	0.0	8	303	1	291	1	309	0.91	hypothetical	protein
+PROKKA_ERR479195_bin.7.faa_JMLLOGMJ_01991	-	213	neuS_final_auto	-	386	0.00094	15.6	1.2	1	1	5e-07	0.0011	15.3	1.2	145	262	98	190	56	208	0.78	Linearmycin	resistance	ATP-binding	protein	LnrL
+PROKKA_ERR479016_bin.12.faa_NHFOOEKJ_05083	-	362	neuS_final_auto	-	386	8e-29	99.5	19.4	1	1	3.2e-32	9.5e-29	99.3	19.4	9	334	7	342	1	358	0.78	hypothetical	protein
+PROKKA_ERR479016_bin.12.faa_NHFOOEKJ_01237	-	302	neuS_final_auto	-	386	0.077	10.7	0.0	1	1	3.1e-05	0.092	10.4	0.0	288	345	139	199	135	284	0.77	Thioredoxin	reductase
+PROKKA_ERR479140_bin.7.faa_OEJKKPBD_00384	-	177	neuS_final_auto	-	386	0.0017	12.3	0.2	1	1	5.2e-06	0.002	12.0	0.2	194	267	61	154	26	167	0.72	Bacitracin	transport	ATP-binding	protein	BcrA
+PROKKA_ERR479105_bin.13.faa_BADIAHHM_00230	-	460	neuS_final_auto	-	386	0.00013	17.1	9.8	1	1	2.2e-05	0.021	9.9	9.7	29	304	126	390	78	436	0.73	hypothetical	protein
+PROKKA_ERR479072_bin.21.faa_NELLIJKF_00005	-	234	neuS_final_auto	-	386	0.0018	12.3	0.2	1	1	5.6e-06	0.0025	11.9	0.2	166	244	74	179	46	185	0.85	putative	ABC	transporter	ATP-binding	protein	YxlF
+PROKKA_ERR479220_bin.4.faa_DEAAAIOE_02702	-	377	neuS_final_auto	-	386	3.4e-15	54.1	17.3	1	1	1.1e-18	4.2e-15	53.8	17.3	47	341	13	339	2	374	0.73	hypothetical	protein
+PROKKA_ERR479182_bin.34.faa_GJNDFKHB_00272	-	322	neuS_final_auto	-	386	1.9e-26	88.9	0.0	1	1	2.7e-29	2.2e-26	88.7	0.0	9	307	3	305	1	320	0.85	hypothetical	protein
+PROKKA_ERR479294_bin.10.faa_HFMNBOFC_01570	-	385	neuS_final_auto	-	386	8.1e-05	18.9	2.5	1	1	5.7e-08	0.00011	18.4	2.5	48	223	42	219	7	245	0.74	GDP-mannose-dependent	monoacylated	alpha-(1-6)-phosphatidylinositol	monomannoside	mannosyltransferase
+PROKKA_ERR479193_bin.13.faa_ACBCDLOH_01618	-	361	neuS_final_auto	-	386	5.2e-38	128.6	5.1	1	1	2.4e-41	6.4e-38	128.3	5.1	8	300	2	327	1	327	0.85	hypothetical	protein
+PROKKA_ERR479407_bin.18.faa_DPMBLKDB_00502	-	531	neuS_final_auto	-	386	2.7e-57	190.2	10.1	1	1	1.1e-59	3.8e-57	189.7	10.1	8	384	1	526	1	529	0.78	hypothetical	protein
+PROKKA_ERR479407_bin.18.faa_DPMBLKDB_00506	-	502	neuS_final_auto	-	386	1.3e-39	132.0	11.1	1	1	4.3e-42	1.5e-39	131.8	11.1	8	356	1	375	1	490	0.80	hypothetical	protein
+PROKKA_ERR479112_bin.6.faa_HEPPEJFG_00455	-	53	neuS_final_auto	-	386	0.0036	13.7	0.1	1	1	1.7e-06	0.004	13.6	0.1	105	142	11	46	8	52	0.84	hypothetical	protein
+PROKKA_ERR479247_bin.23.faa_HKMJBOLC_01000	-	366	neuS_final_auto	-	386	6.1e-25	84.7	12.1	1	1	9.6e-28	7.1e-25	84.5	12.1	8	319	1	327	1	364	0.76	hypothetical	protein
+PROKKA_ERR479247_bin.23.faa_HKMJBOLC_01348	-	385	neuS_final_auto	-	386	2e-06	23.8	0.9	1	2	0.094	70	-1.0	0.5	125	238	121	134	73	198	0.62	hypothetical	protein
+PROKKA_ERR479247_bin.23.faa_HKMJBOLC_01348	-	385	neuS_final_auto	-	386	2e-06	23.8	0.9	2	2	2.7e-09	2e-06	23.8	0.9	232	326	268	363	258	384	0.73	hypothetical	protein
+PROKKA_ERR479298_bin.54.faa_IDAGGEHD_01500	-	202	neuS_final_auto	-	386	1.9e-05	21.2	0.5	1	1	1.2e-08	2.8e-05	20.6	0.5	119	199	16	123	7	145	0.82	hypothetical	protein
+PROKKA_ERR479161_bin.31.faa_ABEDMECG_00204	-	365	neuS_final_auto	-	386	5.9e-32	105.1	1.9	1	1	3.4e-34	7.2e-32	104.8	1.9	11	323	7	325	1	358	0.81	hypothetical	protein
+PROKKA_ERR479211_bin.2.faa_AJLLKPBM_00345	-	361	neuS_final_auto	-	386	4.3e-34	115.7	4.5	1	1	4.2e-37	5.4e-34	115.4	4.5	8	300	2	327	1	327	0.79	hypothetical	protein
+PROKKA_ERR479211_bin.2.faa_AJLLKPBM_02557	-	372	neuS_final_auto	-	386	5.9e-18	62.6	8.1	1	1	5e-21	6.5e-18	62.4	8.1	8	289	1	275	1	349	0.79	hypothetical	protein
+PROKKA_ERR479157_bin.7.faa_MFOOKIIO_02521	-	361	neuS_final_auto	-	386	1.6e-34	117.3	6.5	1	1	6.5e-38	2e-34	117.0	6.5	8	300	2	327	1	327	0.80	hypothetical	protein
+PROKKA_ERR479149_bin.16.faa_OBOABHCJ_00080	-	322	neuS_final_auto	-	386	1.3e-25	86.3	0.0	1	1	1.8e-28	1.7e-25	85.9	0.0	9	307	3	305	1	319	0.84	hypothetical	protein
+PROKKA_ERR479183_bin.11.faa_EOOOOCFD_02217	-	154	neuS_final_auto	-	386	0.0055	13.3	1.1	1	1	2.2e-06	0.0058	13.2	1.1	153	245	13	131	1	140	0.66	hypothetical	protein
+PROKKA_ERR479052_bin.24.faa_ENCMGJEG_03322	-	389	neuS_final_auto	-	386	1e-17	63.8	7.0	1	1	1.2e-21	1.3e-17	63.4	7.0	114	319	136	348	61	385	0.73	hypothetical	protein
+PROKKA_ERR479204_bin.9.faa_ENMGFAFP_00088	-	361	neuS_final_auto	-	386	4.8e-18	62.9	13.0	1	1	4.6e-21	6e-18	62.5	13.0	8	357	1	352	1	359	0.69	hypothetical	protein
+PROKKA_ERR479204_bin.9.faa_ENMGFAFP_01115	-	213	neuS_final_auto	-	386	0.0023	14.5	0.6	1	1	2e-06	0.0027	14.3	0.6	164	262	106	190	47	208	0.79	Linearmycin	resistance	ATP-binding	protein	LnrL
+PROKKA_ERR479137_bin.13.faa_IPAKEHPN_00360	-	439	neuS_final_auto	-	386	1.7e-36	122.0	0.0	1	1	2.2e-39	1.9e-36	121.9	0.0	80	341	129	438	51	439	0.87	hypothetical	protein
+PROKKA_ERR479036_bin.12.faa_JGEMBGBD_00681	-	320	neuS_final_auto	-	386	2.6e-09	34.3	19.1	1	1	2e-12	5.8e-09	33.1	19.1	9	307	4	287	1	316	0.65	hypothetical	protein
+PROKKA_ERR479174_bin.13.faa_GCFFDPMP_00167	-	156	neuS_final_auto	-	386	0.0022	12.9	0.3	1	1	3.6e-06	0.003	12.5	0.3	133	232	5	100	3	111	0.71	hypothetical	protein
+PROKKA_ERR478967_bin.29.faa_FOELKBMP_01842	-	359	neuS_final_auto	-	386	1.9e-15	54.2	12.8	1	1	1.9e-18	2.4e-15	53.9	12.8	8	340	1	351	1	356	0.74	hypothetical	protein
+PROKKA_ERR478967_bin.29.faa_FOELKBMP_00493	-	247	neuS_final_auto	-	386	0.0042	13.6	0.5	1	2	6e-06	0.0074	12.8	0.1	172	222	5	58	1	63	0.89	hypothetical	protein
+PROKKA_ERR478967_bin.29.faa_FOELKBMP_00493	-	247	neuS_final_auto	-	386	0.0042	13.6	0.5	2	2	0.32	4e+02	-2.8	0.0	82	111	210	240	178	244	0.61	hypothetical	protein
+PROKKA_ERR479078_bin.21.faa_INLEIJIH_00558	-	371	neuS_final_auto	-	386	7.1e-26	88.3	1.3	1	1	4.2e-29	8.6e-26	88.0	1.3	5	319	3	330	1	366	0.79	hypothetical	protein
+PROKKA_ERR479138_bin.24.faa_LCLDOIPG_01874	-	361	neuS_final_auto	-	386	9.9e-38	127.7	4.2	1	1	4.5e-41	1.2e-37	127.4	4.2	8	298	2	325	1	327	0.83	hypothetical	protein
+PROKKA_ERR479186_bin.8.faa_JGOGMMKE_00417	-	132	neuS_final_auto	-	386	4.7e-18	62.1	0.2	1	1	3.8e-21	5.5e-18	61.8	0.2	212	298	16	96	2	98	0.89	hypothetical	protein
+PROKKA_ERR479035_bin.15.faa_BMMBBIEE_01402	-	212	neuS_final_auto	-	386	0.017	11.5	0.2	1	1	8.6e-06	0.021	11.3	0.2	179	264	100	193	61	208	0.75	Bacitracin	transport	ATP-binding	protein	BcrA
+PROKKA_ERR479252_bin.12.faa_NMKDABAL_00023	-	154	neuS_final_auto	-	386	0.0047	13.3	1.1	1	1	2.2e-06	0.005	13.2	1.1	153	245	13	131	1	140	0.66	hypothetical	protein
+PROKKA_ERR479021_bin.24.faa_JAPNNKKG_00252	-	335	neuS_final_auto	-	386	1.7e-64	214.5	25.4	1	1	1.8e-67	1.9e-64	214.4	25.4	8	319	1	327	1	335	0.92	hypothetical	protein
+PROKKA_ERR479235_bin.30.faa_OGOEEBOE_00518	-	531	neuS_final_auto	-	386	7.3e-57	189.1	8.7	1	1	2.2e-59	1e-56	188.7	8.7	8	384	1	526	1	529	0.79	hypothetical	protein
+PROKKA_ERR479235_bin.30.faa_OGOEEBOE_00514	-	502	neuS_final_auto	-	386	6.2e-40	133.4	11.5	1	1	1.6e-42	7.3e-40	133.2	11.5	8	359	1	378	1	483	0.83	hypothetical	protein
+PROKKA_ERR479166_bin.14.faa_AGDKENIP_01785	-	314	neuS_final_auto	-	386	1.8e-27	93.5	0.0	1	1	1.2e-30	2.2e-27	93.2	0.0	8	303	1	291	1	309	0.90	hypothetical	protein
+PROKKA_ERR479160_bin.6.faa_AFDLEBKH_02986	-	361	neuS_final_auto	-	386	1.7e-34	117.3	6.5	1	1	6.5e-38	2.2e-34	117.0	6.5	8	300	2	327	1	327	0.80	hypothetical	protein
+PROKKA_ERR479286_bin.8.faa_NIFKOKJG_01119	-	361	neuS_final_auto	-	386	9.2e-38	127.7	4.2	1	1	4.5e-41	1.1e-37	127.4	4.2	8	298	2	325	1	327	0.83	hypothetical	protein
+PROKKA_ERR479203_bin.28.faa_NBJBCNHA_02115	-	361	neuS_final_auto	-	386	4.7e-18	62.9	13.0	1	1	4.6e-21	5.9e-18	62.5	13.0	8	357	1	352	1	359	0.69	hypothetical	protein
+PROKKA_ERR479203_bin.28.faa_NBJBCNHA_00812	-	213	neuS_final_auto	-	386	0.0023	14.5	0.6	1	1	2e-06	0.0026	14.3	0.6	164	262	106	190	47	208	0.79	Linearmycin	resistance	ATP-binding	protein	LnrL
+PROKKA_ERR479407_bin.21.faa_GNENIOFO_02451	-	367	neuS_final_auto	-	386	2e-19	67.6	7.1	1	1	1.6e-22	2.4e-19	67.3	7.1	8	314	3	340	1	366	0.75	hypothetical	protein
+PROKKA_ERR479407_bin.21.faa_GNENIOFO_02523	-	613	neuS_final_auto	-	386	0.00014	18.7	3.6	1	2	0.076	1.1e+02	-0.7	0.1	71	142	93	185	32	228	0.58	hypothetical	protein
+PROKKA_ERR479407_bin.21.faa_GNENIOFO_02523	-	613	neuS_final_auto	-	386	0.00014	18.7	3.6	2	2	9.5e-08	0.00014	18.7	3.6	85	260	271	462	268	464	0.78	hypothetical	protein
+PROKKA_ERR478967_bin.15.faa_BLACFBEF_00939	-	361	neuS_final_auto	-	386	1.2e-34	117.0	6.6	1	1	8.3e-38	1.5e-34	116.7	6.6	8	300	2	327	1	327	0.80	hypothetical	protein
+PROKKA_ERR479143_bin.11.faa_BNIEEOJI_00964	-	531	neuS_final_auto	-	386	3.8e-58	193.5	10.0	1	1	1e-60	5.1e-58	193.1	10.0	8	384	1	526	1	529	0.81	hypothetical	protein
+PROKKA_ERR479143_bin.11.faa_BNIEEOJI_00960	-	502	neuS_final_auto	-	386	1.3e-39	132.5	11.4	1	1	3.1e-42	1.5e-39	132.3	11.4	8	359	1	378	1	483	0.83	hypothetical	protein
+PROKKA_ERR479073_bin.27.faa_GLGBBAOL_00471	-	234	neuS_final_auto	-	386	0.0037	12.3	0.2	1	1	5.6e-06	0.005	11.9	0.2	166	244	74	179	46	185	0.85	putative	ABC	transporter	ATP-binding	protein	YxlF
+PROKKA_ERR479136_bin.15.faa_OOKFEAFH_00049	-	314	neuS_final_auto	-	386	1.7e-27	92.8	0.0	1	1	1.9e-30	2.1e-27	92.5	0.0	8	303	1	291	1	309	0.90	hypothetical	protein
+PROKKA_ERR478959_bin.30.faa_NPAJIHFJ_00442	-	331	neuS_final_auto	-	386	0.017	11.8	0.1	1	1	7.9e-06	0.023	11.4	0.1	129	258	67	213	62	213	0.72	Oligopeptide	transport	ATP-binding	protein	OppD
+PROKKA_ERR479073_bin.15.faa_ALJAJDGI_00098	-	343	neuS_final_auto	-	386	1.8e-32	109.5	3.9	1	1	1.6e-35	2.3e-32	109.1	3.9	35	298	18	307	4	309	0.85	hypothetical	protein
+PROKKA_ERR479200_bin.5.faa_EKCJCMHN_00846	-	99	neuS_final_auto	-	386	2.5e-14	50.3	0.0	1	1	1.2e-17	2.6e-14	50.3	0.0	245	341	3	98	1	99	0.82	hypothetical	protein
+PROKKA_ERR479076_bin.22.faa_HKEEHIGJ_00808	-	361	neuS_final_auto	-	386	2.8e-34	115.7	6.5	1	1	2e-37	3.5e-34	115.4	6.5	8	300	2	327	1	327	0.80	hypothetical	protein
+PROKKA_ERR479194_bin.5.faa_HBBEPNAO_02046	-	361	neuS_final_auto	-	386	4.8e-38	128.6	5.1	1	1	2.4e-41	5.9e-38	128.3	5.1	8	300	2	327	1	327	0.85	hypothetical	protein
+PROKKA_ERR479219_bin.10.faa_BPJIKGDO_06982	-	301	neuS_final_auto	-	386	4.7e-21	74.7	5.3	1	1	1.3e-24	6.3e-21	74.3	5.3	120	323	9	243	2	298	0.69	hypothetical	protein
+PROKKA_ERR479219_bin.10.faa_BPJIKGDO_07348	-	213	neuS_final_auto	-	386	0.0078	14.7	0.4	1	1	1.8e-06	0.0089	14.5	0.4	164	262	106	190	39	208	0.80	Linearmycin	resistance	ATP-binding	protein	LnrL
+PROKKA_ERR479050_bin.15.faa_HIHBMCIM_01374	-	389	neuS_final_auto	-	386	5.5e-18	63.8	7.0	1	1	1.2e-21	7e-18	63.4	7.0	114	319	136	348	61	385	0.73	hypothetical	protein
+PROKKA_ERR479068_bin.7.faa_FJHOJODL_00208	-	359	neuS_final_auto	-	386	4.3e-16	54.2	12.8	1	1	2.9e-18	5.3e-16	53.9	12.8	8	340	1	351	1	356	0.74	hypothetical	protein
+PROKKA_ERR479068_bin.7.faa_FJHOJODL_00500	-	213	neuS_final_auto	-	386	0.00049	14.5	0.6	1	1	3.1e-06	0.00056	14.3	0.6	164	262	106	190	47	208	0.79	Linearmycin	resistance	ATP-binding	protein	LnrL
+PROKKA_ERR479068_bin.7.faa_FJHOJODL_00124	-	247	neuS_final_auto	-	386	0.00095	13.6	0.5	1	2	9.1e-06	0.0016	12.8	0.1	172	222	5	58	1	63	0.89	hypothetical	protein
+PROKKA_ERR479068_bin.7.faa_FJHOJODL_00124	-	247	neuS_final_auto	-	386	0.00095	13.6	0.5	2	2	0.49	89	-2.8	0.0	82	111	210	240	178	244	0.61	hypothetical	protein
+PROKKA_ERR479101_bin.22.faa_MPKALFOG_00192	-	107	neuS_final_auto	-	386	0.0014	12.0	0.1	1	1	6.1e-06	0.0016	11.8	0.1	178	245	3	64	1	72	0.83	hypothetical	protein
+PROKKA_ERR479160_bin.5.faa_CKBGFFJC_00307	-	369	neuS_final_auto	-	386	4.4e-12	40.3	7.2	1	1	2e-14	6.6e-12	39.7	7.2	15	323	27	342	15	367	0.60	hypothetical	protein
+PROKKA_ERR479064_bin.1.faa_GDDJLFHG_02200	-	361	neuS_final_auto	-	386	1.3e-37	127.1	5.0	1	1	6.9e-41	1.6e-37	126.8	5.0	8	298	2	325	1	327	0.85	hypothetical	protein
+PROKKA_ERR479075_bin.30.faa_PAHHLONG_00660	-	324	neuS_final_auto	-	386	2e-46	155.5	28.2	1	1	4.7e-49	2.2e-46	155.3	28.2	8	313	3	304	1	323	0.82	hypothetical	protein
+PROKKA_ERR479075_bin.30.faa_PAHHLONG_00655	-	332	neuS_final_auto	-	386	1e-42	143.2	15.5	1	1	2.6e-45	1.2e-42	142.9	15.5	8	308	1	302	1	326	0.87	hypothetical	protein
+PROKKA_ERR479075_bin.30.faa_PAHHLONG_00215	-	389	neuS_final_auto	-	386	0.00025	16.8	0.2	1	1	7.2e-07	0.00035	16.4	0.2	196	263	189	253	142	286	0.84	UDP-2,3-diacetamido-2,3-dideoxy-D-glucuronate	2-epimerase
+PROKKA_ERR479161_bin.39.faa_OLNADGJL_04850	-	359	neuS_final_auto	-	386	5.6e-15	53.8	12.4	1	1	1.3e-18	6.7e-15	53.5	12.4	8	330	1	337	1	356	0.73	hypothetical	protein
+PROKKA_ERR479245_bin.7.faa_PECLJAIC_00473	-	324	neuS_final_auto	-	386	4.3e-40	134.4	7.4	1	1	4.1e-43	5.1e-40	134.1	7.4	8	308	2	293	1	318	0.78	hypothetical	protein
+PROKKA_ERR479406_bin.10.faa_KPOGDNGN_03074	-	367	neuS_final_auto	-	386	3.3e-19	67.6	7.1	1	1	1.6e-22	3.9e-19	67.3	7.1	8	314	3	340	1	366	0.75	hypothetical	protein
+PROKKA_ERR479406_bin.10.faa_KPOGDNGN_01879	-	613	neuS_final_auto	-	386	0.00023	18.7	3.6	1	2	0.076	1.8e+02	-0.7	0.1	71	142	93	185	32	228	0.58	hypothetical	protein
+PROKKA_ERR479406_bin.10.faa_KPOGDNGN_01879	-	613	neuS_final_auto	-	386	0.00023	18.7	3.6	2	2	9.5e-08	0.00023	18.7	3.6	85	260	271	462	268	464	0.78	hypothetical	protein
+PROKKA_ERR479136_bin.4.faa_GDCFGEFG_01057	-	498	neuS_final_auto	-	386	4.4e-36	121.5	0.0	1	1	3.3e-39	5.1e-36	121.3	0.0	80	341	188	497	110	498	0.87	hypothetical	protein
+PROKKA_ERR479067_bin.10.faa_BFBBKMDF_00872	-	322	neuS_final_auto	-	386	2.8e-26	89.2	0.0	1	1	2.2e-29	3.3e-26	88.9	0.0	9	307	3	305	1	319	0.86	hypothetical	protein
+PROKKA_ERR478975_bin.17.faa_DFINHFCD_02388	-	67	neuS_final_auto	-	386	0.0093	12.7	0.1	1	1	4e-06	0.011	12.4	0.1	215	251	8	44	4	49	0.92	hypothetical	protein
+PROKKA_ERR479139_bin.24.faa_GJBCGFFB_00895	-	335	neuS_final_auto	-	386	4.7e-62	208.9	25.8	1	1	1.7e-65	5.2e-62	208.8	25.8	8	319	1	327	1	335	0.92	hypothetical	protein
+PROKKA_ERR479139_bin.24.faa_GJBCGFFB_04092	-	335	neuS_final_auto	-	386	1e-05	23.4	17.0	1	1	5.9e-09	1.8e-05	22.7	17.0	12	314	12	303	5	333	0.69	hypothetical	protein
+PROKKA_ERR479166_bin.11.faa_EFCANJOL_00922	-	500	neuS_final_auto	-	386	9.7e-38	127.3	0.0	1	1	5.7e-41	1.1e-37	127.1	0.0	53	310	143	470	111	500	0.84	hypothetical	protein
+PROKKA_ERR478965_bin.11.faa_GACHLFNA_00751	-	359	neuS_final_auto	-	386	1.1e-15	54.2	12.8	1	1	9.7e-19	1.3e-15	53.9	12.8	8	340	1	351	1	356	0.74	hypothetical	protein
+PROKKA_ERR478961_bin.25.faa_PROKKA_ERR478961_bin.25.faa_AKLPGNJE_00836	-	314	neuS_final_auto	-	386	3e-27	92.8	0.0	1	1	1.9e-30	3.8e-27	92.5	0.0	8	303	1	291	1	309	0.90	hypothetical	protein
+PROKKA_ERR479281_bin.28.faa_EPNCJOPK_00901	-	299	neuS_final_auto	-	386	0.00024	16.7	0.0	1	1	2.8e-07	0.00036	16.2	0.0	288	376	142	262	139	272	0.69	Thioredoxin	reductase
+PROKKA_ERR479286_bin.9.faa_OMJBDNKP_00384	-	222	neuS_final_auto	-	386	5.4e-18	62.0	0.0	1	1	3.7e-21	5.9e-18	61.9	0.0	154	303	48	199	1	217	0.80	hypothetical	protein
+PROKKA_ERR479014_bin.5.faa_AAKKALPE_01479	-	367	neuS_final_auto	-	386	2.3e-32	109.2	13.8	1	1	1.8e-35	2.7e-32	109.0	13.8	9	323	3	341	1	362	0.80	hypothetical	protein
+PROKKA_ERR479066_bin.11.faa_JICHCOEI_01346	-	361	neuS_final_auto	-	386	1.5e-37	126.4	5.4	1	1	1.1e-40	1.8e-37	126.1	5.4	8	298	2	325	1	327	0.83	hypothetical	protein
+PROKKA_ERR479018_bin.17.faa_HOKOEMDM_01127	-	324	neuS_final_auto	-	386	2.9e-39	132.2	9.3	1	1	1.9e-42	3.5e-39	131.9	9.3	8	308	2	293	1	321	0.81	hypothetical	protein
+PROKKA_ERR479075_bin.37.faa_HNLBONOK_00239	-	287	neuS_final_auto	-	386	2.9e-06	20.7	5.1	1	1	1.9e-08	4.6e-06	20.1	5.1	85	295	58	238	3	273	0.78	hypothetical	protein
+PROKKA_ERR479189_bin.8.faa_HKIAEHCH_02956	-	335	neuS_final_auto	-	386	5.4e-06	23.4	17.0	1	1	3e-09	9e-06	22.7	17.0	12	314	12	303	5	333	0.69	hypothetical	protein
+PROKKA_ERR479298_bin.1.faa_KCMAGIOA_03680	-	107	neuS_final_auto	-	386	0.005	14.1	0.3	1	1	1.2e-06	0.005	14.1	0.3	277	322	44	86	8	104	0.78	hypothetical	protein
+PROKKA_ERR479004_bin.9.faa_DPCAKBCI_00203	-	119	neuS_final_auto	-	386	0.00054	13.3	3.7	1	1	2.1e-06	0.00056	13.3	3.7	63	178	3	111	1	119	0.76	hypothetical	protein
+PROKKA_ERR479075_bin.4.faa_CBOOKJMC_01445	-	361	neuS_final_auto	-	386	3e-34	115.7	6.5	1	1	2e-37	3.7e-34	115.4	6.5	8	300	2	327	1	327	0.80	hypothetical	protein
+PROKKA_ERR479008_bin.2.faa_BKOOJCOC_02465	-	359	neuS_final_auto	-	386	3.2e-15	53.8	12.4	1	1	3.9e-18	3.8e-15	53.5	12.4	8	330	1	337	1	356	0.73	hypothetical	protein
+PROKKA_ERR479008_bin.2.faa_BKOOJCOC_00803	-	213	neuS_final_auto	-	386	0.0041	13.9	0.2	1	1	4.1e-06	0.0041	13.9	0.2	176	262	118	190	33	208	0.79	Linearmycin	resistance	ATP-binding	protein	LnrL
+PROKKA_ERR479008_bin.2.faa_BKOOJCOC_01427	-	247	neuS_final_auto	-	386	0.0052	13.6	0.5	1	2	9.1e-06	0.009	12.8	0.1	172	222	5	58	1	63	0.89	hypothetical	protein
+PROKKA_ERR479008_bin.2.faa_BKOOJCOC_01427	-	247	neuS_final_auto	-	386	0.0052	13.6	0.5	2	2	0.49	4.9e+02	-2.8	0.0	82	111	210	240	178	244	0.61	hypothetical	protein
+PROKKA_ERR479183_bin.8.faa_KCCLCKAN_00972	-	210	neuS_final_auto	-	386	0.0034	12.7	0.2	1	1	3.9e-06	0.0041	12.4	0.2	181	255	102	186	50	203	0.65	Sulfate/thiosulfate	import	ATP-binding	protein	CysA
+PROKKA_ERR478959_bin.11.faa_PROKKA_ERR478959_bin.11.faa_HGBLDOOD_01274	-	314	neuS_final_auto	-	386	1.6e-27	93.8	0.0	1	1	9.3e-31	2e-27	93.5	0.0	8	303	1	291	1	309	0.91	hypothetical	protein
+PROKKA_ERR479140_bin.12.faa_DNOAOIFI_03629	-	335	neuS_final_auto	-	386	6.7e-06	23.4	17.0	1	1	3e-09	1.1e-05	22.7	17.0	12	314	12	303	5	333	0.69	hypothetical	protein
+PROKKA_ERR479129_bin.12.faa_IGFLNOGB_00542	-	154	neuS_final_auto	-	386	0.0053	13.3	1.1	1	1	2.2e-06	0.0056	13.2	1.1	153	245	13	131	1	140	0.66	hypothetical	protein
+PROKKA_ERR479039_bin.2.faa_KKEOBBPL_01475	-	253	neuS_final_auto	-	386	0.0052	12.8	9.5	1	1	6e-06	0.01	11.8	9.5	49	200	14	202	2	247	0.79	GDP-L-fucose	synthase
+PROKKA_ERR479010_bin.1.faa_KANCAJJH_00620	-	314	neuS_final_auto	-	386	2.6e-27	93.1	0.0	1	1	1.5e-30	3.2e-27	92.8	0.0	8	303	1	291	1	309	0.91	hypothetical	protein
+PROKKA_ERR479139_bin.17.faa_LKMCEEPB_02886	-	309	neuS_final_auto	-	386	4e-18	63.3	15.1	1	1	3.2e-21	4.8e-18	63.1	15.1	13	329	11	303	1	308	0.75	hypothetical	protein
+PROKKA_ERR479139_bin.17.faa_LKMCEEPB_01970	-	237	neuS_final_auto	-	386	0.0053	13.5	0.1	1	1	9.7e-06	0.015	12.1	0.1	272	377	6	140	2	149	0.64	Transcriptional	regulatory	protein	BtsR
+PROKKA_ERR479149_bin.32.faa_BPNBEFPH_01040	-	314	neuS_final_auto	-	386	3.9e-27	92.1	0.0	1	1	3.1e-30	4.8e-27	91.8	0.0	8	303	1	291	1	309	0.89	hypothetical	protein
+PROKKA_ERR479270_bin.14.faa_IAICBKFA_04129	-	335	neuS_final_auto	-	386	2.4e-06	25.1	15.2	1	1	3.8e-09	4e-06	24.3	15.2	12	314	12	303	5	333	0.68	hypothetical	protein
+PROKKA_ERR479270_bin.14.faa_IAICBKFA_01196	-	119	neuS_final_auto	-	386	0.0032	14.8	2.1	1	1	3.4e-06	0.0036	14.6	2.1	63	177	3	110	1	118	0.76	hypothetical	protein
+PROKKA_ERR479270_bin.14.faa_IAICBKFA_04080	-	119	neuS_final_auto	-	386	0.0047	14.2	2.4	1	1	5e-06	0.0053	14.0	2.4	63	177	3	110	1	118	0.76	hypothetical	protein
+PROKKA_ERR479270_bin.14.faa_IAICBKFA_02968	-	385	neuS_final_auto	-	386	0.0049	14.1	0.4	1	2	0.37	3.9e+02	-2.0	0.1	31	31	58	58	8	121	0.56	hypothetical	protein
+PROKKA_ERR479270_bin.14.faa_IAICBKFA_02968	-	385	neuS_final_auto	-	386	0.0049	14.1	0.4	2	2	1e-05	0.011	13.0	0.0	236	322	223	312	215	374	0.72	hypothetical	protein
+PROKKA_ERR479009_bin.11.faa_PROKKA_ERR479009_bin.11.faa_AOHMJAME_00126	-	359	neuS_final_auto	-	386	5.7e-16	53.8	12.4	1	1	1.3e-18	6.9e-16	53.5	12.4	8	330	1	337	1	356	0.73	hypothetical	protein
+PROKKA_ERR479070_bin.26.faa_MBDLFEFN_00525	-	322	neuS_final_auto	-	386	2.5e-26	89.2	0.0	1	1	2.2e-29	3e-26	88.9	0.0	9	307	3	305	1	319	0.86	hypothetical	protein
+PROKKA_ERR479195_bin.20.faa_JIOPJGGE_00340	-	314	neuS_final_auto	-	386	1.4e-27	93.8	0.0	1	1	9.3e-31	1.8e-27	93.5	0.0	8	303	1	291	1	309	0.91	hypothetical	protein
+PROKKA_ERR479077_bin.45.faa_JFFFOCNL_01391	-	371	neuS_final_auto	-	386	7.4e-26	88.3	1.3	1	1	4.2e-29	9e-26	88.0	1.3	5	319	3	330	1	366	0.79	hypothetical	protein
+PROKKA_ERR479171_bin.19.faa_JCMLOFKO_00476	-	361	neuS_final_auto	-	386	5.3e-35	117.3	6.3	1	1	6.5e-38	6.5e-35	117.0	6.3	8	300	2	327	1	327	0.80	hypothetical	protein
+PROKKA_ERR479101_bin.10.faa_MOEGLILC_01909	-	359	neuS_final_auto	-	386	1.9e-15	54.2	12.8	1	1	1.9e-18	2.3e-15	53.9	12.8	8	340	1	351	1	356	0.74	hypothetical	protein
+PROKKA_ERR479101_bin.10.faa_MOEGLILC_00835	-	213	neuS_final_auto	-	386	0.0021	14.5	0.6	1	1	2e-06	0.0025	14.3	0.6	164	262	106	190	47	208	0.79	Linearmycin	resistance	ATP-binding	protein	LnrL
+PROKKA_ERR479182_bin.8.faa_JMEJEJGC_02502	-	361	neuS_final_auto	-	386	1.6e-37	127.6	3.7	1	1	9.5e-41	1.9e-37	127.3	3.7	8	298	2	325	1	327	0.83	hypothetical	protein
+PROKKA_ERR479182_bin.8.faa_JMEJEJGC_01108	-	361	neuS_final_auto	-	386	2.1e-34	117.3	6.3	1	1	1.3e-37	2.6e-34	117.0	6.3	8	300	2	327	1	327	0.80	hypothetical	protein
+PROKKA_ERR479254_bin.1.faa_JIODJCMJ_00121	-	360	neuS_final_auto	-	386	2.5e-20	67.4	12.7	1	1	1.1e-22	3.5e-20	66.9	12.7	8	334	1	340	1	354	0.77	hypothetical	protein
+PROKKA_ERR478981_bin.11.faa_DLDDOBNF_00512	-	361	neuS_final_auto	-	386	6.5e-35	117.2	6.6	1	1	7.2e-38	8.1e-35	116.9	6.6	8	300	2	327	1	327	0.80	hypothetical	protein
+PROKKA_ERR479243_bin.13.faa_FFGEMGNN_02024	-	212	neuS_final_auto	-	386	0.018	11.5	0.2	1	1	8.6e-06	0.022	11.3	0.2	179	264	100	193	61	208	0.75	Bacitracin	transport	ATP-binding	protein	BcrA
+PROKKA_ERR479181_bin.17.faa_AICCALHA_00425	-	322	neuS_final_auto	-	386	1e-26	89.3	0.0	1	1	2e-29	1.2e-26	89.0	0.0	9	307	3	305	1	320	0.85	hypothetical	protein
+PROKKA_ERR479063_bin.16.faa_BPGOBCKH_07215	-	320	neuS_final_auto	-	386	6.5e-09	34.3	19.1	1	1	2e-12	1.4e-08	33.1	19.1	9	307	4	287	1	316	0.65	hypothetical	protein
+PROKKA_ERR478970_bin.2.faa_JNNENEPL_01230	-	370	neuS_final_auto	-	386	0.006	14.6	0.0	1	1	1.1e-06	0.0078	14.2	0.0	47	185	16	185	11	231	0.75	UDP-N-acetylglucosamine	2-epimerase
+PROKKA_ERR479000_bin.8.faa_HHDNINOG_01540	-	314	neuS_final_auto	-	386	1.2e-27	93.8	0.0	1	1	9.3e-31	1.5e-27	93.5	0.0	8	303	1	291	1	309	0.91	hypothetical	protein
+PROKKA_ERR479205_bin.19.faa_DBOKPFMC_00207	-	361	neuS_final_auto	-	386	5e-18	62.9	13.0	1	1	4.6e-21	6.2e-18	62.5	13.0	8	357	1	352	1	359	0.69	hypothetical	protein
+PROKKA_ERR479205_bin.19.faa_DBOKPFMC_01432	-	213	neuS_final_auto	-	386	0.0024	14.5	0.6	1	1	2e-06	0.0028	14.3	0.6	164	262	106	190	47	208	0.79	Linearmycin	resistance	ATP-binding	protein	LnrL
+PROKKA_ERR479069_bin.17.faa_JNOGCDOG_00085	-	359	neuS_final_auto	-	386	5.4e-16	54.2	12.8	1	1	9.7e-19	6.6e-16	53.9	12.8	8	340	1	351	1	356	0.74	hypothetical	protein
+PROKKA_ERR479063_bin.26.faa_MGAHLFLM_01892	-	361	neuS_final_auto	-	386	1.6e-37	126.6	5.6	1	1	9.7e-41	1.9e-37	126.3	5.6	8	298	2	325	1	327	0.83	hypothetical	protein
+PROKKA_ERR479417_bin.40.faa_FCOLAKGC_02233	-	335	neuS_final_auto	-	386	6e-64	214.5	25.4	1	1	1.8e-67	6.6e-64	214.4	25.4	8	319	1	327	1	335	0.92	hypothetical	protein
+PROKKA_ERR479273_bin.24.faa_EMHFLBAH_02112	-	335	neuS_final_auto	-	386	2.3e-06	25.1	15.2	1	1	3.8e-09	4e-06	24.3	15.2	12	314	12	303	5	333	0.68	hypothetical	protein
+PROKKA_ERR479273_bin.24.faa_EMHFLBAH_03865	-	119	neuS_final_auto	-	386	0.0032	14.8	2.1	1	1	3.4e-06	0.0036	14.6	2.1	63	177	3	110	1	118	0.76	hypothetical	protein
+PROKKA_ERR479273_bin.24.faa_EMHFLBAH_02455	-	119	neuS_final_auto	-	386	0.0047	14.2	2.4	1	1	5e-06	0.0053	14.0	2.4	63	177	3	110	1	118	0.76	hypothetical	protein
+PROKKA_ERR479273_bin.24.faa_EMHFLBAH_03886	-	385	neuS_final_auto	-	386	0.0049	14.1	0.4	1	2	0.37	3.8e+02	-2.0	0.1	31	31	58	58	8	121	0.56	hypothetical	protein
+PROKKA_ERR479273_bin.24.faa_EMHFLBAH_03886	-	385	neuS_final_auto	-	386	0.0049	14.1	0.4	2	2	1e-05	0.011	13.0	0.0	236	322	223	312	215	374	0.72	hypothetical	protein
+PROKKA_ERR479066_bin.2.faa_OBLJIPAE_00467	-	138	neuS_final_auto	-	386	6.5e-29	97.8	1.4	1	1	9.6e-32	7.3e-29	97.7	1.4	203	308	6	107	2	131	0.94	hypothetical	protein
+PROKKA_ERR479066_bin.2.faa_OBLJIPAE_00468	-	149	neuS_final_auto	-	386	1.5e-05	21.0	1.0	1	1	2.4e-08	1.8e-05	20.7	1.0	8	153	2	141	1	148	0.62	hypothetical	protein
+PROKKA_ERR479213_bin.3.faa_BONNPGPB_00321	-	322	neuS_final_auto	-	386	2.4e-26	88.2	0.0	1	1	4.4e-29	2.8e-26	88.0	0.0	9	307	3	305	1	320	0.84	hypothetical	protein
+PROKKA_ERR479076_bin.45.faa_AKJMGBPC_12456	-	336	neuS_final_auto	-	386	4.5e-31	108.2	7.8	1	1	7.9e-35	5.8e-31	107.9	7.8	8	308	6	303	1	329	0.77	hypothetical	protein
+PROKKA_ERR479076_bin.45.faa_AKJMGBPC_12035	-	384	neuS_final_auto	-	386	0.01	14.9	0.1	1	1	2.5e-06	0.018	14.0	0.1	241	306	227	296	225	380	0.69	hypothetical	protein
+PROKKA_ERR479206_bin.13.faa_GEFPCGMG_00843	-	361	neuS_final_auto	-	386	5e-18	62.9	13.0	1	1	4.6e-21	6.2e-18	62.5	13.0	8	357	1	352	1	359	0.69	hypothetical	protein
+PROKKA_ERR479206_bin.13.faa_GEFPCGMG_01540	-	213	neuS_final_auto	-	386	0.0024	14.5	0.6	1	1	2e-06	0.0028	14.3	0.6	164	262	106	190	47	208	0.79	Linearmycin	resistance	ATP-binding	protein	LnrL
+PROKKA_ERR479076_bin.5.faa_PKLDFKNI_00235	-	361	neuS_final_auto	-	386	1.8e-37	123.5	2.4	1	1	8.7e-40	2.3e-37	123.2	2.4	1	300	1	326	1	328	0.83	hypothetical	protein
+PROKKA_ERR479165_bin.9.faa_BNFIPABC_00125	-	500	neuS_final_auto	-	386	9.4e-38	127.3	0.0	1	1	5.7e-41	1.1e-37	127.1	0.0	53	310	143	470	111	500	0.84	hypothetical	protein
+PROKKA_ERR479182_bin.33.faa_HHMJLHMA_01236	-	503	neuS_final_auto	-	386	9.4e-43	143.6	0.0	1	1	6.2e-46	1.1e-42	143.4	0.0	48	341	141	502	115	503	0.88	hypothetical	protein
+PROKKA_ERR479261_bin.17.faa_NGJDCHAB_00492	-	364	neuS_final_auto	-	386	2e-26	89.4	9.4	1	1	1.9e-29	2.4e-26	89.1	9.4	10	314	5	333	1	362	0.77	hypothetical	protein
+PROKKA_ERR479212_bin.15.faa_LGBMLJPH_00793	-	361	neuS_final_auto	-	386	4.3e-34	115.7	4.5	1	1	4.2e-37	5.3e-34	115.4	4.5	8	300	2	327	1	327	0.79	hypothetical	protein
+PROKKA_ERR479212_bin.15.faa_LGBMLJPH_00764	-	372	neuS_final_auto	-	386	5.8e-18	62.6	8.1	1	1	5e-21	6.5e-18	62.4	8.1	8	289	1	275	1	349	0.79	hypothetical	protein
+PROKKA_ERR479246_bin.19.faa_CIBNHGOL_00228	-	324	neuS_final_auto	-	386	4.6e-40	134.4	7.4	1	1	4.1e-43	5.5e-40	134.1	7.4	8	308	2	293	1	318	0.78	hypothetical	protein
+PROKKA_ERR479079_bin.20.faa_PMCIDEMD_00389	-	369	neuS_final_auto	-	386	3.6e-23	78.9	12.9	1	1	3.3e-26	4.7e-23	78.5	12.9	13	334	5	345	2	364	0.73	hypothetical	protein
+PROKKA_ERR479197_bin.22.faa_CIGMLLNF_00140	-	352	neuS_final_auto	-	386	7.8e-26	85.1	9.9	1	1	3.8e-28	9.5e-26	84.9	9.9	7	314	3	320	1	350	0.72	hypothetical	protein
+PROKKA_ERR479084_bin.33.faa_NKMPIBHB_02261	-	309	neuS_final_auto	-	386	1.4e-36	123.8	0.0	1	1	6.2e-40	1.5e-36	123.7	0.0	85	341	3	308	1	309	0.91	hypothetical	protein
+PROKKA_ERR479242_bin.4.faa_EKCLKFJM_05335	-	335	neuS_final_auto	-	386	1.3e-63	214.5	25.4	1	1	7e-67	1.5e-63	214.4	25.4	8	319	1	327	1	335	0.92	hypothetical	protein
+PROKKA_ERR479242_bin.4.faa_EKCLKFJM_05842	-	335	neuS_final_auto	-	386	1.5e-05	23.4	17.0	1	1	1.2e-08	2.5e-05	22.7	17.0	12	314	12	303	5	333	0.69	hypothetical	protein
+PROKKA_ERR479242_bin.4.faa_EKCLKFJM_05412	-	417	neuS_final_auto	-	386	0.00019	19.8	0.1	1	1	1.1e-07	0.00023	19.5	0.1	194	323	203	357	113	413	0.69	hypothetical	protein
+PROKKA_ERR479242_bin.4.faa_EKCLKFJM_00811	-	233	neuS_final_auto	-	386	0.006	14.8	0.5	1	1	3.5e-06	0.0074	14.6	0.5	211	282	145	229	72	232	0.77	putative	ABC	transporter	ATP-binding	protein
+PROKKA_ERR479251_bin.24.faa_IAHBANMD_01729	-	154	neuS_final_auto	-	386	0.0078	13.3	1.1	1	1	2.2e-06	0.0083	13.2	1.1	153	245	13	131	1	140	0.66	hypothetical	protein
+PROKKA_ERR479284_bin.12.faa_EJLGMJID_00276	-	361	neuS_final_auto	-	386	7.9e-38	126.4	5.4	1	1	1.1e-40	9.4e-38	126.1	5.4	8	298	2	325	1	327	0.83	hypothetical	protein
+PROKKA_ERR479124_bin.20.faa_GNDLPOOG_00158	-	361	neuS_final_auto	-	386	1.6e-38	126.9	5.4	1	1	7.6e-41	1.9e-38	126.7	5.4	8	298	2	325	1	327	0.83	hypothetical	protein
+PROKKA_ERR479115_bin.6.faa_LOMFKKKC_00504	-	292	neuS_final_auto	-	386	4.7e-13	46.0	1.6	1	1	2.9e-16	5.6e-13	45.8	1.6	99	317	33	244	14	285	0.73	hypothetical	protein
+PROKKA_ERR478966_bin.27.faa_KMNOCDKB_00002	-	531	neuS_final_auto	-	386	2.5e-55	182.2	12.1	1	1	3.3e-57	4e-55	181.5	12.1	8	385	1	527	1	529	0.77	hypothetical	protein
+PROKKA_ERR478966_bin.27.faa_KMNOCDKB_00006	-	502	neuS_final_auto	-	386	1.1e-39	130.7	11.3	1	1	1e-41	1.2e-39	130.5	11.3	8	357	1	376	1	489	0.82	hypothetical	protein
+PROKKA_ERR479199_bin.4.faa_PIAECPLC_02784	-	331	neuS_final_auto	-	386	0.018	11.8	0.1	1	1	7.9e-06	0.024	11.4	0.1	129	258	67	213	62	213	0.72	Oligopeptide	transport	ATP-binding	protein	OppD
+PROKKA_ERR479294_bin.15.faa_JEFOIMJM_00009	-	361	neuS_final_auto	-	386	8.6e-38	127.3	5.1	1	1	1.2e-40	1e-37	127.1	5.1	8	298	2	325	1	327	0.85	hypothetical	protein
+PROKKA_ERR479294_bin.15.faa_JEFOIMJM_01764	-	361	neuS_final_auto	-	386	9.1e-35	117.3	6.3	1	1	1.3e-37	1.1e-34	117.0	6.3	8	300	2	327	1	327	0.80	hypothetical	protein
+PROKKA_ERR479161_bin.19.faa_MPHKPBIN_00175	-	322	neuS_final_auto	-	386	6.9e-26	88.2	0.0	1	1	4.4e-29	8.3e-26	88.0	0.0	9	307	3	305	1	320	0.84	hypothetical	protein
+PROKKA_ERR479019_bin.29.faa_GOMOACDP_04417	-	335	neuS_final_auto	-	386	1.1e-63	214.5	25.4	1	1	7e-67	1.2e-63	214.4	25.4	8	319	1	327	1	335	0.92	hypothetical	protein
+PROKKA_ERR479019_bin.29.faa_GOMOACDP_01670	-	339	neuS_final_auto	-	386	2.3e-33	114.7	6.3	1	2	0.58	1e+03	-2.6	0.0	159	191	37	68	23	84	0.70	hypothetical	protein
+PROKKA_ERR479019_bin.29.faa_GOMOACDP_01670	-	339	neuS_final_auto	-	386	2.3e-33	114.7	6.3	2	2	2.2e-36	3.9e-33	114.0	6.3	115	310	113	311	39	334	0.89	hypothetical	protein
+PROKKA_ERR479019_bin.29.faa_GOMOACDP_00210	-	385	neuS_final_auto	-	386	0.001	17.1	5.2	1	1	1.1e-06	0.002	16.2	5.2	219	323	253	360	62	383	0.81	hypothetical	protein
+PROKKA_ERR479019_bin.29.faa_GOMOACDP_00460	-	213	neuS_final_auto	-	386	0.0063	14.5	0.6	1	1	4.1e-06	0.0072	14.3	0.6	164	262	106	190	47	208	0.79	Linearmycin	resistance	ATP-binding	protein	LnrL
+PROKKA_ERR478997_bin.19.faa_GGAAEJKP_00133	-	358	neuS_final_auto	-	386	8.4e-20	66.9	14.8	1	1	1.4e-22	1.1e-19	66.5	14.8	8	334	1	328	1	353	0.75	hypothetical	protein
+PROKKA_ERR479402_bin.4.faa_FHMMMCKF_04223	-	100	neuS_final_auto	-	386	0.019	12.3	0.1	1	1	4.8e-06	0.023	12.1	0.1	193	245	27	78	4	94	0.75	Vitamin	B12	import	ATP-binding	protein	BtuD
+PROKKA_ERR479105_bin.17.faa_IOPOIPDB_00802	-	361	neuS_final_auto	-	386	1.2e-34	117.3	6.3	1	1	6.5e-38	1.5e-34	117.0	6.3	8	300	2	327	1	327	0.80	hypothetical	protein
+PROKKA_ERR479297_bin.13.faa_FKMAIABE_01307	-	361	neuS_final_auto	-	386	8e-38	127.4	4.7	1	1	1.1e-40	9.5e-38	127.1	4.7	8	298	2	325	1	327	0.85	hypothetical	protein
+PROKKA_ERR479297_bin.13.faa_FKMAIABE_00836	-	361	neuS_final_auto	-	386	8.8e-35	117.3	6.3	1	1	1.3e-37	1.1e-34	117.0	6.3	8	300	2	327	1	327	0.80	hypothetical	protein
+PROKKA_ERR478996_bin.15.faa_CMAIOGEG_00051	-	377	neuS_final_auto	-	386	5.2e-15	54.1	17.3	1	1	1.1e-18	6.3e-15	53.8	17.3	47	341	13	339	2	374	0.73	hypothetical	protein
+PROKKA_ERR479220_bin.5.faa_BMICAOOC_05947	-	410	neuS_final_auto	-	386	9.9e-25	86.6	15.9	1	1	1.6e-28	1.4e-24	86.1	15.9	8	323	3	352	1	406	0.70	hypothetical	protein
+PROKKA_ERR479014_bin.16.faa_PROKKA_ERR479014_bin.16.faa_ICEJFAGF_03853	-	362	neuS_final_auto	-	386	7.8e-29	99.5	19.4	1	1	4.9e-32	9.2e-29	99.3	19.4	9	334	7	342	1	358	0.78	hypothetical	protein
+PROKKA_ERR479014_bin.16.faa_PROKKA_ERR479014_bin.16.faa_ICEJFAGF_03174	-	394	neuS_final_auto	-	386	9.1e-05	20.3	4.4	1	1	7.2e-08	0.00014	19.7	3.5	211	275	214	288	4	307	0.55	hypothetical	protein
+PROKKA_ERR479014_bin.16.faa_PROKKA_ERR479014_bin.16.faa_ICEJFAGF_00069	-	302	neuS_final_auto	-	386	0.075	10.7	0.0	1	1	4.7e-05	0.09	10.4	0.0	288	345	139	199	135	284	0.77	Thioredoxin	reductase
+PROKKA_ERR479254_bin.4.faa_MPPMMEMJ_00065	-	314	neuS_final_auto	-	386	1.6e-27	93.5	0.0	1	1	1.2e-30	2e-27	93.2	0.0	8	303	1	291	1	309	0.90	hypothetical	protein
+PROKKA_ERR478964_bin.16.faa_PROKKA_ERR478964_bin.16.faa_AIFIGIBE_00718	-	531	neuS_final_auto	-	386	1.4e-54	182.2	12.1	1	1	3.3e-57	2.2e-54	181.5	12.1	8	385	1	527	1	529	0.77	hypothetical	protein
+PROKKA_ERR478964_bin.16.faa_PROKKA_ERR478964_bin.16.faa_AIFIGIBE_00722	-	502	neuS_final_auto	-	386	5.9e-39	130.7	11.3	1	1	1e-41	6.9e-39	130.5	11.3	8	357	1	376	1	489	0.82	hypothetical	protein
+PROKKA_ERR479219_bin.16.faa_MPPLAEAO_01781	-	377	neuS_final_auto	-	386	3.4e-15	54.1	17.3	1	1	1.1e-18	4.2e-15	53.8	17.3	47	341	13	339	2	374	0.73	hypothetical	protein
+PROKKA_ERR479144_bin.9.faa_GGBEGLOO_00228	-	531	neuS_final_auto	-	386	1.9e-58	193.5	10.0	1	1	1e-60	2.6e-58	193.1	10.0	8	384	1	526	1	529	0.81	hypothetical	protein
+PROKKA_ERR479144_bin.9.faa_GGBEGLOO_00224	-	494	neuS_final_auto	-	386	1.1e-36	121.8	10.6	1	1	5.3e-39	1.3e-36	121.6	10.6	17	359	1	370	1	475	0.83	hypothetical	protein
+PROKKA_ERR479194_bin.2.faa_MNPEJLCC_01241	-	362	neuS_final_auto	-	386	0.00095	15.2	5.8	1	1	1.8e-06	0.0015	14.5	5.8	23	200	19	211	1	272	0.67	N,N'-diacetylbacillosaminyl-diphospho-undecaprenol	alpha-1,3-N-acetylgalactosaminyltransferase
+PROKKA_ERR479194_bin.2.faa_MNPEJLCC_01130	-	551	neuS_final_auto	-	386	0.00097	15.2	0.1	1	2	4.1e-06	0.0036	13.3	0.0	186	258	128	200	105	204	0.81	Putative	HMP/thiamine	import	ATP-binding	protein	YkoD
+PROKKA_ERR479194_bin.2.faa_MNPEJLCC_01130	-	551	neuS_final_auto	-	386	0.00097	15.2	0.1	2	2	0.11	94	-1.2	0.1	211	254	426	480	363	519	0.70	Putative	HMP/thiamine	import	ATP-binding	protein	YkoD
+PROKKA_ERR479152_bin.3.faa_HPCMPOJK_00620	-	361	neuS_final_auto	-	386	7.7e-19	63.5	12.9	1	1	1.5e-21	9.5e-19	63.2	12.9	8	357	1	352	1	359	0.69	hypothetical	protein
+PROKKA_ERR479034_bin.13.faa_EPGKIOAP_00779	-	387	neuS_final_auto	-	386	0.00041	15.5	0.5	1	2	1.2e-06	0.0011	14.1	0.3	30	162	25	185	14	263	0.74	N,N'-diacetylbacillosaminyl-diphospho-undecaprenol	alpha-1,3-N-acetylgalactosaminyltransferase
+PROKKA_ERR479034_bin.13.faa_EPGKIOAP_00779	-	387	neuS_final_auto	-	386	0.00041	15.5	0.5	2	2	0.033	30	-0.5	0.0	324	363	250	336	217	376	0.65	N,N'-diacetylbacillosaminyl-diphospho-undecaprenol	alpha-1,3-N-acetylgalactosaminyltransferase
+PROKKA_ERR479197_bin.8.faa_IMOPAHKK_02712	-	387	neuS_final_auto	-	386	0.0021	15.3	0.6	1	2	1.6e-06	0.0065	13.7	0.2	30	161	25	184	17	249	0.75	N,N'-diacetylbacillosaminyl-diphospho-undecaprenol	alpha-1,3-N-acetylgalactosaminyltransferase
+PROKKA_ERR479197_bin.8.faa_IMOPAHKK_02712	-	387	neuS_final_auto	-	386	0.0021	15.3	0.6	2	2	0.027	1.1e+02	-0.2	0.0	323	363	249	328	197	376	0.65	N,N'-diacetylbacillosaminyl-diphospho-undecaprenol	alpha-1,3-N-acetylgalactosaminyltransferase
+PROKKA_ERR479134_bin.11.faa_CFBIADMF_01204	-	323	neuS_final_auto	-	386	3.3e-36	122.1	8.7	1	1	2.2e-39	3.9e-36	121.8	8.7	8	308	2	292	1	318	0.75	hypothetical	protein
+PROKKA_ERR479249_bin.12.faa_DKNJHJFG_01349	-	359	neuS_final_auto	-	386	1.5e-15	54.2	12.8	1	1	2.9e-18	1.9e-15	53.9	12.8	8	340	1	351	1	356	0.74	hypothetical	protein
+PROKKA_ERR479249_bin.12.faa_DKNJHJFG_00643	-	213	neuS_final_auto	-	386	0.00072	15.8	0.6	1	1	1.3e-06	0.00083	15.6	0.6	164	262	106	190	47	208	0.79	Linearmycin	resistance	ATP-binding	protein	LnrL
+PROKKA_ERR479249_bin.12.faa_DKNJHJFG_01526	-	405	neuS_final_auto	-	386	0.0045	13.2	1.8	1	2	9.4e-06	0.0061	12.7	0.8	84	175	90	178	38	250	0.75	D-inositol-3-phosphate	glycosyltransferase
+PROKKA_ERR479249_bin.12.faa_DKNJHJFG_01526	-	405	neuS_final_auto	-	386	0.0045	13.2	1.8	2	2	0.19	1.2e+02	-1.5	0.0	314	372	323	384	278	401	0.63	D-inositol-3-phosphate	glycosyltransferase
+PROKKA_ERR479076_bin.39.faa_AKDNLALL_00402	-	324	neuS_final_auto	-	386	1e-46	155.5	28.2	1	1	4.7e-49	1.2e-46	155.3	28.2	8	313	3	304	1	323	0.82	hypothetical	protein
+PROKKA_ERR479076_bin.39.faa_AKDNLALL_00407	-	332	neuS_final_auto	-	386	5.5e-43	143.2	15.5	1	1	2.6e-45	6.7e-43	142.9	15.5	8	308	1	302	1	326	0.87	hypothetical	protein
+PROKKA_ERR479076_bin.39.faa_AKDNLALL_00040	-	530	neuS_final_auto	-	386	0.00036	15.4	2.1	1	2	1.3e-05	0.0033	12.3	0.1	184	278	147	235	75	246	0.66	Ribose	import	ATP-binding	protein	RbsA
+PROKKA_ERR479076_bin.39.faa_AKDNLALL_00040	-	530	neuS_final_auto	-	386	0.00036	15.4	2.1	2	2	0.011	2.7	2.7	0.2	162	255	387	481	351	482	0.62	Ribose	import	ATP-binding	protein	RbsA
+PROKKA_ERR479064_bin.8.faa_HCICCOPN_01203	-	460	neuS_final_auto	-	386	0.00033	17.1	9.8	1	1	2.2e-05	0.05	9.9	9.7	29	304	126	390	78	436	0.73	hypothetical	protein
+PROKKA_ERR479199_bin.25.faa_BLEKMGKC_00084	-	309	neuS_final_auto	-	386	5.7e-06	23.5	11.3	1	1	4.4e-09	1.5e-05	22.1	11.3	10	307	4	282	1	300	0.66	hypothetical	protein
+PROKKA_ERR479076_bin.42.faa_JLCAEDPO_00793	-	331	neuS_final_auto	-	386	0.06	11.8	0.1	1	1	1.6e-05	0.08	11.4	0.1	129	258	67	213	62	213	0.72	Oligopeptide	transport	ATP-binding	protein	OppD
+PROKKA_ERR479076_bin.42.faa_JLCAEDPO_04874	-	302	neuS_final_auto	-	386	0.13	10.7	0.0	1	1	3.1e-05	0.16	10.4	0.0	288	345	139	199	135	284	0.77	Thioredoxin	reductase
+PROKKA_ERR479104_bin.11.faa_OOBENPIM_00890	-	314	neuS_final_auto	-	386	1.5e-27	93.1	0.0	1	1	1.4e-30	1.8e-27	92.8	0.0	8	303	1	291	1	309	0.90	hypothetical	protein
+PROKKA_ERR479205_bin.12.faa_OFPOAHNC_00377	-	89	neuS_final_auto	-	386	5.9e-13	45.7	0.1	1	1	3.5e-16	7.1e-13	45.5	0.1	248	300	3	55	1	56	0.95	hypothetical	protein
+PROKKA_ERR478995_bin.16.faa_FNEEPIDN_00256	-	367	neuS_final_auto	-	386	3.6e-34	115.3	4.1	1	1	2.6e-37	4.3e-34	115.0	4.1	7	299	5	331	1	344	0.81	hypothetical	protein
+PROKKA_ERR479102_bin.35.faa_JBBOPOGO_00410	-	359	neuS_final_auto	-	386	2.1e-15	54.2	12.8	1	1	1.9e-18	2.6e-15	53.9	12.8	8	340	1	351	1	356	0.74	hypothetical	protein
+PROKKA_ERR479102_bin.35.faa_JBBOPOGO_02488	-	213	neuS_final_auto	-	386	0.0024	14.5	0.6	1	1	2e-06	0.0027	14.3	0.6	164	262	106	190	47	208	0.79	Linearmycin	resistance	ATP-binding	protein	LnrL
+PROKKA_ERR479263_bin.3.faa_NAEHIHDA_00738	-	356	neuS_final_auto	-	386	2.1e-32	111.3	20.1	1	1	4.1e-36	2.4e-32	111.1	20.1	8	323	1	321	1	353	0.78	hypothetical	protein
+PROKKA_ERR478980_bin.30.faa_CBKDMJJL_00241	-	361	neuS_final_auto	-	386	5.5e-35	117.2	6.6	1	1	7.2e-38	6.9e-35	116.9	6.6	8	300	2	327	1	327	0.80	hypothetical	protein
+PROKKA_ERR479158_bin.10.faa_NKBDMCMD_00104	-	369	neuS_final_auto	-	386	3.3e-12	40.3	7.2	1	1	2e-14	5e-12	39.7	7.2	15	323	27	342	15	367	0.60	hypothetical	protein
+PROKKA_ERR479254_bin.27.faa_IKNHCFMP_00167	-	363	neuS_final_auto	-	386	8e-05	18.3	6.9	1	1	1.8e-07	0.00012	17.8	6.9	23	209	19	220	1	272	0.73	N,N'-diacetylbacillosaminyl-diphospho-undecaprenol	alpha-1,3-N-acetylgalactosaminyltransferase
+PROKKA_ERR479254_bin.27.faa_IKNHCFMP_00139	-	551	neuS_final_auto	-	386	0.00056	15.6	0.2	1	2	4.1e-06	0.0027	13.3	0.0	186	258	128	200	105	204	0.81	Putative	HMP/thiamine	import	ATP-binding	protein	YkoD
+PROKKA_ERR479254_bin.27.faa_IKNHCFMP_00139	-	551	neuS_final_auto	-	386	0.00056	15.6	0.2	2	2	0.065	42	-0.5	0.1	211	254	426	480	353	521	0.70	Putative	HMP/thiamine	import	ATP-binding	protein	YkoD
+PROKKA_ERR479181_bin.23.faa_DMKHAECA_03274	-	361	neuS_final_auto	-	386	1.6e-37	127.6	3.7	1	1	9.5e-41	1.9e-37	127.3	3.7	8	298	2	325	1	327	0.83	hypothetical	protein
+PROKKA_ERR479181_bin.23.faa_DMKHAECA_02582	-	361	neuS_final_auto	-	386	2.1e-34	117.3	6.3	1	1	1.3e-37	2.6e-34	117.0	6.3	8	300	2	327	1	327	0.80	hypothetical	protein
+PROKKA_ERR479197_bin.12.faa_AKNHOBJM_01808	-	314	neuS_final_auto	-	386	1.4e-27	93.8	0.0	1	1	9.3e-31	1.7e-27	93.5	0.0	8	303	1	291	1	309	0.91	hypothetical	protein
+PROKKA_ERR479070_bin.22.faa_ENHFHFDC_00322	-	359	neuS_final_auto	-	386	3.7e-16	54.2	12.8	1	1	9.7e-19	4.6e-16	53.9	12.8	8	340	1	351	1	356	0.74	hypothetical	protein
+PROKKA_ERR479165_bin.5.faa_OABKELFG_01262	-	314	neuS_final_auto	-	386	1.8e-27	93.5	0.0	1	1	1.2e-30	2.3e-27	93.2	0.0	8	303	1	291	1	309	0.90	hypothetical	protein
+PROKKA_ERR479262_bin.10.faa_AJCGLKDJ_00992	-	154	neuS_final_auto	-	386	0.0053	13.3	1.2	1	1	2.2e-06	0.0056	13.2	1.2	153	245	13	131	1	140	0.66	hypothetical	protein
+PROKKA_ERR479005_bin.1.faa_PROKKA_ERR479005_bin.1.faa_MBDGDHFJ_02160	-	119	neuS_final_auto	-	386	0.0087	13.3	3.7	1	1	2.1e-06	0.0089	13.3	3.7	63	178	3	111	1	119	0.76	hypothetical	protein
+PROKKA_ERR479066_bin.24.faa_GPPDKAGB_01160	-	358	neuS_final_auto	-	386	2e-38	129.9	6.0	1	1	9.8e-42	2.3e-38	129.6	6.0	7	298	3	322	1	324	0.86	hypothetical	protein
+PROKKA_ERR479173_bin.15.faa_OEDPKAOE_00606	-	156	neuS_final_auto	-	386	0.003	12.9	0.3	1	1	3.6e-06	0.004	12.5	0.3	133	232	5	100	3	111	0.71	hypothetical	protein
+PROKKA_ERR479247_bin.3.faa_HBKEGIGD_01195	-	324	neuS_final_auto	-	386	4.5e-40	134.4	7.4	1	1	4.1e-43	5.5e-40	134.1	7.4	8	308	2	293	1	318	0.78	hypothetical	protein
+PROKKA_ERR479017_bin.6.faa_DNHHNPIA_01418	-	361	neuS_final_auto	-	386	4.5e-18	62.9	13.0	1	1	2.3e-21	5.6e-18	62.5	13.0	8	357	1	352	1	359	0.69	hypothetical	protein
+PROKKA_ERR479405_bin.2.faa_OMAELBCE_00114	-	531	neuS_final_auto	-	386	2.4e-57	190.2	10.1	1	1	1.1e-59	3.3e-57	189.7	10.1	8	384	1	526	1	529	0.78	hypothetical	protein
+PROKKA_ERR479405_bin.2.faa_OMAELBCE_00110	-	502	neuS_final_auto	-	386	1.1e-39	132.0	11.1	1	1	4.3e-42	1.3e-39	131.8	11.1	8	356	1	375	1	490	0.80	hypothetical	protein
+PROKKA_ERR479014_bin.12.faa_OEOOGNKI_01728	-	361	neuS_final_auto	-	386	4.5e-18	62.9	13.0	1	1	2.3e-21	5.6e-18	62.5	13.0	8	357	1	352	1	359	0.69	hypothetical	protein
+PROKKA_ERR479070_bin.15.faa_HHOLKJCG_00776	-	154	neuS_final_auto	-	386	0.0034	13.8	0.6	1	1	1.5e-06	0.0035	13.8	0.6	162	245	30	131	1	140	0.67	hypothetical	protein
+PROKKA_ERR478997_bin.24.faa_HCGOCECP_01429	-	377	neuS_final_auto	-	386	2.9e-15	54.1	17.3	1	1	1.1e-18	3.6e-15	53.8	17.3	47	341	13	339	2	374	0.73	hypothetical	protein
+PROKKA_ERR479122_bin.10.faa_ACFJNGCH_02052	-	359	neuS_final_auto	-	386	5.5e-15	53.8	12.4	1	1	3.9e-18	6.6e-15	53.5	12.4	8	330	1	337	1	356	0.73	hypothetical	protein
+PROKKA_ERR479122_bin.10.faa_ACFJNGCH_02761	-	213	neuS_final_auto	-	386	0.0022	15.6	1.2	1	1	1.5e-06	0.0026	15.3	1.2	145	262	98	190	56	208	0.78	Linearmycin	resistance	ATP-binding	protein	LnrL
+PROKKA_ERR479122_bin.10.faa_ACFJNGCH_05081	-	385	neuS_final_auto	-	386	0.006	14.1	0.4	1	2	0.27	4.7e+02	-2.0	0.1	31	31	58	58	8	121	0.56	hypothetical	protein
+PROKKA_ERR479122_bin.10.faa_ACFJNGCH_05081	-	385	neuS_final_auto	-	386	0.006	14.1	0.4	2	2	7.6e-06	0.013	13.0	0.0	236	322	223	312	215	374	0.72	hypothetical	protein
+PROKKA_ERR479077_bin.16.faa_EHHMNDOK_06372	-	365	neuS_final_auto	-	386	4.5e-12	44.6	10.8	1	1	1.6e-15	5.3e-12	44.3	10.8	10	319	4	317	1	364	0.68	hypothetical	protein
+PROKKA_ERR479077_bin.16.faa_EHHMNDOK_04091	-	291	neuS_final_auto	-	386	0.00046	18.2	0.8	1	2	2.5e-06	0.0084	14.1	0.1	226	282	27	84	23	92	0.84	hypothetical	protein
+PROKKA_ERR479077_bin.16.faa_EHHMNDOK_04091	-	291	neuS_final_auto	-	386	0.00046	18.2	0.8	2	2	0.0071	24	2.7	0.0	49	110	181	270	145	282	0.70	hypothetical	protein
+PROKKA_ERR479284_bin.24.faa_ACFJHGJM_00162	-	111	neuS_final_auto	-	386	0.0072	11.2	0.0	1	1	9.7e-06	0.0076	11.1	0.0	48	139	4	92	1	107	0.79	hypothetical	protein
+PROKKA_ERR479113_bin.2.faa_OMPFFNLA_00377	-	369	neuS_final_auto	-	386	0.0052	15.1	4.5	1	1	1.8e-06	0.0077	14.5	4.4	77	271	65	249	33	363	0.70	UDP-2,3-diacetamido-2,3-dideoxy-D-glucuronate	2-epimerase
+PROKKA_ERR479113_bin.2.faa_OMPFFNLA_08203	-	353	neuS_final_auto	-	386	0.0076	14.5	0.8	1	2	4.4e-06	0.019	13.2	0.5	66	202	26	160	24	175	0.71	Putative	glycosyltransferase	EpsD
+PROKKA_ERR479113_bin.2.faa_OMPFFNLA_08203	-	353	neuS_final_auto	-	386	0.0076	14.5	0.8	2	2	0.056	2.4e+02	-0.3	0.1	85	113	161	189	150	208	0.81	Putative	glycosyltransferase	EpsD
+PROKKA_ERR479041_bin.5.faa_KMLGJMLK_00333	-	361	neuS_final_auto	-	386	1.7e-38	129.0	4.3	1	1	1.8e-41	2e-38	128.7	4.3	8	298	2	325	1	327	0.85	hypothetical	protein
+PROKKA_ERR478994_bin.4.faa_LMEANHMJ_01703	-	367	neuS_final_auto	-	386	4e-34	115.3	4.1	1	1	5.2e-37	4.8e-34	115.0	4.1	7	299	5	331	1	344	0.81	hypothetical	protein
+PROKKA_ERR478994_bin.4.faa_LMEANHMJ_01071	-	507	neuS_final_auto	-	386	0.016	11.3	0.3	1	2	5.8e-05	0.054	9.5	0.1	205	264	158	213	94	244	0.79	Ribose	import	ATP-binding	protein	RbsA
+PROKKA_ERR478994_bin.4.faa_LMEANHMJ_01071	-	507	neuS_final_auto	-	386	0.016	11.3	0.3	2	2	0.085	79	-0.9	0.0	193	248	400	451	342	458	0.59	Ribose	import	ATP-binding	protein	RbsA
+PROKKA_ERR479091_bin.2.faa_GLKKPCMA_00841	-	367	neuS_final_auto	-	386	2.8e-34	115.2	4.8	1	1	2.9e-37	3.4e-34	114.9	4.8	7	299	5	331	1	344	0.80	hypothetical	protein
+PROKKA_ERR479169_bin.6.faa_HLPPPONE_03223	-	331	neuS_final_auto	-	386	5.4e-30	105.1	5.4	1	1	1.1e-33	6.9e-30	104.7	5.4	59	307	31	297	1	316	0.80	hypothetical	protein
+PROKKA_ERR479169_bin.6.faa_HLPPPONE_04288	-	213	neuS_final_auto	-	386	0.017	14.5	0.6	1	1	3.1e-06	0.02	14.3	0.6	164	262	106	190	47	208	0.79	Linearmycin	resistance	ATP-binding	protein	LnrL
+PROKKA_ERR479169_bin.6.faa_HLPPPONE_04512	-	76	neuS_final_auto	-	386	0.038	13.4	0.1	1	1	6.2e-06	0.04	13.3	0.1	114	150	15	57	7	73	0.82	hypothetical	protein
+PROKKA_ERR479273_bin.8.faa_NGMMJGGF_00193	-	361	neuS_final_auto	-	386	2.1e-35	117.2	6.4	1	1	7.2e-38	2.6e-35	116.9	6.4	8	300	2	327	1	327	0.80	hypothetical	protein
+PROKKA_ERR479091_bin.14.faa_DECOKCMG_02170	-	212	neuS_final_auto	-	386	0.019	11.5	0.2	1	1	8.6e-06	0.023	11.3	0.2	179	264	100	193	61	208	0.75	Bacitracin	transport	ATP-binding	protein	BcrA
+PROKKA_ERR479078_bin.26.faa_KOIEPMBK_00433	-	309	neuS_final_auto	-	386	6.8e-13	46.5	10.8	1	1	2.2e-16	8.9e-13	46.1	10.8	84	322	75	288	7	305	0.77	hypothetical	protein
+PROKKA_ERR479184_bin.4.faa_GEBNMPDJ_03312	-	565	neuS_final_auto	-	386	1.3e-38	131.3	18.7	1	2	6.1e-42	1.3e-38	131.3	18.7	8	346	1	392	1	503	0.76	hypothetical	protein
+PROKKA_ERR479184_bin.4.faa_GEBNMPDJ_03312	-	565	neuS_final_auto	-	386	1.3e-38	131.3	18.7	2	2	0.0035	7.7	3.7	0.8	52	94	509	550	488	557	0.70	hypothetical	protein
+PROKKA_ERR479184_bin.4.faa_GEBNMPDJ_02557	-	473	neuS_final_auto	-	386	0.021	12.1	0.0	1	2	3e-05	0.065	10.5	0.0	192	258	142	203	111	204	0.70	Putative	HMP/thiamine	import	ATP-binding	protein	YkoD
+PROKKA_ERR479184_bin.4.faa_GEBNMPDJ_02557	-	473	neuS_final_auto	-	386	0.021	12.1	0.0	2	2	0.14	3.1e+02	-1.6	0.0	201	258	402	452	390	452	0.78	Putative	HMP/thiamine	import	ATP-binding	protein	YkoD
+PROKKA_ERR479287_bin.19.faa_HIAMFNGO_01560	-	76	neuS_final_auto	-	386	0.0061	14.5	0.0	1	1	9.1e-07	0.0062	14.5	0.0	114	150	15	57	6	73	0.82	hypothetical	protein
+PROKKA_ERR479084_bin.32.faa_PICPMCHL_01975	-	309	neuS_final_auto	-	386	4.9e-06	23.9	11.5	1	1	3.2e-09	1.3e-05	22.6	11.5	10	307	4	282	1	300	0.66	hypothetical	protein
+PROKKA_ERR479237_bin.12.faa_BMHJBOPP_00301	-	531	neuS_final_auto	-	386	7.8e-57	189.1	8.7	1	1	2.2e-59	1.1e-56	188.7	8.7	8	384	1	526	1	529	0.79	hypothetical	protein
+PROKKA_ERR479237_bin.12.faa_BMHJBOPP_00297	-	502	neuS_final_auto	-	386	6.6e-40	133.4	11.5	1	1	1.6e-42	7.8e-40	133.2	11.5	8	359	1	378	1	483	0.83	hypothetical	protein
+PROKKA_ERR478972_bin.11.faa_PROKKA_ERR478972_bin.11.faa_IPKHJFPM_01257	-	361	neuS_final_auto	-	386	7.5e-37	123.8	5.3	1	1	6.9e-40	9e-37	123.5	5.3	8	298	2	325	1	327	0.83	hypothetical	protein
+PROKKA_ERR478983_bin.6.faa_GNHPGAGM_00950	-	361	neuS_final_auto	-	386	7e-35	117.2	6.6	1	1	7.2e-38	8.7e-35	116.9	6.6	8	300	2	327	1	327	0.80	hypothetical	protein
+PROKKA_ERR479241_bin.10.faa_EMLPHFBG_02524	-	91	neuS_final_auto	-	386	1.7e-22	79.0	0.4	1	1	7.3e-26	1.8e-22	78.9	0.4	236	319	1	83	1	91	0.92	hypothetical	protein
+PROKKA_ERR479241_bin.10.faa_EMLPHFBG_02503	-	335	neuS_final_auto	-	386	1.3e-05	23.4	17.0	1	1	8.9e-09	2.2e-05	22.7	17.0	12	314	12	303	5	333	0.69	hypothetical	protein
+PROKKA_ERR479241_bin.10.faa_EMLPHFBG_03214	-	233	neuS_final_auto	-	386	0.0053	14.8	0.5	1	1	2.6e-06	0.0064	14.6	0.5	211	282	145	229	72	232	0.77	putative	ABC	transporter	ATP-binding	protein
+PROKKA_ERR479298_bin.31.faa_CNLIIBEJ_00025	-	156	neuS_final_auto	-	386	0.00063	12.9	0.3	1	1	3.6e-06	0.00085	12.5	0.3	133	232	5	100	3	111	0.71	hypothetical	protein
+PROKKA_ERR479051_bin.8.faa_CBDAFKHH_00182	-	361	neuS_final_auto	-	386	5.3e-35	117.3	6.3	1	1	6.5e-38	6.6e-35	117.0	6.3	8	300	2	327	1	327	0.80	hypothetical	protein
+PROKKA_ERR479049_bin.28.faa_PJPNNFLP_01211	-	168	neuS_final_auto	-	386	2.9e-23	79.8	0.0	1	1	2.7e-26	3.1e-23	79.7	0.0	183	341	2	167	1	168	0.82	hypothetical	protein
+PROKKA_ERR479049_bin.28.faa_PJPNNFLP_01212	-	264	neuS_final_auto	-	386	1.2e-07	28.4	0.0	1	1	1.4e-10	1.6e-07	28.0	0.0	47	141	135	256	120	261	0.81	hypothetical	protein
+PROKKA_ERR479235_bin.23.faa_GOCPIFFE_01113	-	216	neuS_final_auto	-	386	2.8e-09	34.2	1.9	1	1	3.2e-12	3.2e-09	34.0	1.9	155	330	13	194	1	213	0.69	hypothetical	protein
+PROKKA_ERR479235_bin.23.faa_GOCPIFFE_02522	-	213	neuS_final_auto	-	386	0.0011	15.8	0.6	1	1	1.3e-06	0.0013	15.6	0.6	164	262	106	190	47	208	0.79	Linearmycin	resistance	ATP-binding	protein	LnrL
+PROKKA_ERR479235_bin.23.faa_GOCPIFFE_00082	-	706	neuS_final_auto	-	386	0.0051	13.6	9.3	1	2	1.3e-06	0.0014	15.5	5.2	41	223	55	246	35	271	0.65	hypothetical	protein
+PROKKA_ERR479235_bin.23.faa_GOCPIFFE_00082	-	706	neuS_final_auto	-	386	0.0051	13.6	9.3	2	2	0.28	2.8e+02	-2.0	0.1	132	187	279	349	277	377	0.58	hypothetical	protein
+PROKKA_ERR479141_bin.2.faa_BAGECCPN_00790	-	335	neuS_final_auto	-	386	6.6e-06	23.4	17.0	1	1	3e-09	1.1e-05	22.7	17.0	12	314	12	303	5	333	0.69	hypothetical	protein
+PROKKA_ERR479004_bin.15.faa_MLMCLCGB_01222	-	338	neuS_final_auto	-	386	8.4e-27	91.1	20.3	1	1	6.2e-30	1.1e-26	90.7	20.3	1	307	1	302	1	320	0.80	hypothetical	protein
+PROKKA_ERR479194_bin.7.faa_POGPDINN_00008	-	314	neuS_final_auto	-	386	3.3e-28	94.6	0.0	1	1	5.1e-31	4e-28	94.3	0.0	8	303	1	291	1	309	0.90	hypothetical	protein
+PROKKA_ERR478966_bin.20.faa_MJDCDMGL_01150	-	361	neuS_final_auto	-	386	1.4e-34	116.6	6.8	1	1	1.1e-37	1.7e-34	116.3	6.8	8	300	2	327	1	327	0.80	hypothetical	protein
+PROKKA_ERR479002_bin.23.faa_PROKKA_ERR479002_bin.23.faa_DKOBBMBG_01974	-	377	neuS_final_auto	-	386	2.5e-15	54.1	17.3	1	1	2.1e-18	3e-15	53.8	17.3	47	341	13	339	2	374	0.73	hypothetical	protein
+PROKKA_ERR479002_bin.23.faa_PROKKA_ERR479002_bin.23.faa_DKOBBMBG_00565	-	213	neuS_final_auto	-	386	0.0026	14.5	0.6	1	1	2e-06	0.0029	14.3	0.6	164	262	106	190	47	208	0.79	Linearmycin	resistance	ATP-binding	protein	LnrL
+PROKKA_ERR478988_bin.10.faa_JEPCAHNM_02014	-	331	neuS_final_auto	-	386	0.024	11.8	0.1	1	1	7.9e-06	0.032	11.4	0.1	129	258	67	213	62	213	0.72	Oligopeptide	transport	ATP-binding	protein	OppD
+PROKKA_ERR479064_bin.4.faa_FPMMANKP_03407	-	219	neuS_final_auto	-	386	2.9e-28	97.4	21.4	1	1	6.9e-32	3.4e-28	97.2	21.4	125	318	1	191	1	218	0.78	hypothetical	protein
+PROKKA_ERR479171_bin.25.faa_JLPIBBIM_02923	-	336	neuS_final_auto	-	386	1.1e-30	106.7	6.6	1	1	6.5e-34	1.5e-30	106.1	6.6	1	307	1	302	1	321	0.81	hypothetical	protein
+PROKKA_ERR479171_bin.25.faa_JLPIBBIM_01587	-	383	neuS_final_auto	-	386	0.00028	19.7	0.3	1	1	3.1e-06	0.0072	15.1	0.3	79	282	74	236	8	246	0.63	UDP-N-acetylglucosamine	2-epimerase
+PROKKA_ERR479171_bin.25.faa_JLPIBBIM_05967	-	213	neuS_final_auto	-	386	0.011	14.5	0.6	1	1	5.1e-06	0.012	14.3	0.6	164	262	106	190	47	208	0.79	Linearmycin	resistance	ATP-binding	protein	LnrL
+PROKKA_ERR479171_bin.25.faa_JLPIBBIM_08880	-	76	neuS_final_auto	-	386	0.023	13.4	0.1	1	1	1e-05	0.024	13.3	0.1	114	150	15	57	7	73	0.82	hypothetical	protein
+PROKKA_ERR479171_bin.25.faa_JLPIBBIM_10397	-	236	neuS_final_auto	-	386	0.047	12.4	0.0	1	1	2.6e-05	0.061	12.0	0.0	212	275	50	115	27	138	0.78	UDP-N-acetylglucosamine	2-epimerase
+PROKKA_ERR479077_bin.57.faa_MIJKOMMM_01193	-	368	neuS_final_auto	-	386	1.1e-24	85.0	11.6	1	1	4.2e-28	1.3e-24	84.7	11.6	8	360	1	339	1	367	0.72	hypothetical	protein
+PROKKA_ERR479117_bin.6.faa_MADMPJNA_00874	-	294	neuS_final_auto	-	386	6.8e-13	46.0	1.6	1	1	2.8e-16	8.1e-13	45.8	1.6	99	317	35	246	15	287	0.73	hypothetical	protein
+PROKKA_ERR479154_bin.15.faa_FBLPMDKA_01047	-	138	neuS_final_auto	-	386	1.9e-26	89.9	4.2	1	1	2.6e-29	2.2e-26	89.7	4.2	202	308	5	107	2	133	0.92	hypothetical	protein
+PROKKA_ERR479154_bin.15.faa_FBLPMDKA_01046	-	83	neuS_final_auto	-	386	0.00014	17.9	1.1	1	1	1.8e-07	0.00015	17.8	1.1	90	153	10	75	7	82	0.70	hypothetical	protein
+PROKKA_ERR479078_bin.20.faa_IIMHKOLN_00322	-	365	neuS_final_auto	-	386	2.8e-12	44.6	10.8	1	1	1.6e-15	3.3e-12	44.3	10.8	10	319	4	317	1	364	0.68	hypothetical	protein
+PROKKA_ERR479078_bin.20.faa_IIMHKOLN_02894	-	291	neuS_final_auto	-	386	0.00028	18.2	0.8	1	2	2.5e-06	0.0052	14.1	0.1	226	282	27	84	23	92	0.84	hypothetical	protein
+PROKKA_ERR479078_bin.20.faa_IIMHKOLN_02894	-	291	neuS_final_auto	-	386	0.00028	18.2	0.8	2	2	0.0071	15	2.7	0.0	49	110	181	270	145	282	0.70	hypothetical	protein
+PROKKA_ERR479084_bin.17.faa_DOBHJHIB_00833	-	330	neuS_final_auto	-	386	6.4e-31	104.4	0.0	1	1	5.6e-34	8.1e-31	104.1	0.0	10	309	4	314	1	324	0.83	hypothetical	protein
+PROKKA_ERR478996_bin.18.faa_GGLMCCPI_01149	-	358	neuS_final_auto	-	386	2.6e-19	66.9	14.8	1	1	1.4e-22	3.3e-19	66.5	14.8	8	334	1	328	1	353	0.75	hypothetical	protein
+PROKKA_ERR479077_bin.28.faa_ILOGDHGK_01177	-	336	neuS_final_auto	-	386	1.3e-05	22.4	13.1	1	1	5e-09	1.8e-05	21.9	13.1	39	323	4	300	1	333	0.63	hypothetical	protein
+PROKKA_ERR479141_bin.12.faa_HKEFFGAC_01697	-	361	neuS_final_auto	-	386	2e-37	126.4	5.4	1	1	1.1e-40	2.4e-37	126.1	5.4	8	298	2	325	1	327	0.83	hypothetical	protein
+PROKKA_ERR479072_bin.5.faa_BBJGLHAA_00591	-	361	neuS_final_auto	-	386	1.2e-38	129.6	2.7	1	1	1.3e-41	1.5e-38	129.2	2.7	1	300	1	326	1	328	0.83	hypothetical	protein
+PROKKA_ERR479184_bin.2.faa_GIPIBBNH_02318	-	335	neuS_final_auto	-	386	1.6e-06	25.1	15.2	1	1	9.5e-10	2.6e-06	24.3	15.2	12	314	12	303	5	333	0.68	hypothetical	protein
+PROKKA_ERR479213_bin.16.faa_IAJKNPOL_00469	-	333	neuS_final_auto	-	386	1.9e-15	52.7	9.4	1	1	2.6e-18	2.3e-15	52.5	9.4	8	309	1	306	1	328	0.77	hypothetical	protein
+PROKKA_ERR479074_bin.22.faa_BKNHLKGB_01499	-	234	neuS_final_auto	-	386	0.0081	12.3	0.2	1	1	5.6e-06	0.011	11.9	0.2	166	244	74	179	46	185	0.85	putative	ABC	transporter	ATP-binding	protein	YxlF
+PROKKA_ERR479169_bin.24.faa_FGCKDGJD_00920	-	361	neuS_final_auto	-	386	5.4e-35	117.3	6.3	1	1	6.5e-38	6.7e-35	117.0	6.3	8	300	2	327	1	327	0.80	hypothetical	protein
+PROKKA_ERR479281_bin.24.faa_FNHOGKPF_00819	-	500	neuS_final_auto	-	386	9.3e-38	127.3	0.0	1	1	5.7e-41	1.1e-37	127.1	0.0	53	310	143	470	111	500	0.84	hypothetical	protein
+PROKKA_ERR479084_bin.24.faa_CKBKJJCI_05790	-	163	neuS_final_auto	-	386	2.2e-12	46.2	3.5	1	1	7.1e-16	2.4e-12	46.0	3.5	215	341	3	125	1	160	0.73	hypothetical	protein
+PROKKA_ERR479084_bin.24.faa_CKBKJJCI_01419	-	335	neuS_final_auto	-	386	2.5e-05	23.0	15.3	1	1	1.6e-08	5.3e-05	21.9	15.3	12	314	12	303	5	333	0.67	hypothetical	protein
+PROKKA_ERR479084_bin.24.faa_CKBKJJCI_09672	-	385	neuS_final_auto	-	386	0.012	14.1	0.4	1	2	0.27	9.3e+02	-2.0	0.1	31	31	58	58	8	121	0.56	hypothetical	protein
+PROKKA_ERR479084_bin.24.faa_CKBKJJCI_09672	-	385	neuS_final_auto	-	386	0.012	14.1	0.4	2	2	7.6e-06	0.026	13.0	0.0	236	322	223	312	215	374	0.72	hypothetical	protein
+PROKKA_ERR479172_bin.8.faa_AEAAAAEP_00439	-	361	neuS_final_auto	-	386	2.2e-38	129.6	2.6	1	1	1.3e-41	2.8e-38	129.2	2.6	1	300	1	326	1	328	0.83	hypothetical	protein
+PROKKA_ERR479280_bin.15.faa_ODMLNFLN_00896	-	314	neuS_final_auto	-	386	2.6e-27	92.4	0.0	1	1	2.4e-30	3.2e-27	92.1	0.0	8	303	1	291	1	309	0.91	hypothetical	protein
