@@ -1565,3 +1565,20 @@ The Jupyter-based R scripts used for **HMMER** and **InterProScan** analyses are
 ```
 metagen_files/jupyter_scripts
 ```
+
+## 5.6 Retrieve of metadata
+
+Metadata information for each study is available in:
+```
+metagen_files/jupyter_scripts/06.metagenomic_study_paper.ipynb
+```
+Metadata files are presented in the directory:
+```
+metagen_files/Metadata
+```
+Files were concatened with **cat** bash shell command for **control** and **disease** state
+
+Control and Disease ID are located in:
+```
+metagen_files/Metadata/
+```
