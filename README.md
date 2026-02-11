@@ -296,6 +296,11 @@ Create directories to store results and execute HMMER searches:
 mkdir HMMER_CONTROL_RESULTS && cd HMMER_CONTROL_RESULTS
 bash ../../scripts/teste_hmm_control.sh
 ```
+Output files are available in:
+```
+genomes_download/plots_data/hmmer_out/control_result/
+```
+
 ### 3.1.4 Consolidation of HMMER Outputs
 Concatenate output files for each enzyme model:
 ```

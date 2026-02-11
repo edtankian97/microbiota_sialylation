@@ -1,0 +1,13 @@
+E_coli_k1.faa_protein_3725	-	409	neuS_final_auto	-	386	6.4e-77	257.5	28.1	1	1	1.7e-80	7.8e-77	257.2	28.1	5	344	41	394	7	405	0.94	-
+Fusobac.faa_protein_1261	-	326	neuS_final_auto	-	386	3.7e-58	194.7	28.8	1	1	2.2e-61	5e-58	194.3	28.8	8	310	1	294	1	326	0.88	-
+GBS_COH1.faa_WP_000181211.1	-	318	neuS_final_auto	-	386	1.5e-48	162.8	11.0	1	1	9.4e-52	1.8e-48	162.6	11.0	11	319	3	312	1	317	0.91	MULTISPECIES:	glycosyltransferase	family	52	[Streptococcus]
+gonorrhoeae_FA_1090.faa_WP_003690950.1	-	378	neuS_final_auto	-	386	1.4e-07	27.9	4.5	1	1	4.7e-10	8.8e-07	25.3	4.5	8	308	50	330	40	371	0.64	N-acetyllactosaminide	alpha-2,3-sialyltransferase	[Neisseria	gonorrhoeae]
+H_ducreyi_35000HP.faa_WP_010944657.1	-	295	neuS_final_auto	-	386	1.4e-36	123.1	8.4	1	1	3.7e-39	2.8e-36	122.1	8.4	115	305	86	273	1	280	0.85	glycosyltransferase	family	52	protein	[[Haemophilus]	ducreyi]
+H_ducreyi_35000HP.faa_WP_010944122.1	-	399	neuS_final_auto	-	386	0.011	11.5	11.0	1	1	2.5e-05	0.019	10.7	11.0	73	307	96	347	23	386	0.70	hypothetical	protein	[[Haemophilus]	ducreyi]
+Lacto_acido.faa_WP_011254552.1	-	380	neuS_final_auto	-	386	0.0017	14.4	0.6	1	1	3.4e-05	0.02	10.9	0.6	211	269	151	221	8	243	0.78	non-hydrolyzing	UDP-N-acetylglucosamine	2-epimerase	[Lactobacillus	acidophilus]
+Lacto_acido.faa_WP_011254207.1	-	380	neuS_final_auto	-	386	0.0017	14.4	0.6	1	1	3.4e-05	0.02	10.9	0.6	211	269	151	221	8	243	0.78	non-hydrolyzing	UDP-N-acetylglucosamine	2-epimerase	[Lactobacillus	acidophilus]
+Lacto_acido.faa_WP_003549788.1	-	298	neuS_final_auto	-	386	0.0075	12.3	0.1	1	1	1.7e-05	0.01	11.9	0.1	174	255	107	183	66	207	0.78	ABC	transporter	ATP-binding	protein	[Lactobacillus	acidophilus]
+N_meningitidis_MC58.faa_WP_010980749.1	-	225	neuS_final_auto	-	386	1.1e-49	166.7	12.7	1	1	1.4e-52	1.3e-49	166.3	12.7	5	189	30	215	2	220	0.94	polysialic	acid	capsule	biosynthesis	protein	SiaD,	partial	[Neisseria	meningitidis]
+N_meningitidis_MC58.faa_WP_002244089.1	-	371	neuS_final_auto	-	386	5.8e-08	29.2	4.7	1	1	5.8e-10	5.6e-07	26.0	4.7	10	308	51	330	43	359	0.60	N-acetyllactosaminide	alpha-2,3-sialyltransferase	[Neisseria	meningitidis]
+Past_multitoci_Pm70.faa_WP_010906695.1	-	308	neuS_final_auto	-	386	9.3e-07	25.3	12.8	1	1	7.4e-10	1.5e-06	24.7	12.8	8	320	1	282	1	305	0.69	glycosyltransferase	family	52	protein	[Pasteurella	multocida]
+Staphylo_hominis.faa_WP_002448316.1	-	201	neuS_final_auto	-	386	0.0029	14.1	0.2	1	1	2.5e-06	0.0059	13.0	0.2	185	242	103	172	53	177	0.67	MULTISPECIES:	ATP-binding	cassette	domain-containing	protein	[Staphylococcus]

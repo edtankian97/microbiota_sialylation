@@ -1,0 +1,4 @@
+campylobacter_jejuni_ATCC_faa.faa_AIGAGPLH_01106	-	291	lic3X_final_auto	-	395	7.4e-152	502.7	35.5	1	1	9.8e-155	8.2e-152	502.5	35.5	57	345	1	291	1	291	0.97	hypothetical	protein
+campylobacter_jejuni_ATCC_faa.faa_AIGAGPLH_01440	-	425	lic3X_final_auto	-	395	3.1e-129	428.2	39.6	1	1	7.9e-132	6.6e-129	427.1	39.6	49	357	2	398	1	425	0.79	hypothetical	protein
+H_influenzae_Hi375.faa_WP_038440754.1	-	328	lic3X_final_auto	-	395	6.8e-151	499.5	27.0	1	1	4.5e-154	7.6e-151	499.4	27.0	29	347	4	327	1	328	0.93	alpha-2,3-sialyltransferase	[Haemophilus	influenzae]
+Past_multitoci_Pm70.faa_WP_010907055.1	-	303	lic3X_final_auto	-	395	1.7e-132	439.2	16.2	1	1	9.3e-136	1.9e-132	439.1	16.2	55	345	7	303	1	303	0.95	alpha-2,3-sialyltransferase	[Pasteurella	multocida]

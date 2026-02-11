@@ -1,0 +1,10 @@
+campylobacter_jejuni_ATCC_faa.faa_AIGAGPLH_01106	-	291	CST-I	PF06002.18	295	1e-108	359.9	25.6	1	1	1.3e-111	1.1e-108	359.8	25.6	2	295	3	291	2	291	0.98	hypothetical	protein
+campylobacter_jejuni_ATCC_faa.faa_AIGAGPLH_01440	-	425	CST-I	PF06002.18	295	2e-87	290.0	19.8	1	2	2.4e-90	2e-87	290.0	19.8	2	253	13	258	12	266	0.97	hypothetical	protein
+campylobacter_jejuni_ATCC_faa.faa_AIGAGPLH_01440	-	425	CST-I	PF06002.18	295	2e-87	290.0	19.8	2	2	0.11	93	-1.1	0.1	256	282	299	325	268	335	0.67	hypothetical	protein
+H_influenzae_Hi375.faa_WP_038440754.1	-	328	CST-I	PF06002.18	295	2.7e-107	355.3	16.0	1	1	1.9e-110	3.3e-107	355.0	16.0	1	294	35	324	35	325	0.94	alpha-2,3-sialyltransferase	[Haemophilus	influenzae]
+N_meningitidis_MC58.faa_WP_010980934.1	-	1829	CST-I	PF06002.18	295	1.8	4.7	10.3	1	5	0.0098	19	1.4	0.0	147	192	902	947	899	966	0.87	iron-regulated	protein	FrpC	[Neisseria	meningitidis]
+N_meningitidis_MC58.faa_WP_010980934.1	-	1829	CST-I	PF06002.18	295	1.8	4.7	10.3	2	5	0.0066	13	2.0	0.1	147	195	1102	1150	1099	1180	0.87	iron-regulated	protein	FrpC	[Neisseria	meningitidis]
+N_meningitidis_MC58.faa_WP_010980934.1	-	1829	CST-I	PF06002.18	295	1.8	4.7	10.3	3	5	0.017	32	0.6	0.0	147	192	1302	1347	1299	1365	0.87	iron-regulated	protein	FrpC	[Neisseria	meningitidis]
+N_meningitidis_MC58.faa_WP_010980934.1	-	1829	CST-I	PF06002.18	295	1.8	4.7	10.3	4	5	0.017	32	0.6	0.0	147	192	1502	1547	1499	1565	0.87	iron-regulated	protein	FrpC	[Neisseria	meningitidis]
+N_meningitidis_MC58.faa_WP_010980934.1	-	1829	CST-I	PF06002.18	295	1.8	4.7	10.3	5	5	0.013	25	1.0	0.1	147	199	1702	1752	1699	1772	0.84	iron-regulated	protein	FrpC	[Neisseria	meningitidis]
+Past_multitoci_Pm70.faa_WP_010907055.1	-	303	CST-I	PF06002.18	295	1.6e-176	582.8	14.1	1	1	8.8e-180	1.8e-176	582.6	14.1	1	295	11	303	11	303	1.00	alpha-2,3-sialyltransferase	[Pasteurella	multocida]

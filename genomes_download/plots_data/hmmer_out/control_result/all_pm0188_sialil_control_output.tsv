@@ -1,0 +1,5 @@
+DH10B_ncbi.faa_WP_000772934.1	-	218	pm0188_final_auto	-	397	0.005	13.6	0.4	1	1	1.7e-06	0.0068	13.2	0.4	118	217	72	172	68	181	0.84	MULTISPECIES:	protein	YidX	[Gammaproteobacteria]
+E_coli_k1.faa_protein_2739	-	218	pm0188_final_auto	-	397	0.0057	13.6	0.4	1	1	1.7e-06	0.0077	13.2	0.4	118	217	72	172	68	181	0.84	-
+H_ducreyi_35000HP.faa_WP_010944122.1	-	399	pm0188_final_auto	-	397	3.5e-136	450.7	22.1	1	1	5.1e-139	3.9e-136	450.5	22.1	2	393	4	397	1	399	0.99	hypothetical	protein	[[Haemophilus]	ducreyi]
+H_ducreyi_35000HP.faa_WP_010944657.1	-	295	pm0188_final_auto	-	397	3.8e-07	25.8	0.6	1	1	7.9e-10	6e-07	25.1	0.6	274	352	212	281	135	285	0.75	glycosyltransferase	family	52	protein	[[Haemophilus]	ducreyi]
+Past_multitoci_Pm70.faa_WP_010906518.1	-	412	pm0188_final_auto	-	397	5.7e-163	539.3	13.6	1	1	3e-166	6.1e-163	539.2	13.6	2	396	25	411	1	412	0.98	hypothetical	protein	[Pasteurella	multocida]

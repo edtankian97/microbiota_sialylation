@@ -1,0 +1,15 @@
+akker_munin.faa_WP_123043974.1	-	262	IPR010866_auto	-	428	0.011	12.3	0.0	1	1	6.3e-06	0.014	11.9	0.0	220	268	155	226	90	256	0.65	ABC	transporter	ATP-binding	protein	[Akkermansia	muciniphila]
+campylobacter_jejuni_ATCC_faa.faa_AIGAGPLH_01414	-	688	IPR010866_auto	-	428	2.4e-05	20.6	16.6	1	2	1.7e-07	0.00028	17.1	1.5	147	288	50	217	5	258	0.50	hypothetical	protein
+campylobacter_jejuni_ATCC_faa.faa_AIGAGPLH_01414	-	688	IPR010866_auto	-	428	2.4e-05	20.6	16.6	2	2	8.1e-05	0.14	8.2	8.0	99	325	321	600	272	685	0.43	hypothetical	protein
+E_coli_k1.faa_protein_3725	-	409	IPR010866_auto	-	428	7.4e-28	96.2	8.8	1	1	4e-31	9.4e-28	95.9	8.8	36	328	43	360	6	404	0.64	-
+E_coli_k1.faa_protein_3727	-	675	IPR010866_auto	-	428	0.00052	17.7	0.2	1	2	0.00023	0.53	7.8	0.0	219	305	133	237	54	386	0.69	-
+E_coli_k1.faa_protein_3727	-	675	IPR010866_auto	-	428	0.00052	17.7	0.2	2	2	0.00019	0.45	8.0	0.2	208	269	447	535	384	636	0.70	-
+Fusobac.faa_protein_1261	-	326	IPR010866_auto	-	428	5.2e-28	95.7	8.6	1	1	2.7e-31	6.1e-28	95.5	8.6	36	319	1	291	1	321	0.60	-
+GBS_COH1.faa_WP_000181211.1	-	318	IPR010866_auto	-	428	1.5e-19	67.5	1.2	1	1	9.6e-23	1.8e-19	67.3	1.2	39	313	3	300	1	315	0.55	MULTISPECIES:	glycosyltransferase	family	52	[Streptococcus]
+gonorrhoeae_FA_1090.faa_WP_003690950.1	-	378	IPR010866_auto	-	428	3.4e-09	33.4	0.4	1	1	2.5e-12	4.6e-09	33.0	0.4	25	326	37	339	11	365	0.54	N-acetyllactosaminide	alpha-2,3-sialyltransferase	[Neisseria	gonorrhoeae]
+H_ducreyi_35000HP.faa_WP_010944657.1	-	295	IPR010866_auto	-	428	1.3e-22	77.3	1.1	1	1	9.7e-26	1.5e-22	77.2	1.1	65	314	25	273	1	292	0.60	glycosyltransferase	family	52	protein	[[Haemophilus]	ducreyi]
+H_influenzae_Hi375.faa_WP_005688025.1	-	304	IPR010866_auto	-	428	1.2e-10	38.1	0.8	1	1	8.3e-14	1.4e-10	37.8	0.8	36	324	1	274	1	294	0.57	MULTISPECIES:	lipooligosaccharide	biosynthesis	sialyltransferase	LsgB	[Haemophilus]
+N_meningitidis_MC58.faa_WP_010980749.1	-	225	IPR010866_auto	-	428	9.4e-13	45.2	2.9	1	1	1.2e-15	1.1e-12	44.9	2.9	35	187	32	193	3	220	0.68	polysialic	acid	capsule	biosynthesis	protein	SiaD,	partial	[Neisseria	meningitidis]
+N_meningitidis_MC58.faa_WP_002244089.1	-	371	IPR010866_auto	-	428	9.6e-10	35.3	0.3	1	1	1.4e-12	1.3e-09	34.9	0.3	37	326	50	339	10	360	0.54	N-acetyllactosaminide	alpha-2,3-sialyltransferase	[Neisseria	meningitidis]
+Past_multitoci_Pm70.faa_WP_010906695.1	-	308	IPR010866_auto	-	428	2.6e-14	50.4	4.2	1	1	3e-17	3e-14	50.2	4.2	36	324	1	278	1	304	0.57	glycosyltransferase	family	52	protein	[Pasteurella	multocida]
+Past_multitoci_Pm70.faa_WP_010906518.1	-	412	IPR010866_auto	-	428	3.1e-10	37.0	0.5	1	1	4.3e-13	4.3e-10	36.5	0.5	131	316	105	362	11	407	0.63	hypothetical	protein	[Pasteurella	multocida]
