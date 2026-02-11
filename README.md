@@ -291,15 +291,13 @@ bash ../scripts/rename_fasta_control.sh #rename fasta header with filename
 less GCF_004015025.1_Akker_munciph_NEG.faa #see content of a file
 ```
 ### 3.1.3 HMMER Analysis of Control Proteomes
-Create directories to store results and execute HMMER searches:
+
+Store results and execute HMMER searches:
 ```
-mkdir HMMER_CONTROL_RESULTS && cd HMMER_CONTROL_RESULTS
+cd HMMER_CONTROL_RESULTS
 bash ../../scripts/teste_hmm_control.sh
 ```
-Output files are available in:
-```
-genomes_download/plots_data/hmmer_out/control_result/
-```
+Output are already available in **HMMER_CONTROL_RESULTS**
 
 ### 3.1.4 Consolidation of HMMER Outputs
 Concatenate output files for each enzyme model:
@@ -328,6 +326,11 @@ Clean output formatting:
 ```
 sed -i '/#/d' *_output.tsv
 sed -i 's/ \{1,\}/\t/g' *_output.tsv 
+```
+
+Concatenated output files are available in:
+```
+genomes_download/plots_data/hmmer_out/control_result/
 ```
 
 ## 3.2 Protein analysis: NCBI RefSeq Proteomes
