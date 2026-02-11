@@ -1,0 +1,4 @@
+E_coli_k1.faa_protein_3722	-	418	neuA_final_mafft_auto	-	321	3.5e-78	261.1	0.7	1	1	3.9e-81	4.6e-78	260.7	0.7	36	280	2	253	1	302	0.80	-
+E_coli_k1.faa_protein_1288	-	248	neuA_final_mafft_auto	-	321	1.9e-20	71.3	0.1	1	1	5.3e-23	6.2e-20	69.7	0.1	35	186	1	152	1	248	0.72	-
+E_coli_k1.faa_protein_3728	-	246	neuA_final_mafft_auto	-	321	2.5e-20	71.0	0.1	1	1	2.7e-23	3.2e-20	70.6	0.1	35	218	1	188	1	202	0.74	-
+E_coli_k1.faa_protein_979	-	302	neuA_final_mafft_auto	-	321	0.039	11.2	0.1	1	1	5.7e-05	0.067	10.4	0.1	54	87	31	63	26	67	0.88	-
