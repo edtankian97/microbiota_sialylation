@@ -1353,6 +1353,10 @@ Output directory:
 ```
 metagen_files/Study02_colon_cancer/bins_paired/all_prokka/metagen_hmmer_results/
 ```
+Coverage files are located in: 
+```
+metagen_files/Study02_colon_cancer/output_data/hmmer_out
+```
 Process coverage files
 ```
 cd bins_paired/all_prokka/metagen_hmmer_results/
