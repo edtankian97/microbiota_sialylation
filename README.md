@@ -1467,7 +1467,13 @@ Verify that the number of entries matches across files.
 wc -l *_for_Interpro.tsv
 grep -c ">" *retrieved_now
 ```
+Retrieved faa files are already located in:
+```
+metagen_files/Study02_colon_cancer/output_data/Interpro_analysis/
+```
+
 ### 5.2.7 Interproscan annotation
+
 Run InterProScan:
 ```
 bash interpro_analysis.sh
@@ -1486,6 +1492,21 @@ Bins passing InterProScan filtering are listed in:
 ```
 metagen_files/Study02_france_cancer/output_data/Interpro_results/bins_for_identification.tsv
 ```
+Bins with sialylation mechanisms can be downloaded through this [link](https://drive.google.com/drive/u/1/folders/19BrfjyBeWEPeBq_AcguPMBde3wH1wst1)
+
+Download and descompress the file
+```
+tar -xf bins_sialylation_colon02.tar.gz
+```
+Move directory into:
+```
+bins_paired
+```
+Change name of directory
+```
+mv bins_sialylation bins_paired_sialylation
+```
+
 Prepare bins for taxonomic classification:
 ```
 cd ./output_data/Interpro_results/ #considering that you are at Study02_france_cancer folder
@@ -1493,7 +1514,7 @@ less bins_for_identification.tsv
 sed '1d' bins_for_identification.tsv > bins_for_identification_modified.tsv
 mv bins_for_identification_modified.tsv ../../bins_paired #move file to desired folder
 cd ../../bins_paired #go to folder of extraction
-mkdir bins_paired_sialylation #create folder to move the files
+mkdir -p bins_paired_sialylation #create folder to move the files
 ```
 Execute command to move the right files
 ```
