@@ -28,59 +28,43 @@ The bioinformatic analyses are organized into the following major components:
 - Detection of sialylation-associated pathways in metagenomic datasets.
 - Focus on microbiomes from diseases potentially linked to altered sialic acid metabolism or utilization.
 
-## Structure of folders before everything (still in construction, ignore for while)
+## Structure of folders before everything
 
 ```
 .
-└── genomes_download
-    ├── Protein_database
-    │   ├── CMP_synthase_mixed_database.fasta
-    │   ├── CMP_synthase_review_database.fasta
-    │   ├── CMP_synthase_unreview_database.fasta
-    │   ├── KpsM_mixed.fasta
-    │   ├── KpsT_mixed.fasta
-    │   ├── oacetil_plus_poli_mixed_database.fasta
-    │   ├── polisialil_database.fasta
-    │   ├── sialiltransferase_mixed_database_old_gold.fasta
-    │   ├── sialiltransferase_review_database.fasta
-    │   └── sialiltransferase_unreview_database.fasta
-    ├── control_proteins
-    │   ├── Bac_fragilis_ATCC_faa.faa
-    │   ├── E_coli_dh10B.faa
-    │   ├── F_nucleatum_faa.faa
-    │   ├── M4.faa
-    │   ├── MAPA1.faa
-    │   ├── P_putida_kt2440.faa
-    │   ├── campylobacter_jejuni_ATCC_faa.faa
-    │   ├── control_proteomes.txt
-    │   └── files.txt
-    ├── plots_data
-    │   └── itol
-    ├── proteins
+├── Protein_database
+│   └── mafft_align
+│       └── hmm_models
+├── genomes_download
+│   ├── Protein_database
+│   ├── checkm_result_ncbi
+│   ├── control_proteins
+│   │   └── HMMER_CONTROL_RESULTS
+│   ├── plots_data
+│   │   ├── Interpro_results
+│   │   ├── hmmer_out
+│   │   │   └── control_result
+│   │   └── itol
+│   ├── proteins
+│   └── scripts
+│       └── jupyter_scripts
+└── metagen_files
+    ├── Metadata
+    ├── Study01_france_cancer
+    │   └── output_data
+    │       ├── Interpro_analysis
+    │       ├── Interpro_results
+    │       └── hmmer_out
+    ├── Study02_colon_cancer
+    │   └── output_data
+    │       ├── Interpro_analysis
+    │       ├── Interpro_results
+    │       └── hmmer_out
+    ├── Study03_colon_cancer
+    ├── Study04_colon_cancer
+    ├── Study05_aterosclerosis
+    ├── jupyter_scripts
     └── scripts
-        ├── CD_HIT_script.sh
-        ├── CMP_hmm.sh
-        ├── KpsM_hmm.sh
-        ├── KpsT_hmm.sh
-        ├── RfaH_hmm.sh
-        ├── Sialiltrans_hmm.sh
-        ├── hmm_models.sh
-        ├── jupyter_scripts
-        │   ├── Checkm_refseq_Reanalise_V2.ipynb
-        │   ├── hmm_process.ipynb
-        │   ├── host_distribution.ipynb
-        │   ├── itol_notation.ipynb
-        │   ├── pie_data.ipynb
-        │   └── retrieve_assembly_info.ipynb
-        ├── mafft_align.sh
-        ├── o_acetiltrans_poli_hmm.sh
-        ├── phylo.sh
-        ├── polisialiltrans_hmm.sh
-        ├── rename_control_files.sh
-        ├── rename_fasta.sh
-        ├── rename_fasta_control.sh
-        ├── rename_file.sh
-        └── teste_hmm_control.sh
 ```
 ## Recommendations
 
