@@ -191,6 +191,11 @@ At this point, return to the notebook: *Checkm_refseq_Reanalise_V2_R.ipynb*
 ## **2. HMMER Model Construction**
 The complete procedure for downloading reference protein sequences and removing duplicate entries is described in detail in [this repository](https://github.com/ThaisAFM/sialic_acid_catalog).
 
+HMM models outputs are already available in:
+```
+genomes_download/Protein_database/mafft_align/hmm_models/
+```
+
 Briefly, duplicate protein sequences were removed using CD-HIT. Installation instructions for CD-HIT are available [here](https://github.com/weizhongli/cdhit)
 
 Example of CD-HIT usage:
@@ -873,6 +878,8 @@ Now you can upload the files in iToL site. First submit and open final tree file
 with the name **RAxML_result.final_complete_sialylation_refined.tre**
 
 # 5. Metagenomic analysis
+
+Most of metagenomic scripts were based on [this repository](https://github.com/gabcmartins/scripts_projeto_doc/tree/main).
 
 ## 5.1 Study 01: Colorectal cancer cohort (France)
 [Zeller et. all (2014)](https://link.springer.com/article/10.15252/msb.20145645#supplementary-materials)
