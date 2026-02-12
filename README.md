@@ -907,6 +907,7 @@ outputs_fastp
 ```
 
 ### 5.1.3 Host genome preparation (GRCh38)
+
 The human reference genome (ID: GRCh38) was downloaded and indexed for host read removal.
 ```
 conda install -c bioconda bowtie2 #download bowtie2 via conda
@@ -915,6 +916,13 @@ bash script_get_human_genome_GRch38.sh
 Output directory:
 ```
 human_genome
+```
+
+Output files of human genome index are available in this [link](https://drive.google.com/drive/u/2/folders/1X3vU67MuJUPqGO0--WmXog5Kt0BlqwFi)
+Download and descompress the file.
+
+```
+tar -xf human_genome_index.tar.gz
 ```
 
 ### 5.1.4 Alignment against the human genome
@@ -1012,6 +1020,11 @@ metagen_files/jupyter_scripts/01.cover_process_study01_metagen.ipynb
 Filtered coverage results will be saved in **metagen_hmmer_results/** 
 
 - Move files that passed the filtering criteria
+
+Original output directory:
+```
+metagen_files/Study01_france_cancer/output_data
+```
 
 **NeuA**
 ```
@@ -1178,6 +1191,13 @@ Bins passing InterProScan filtering are listed in:
 ```
 metagen_files/Study01_france_cancer/output_data/Interpro_results/bins_for_identification.tsv
 ```
+Output files of bins with sialylation mechanism are available in this [link](https://drive.google.com/drive/u/2/folders/1LiB_q4n4rFV3Kdhh-SCJS8CD7SBt31MF) 
+Download and descompress the file.
+
+```
+tar -xf bins_paired_sialylation.tar.gz
+```
+
 Prepare bins for taxonomic classification:
 ```
 cd ./output_data/Interpro_results/ #considering that you are at Study01_france_cancer folder
@@ -1231,6 +1251,10 @@ bash checkm_script_metagen_FR.sh
 Output directory:
 ```
 checkm_result_bins_with_sia
+```
+Original output directory:
+```
+metagen_files/Study01_france_cancer/output_data/bins_stats_ext.tsv
 ```
 
 ## 5.2 Study 02: Colorectal cancer cohort (China)
