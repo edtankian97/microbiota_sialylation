@@ -660,10 +660,10 @@ Run PhyloPhlAn:
 cd ../../../scripts/
 bash phylo.sh #make sure phylophlan's conda environment is activated
 ```
-phylophlan generates a lot of files, but the most important is refine tree called *RAxML_result.proteins_unique_comm_sia_refined.tre*, which was used for tree annotation with iTOL.
+phylophlan generates a lot of files, but the most important is refine tree called *RAxML_result.final_complete_sialylation_refined.tre*, which was used for tree annotation with iTOL.
 This output is located at
 ```
-genomes_download/
+genomes_download/plots_data/itol/
 ```
 
 ## 4.2 Genome-level information
@@ -709,9 +709,9 @@ find ./ -type f -name 'kpsD*coverage' -exec cat {} + > all_KpsD_coverage.tsv
 find ./ -type f -name 'neuO*coverage' -exec cat {} + > all_neuO_coverage.tsv
 find ./ -type f -name 'neuD*coverage' -exec cat {} + > all_neuD_coverage.tsv
 ```
-Coverage filtering is performed in **Part 01** of script *08.hmm_process_external_rings.ipynb*:
+Coverage filtering is performed in **Part 01** of script *08.hmm_process_external_rings.ipynb*, located at:
 ```
-*microbiota_sialylation/genomes_download/plots_data/hmmer_out/
+*microbiota_sialylation/genomes_download/scripts/jupyter_scripts/08.hmm_process_external_rings.ipynb*
 ```
 Filtered outputs are stored in:
 ```
@@ -831,12 +831,18 @@ datasets rehydrate --directory genomes_unique
 find ./genomes_unique/ncbi_dataset/data/GCF*/ -type f -iname "*.fna" -exec mv -v "{}" ./genomes_unique \; #move files
 ls ./genomes_unique # list files
 ```
-Start the process of analysis
+Start the process of analysis.
+Observation: No need to move **out_70id_60cov.csv**, as it's already inside of **plots_data/itol/** PATH 
 ```
 abricate ./genomes_unique/*fna --db vfdb --csv --minid 70 --mincov 60 > out_70id_60cov.csv
-mv out_70id_60cov.csv ../../../../plots_data/itol/
+mv out_70id_60cov.csv ../../../../plots_data/itol/ 
 ```
 ### 4.5.4 Processing of resulted files for iTOL annotation
+
+Output files of **10.itol_notation.ipynb** are available in
+```
+genomes_download/plots_data/itol/
+```
 
 Follow the script **10.itol_notation.ipynb** which is loccated in the path: microbial_sialylation/genomes_download/scripts/jupyter_scripts/
 After this, each dataset created in the script was concatenated with iTol dataset
