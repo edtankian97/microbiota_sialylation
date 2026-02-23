@@ -1665,9 +1665,13 @@ Run taxonomic classification:
 ```
 bash metagen_GTDB.sh
 ```
-Summary output:
+Summary output (Bacteria):
 ```
 metagen_files/Study02_france_cancer/output_data/gtdbtk.bac120.summary.tsv
+```
+Summary output (Archea)
+```
+metagen_files/Study02_france_cancer/output_data/gtdbtk.ar53.summary.tsv
 ```
 
 ### 5.2.10 Bin quality assessment (CheckM)
@@ -1681,6 +1685,7 @@ Output directory:
 ```
 checkm_result_bins_with_sia
 ```
+Original results are available in [Drive](https://drive.google.com/drive/u/1/folders/19BrfjyBeWEPeBq_AcguPMBde3wH1wst1)
 
 ## 5.3 Study 03: Colorectal Cancer Cohort (China)
 
