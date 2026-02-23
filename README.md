@@ -1048,7 +1048,7 @@ Filtered coverage results will be saved in **metagen_hmmer_results/**
 
 Original output directory:
 ```
-metagen_files/Study01_france_cancer/output_data
+metagen_files/Study01_france_cancer/output_data/hmmer_out/
 ```
 
 **NeuA**
