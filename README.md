@@ -1342,10 +1342,7 @@ for file in $(cat duplicated_reads_sia_modified_TRUE_FINAL); do cp $file ../read
 bash kraken_script_FR.sh
 mv *report ./kraken_out
 ```
-Original output are located in 
-```
-Study01_france_cancer/kraken_out/
-```
+Original kraken output are located in [Drive](https://drive.google.com/drive/u/1/folders/18BAtw3uPYF4AR6dZkjIuLlqbs9yFCEN9)
 
 - Bracken analysis
 ```
