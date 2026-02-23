@@ -1276,6 +1276,85 @@ Original output directory:
 ```
 metagen_files/Study01_france_cancer/output_data/bins_stats_ext.tsv
 ```
+### 5.1.16 Relative abundance
+
+Atention: You should be located at 
+```
+Study01_france_cancer
+```
+- Download kraken 
+```
+git clone https://github.com/DerrickWood/kraken2.git
+cd kraken2
+bash install_kraken2.sh kraken2_db
+```
+- Download kraken2 database
+```
+wget https://genome-idx.s3.amazonaws.com/kraken/k2_standard_20251015.tar.gz
+mkdir -p kraken2_DB
+mv k2_standard_20251015.tar.gz ./kraken2_DB
+cd kraken2_DB
+tar -xvzf k2_standard_20251015.tar.gz
+```
+- Download Bracken
+```
+ git clone https://github.com/jenniferlu717/Bracken.git
+```
+Especify PATH
+```
+export PATH=/PATH/TO/Bracken:$PATH
+export PATH=/PATH/TO/Kraken2:$PATH
+export PATH=/PATH/TO/kraken2_DB:$PATH
+```
+- Bracken installation
+```
+cd Bracken 
+bash install_bracken.sh
+```
+- Kraken analysis
+
+Create file with filenames to be moved
+```
+sed '1d' bins_for_identification.tsv > bins_for_identification_2.tsv
+sed 's/_bin.*\.fa//' bins_for_identification_2.tsv \
+| sort -u \
+| awk '{
+  print $0 "_filtered_aligned_R1.fastq.gz"
+  print $0 "_filtered_aligned_R2.fastq.gz"
+}' > duplicated_reads_sia_FR_modified_TRUE_FINAL
+```
+
+# move file
+```
+mv duplicated_reads_sia_FR_modified_TRUE_FINAL ./france_fastq_reads/
+mkdir reads_sialylation
+cd france_fastq_reads/
+for file in $(cat duplicated_reads_sia_FR_modified_TRUE_FINAL); do cp $file ../reads_sialylation; done
+```
+- Kraken script
+```
+bash kraken_script_FR.sh
+mv *report ./kraken_out
+```
+Original output are located in 
+```
+Study01_france_cancer/kraken_out/
+```
+
+- Bracken analysis
+```
+bash bracken_script.sh
+```
+Combine output
+```
+mv combine_bracken_out.py ./bracken_out
+cd bracken_out
+python combine_bracken_out.py --files *_bracken_out.tsv -o merged_FR_bracken_output
+```
+Check final file
+```
+less merged_FR_bracken_output
+```
 
 ## 5.2 Study 02: Colorectal cancer cohort (China)
 
