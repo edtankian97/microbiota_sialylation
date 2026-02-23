@@ -1015,6 +1015,8 @@ Protein sequences were annotated using HMMER models.
 cd ../../ #must be at Study01_france_cancer folder
 bash metagen_hmmer.sh
 ```
+All hmmer output files are available in [Drive](https://drive.google.com/drive/u/1/folders/1LiB_q4n4rFV3Kdhh-SCJS8CD7SBt31MF)
+
 Original output directory:
 ```
 metagen_files/Study01_france_cancer/output_data
