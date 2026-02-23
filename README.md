@@ -348,13 +348,19 @@ for f in *.faa; do sed -i "s/^>/>${f}_/" "$f"; done
 ### 3.2.3 Organization of HMMER Analyses
 ```
 cd .. #must be at genomes_download folder
-mkdir HMMER_analysis # you must be located at **genomes_download** folder
+mkdir -p HMMER_analysis # you must be located at **genomes_download** folder
 cd HMMER_analysis
 mkdir neuA_out pm0188_out PF11477_out neuS_out PF06002_out lst_out lic3X_out IPR010866_out
 cd ../../ #must be at genomes_download folder
 
 cd scripts/
 bash ncbi_teste_own_hmmer.sh
+```
+Original output files are available in [Drive](https://drive.google.com/drive/u/1/folders/1X3vU67MuJUPqGO0--WmXog5Kt0BlqwFi)
+
+Filename: 
+```
+HMMER_analysis.tar.gz
 ```
 
 ### 3.2.4 Coverage Filtering
@@ -578,8 +584,8 @@ After InterProScan validation of core sialylation enzymes, retrieve metadata for
 cd plots_data/
 less complete_sialylation_interpro_filtration_final.tsv #see the data
 #process and download zip file to extract information
-sed -i '1d' complete_sialylation_interpro_filtration_final.tsv
-datasets download genome accession --inputfile complete_sialylation_interpro_filtration_final.tsv 
+sed '1d' complete_sialylation_interpro_filtration_final.tsv > complete_sialylation_interpro_filtration_final_1.tsv
+datasets download genome accession --inputfile complete_sialylation_interpro_filtration_final_1.tsv 
 ```
 Extract relevant genome- and sample-level metadata:
 ```
@@ -593,7 +599,7 @@ genomes_download/plots_data/
 ```
 ### 4.1.2 Taxonomy information
 
-Taxonomic data are derived directly from accession_complete_fields.tsv, located in:
+Taxonomic data are derived directly from **accession_complete_fields.tsv**, located in:
 ```
 genomes_download/plots_data/
 ```
@@ -611,6 +617,12 @@ rm -rfv ncbi_dataset
 ```
 
 ### 4.1.3 Phylogenetic Tree Construction
+
+**complete_sialylation_interpro_filtration_final.tsv** is located at:
+```
+genomes_download/plots_data/itol/
+```
+
 Prepare representative proteomes for phylogenetic reconstruction:
 ```
 cp complete_sialylation_interpro_filtration_final.tsv ../proteins/proteins_sialylation/
@@ -658,7 +670,7 @@ genomes_download/plots_data/itol/
 ## 4.2 Genome-level information
 Genome-level summary statistics and annotations are generated using script *05.retrieve_genome_info.ipynb*, located at:
 ```
-scripts/jupyter_scripts/retrieve_genome_info.ipynb
+microbial_sialylation/genomes_download/scripts/jupyter_scripts/retrieve_genome_info.ipynb
 ```
 
 ## 4.3 Host distribution
@@ -677,6 +689,17 @@ microbial_sialylation/genomes_download/scripts/jupyter_scripts/
 ## 4.5 iTOL annotation
 
 ### 4.5.1 HMMER Analysis of External Ring Proteins
+
+Original outputs (HMM models and Hmmer output) of external rings can be acessed on [Drive](https://drive.google.com/drive/u/1/folders/1cxFr1zBFR3tjuNnZt0mmgqpPKMpeEx4e) and are also located in:
+
+```
+genomes_download/Protein_database/external_rings_models/
+```
+File with HMM results must be descompressed
+```
+ tar -xzvf external_rings_output.tar.gz
+```
+
 Run HMMER searches for external ring-associated proteins (KpsM, KpsT, KpsD, NeuD, NeuO):
 
 ```
@@ -790,12 +813,17 @@ cd ../../../../scripts #must be at scripts folder
 bash retrieve_sequences_for_interpro_external_rings.sh 
 ls ../Interpro_analysis # files will be at Interpro_analysis folder
 ```
+Retrieved sequences are available in [Drive](https://drive.google.com/drive/u/1/folders/12ZK2aoNHCfAWA656mXL3G0J_ohoyQRwk)
+
 Run Interpro analysis
 ```
 bash interpro_analysis_external_rings.sh
 cd .. # must be at genomes_download
 ```
-Check output files at **/Interpro_analysis/Interpro_results/** PATH. Our results are already available at **plots_data/Interpro_results/** PATH
+Our results are already available at **plots_data/Interpro_results/** PATH
+
+Check output files at **/Interpro_analysis/Interpro_results/** PATH. 
+
 ```
 ls ./Interpro_analysis/Interpro_results/
 ```
@@ -833,7 +861,10 @@ Output files of **10.itol_notation.ipynb** are available in
 genomes_download/plots_data/itol/
 ```
 
-Follow the script **10.itol_notation.ipynb** which is loccated in the path: microbial_sialylation/genomes_download/scripts/jupyter_scripts/
+Follow the script **10.itol_notation.ipynb** which is loccated in the path: 
+```
+microbial_sialylation/genomes_download/scripts/jupyter_scripts/
+```
 After this, each dataset created in the script was concatenated with iTol dataset
 ```
 cd ../../../../plots_data/itol/
@@ -858,8 +889,11 @@ cat vfdb_itol_representative_EANS.txt vfdb_itol_represent_EANS.tsv > final_vfdb_
 cat ed_tree_label.txt representative_labels_itol.tsv > ed_tree_label_represent.txt
 cat representative_phyli_sialylation.txt representative_phylum_itol.tsv > final_representative_phylum.txt
 ```
-Now you can upload the files in iToL site. First submit and open final tree file which is inside **plots_data/itol/** folder
-with the name **RAxML_result.final_complete_sialylation_refined.tre**
+Now you can upload the files in iToL site. First submit and open final tree file which is inside **plots_data/itol/** folder with the name **RAxML_result.final_complete_sialylation_refined.tre**
+
+```
+genomes_download/plots_data/itol/
+```
 
 # 5. Metagenomic analysis
 
@@ -1316,11 +1350,31 @@ Protein FASTA files (.faa) are located in:
 ```
 bins_paired/all_prokka/
 ```
-Rename faa files
+- Rename faa files. (Recommend to create a directory and paste a single faa file to teste)
+
+Input faa header:
+```
+>GPNBKJNP_00001_hypothetical_protein
+MKTDKGFFTFRKISLSLHKKILLSYLCLLILTCGLVSIIFVERAKVRESERILKSINTVR
+RSIDDVHFAIIRLCTKGESVISWDNSDFNIYHQYRLSVDSLLQDMKVKCSGFVLPHQIDS
+LCDLLYKKEINLGYIMNTVKSREKSDSIFANKLPVIAKETVRMKTISQKKKGIAGLFGKK
+EIVQIPYYTNELRTFNDKLIFEIDKQNAQVETYMDSLRLQNKLLNNKLYDFVSFWDCQIQ
+KSFTERNITLSEAWQSSFYQFIAVVSIAVVILIIFF
+```
+
+Expected output:
+```
+>PROKKA_ERR2017411_N001_bin.10.faa GPNBKJNP_00001 hypothetical protein
+MKTDKGFFTFRKISLSLHKKILLSYLCLLILTCGLVSIIFVERAKVRESERILKSINTVR
+RSIDDVHFAIIRLCTKGESVISWDNSDFNIYHQYRLSVDSLLQDMKVKCSGFVLPHQIDS
+LCDLLYKKEINLGYIMNTVKSREKSDSIFANKLPVIAKETVRMKTISQKKKGIAGLFGKK
+EIVQIPYYTNELRTFNDKLIFEIDKQNAQVETYMDSLRLQNKLLNNKLYDFVSFWDCQIQ
+KSFTERNITLSEAWQSSFYQFIAVVSIAVVILIIFF
+```
+
 ```
 cd all_prokka
-for f in *.faa; do sed -i '/^>/ s/ /_/1' "$f"; done
-sed -i 's/ .*//' *.faa
+for f in *.faa; do sed -i "s/^>/>${f} /" "$f"; done
 ```
 Verify that headers and filenames are correct:
 ```
@@ -1341,6 +1395,9 @@ Coverage files are located in:
 ```
 metagen_files/Study02_colon_cancer/output_data/hmmer_out
 ```
+
+All results of Hmmer output are available in [Drive](https://drive.google.com/drive/u/1/folders/19BrfjyBeWEPeBq_AcguPMBde3wH1wst1)
+
 Process coverage files
 ```
 cd bins_paired/all_prokka/metagen_hmmer_results/
@@ -1444,6 +1501,10 @@ Study02_colon_cancer/
 Remove header of input of seqkit
 ```
 sed -i '1d' colon02_*
+```
+Rename faa files. 
+```
+sed -i 's/ .*//' *.faa
 ```
 Retrieve sequences for Interproscan analysis
 ```
@@ -1557,6 +1618,10 @@ bash ena-file-download-read_run-ERP008729-colon_03.sh
 ```
 Then, follow the same steps described for **Study 02** with slight modification.
 
+Faa files should be renamed as follow:
+```
+for f in *.faa; do sed -i "s/^>/>${f}_/" "$f"; done
+```
 Move paired files to **host_adapt_trimm_reads** folder
 ```
 mkdir host_adapt_trimm_reads
@@ -1593,6 +1658,11 @@ metagen_files/scripts
 ```
 Follow the same steps from **Study 02**  colon cancer with slighty modification.
 
+Faa files should be renamed as follow:
+```
+for f in *.faa; do sed -i "s/^>/>${f}_/" "$f"; done
+```
+
 Caution: Step **5.2.2** is not necessary!!!
 
 The Jupyter-based R scripts used for **HMMER** and **InterProScan** analyses are located in:
@@ -1614,6 +1684,11 @@ metagen_files/scripts
 ```
 
 Follow the same steps from **Study 02**  colon cancer with slighty modification.
+
+Faa files should be renamed as follow:
+```
+for f in *.faa; do sed -i "s/^>/>${f}_/" "$f"; done
+```
 
 The Jupyter-based R scripts used for **HMMER** and **InterProScan** analyses are located in:
 ```
