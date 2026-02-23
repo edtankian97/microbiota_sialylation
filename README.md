@@ -645,6 +645,7 @@ Follow the database installation instructions provided [here](https://github.com
 cd .. #must be in protein folder
 mkdir protein_tree && cd protein_tree
 mkdir phylophlan_database && cd phylophlan_database
+wget http://cmprod1.cibio.unitn.it/databases/PhyloPhlAn/phylophlan_databases.txt
 cat phylophlan_databases.txt # copy and paste one of the links to **phylophlan** database (not amphora)
 tar -xf phylophlan.tar
 bunzip2 -k phylophlan/phylophlan.bz2
@@ -690,7 +691,7 @@ microbial_sialylation/genomes_download/scripts/jupyter_scripts/
 
 ### 4.5.1 HMMER Analysis of External Ring Proteins
 
-Original outputs (HMM models and Hmmer output) of external rings can be acessed on [Drive](https://drive.google.com/drive/u/1/folders/1cxFr1zBFR3tjuNnZt0mmgqpPKMpeEx4e) and are also located in:
+Original outputs (HMM models and Hmmer output) of external rings can be acessed on [Drive](https://drive.google.com/drive/u/1/folders/1cxFr1zBFR3tjuNnZt0mmgqpPKMpeEx4e). HMM models are located in:
 
 ```
 genomes_download/Protein_database/external_rings_models/
@@ -827,7 +828,11 @@ Check output files at **/Interpro_analysis/Interpro_results/** PATH.
 ```
 ls ./Interpro_analysis/Interpro_results/
 ```
-Now, it's time to process the results with interproscan'R script for external rings: **09.Interpro_analysis_external_rings_final_script**. Final output files wil be used for iTOL annotation of external rings.
+Now, it's time to process the results with interproscan'R script for external rings: **09.Interpro_analysis_external_rings_final_script**, which is located in:
+```
+genomes_download/scripts/jupyter_scripts/
+```
+Final output files wil be used for iTOL annotation of external rings.
 
 
 ### 4.5.3 Virulence factors
@@ -1181,7 +1186,7 @@ metagen_files/jupyter_scripts/02.hmm_process_FR.ipynb
 ```
 Output data are available in:
 ```
-metagen_files/output_data/hmmer_out/
+metagen_files/Study01_france_cancer/output_data/hmmer_out/
 ```
 Retrieve fasta sequences for Interproscan analysis
 ```
@@ -1315,21 +1320,22 @@ bash install_bracken.sh
 
 Create file with filenames to be moved
 ```
+cp output_data/Interpro_results/bins_for_identification.tsv ./
 sed '1d' bins_for_identification.tsv > bins_for_identification_2.tsv
 sed 's/_bin.*\.fa//' bins_for_identification_2.tsv \
 | sort -u \
 | awk '{
   print $0 "_filtered_aligned_R1.fastq.gz"
   print $0 "_filtered_aligned_R2.fastq.gz"
-}' > duplicated_reads_sia_FR_modified_TRUE_FINAL
+}' > duplicated_reads_sia_modified_TRUE_FINAL
 ```
 
 # move file
 ```
-mv duplicated_reads_sia_FR_modified_TRUE_FINAL ./france_fastq_reads/
+mv duplicated_reads_sia_modified_TRUE_FINAL ./france_fastq_reads/
 mkdir reads_sialylation
 cd france_fastq_reads/
-for file in $(cat duplicated_reads_sia_FR_modified_TRUE_FINAL); do cp $file ../reads_sialylation; done
+for file in $(cat duplicated_reads_sia_modified_TRUE_FINAL); do cp $file ../reads_sialylation; done
 ```
 - Kraken script
 ```
@@ -1612,7 +1618,7 @@ Final InterProScan results are available at:
 ```
 metagen_files/Study02_france_cancer/output_data/Interpro_results/
 ```
-These results are further processed using the R script *04.Interpro_results_colon02.iypnb*, located in:
+These results are further processed using the R script *05.Interpro_results_colon02.iypnb*, located in:
 ```
 metagen_files/jupyter_scripts/
 ```
