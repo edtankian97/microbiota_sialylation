@@ -360,7 +360,8 @@ rm -rfv proteins/
 unzip proteins.zip -d proteins
 datasets rehydrate --directory proteins
 ```
-Proteomes are available in tar.gz file in [Drive]()
+Proteomes are available in tar.gz file in [Drive](https://drive.google.com/drive/u/1/folders/1X3vU67MuJUPqGO0--WmXog5Kt0BlqwFi) with output filename: **proteins.tar.gz**
+
 ### 3.2.2 Renaming and Formatting of Proteomes
 ```
 cd proteins
