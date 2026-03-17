@@ -169,7 +169,7 @@ awk -F',' '/^GCF_/ { print $1, $11, $12 }' bin_stats_ext.tsv > checkm_GCF_delim.
 awk -F' ' 'BEGIN{OFS="\t"} /^GCF_/ { print $1, $6, $8 }' checkm_GCF_delim.txt > quality_report.tsv #choose right colummns that I want
 ```
 The file *quality_report.tsv* contains genome accession IDs along with completeness and contamination values used for downstream filtering.
-At this point, return to the notebook: *Checkm_refseq_Reanalise_V2_R.ipynb*
+After this step, return to Part 02 of the notebook: *01.Checkm_refseq_Reanalise_V2_R.ipynb.
 
 
 ## **2. HMMER Model Construction**
@@ -230,9 +230,11 @@ The analyses were performed using HMMER v3.4, which was also used for downstream
 
 Run the model construction script:
 ```
-bash ../../scripts/hmm_models.sh
+cd ../../scripts/ # go to scripts folder
+bash hmm_models.sh
+cd ../Protein_database # you should be located in Protein_database/ folder
 ```
-The resulting HMM profiles will be located at
+Check output files. The resulting HMM profiles will be located at
 ```
 genomes_download/Protein_database/mafft_align/hmm_models/
 ```
@@ -240,7 +242,7 @@ genomes_download/Protein_database/mafft_align/hmm_models/
 ## 2.4 Organization of HMM Profiles for External Annotation
 HMM models corresponding to proteins used for external ring annotation are grouped into a separate directory for clarity and downstream use.
 ```
-cd ../../../   # you should now be in Protein_database/
+cd ../../   # Return to the Protein_database/ folder
 
 mkdir external_rings_models
 
@@ -267,14 +269,22 @@ ATCC reference proteomes, already available in the *control_proteins/* directory
 conda activate ncbi_datasets
 cd ./control_proteins/ 
 datasets download genome accession --inputfile control_proteomes.txt --include protein --filename control.zip
+mkdir -p control
 unzip control.zip -d control
 ls control
 ```
 ### 3.1.2 Processing and Renaming of Control Proteomes
+
 ```
 bash ../scripts/rename_control_files.sh #rename the files based on their directories
 find ./control/ncbi_dataset/data/GCF*/ -type f -iname "*.faa" -exec mv -v "{}" ./ \; #move files
 ls #see moved files 
+```
+```
+## remove _protein.faa sulfix 
+for file in *.faa; do mv "$file" "${file/_protein.faa/.faa}"; done
+```
+``` 
 while read line; do eval mv $line; done < files.txt #rename with species names
 bash ../scripts/rename_fasta_control.sh #rename fasta header with filename
 less GCF_004015025.1_Akker_munciph_NEG.faa #see content of a file
@@ -286,7 +296,7 @@ Store results and execute HMMER searches:
 cd HMMER_CONTROL_RESULTS
 bash ../../scripts/teste_hmm_control.sh
 ```
-Output are already available in **HMMER_CONTROL_RESULTS**
+Output files are already available in **HMMER_CONTROL_RESULTS**
 
 ### 3.1.4 Consolidation of HMMER Outputs
 Concatenate output files for each enzyme model:
@@ -324,19 +334,38 @@ genomes_download/plots_data/hmmer_out/control_result/
 
 ## 3.2 Protein analysis: NCBI RefSeq Proteomes
 Proteomes corresponding to genomes that passed CheckM quality filtering were downloaded from NCBI.
+
 ### 3.2.1 Download of Filtered Proteomes
 ```
 cd ../../ #go to genomes_download folder and then move checkm_filter_v2_complete.tsv to this folder
 cut -f2 checkm_filter_v2_complete.tsv > checkm_filter_v2_complete_ID.tsv
 sed -i '1d' checkm_filter_v2_complete_ID.tsv
+```
+
+```
+## remove " "
+sed -i 's/"//g' checkm_filter_v2_complete_ID.tsv
+
+
+## also remove the sulfix of the following genome codes by hand: 
+##GCF_000146065.2_ASM14606v1_genomic
+##GCF_000010245.2_ASM1024v1_genomic
+##GCF_000967155.2_HUSEC2011CHR1_genomic
+##GCF_000264665.3_ASM26466v2_genomic
+```
+
+```
 datasets download genome accession --inputfile checkm_filter_v2_complete_ID.tsv --include protein --dehydrated  --filename proteins.zip
 rm -rfv proteins/
 unzip proteins.zip -d proteins
 datasets rehydrate --directory proteins
 ```
+Proteomes are available in tar.gz file in [Drive]()
 ### 3.2.2 Renaming and Formatting of Proteomes
 ```
+cd proteins
 bash ../scripts/rename_files.sh
+cd .. #back to genomes_download folder
 find proteins/ncbi_dataset/data/GCF*/ -type f -iname "*.faa" -exec mv -v "{}" ./proteins/ \;
 mkdir proteins/proteins_sialylation/final_complete_sialylation/ #create more directories
 ```
@@ -553,11 +582,15 @@ cd .. #must be at genomes_download folder
 ```
 
 ### 3.3.3 InterProScan Output Processing
-Results are available in:
+Results are already available in:
+```
+microbiota_sialylation/genomes_download/plots_data/Interpro_results
+```
+If you run interpro_analysis.sh script, result will be in
 ```
 Interpro_analysis/Interpro_results/
-plots_data/Interpro_results/
 ```
+
 Final filtering based on InterPro signatures is performed using the R script located in:
 ```
 scripts/jupyter_scripts/04.Interpro_results.ipynb
@@ -965,6 +998,7 @@ outputs_bowtie2_FR
 Reads aligning to the human genome were removed using samtools, retaining only microbial reads.
 ```
 conda install -c bioconda samtools #download samtools via conda
+mv outputs_bowtie2_FR output_bowtie2_FR
 bash script_remove_human_genome.sh
 ```
 Output directory:
@@ -993,7 +1027,7 @@ bash prepare_to_binning.sh #coverage count
 bash generate_bins.sh #generate bins
 bash rename_bins_files.sh #rename files based on their directories
 ```
-
+Bins are available at [Drive](https://drive.google.com/drive/u/1/folders/1LiB_q4n4rFV3Kdhh-SCJS8CD7SBt31MF)
 ### 5.1.9 Protein prediction (Prokka)
 Protein-coding sequences were predicted for each bin using Prokka.
 ```
