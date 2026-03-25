@@ -360,7 +360,7 @@ rm -rfv proteins/
 unzip proteins.zip -d proteins
 datasets rehydrate --directory proteins
 ```
-Proteomes are available in tar.gz file in [Drive](https://drive.google.com/drive/u/1/folders/1X3vU67MuJUPqGO0--WmXog5Kt0BlqwFi) with output filename: **proteins.tar.gz**
+Proteomes will be available upon request at my e-mail: edson_alexandre97@usp.br
 
 ### 3.2.2 Renaming and Formatting of Proteomes
 ```
@@ -1316,82 +1316,22 @@ Original output directory:
 ```
 metagen_files/Study01_france_cancer/output_data/bins_stats_ext.tsv
 ```
-### 5.1.16 Relative abundance
+Process CheckM output
+```
+awk -F',' '/^ERR/ { print $1, $11, $12 }' bin_stats_ext.tsv > checkm_ERR_delim.txt #delimiter rows with comma
 
-Atention: You should be located at 
-```
-Study01_france_cancer
-```
-- Download kraken 
-```
-git clone https://github.com/DerrickWood/kraken2.git
-cd kraken2
-bash install_kraken2.sh kraken2_db
-```
-- Download kraken2 database
-```
-wget https://genome-idx.s3.amazonaws.com/kraken/k2_standard_20251015.tar.gz
-mkdir -p kraken2_DB
-mv k2_standard_20251015.tar.gz ./kraken2_DB
-cd kraken2_DB
-tar -xvzf k2_standard_20251015.tar.gz
-```
-- Download Bracken
-```
- git clone https://github.com/jenniferlu717/Bracken.git
-```
-Especify PATH
-```
-export PATH=/PATH/TO/Bracken:$PATH
-export PATH=/PATH/TO/Kraken2:$PATH
-export PATH=/PATH/TO/kraken2_DB:$PATH
-```
-- Bracken installation
-```
-cd Bracken 
-bash install_bracken.sh
-```
-- Kraken analysis
 
-Create file with filenames to be moved
-```
-cp output_data/Interpro_results/bins_for_identification.tsv ./
-sed '1d' bins_for_identification.tsv > bins_for_identification_2.tsv
-sed 's/_bin.*\.fa//' bins_for_identification_2.tsv \
-| sort -u \
-| awk '{
-  print $0 "_filtered_aligned_R1.fastq.gz"
-  print $0 "_filtered_aligned_R2.fastq.gz"
-}' > duplicated_reads_sia_modified_TRUE_FINAL
-```
+awk -F' ' 'BEGIN{OFS="\t"} /^ERR/ { print $1, $6, $8 }' checkm_ERR_delim.txt > quality_report.tsv #choose right colummns that I want
 
-# move file
-```
-mv duplicated_reads_sia_modified_TRUE_FINAL ./france_fastq_reads/
-mkdir reads_sialylation
-cd france_fastq_reads/
-for file in $(cat duplicated_reads_sia_modified_TRUE_FINAL); do cp $file ../reads_sialylation; done
-```
-- Kraken script
-```
-bash kraken_script_FR.sh
-mv *report ./kraken_out
-```
-Original kraken output are located in [Drive](https://drive.google.com/drive/u/1/folders/18BAtw3uPYF4AR6dZkjIuLlqbs9yFCEN9)
+#Completeness and contamination filter
+awk '$2 >= 50 && $3 <= 10' quality_report.tsv > quality_report_bin_filtered.tsv
 
-- Bracken analysis
-```
-bash bracken_script.sh
-```
-Combine output
-```
-mv combine_bracken_out.py ./bracken_out
-cd bracken_out
-python combine_bracken_out.py --files *_bracken_out.tsv -o merged_FR_bracken_output
-```
-Check final file
-```
-less merged_FR_bracken_output
+wc -l quality_report.tsv
+wc -l quality_report_bin_filtered.tsv
+
+#extract first column of filtered file
+
+awk '{print $1}' quality_report_bin_filtered.tsv > quality_report_bin_filtered_ID.tsv
 ```
 
 ## 5.2 Study 02: Colorectal cancer cohort (China)
@@ -1721,6 +1661,24 @@ Output directory:
 checkm_result_bins_with_sia
 ```
 Original results are available in [Drive](https://drive.google.com/drive/u/1/folders/19BrfjyBeWEPeBq_AcguPMBde3wH1wst1)
+
+Process CheckM output
+```
+awk -F',' '/^ERR/ { print $1, $11, $12 }' bin_stats_ext.tsv > checkm_ERR_delim.txt #delimiter rows with comma
+
+
+awk -F' ' 'BEGIN{OFS="\t"} /^ERR/ { print $1, $6, $8 }' checkm_ERR_delim.txt > quality_report.tsv #choose right colummns that I want
+
+#Completeness and contamination filter
+awk '$2 >= 50 && $3 <= 10' quality_report.tsv > quality_report_bin_filtered.tsv
+
+wc -l quality_report.tsv
+wc -l quality_report_bin_filtered.tsv
+
+#extract first column of filtered file
+
+awk '{print $1}' quality_report_bin_filtered.tsv > quality_report_bin_filtered_ID.tsv
+```
 
 ## 5.3 Study 03: Colorectal Cancer Cohort (China)
 
